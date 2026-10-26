@@ -1,0 +1,337 @@
+/* Hallmark · shape: app screen · genre: atmospheric · theme: horadric-sanctuary (by request) · signature: horadric-tome-hud · states: 8 · contrast: pass · v2.0.0 */
+/* critique: D2R Resurrected HD UI frame, beveled gold borders, instant keyboard focus, GPU-only transitions */
+@import './tokens.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: clip;
+  overflow-y: clip;
+  background-color: var(--color-void);
+  color: var(--color-beige);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background-color: var(--color-gold-dark);
+  color: var(--color-gold-light);
+}
+
+/* Instant Focus-Visible Indicator */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Custom D2R Scrollbar */
+.d2r-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.d2r-scroll::-webkit-scrollbar-track {
+  background: var(--color-obsidian-solid);
+  border-left: 1px solid var(--color-gold-subtle);
+}
+.d2r-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-gold-dark);
+  border-radius: 2px;
+}
+
+/* Root Overlay Canvas */
+.d2r-canvas {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-void);
+  color: var(--color-beige);
+  pointer-events: none;
+  user-select: none;
+}
+
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
+/* Horadric Panel Frame (D2R Resurrected Aesthetic) */
+.d2r-panel {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-obsidian);
+  color: var(--color-beige);
+  border: 1px solid var(--color-gold-dark);
+  border-radius: 4px;
+  overflow: hidden;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.d2r-panel::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border: 1px solid var(--color-gold-subtle);
+  border-radius: 3px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ornate Panel Header */
+.d2r-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: var(--color-stone);
+  color: var(--color-gold-light);
+  border-bottom: 1px solid var(--color-gold-dark);
+  cursor: move;
+}
+
+.d2r-title {
+  font-family: var(--font-display);
+  color: var(--color-gold-light);
+  font-size: 13px;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+.d2r-subtitle {
+  color: var(--color-gold);
+  font-size: 11px;
+  font-weight: 600;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+/* Buttons & Controls (All 8 States) */
+.d2r-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 28px;
+  padding: 4px 12px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-gold-light);
+  background-color: var(--color-void);
+  border: 1px solid var(--color-gold-dark);
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: transform var(--dur-micro) var(--ease-out), opacity var(--dur-micro) var(--ease-out);
+}
+
+.d2r-btn:active,
+.d2r-btn.is-active {
+  transform: scale(0.97);
+}
+
+.d2r-btn:disabled,
+.d2r-btn.is-disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.d2r-btn-gold {
+  background-color: var(--color-gold-dark);
+  color: var(--color-gold-light);
+  border-color: var(--color-gold);
+}
+
+.d2r-btn-crimson {
+  background-color: var(--color-void);
+  color: var(--color-crimson);
+  border-color: var(--color-crimson-border);
+}
+
+.d2r-btn-icon {
+  min-width: 28px;
+  min-height: 28px;
+  padding: 4px;
+  border-radius: 3px;
+  background-color: var(--color-void);
+  border: 1px solid var(--color-void);
+  color: var(--color-slate-gold);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--dur-micro) var(--ease-out), opacity var(--dur-micro) var(--ease-out);
+}
+
+.d2r-btn-icon:active {
+  transform: scale(0.95);
+}
+
+.d2r-btn-icon.active {
+  background-color: var(--color-void);
+  border-color: var(--color-gold);
+  color: var(--color-gold-light);
+}
+
+/* Inputs & Selects */
+.d2r-input,
+.d2r-select,
+.d2r-textarea {
+  width: 100%;
+  background-color: var(--color-slot-bg);
+  color: var(--color-gold-light);
+  border: 1px solid var(--color-gold-dark);
+  border-radius: 3px;
+  padding: 8px 12px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  user-select: text;
+  pointer-events: auto;
+}
+
+.d2r-input::placeholder,
+.d2r-textarea::placeholder {
+  color: var(--color-muted);
+}
+
+/* Badges & Tabular Numerals */
+.d2r-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.d2r-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 700;
+  background-color: var(--color-void);
+  border: 1px solid var(--color-gold-subtle);
+  color: var(--color-gold-currency);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Cards & Slots */
+.d2r-card {
+  background-color: var(--color-stone);
+  color: var(--color-beige);
+  border: 1px solid var(--color-gold-subtle);
+  border-radius: 3px;
+  padding: 12px;
+}
+
+.d2r-rune-slot {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background-color: var(--color-slot-bg);
+  color: var(--color-gold-light);
+  border: 1px solid var(--color-gold-subtle);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform var(--dur-micro) var(--ease-out), opacity var(--dur-micro) var(--ease-out);
+}
+
+.d2r-rune-slot.owned {
+  border-color: var(--color-rune-orange);
+  background-color: var(--color-rune-bg);
+  color: var(--color-gold-light);
+}
+
+.d2r-rune-slot:active {
+  transform: scale(0.95);
+}
+
+/* Resize Handles */
+.d2r-resize-e {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  cursor: ew-resize;
+  z-index: 40;
+}
+.d2r-resize-s {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8px;
+  cursor: ns-resize;
+  z-index: 40;
+}
+.d2r-resize-se {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  cursor: nwse-resize;
+  z-index: 45;
+}
+
+/* Toast Notification */
+.d2r-toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background-color: var(--color-obsidian);
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold-light);
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  pointer-events: auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .d2r-btn:hover:not(:disabled) {
+    background-color: var(--color-stone-hover);
+    border-color: var(--color-gold);
+  }
+  .d2r-btn-gold:hover:not(:disabled) {
+    background-color: var(--color-stone-active);
+  }
+  .d2r-btn-icon:hover {
+    background-color: var(--color-stone-hover);
+    color: var(--color-gold-light);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

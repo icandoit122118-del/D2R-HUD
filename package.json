@@ -1,0 +1,24 @@
+{
+  "name": "d2r-hud-resurrected",
+  "version": "1.3.0",
+  "description": "Diablo II: Resurrected Self-Contained Sanctuary HUD Overlay (v1.3.0)",
+  "main": "index.js",
+  "scripts": {
+    "extract:assets": "node scripts/extract-d2r-assets.cjs",
+    "web:dev": "npm run dev --prefix web",
+    "web:build": "npm run build --prefix web",
+    "app:start": "electron .",
+    "verify": "node scripts/package-and-verify.cjs"
+  },
+  "build": {
+    "appId": "com.sanctuary.d2rhud",
+    "productName": "D2R-HUD",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "index.js",
+      "web/dist/**/*"
+    ]
+  }
+}

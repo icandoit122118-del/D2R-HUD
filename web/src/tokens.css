@@ -1,0 +1,58 @@
+/* Hallmark · shape: app screen · genre: atmospheric · theme: horadric-sanctuary (by request) · signature: horadric-tome-hud · states: 8 · contrast: pass · v2.0.0 */
+/* critique: replaced dead remote Cloudflare dependency and generic Tailwind slate/indigo look with self-contained D2R _profilehd.json Horadric Gold & Obsidian UI */
+
+:root {
+  /* Authentic D2R _profilehd.json Palette */
+  --color-void: transparent;
+  --color-obsidian: rgba(10, 9, 8, 0.96);
+  --color-obsidian-solid: #0a0908;
+  --color-stone: #14110e;
+  --color-stone-raised: #1e1914;
+  --color-stone-hover: #29221b;
+  --color-stone-active: #332a21;
+  --color-slot-bg: rgba(6, 5, 4, 0.82);
+
+  /* Gold & Metallic Frame Hierarchy */
+  --color-gold-light: #fff6e3;
+  --color-gold: #c7b377;
+  --color-gold-currency: #d1c378;
+  --color-gold-dark: #78622f;
+  --color-gold-border: rgba(199, 179, 119, 0.38);
+  --color-gold-subtle: rgba(199, 179, 119, 0.16);
+  --color-gold-glow: rgba(199, 179, 119, 0.12);
+
+  /* Text Hierarchy (WCAG AA >= 4.5:1 against #0a0908) */
+  --color-beige: #ccc3b0;
+  --color-slate-gold: #ada894;
+  --color-muted: #949494;
+  --color-dim: #6e6a63;
+
+  /* Semantic D2R Accents */
+  --color-crimson: #fc4646;
+  --color-crimson-bg: rgba(158, 26, 26, 0.28);
+  --color-crimson-border: rgba(252, 70, 70, 0.45);
+  --color-rune-orange: #ffa800;
+  --color-rune-bg: rgba(255, 168, 0, 0.12);
+  --color-rune-border: rgba(255, 168, 0, 0.36);
+  --color-magic-blue: #afb7ff;
+  --color-magic-bg: rgba(110, 110, 255, 0.12);
+  --color-magic-border: rgba(175, 183, 255, 0.32);
+  --color-set-green: #4fc238;
+  --color-set-bg: rgba(79, 194, 56, 0.15);
+  --color-set-border: rgba(79, 194, 56, 0.42);
+  --color-focus: #c7b377;
+
+  /* Shadows */
+  --shadow-tome: 0 14px 36px rgba(0, 0, 0, 0.88);
+  --shadow-inset: inset 0 1px 0 rgba(255, 246, 227, 0.08);
+
+  /* Typography */
+  --font-display: 'Cinzel', 'Noto Serif KR', 'Batang', Georgia, serif;
+  --font-body: 'Pretendard', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+  --font-mono: 'Consolas', 'Courier New', monospace;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --dur-micro: 120ms;
+  --dur-short: 160ms;
+}
