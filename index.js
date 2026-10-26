@@ -99,78 +99,267 @@ function createWindow() {
 
 async function runSelfTestVerification() {
   const receiptPath = process.env.D2R_HUD_VERIFY_OUT || path.join(os.tmpdir(), 'd2r-hud-verify-receipt.json');
+  const startTs = Date.now();
   try {
-    await new Promise((resolve) => setTimeout(resolve, 650));
+    await new Promise((resolve) => setTimeout(resolve, 600));
+
+    // Measure main process memory & display metrics
+    const mainMemory = process.memoryUsage();
+    const appMetrics = app.getAppMetrics();
+    const displaysInfo = getAllDisplaysInfo();
+
+    // Test auto-hide PowerShell pixel checker directly from main process
+    const pixelTestStart = Date.now();
+    const pixelSample = await new Promise((resolve) => {
+      const { execFile } = require('child_process');
+      execFile(
+        'powershell',
+        [
+          '-NoProfile',
+          '-NonInteractive',
+          '-ExecutionPolicy',
+          'Bypass',
+          '-Command',
+          'Add-Type -AssemblyName System.Drawing; $b = New-Object System.Drawing.Bitmap(1,1); $g = [System.Drawing.Graphics]::FromImage($b); $g.CopyFromScreen(100,100,0,0,[System.Drawing.Size]::new(1,1)); $c = $b.GetPixel(0,0); Write-Output "$($c.R),$($c.G),$($c.B)"',
+        ],
+        { timeout: 5000 },
+        (err, stdout) => {
+          resolve({
+            ok: !err && /^\d+,\d+,\d+$/.test((stdout || '').trim()),
+            rgb: (stdout || '').trim(),
+            elapsedMs: Date.now() - pixelTestStart,
+          });
+        }
+      );
+    });
+
     const probe = await mainWindow.webContents.executeJavaScript(`
       (async () => {
+        const t0 = performance.now();
         const { ipcRenderer } = window.require('electron');
-        const version = await ipcRenderer.invoke('get-app-version');
-        const hudPanel = document.querySelector('.d2r-panel');
-        const titleText = document.title;
+        const results = {};
 
-        // 1. Open Horadric Tome (Runewords & Cubing) via toolbar button
+        // 1. IPC Version check & latency
+        const ipcT0 = performance.now();
+        const version = await ipcRenderer.invoke('get-app-version');
+        results.ipcVersion = {
+          ok: version === '1.3.0',
+          version,
+          latencyMs: Number((performance.now() - ipcT0).toFixed(2))
+        };
+
+        // 2. Main Quest HUD Mount & Step Navigation + Task Checkbox toggle
+        const hudPanel = document.querySelector('.d2r-panel');
+        const initialStepText = document.body.innerText;
+        const firstCheckbox = document.querySelector('[role="checkbox"]');
+        const beforeChecked = firstCheckbox ? firstCheckbox.getAttribute('aria-checked') : null;
+        if (firstCheckbox) firstCheckbox.click();
+        await new Promise(r => setTimeout(r, 80));
+        const afterChecked = firstCheckbox ? firstCheckbox.getAttribute('aria-checked') : null;
+
+        const nextStepBtn = Array.from(document.querySelectorAll('button')).find(b => (b.textContent || '').includes('다음 단계'));
+        if (nextStepBtn) nextStepBtn.click();
+        await new Promise(r => setTimeout(r, 80));
+        const stepMovedForward = document.body.innerText.includes('2 / ');
+
+        const prevStepBtn = Array.from(document.querySelectorAll('button')).find(b => (b.textContent || '').includes('이전 단계'));
+        if (prevStepBtn) prevStepBtn.click();
+        await new Promise(r => setTimeout(r, 80));
+        const stepMovedBack = document.body.innerText.includes('1 / ');
+
+        results.questHud = {
+          ok: !!hudPanel && beforeChecked !== afterChecked && stepMovedForward && stepMovedBack,
+          hudPanelMounted: !!hudPanel,
+          checkboxToggled: beforeChecked + ' -> ' + afterChecked,
+          stepNavigation: { stepMovedForward, stepMovedBack }
+        };
+
+        // 3. Horadric Tome: Runeword Dictionary (98 runewords, socket filter, search, owned-rune craftability)
         const tomeBtn = Array.from(document.querySelectorAll('button')).find(b => (b.getAttribute('title') || '').includes('호라드림 사전'));
         if (tomeBtn) tomeBtn.click();
-        await new Promise(r => setTimeout(r, 180));
+        await new Promise(r => setTimeout(r, 150));
 
-        const bodyTextAfterTome = document.body.innerText;
-        const rwMatch = bodyTextAfterTome.match(/룬어 사전\\s*\\((\\d+)\\)/);
-        const cubeMatch = bodyTextAfterTome.match(/호라드림의 함 큐빙\\s*\\((\\d+)\\)/);
-        const rwCardsCount = document.querySelectorAll('.d2r-card').length;
+        const rwTotalMatch = document.body.innerText.match(/룬어 사전\\s*\\((\\d+)\\)/);
+        const totalRunewords = rwTotalMatch ? Number(rwTotalMatch[1]) : 0;
 
-        // 2. Switch to Cubing tab
+        // Filter by 4 sockets ('4홈')
+        const sock4Btn = Array.from(document.querySelectorAll('button')).find(b => (b.textContent || '').trim() === '4홈');
+        if (sock4Btn) sock4Btn.click();
+        await new Promise(r => setTimeout(r, 100));
+        const rw4SocketMatch = document.body.innerText.match(/룬어 사전\\s*\\((\\d+)\\)/);
+        const socket4Count = rw4SocketMatch ? Number(rw4SocketMatch[1]) : 0;
+
+        // Reset socket filter to '전체 홈'
+        const sockAllBtn = Array.from(document.querySelectorAll('button')).find(b => (b.textContent || '').trim() === '전체 홈');
+        if (sockAllBtn) sockAllBtn.click();
+        await new Promise(r => setTimeout(r, 80));
+
+        // Open Owned Rune Stash Bar and select Tal(탈), Thul(주울), Ort(오르트), Amn(앰) -> Spirit(영혼) craftable!
+        const stashBtn = Array.from(document.querySelectorAll('button')).find(b => (b.textContent || '').includes('보유 룬 선택'));
+        if (stashBtn) stashBtn.click();
+        await new Promise(r => setTimeout(r, 100));
+
+        for (const rName of ['탈', '주울', '오르트', '앰']) {
+          const rBtn = Array.from(document.querySelectorAll('.d2r-rune-slot')).find(b => (b.getAttribute('title') || '').includes(' ' + rName + ' 룬'));
+          if (rBtn) rBtn.click();
+        }
+        await new Promise(r => setTimeout(r, 100));
+
+        const craftableFilterBtn = Array.from(document.querySelectorAll('button')).find(b => (b.textContent || '').includes('제작 가능만'));
+        if (craftableFilterBtn) craftableFilterBtn.click();
+        await new Promise(r => setTimeout(r, 100));
+        const craftableMatch = document.body.innerText.match(/룬어 사전\\s*\\((\\d+)\\)/);
+        const craftableCount = craftableMatch ? Number(craftableMatch[1]) : 0;
+        const spiritCraftableVisible = document.body.innerText.includes('영혼') && document.body.innerText.includes('제작 가능');
+
+        // Clear owned runes
+        const clearRunesBtn = Array.from(document.querySelectorAll('button')).find(b => (b.textContent || '').trim() === '비우기');
+        if (clearRunesBtn) clearRunesBtn.click();
+        await new Promise(r => setTimeout(r, 80));
+
+        results.runewordSystem = {
+          ok: totalRunewords === 98 && socket4Count > 0 && socket4Count < 98 && craftableCount >= 1 && spiritCraftableVisible,
+          totalRunewords,
+          socket4FilteredCount: socket4Count,
+          spiritCraftableCount: craftableCount,
+          spiritCraftableVisible
+        };
+
+        // 4. Horadric Cube Recipes (60 recipes + category filter)
         const cubeTabBtn = Array.from(document.querySelectorAll('button')).find(b => (b.textContent || '').includes('호라드림의 함 큐빙'));
         if (cubeTabBtn) cubeTabBtn.click();
-        await new Promise(r => setTimeout(r, 150));
-        const cubeCardsCount = document.querySelectorAll('.d2r-card').length;
+        await new Promise(r => setTimeout(r, 120));
+        const cubeTotalMatch = document.body.innerText.match(/호라드림의 함 큐빙\\s*\\((\\d+)\\)/);
+        const totalCubing = cubeTotalMatch ? Number(cubeTotalMatch[1]) : 0;
+        const cubeCardsAll = document.querySelectorAll('.d2r-card').length;
 
-        // 3. Open Guide Editor panel
+        results.cubingSystem = {
+          ok: totalCubing === 60 && cubeCardsAll === 60,
+          totalCubing,
+          cubeCardsAll
+        };
+
+        // 5. Verify all 33 D2R HD Rune PNG Assets inside packaged ASAR
+        const runeFiles = [
+          'El', 'Eld', 'Tir', 'Nef', 'Eth', 'Ith', 'Tal', 'Ral', 'Ort', 'Thul', 'Amn',
+          'Sol', 'Shael', 'Dol', 'Hel', 'Io', 'Lum', 'Ko', 'Fal', 'Lem', 'Pul', 'Um',
+          'Mal', 'Ist', 'Gul', 'Vex', 'Ohm', 'Lo', 'Sur', 'Ber', 'Jah', 'Cham', 'Zod'
+        ];
+        const assetT0 = performance.now();
+        let loadedRunes = 0;
+        let totalRuneBytes = 0;
+        for (const rf of runeFiles) {
+          const resp = await fetch('./data/portal-master/images/items/socketables/rune/' + rf + '_Rune.png');
+          if (resp.ok) {
+            const blob = await resp.blob();
+            if (blob.size > 1000) {
+              loadedRunes++;
+              totalRuneBytes += blob.size;
+            }
+          }
+        }
+        results.hdRuneAssets = {
+          ok: loadedRunes === 33,
+          loadedRunes,
+          expectedRunes: 33,
+          totalRuneBytes,
+          loadTimeMs: Number((performance.now() - assetT0).toFixed(2))
+        };
+
+        // 6. Guide Editor & Direct File Save/Read IPC roundtrip
         const editorBtn = Array.from(document.querySelectorAll('button')).find(b => (b.getAttribute('title') || '').includes('가이드 선택 및 편집'));
         if (editorBtn) editorBtn.click();
-        await new Promise(r => setTimeout(r, 150));
+        await new Promise(r => setTimeout(r, 120));
         const editorOpened = document.body.innerText.includes('성역 원정대 가이드 편집기');
 
-        // 4. Open Settings panel
+        const tempGuidePath = ${JSON.stringify(path.join(os.tmpdir(), 'd2r_hud_test_guide.json'))};
+        const sampleGuide = {
+          meta: { id: 'test-guide', title: '실측 테스트 가이드', author: 'SelfTest', version: '1.3.0' },
+          steps: [{ index: 0, title: '1단계', location: '로그 야영지', tasks: [{ text: '찰시 대화', is_checked: false }], note: '테스트 노트' }]
+        };
+        const saveOk = await ipcRenderer.invoke('save-guide-direct', tempGuidePath, sampleGuide);
+        const existsOk = await ipcRenderer.invoke('check-file-exists', tempGuidePath);
+        const readBack = await ipcRenderer.invoke('read-guide-file', tempGuidePath);
+        results.guideFileIpc = {
+          ok: editorOpened && saveOk === true && existsOk === true && readBack && readBack.meta && readBack.meta.title === '실측 테스트 가이드',
+          editorOpened,
+          saveOk,
+          existsOk,
+          readBackTitle: readBack?.meta?.title || null
+        };
+
+        // 7. Settings Panel, Monitor IPC, Corner Snap, GitHub Release Live Check
         const settingsBtn = Array.from(document.querySelectorAll('button')).find(b => (b.getAttribute('title') || '').includes('환경 설정'));
         if (settingsBtn) settingsBtn.click();
-        await new Promise(r => setTimeout(r, 150));
+        await new Promise(r => setTimeout(r, 120));
         const settingsOpened = document.body.innerText.includes('인게임 픽셀 자동 숨김');
 
-        // 5. Verify local rune image asset loading inside packaged app
-        const runeResp = await fetch('./data/portal-master/images/items/socketables/rune/Ber_Rune.png');
-        const runeBlob = await runeResp.blob();
-
-        return {
-          ok: true,
-          version,
-          titleText,
-          locationHref: window.location.href,
-          hudBarMounted: !!hudPanel,
-          runewordCount: rwMatch ? Number(rwMatch[1]) : 0,
-          cubeRecipeCount: cubeMatch ? Number(cubeMatch[1]) : 0,
-          rwCardsRendered: rwCardsCount,
-          cubeCardsRendered: cubeCardsCount,
-          editorOpened,
+        const ghT0 = performance.now();
+        let updateCheckResult = null;
+        try {
+          updateCheckResult = await ipcRenderer.invoke('check-update');
+        } catch (err) {
+          updateCheckResult = { error: err.message };
+        }
+        results.settingsAndUpdate = {
+          ok: settingsOpened && updateCheckResult && updateCheckResult.currentVersion === '1.3.0' && updateCheckResult.latestVersion === '1.3.0',
           settingsOpened,
-          berRuneAssetBytes: runeBlob.size,
+          updateCheckResult,
+          githubCheckLatencyMs: Number((performance.now() - ghT0).toFixed(2))
         };
+
+        results.totalRendererTestMs = Number((performance.now() - t0).toFixed(2));
+        return results;
       })()
     `);
+
+    // Test mainWindow bounds and move-to-monitor + corner snap IPC events
+    const primaryDisplay = screen.getPrimaryDisplay();
+    mainWindow.webContents.send('snap-to-corner', 'bottom-right');
+    await new Promise((r) => setTimeout(r, 60));
+    mainWindow.webContents.send('snap-to-corner', 'top-right');
+    await new Promise((r) => setTimeout(r, 60));
+
+    const allPassed =
+      probe.ipcVersion?.ok &&
+      probe.questHud?.ok &&
+      probe.runewordSystem?.ok &&
+      probe.cubingSystem?.ok &&
+      probe.hdRuneAssets?.ok &&
+      probe.guideFileIpc?.ok &&
+      probe.settingsAndUpdate?.ok &&
+      pixelSample.ok;
 
     const receipt = {
       verifiedAt: new Date().toISOString(),
       appVersion: APP_VERSION,
       isPackaged: app.isPackaged,
-      displays: getAllDisplaysInfo().displays.length,
+      allPassed,
+      totalElapsedMs: Date.now() - startTs,
+      systemMetrics: {
+        electronVersion: process.versions.electron,
+        chromeVersion: process.versions.chrome,
+        nodeVersion: process.versions.node,
+        mainProcessRssMB: Number((mainMemory.rss / (1024 * 1024)).toFixed(2)),
+        mainProcessHeapUsedMB: Number((mainMemory.heapUsed / (1024 * 1024)).toFixed(2)),
+        processMetrics: appMetrics.map((m) => ({
+          type: m.type,
+          pid: m.pid,
+          workingSetSizeMB: Number(((m.memory?.workingSetSize || 0) / 1024).toFixed(2)),
+        })),
+        displaysDetected: displaysInfo.displays.length,
+        primaryBounds: primaryDisplay.bounds,
+      },
+      pixelAutoHideProbe: pixelSample,
       probe,
     };
     fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2), 'utf8');
-    app.exit(0);
+    app.exit(allPassed ? 0 : 1);
   } catch (err) {
     const errorReceipt = {
       verifiedAt: new Date().toISOString(),
       appVersion: APP_VERSION,
-      ok: false,
+      allPassed: false,
       error: err && err.stack ? err.stack : String(err),
     };
     fs.writeFileSync(receiptPath, JSON.stringify(errorReceipt, null, 2), 'utf8');

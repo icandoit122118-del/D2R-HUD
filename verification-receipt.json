@@ -1,20 +1,105 @@
 {
-  "verifiedAt": "2026-10-26T15:26:19.571Z",
+  "verifiedAt": "2026-10-26T16:14:41.187Z",
   "appVersion": "1.3.0",
   "isPackaged": true,
-  "displays": 2,
-  "probe": {
+  "allPassed": true,
+  "totalElapsedMs": 3343,
+  "systemMetrics": {
+    "electronVersion": "30.5.1",
+    "chromeVersion": "124.0.6367.243",
+    "nodeVersion": "20.16.0",
+    "mainProcessRssMB": 107.59,
+    "mainProcessHeapUsedMB": 5.79,
+    "processMetrics": [
+      {
+        "type": "Browser",
+        "pid": 16388,
+        "workingSetSizeMB": 107.59
+      },
+      {
+        "type": "GPU",
+        "pid": 20604,
+        "workingSetSizeMB": 122.32
+      },
+      {
+        "type": "Utility",
+        "pid": 21444,
+        "workingSetSizeMB": 43
+      },
+      {
+        "type": "Tab",
+        "pid": 5496,
+        "workingSetSizeMB": 85.12
+      }
+    ],
+    "displaysDetected": 2,
+    "primaryBounds": {
+      "x": 0,
+      "y": 0,
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "pixelAutoHideProbe": {
     "ok": true,
-    "version": "1.3.0",
-    "titleText": "D2R-HUD v1.3 — 디아블로 II: 레저렉션 성역 내비게이터",
-    "locationHref": "file:///C:/Users/icand/.gemini/antigravity/scratch/D2R-HUD/release/D2R-HUD-win32-x64/resources/app.asar/web/dist/index.html",
-    "hudBarMounted": true,
-    "runewordCount": 98,
-    "cubeRecipeCount": 60,
-    "rwCardsRendered": 98,
-    "cubeCardsRendered": 60,
-    "editorOpened": true,
-    "settingsOpened": true,
-    "berRuneAssetBytes": 8345
+    "rgb": "0,0,0",
+    "elapsedMs": 786
+  },
+  "probe": {
+    "ipcVersion": {
+      "ok": true,
+      "version": "1.3.0",
+      "latencyMs": 0.3
+    },
+    "questHud": {
+      "ok": true,
+      "hudPanelMounted": true,
+      "checkboxToggled": "false -> true",
+      "stepNavigation": {
+        "stepMovedForward": true,
+        "stepMovedBack": true
+      }
+    },
+    "runewordSystem": {
+      "ok": true,
+      "totalRunewords": 98,
+      "socket4FilteredCount": 28,
+      "spiritCraftableCount": 6,
+      "spiritCraftableVisible": true
+    },
+    "cubingSystem": {
+      "ok": true,
+      "totalCubing": 60,
+      "cubeCardsAll": 60
+    },
+    "hdRuneAssets": {
+      "ok": true,
+      "loadedRunes": 33,
+      "expectedRunes": 33,
+      "totalRuneBytes": 349821,
+      "loadTimeMs": 48
+    },
+    "guideFileIpc": {
+      "ok": true,
+      "editorOpened": true,
+      "saveOk": true,
+      "existsOk": true,
+      "readBackTitle": "실측 테스트 가이드"
+    },
+    "settingsAndUpdate": {
+      "ok": true,
+      "settingsOpened": true,
+      "updateCheckResult": {
+        "hasUpdate": false,
+        "currentVersion": "1.3.0",
+        "latestVersion": "1.3.0",
+        "releaseNotes": "### D2R-HUD v1.3.0 (디아블로 II: 레저렉션 자체 내장형 오버레이)\n\n- 외부 웹 서버(d2hud.pages.dev) 의존성 완전 제거 (100% 오프라인 독립 구동)\n- 디아블로 II: 레저렉션 _profilehd.json 정통 HD UI 프레임 및 컬러 토큰 적용\n- 실제 D2R HD 룬 스프라이트 33종 + 룬워드 98종 + 호라드림의 함 큐빙 60종 내장\n- 멀티 모니터 즉시 이동(Ctrl+F8) 및 인게임 픽셀 자동 숨김 지원",
+        "downloadUrl": null,
+        "fileName": "D2R-HUD-Update.zip",
+        "releaseName": "D2R-HUD v1.3.0 — Resurrected Self-Contained Edition"
+      },
+      "githubCheckLatencyMs": 354.7
+    },
+    "totalRendererTestMs": 1807.3
   }
 }

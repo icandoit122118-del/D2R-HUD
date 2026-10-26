@@ -144,7 +144,7 @@ function main() {
 
   const receipt = JSON.parse(fs.readFileSync(RECEIPT_PATH, 'utf8'));
   console.log('[VERIFY] Self-test receipt:', JSON.stringify(receipt, null, 2));
-  if (!receipt.probe || !receipt.probe.ok || !receipt.probe.hudBarMounted) {
+  if (!receipt.allPassed) {
     throw new Error('Self-test probe failed');
   }
 }
