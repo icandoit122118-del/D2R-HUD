@@ -1,0 +1,192 @@
+{
+  "type": "SettingsPanel",
+  "name": "D2RHudMainPanel",
+  "fields": {
+    "priority": 9002,
+    "fitToParent": true
+  },
+  "children": [
+    {
+      "type": "RectangleWidget",
+      "name": "Background",
+      "fields": {
+        "fitToScreen": true,
+        "color": [
+          0,
+          0,
+          0,
+          0.72
+        ]
+      },
+      "children": [
+        {
+          "type": "ClickCatcherWidget",
+          "name": "catcher",
+          "fields": {
+            "fitToParent": true
+          }
+        },
+        {
+          "type": "Widget",
+          "name": "Anchor",
+          "fields": {
+            "anchor": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "rect": "$SettingsPanelAnchorRect"
+          },
+          "children": [
+            {
+              "type": "ImageWidget",
+              "name": "Background",
+              "fields": {
+                "filename": "\\PANEL\\Options\\FrontEndOptionsBG"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "Title",
+              "fields": {
+                "rect": {
+                  "x": 0,
+                  "y": 45,
+                  "width": 1950,
+                  "height": 103
+                },
+                "text": "D2R-HUD v1.3 — 성역 내비게이터 & 호라드림 사전",
+                "style": "$StyleTitleBlock"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "OpenMiniTrackerBtn",
+              "fields": {
+                "rect": {
+                  "x": 110,
+                  "y": 38,
+                  "scale": 0.72
+                },
+                "filename": "PANEL/infobutton",
+                "hoveredFrame": 3,
+                "textString": "인게임 미니 HUD 켜기",
+                "onClickMessage": "PanelManager:OpenPanel:D2RHudTrackerPanel",
+                "tooltipString": "화면 좌측 상단에 전투를 가리지 않는 미니 퀘스트 내비게이터(D2RHudTrackerPanel)를 띄웁니다.",
+                "textColor": "$FontColorGoldYellow",
+                "text/style": "$StyleFEButtonText",
+                "sound": "select"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "CloseButton",
+              "fields": {
+                "rect": {
+                  "x": 1868,
+                  "y": 8
+                },
+                "filename": "PANEL\\closebtn_4x",
+                "hoveredFrame": 3,
+                "onClickMessage": "PanelManager:ClosePanel:D2RHudMainPanel",
+                "tooltipString": "@strClose",
+                "sound": "cursor_close_window_hd",
+                "acceptsEscKeyEverywhere": true,
+                "action": "back"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ImageWidget",
+      "name": "SettingsBackground",
+      "fields": {
+        "rect": "$SettingsPanelBackgroundRect",
+        "anchor": {
+          "x": 0.5
+        },
+        "filename": "Controller/Panel/Options/Panel_Options_BG"
+      }
+    },
+    {
+      "type": "TabBarWidget",
+      "name": "OptionsTabs",
+      "fields": {
+        "rect": "$SettingsPanelTabsRect",
+        "anchor": {
+          "x": 0.5
+        },
+        "tabCount": 7,
+        "tabSize": {
+          "x": 242,
+          "y": 121
+        },
+        "tabPadding": {
+          "x": 2,
+          "y": 0
+        },
+        "unavailableTabsLeaveGaps": false,
+        "tabSizingMethod": "fixedCenter",
+        "filename": "Controller/Panel/Stash/V2/StashTabs",
+        "inactiveFrames": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "activeFrames": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "activeTextColor": "$TabsActiveTextColor",
+        "inactiveTextColor": "$TabsInactiveTextColor",
+        "tabTextOffset": {
+          "x": 0,
+          "y": -4
+        },
+        "textStyle": {
+          "options": {
+            "lineWrap": true
+          },
+          "pointSize": "$SmallFontSize",
+          "alignment": {
+            "h": "center",
+            "v": "center"
+          },
+          "fontColor": "$FontColorWhite",
+          "spacing": {
+            "leading": 0.9,
+            "kerning": 0.95
+          }
+        },
+        "textStrings": [
+          "캠페인 1~3막",
+          "캠페인 4~5막·길찾기",
+          "초반육성·스타터",
+          "룬워드 (2~3홈)",
+          "룬워드 (4홈)",
+          "룬워드 (5~6홈·신규)",
+          "호라드림 큐빙 60종"
+        ],
+        "tabMessages": [
+          "SettingsPanelMessage:CheckChanges:D2RHudCamp1Panel",
+          "SettingsPanelMessage:CheckChanges:D2RHudCamp2Panel",
+          "SettingsPanelMessage:CheckChanges:D2RHudStarterPanel",
+          "SettingsPanelMessage:CheckChanges:D2RHudRw23Panel",
+          "SettingsPanelMessage:CheckChanges:D2RHudRw4Panel",
+          "SettingsPanelMessage:CheckChanges:D2RHudRw56Panel",
+          "SettingsPanelMessage:CheckChanges:D2RHudCubePanel"
+        ]
+      }
+    }
+  ]
+}

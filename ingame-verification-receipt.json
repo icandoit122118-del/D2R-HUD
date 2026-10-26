@@ -1,0 +1,163 @@
+{
+  "verifiedAt": "2026-10-27T01:36:44.608936+09:00",
+  "gameExecutable": "D:\\Diablo II Resurrected\\D2R.exe",
+  "launchCommand": "\"D:\\Diablo II Resurrected\\D2R.exe\" -mod yupgoolg -txt",
+  "installedModMpq": "D:\\Diablo II Resurrected\\mods\\yupgoolg\\yupgoolg.mpq",
+  "installedModMpqSha256": "826348cb9fd9adb3b2268bdb9b7b867c19b894409a5dc0373fffe28aa2f33b6f",
+  "standaloneModDir": "D:\\Diablo II Resurrected\\mods\\d2rhud\\d2rhud.mpq",
+  "runtimeVerification": {
+    "launchedPid": 17740,
+    "peakWorkingSetMB": 3650.01,
+    "openedModFilesByD2R": [
+      "D:\\Diablo II Resurrected\\mods\\yupgoolg\\yupgoolg.mpq"
+    ],
+    "processSamplesCount": 16,
+    "lastSample": {
+      "second": 16,
+      "pid": 17740,
+      "cmdline": [
+        "D:\\Diablo II Resurrected\\D2R.exe",
+        "-mod",
+        "yupgoolg",
+        "-txt"
+      ],
+      "rssMB": 3648.94
+    },
+    "blzLogTail": [
+      "10/27 01:35:48.215  [CommandDefinition/4] [<>:0]: Could not find ExecuteCommandCallback: Away",
+      "10/27 01:35:48.215  [CommandDefinition/4] [<>:0]: Could not find ExecuteCommandCallback: Online",
+      "10/27 01:35:48.215  [CommandDefinition/4] [<>:0]: Could not find ExecuteCommandCallback: Offline",
+      "10/27 01:35:48.215  [CommandDefinition/4] [<>:0]: Could not find ExecuteCommandCallback: WhoAmI",
+      "10/27 01:35:48.215  [CommandDefinition/4] [<>:0]: Could not find ExecuteCommandCallback: WhoIs",
+      "10/27 01:35:48.215  [CommandDefinition/4] [<>:0]: Could not find ExecuteCommandCallback: Time",
+      "10/27 01:35:48.216  [CommandDefinition/4] [<>:0]: Could not find ExecuteCommandCallback: Ladder",
+      "10/27 01:35:48.216  [CommandDefinition/4] [<>:0]: Could not find ExecuteCommandCallback: UberDiablo",
+      "10/27 01:35:48.216  [CommandDefinition/4] [<>:0]: Could not find ExecuteCommandCallback: DesecratedOnline",
+      "10/27 01:35:48.216  [CommandDefinition/4] [<>:0]: Could not find ExecuteCommandCallback: DesecratedOffline",
+      "10/27 01:35:48.216  [CommandDefinition/4] [<>:0]: Could not find ExecuteCommandCallback: Desecrated",
+      "10/27 01:35:48.216  [CommandDefinition/4] [<>:0]: Could not find ExecuteCommandCallback: SendMessage"
+    ],
+    "uiLayoutParseErrors": []
+  },
+  "uiPanelGraphVerification": {
+    "entryPointChecks": {
+      "hudpanelhd.json": {
+        "opensD2RHudMainPanel": true,
+        "opensD2RHudTrackerPanel": true,
+        "valid": true
+      },
+      "mainmenubuttonribbonhd.json": {
+        "opensD2RHudMainPanel": true,
+        "opensD2RHudTrackerPanel": false,
+        "valid": true
+      },
+      "pauselayouthd.json": {
+        "opensD2RHudMainPanel": true,
+        "opensD2RHudTrackerPanel": false,
+        "valid": true
+      },
+      "playerinventoryexpansionlayouthd.json": {
+        "opensD2RHudMainPanel": true,
+        "opensD2RHudTrackerPanel": false,
+        "valid": true
+      },
+      "horadriccubelayouthd.json": {
+        "opensD2RHudMainPanel": true,
+        "opensD2RHudTrackerPanel": false,
+        "valid": true
+      }
+    },
+    "mainEncyclopediaSubPanels": [
+      {
+        "subPanelName": "D2RHudCamp1Panel",
+        "mpqPath": "data\\global\\ui\\layouts\\D2RHudCamp1Panelhd.json",
+        "type": "VideoOptionsPanel",
+        "tableRowCount": 56
+      },
+      {
+        "subPanelName": "D2RHudCamp2Panel",
+        "mpqPath": "data\\global\\ui\\layouts\\D2RHudCamp2Panelhd.json",
+        "type": "VideoOptionsPanel",
+        "tableRowCount": 43
+      },
+      {
+        "subPanelName": "D2RHudStarterPanel",
+        "mpqPath": "data\\global\\ui\\layouts\\D2RHudStarterPanelhd.json",
+        "type": "VideoOptionsPanel",
+        "tableRowCount": 36
+      },
+      {
+        "subPanelName": "D2RHudRw23Panel",
+        "mpqPath": "data\\global\\ui\\layouts\\D2RHudRw23Panelhd.json",
+        "type": "VideoOptionsPanel",
+        "tableRowCount": 167
+      },
+      {
+        "subPanelName": "D2RHudRw4Panel",
+        "mpqPath": "data\\global\\ui\\layouts\\D2RHudRw4Panelhd.json",
+        "type": "VideoOptionsPanel",
+        "tableRowCount": 86
+      },
+      {
+        "subPanelName": "D2RHudRw56Panel",
+        "mpqPath": "data\\global\\ui\\layouts\\D2RHudRw56Panelhd.json",
+        "type": "VideoOptionsPanel",
+        "tableRowCount": 47
+      },
+      {
+        "subPanelName": "D2RHudCubePanel",
+        "mpqPath": "data\\global\\ui\\layouts\\D2RHudCubePanelhd.json",
+        "type": "VideoOptionsPanel",
+        "tableRowCount": 182
+      }
+    ],
+    "compactTrackerSubPanels": [
+      {
+        "subPanelName": "D2RHudTrackAct1",
+        "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackAct1hd.json",
+        "type": "VideoOptionsPanel",
+        "tableRowCount": 18
+      },
+      {
+        "subPanelName": "D2RHudTrackAct2",
+        "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackAct2hd.json",
+        "type": "VideoOptionsPanel",
+        "tableRowCount": 19
+      },
+      {
+        "subPanelName": "D2RHudTrackAct3",
+        "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackAct3hd.json",
+        "type": "VideoOptionsPanel",
+        "tableRowCount": 17
+      },
+      {
+        "subPanelName": "D2RHudTrackAct4",
+        "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackAct4hd.json",
+        "type": "VideoOptionsPanel",
+        "tableRowCount": 9
+      },
+      {
+        "subPanelName": "D2RHudTrackAct5",
+        "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackAct5hd.json",
+        "type": "VideoOptionsPanel",
+        "tableRowCount": 17
+      },
+      {
+        "subPanelName": "D2RHudTrackMap",
+        "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackMaphd.json",
+        "type": "VideoOptionsPanel",
+        "tableRowCount": 25
+      },
+      {
+        "subPanelName": "D2RHudTrackStarter",
+        "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackStarterhd.json",
+        "type": "VideoOptionsPanel",
+        "tableRowCount": 25
+      }
+    ]
+  },
+  "injectedMpqFilesSummary": {
+    "totalFiles": 21,
+    "allVerifiedByteExact": true
+  }
+}

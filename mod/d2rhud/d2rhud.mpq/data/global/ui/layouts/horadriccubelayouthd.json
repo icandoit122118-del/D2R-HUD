@@ -1,0 +1,170 @@
+{
+  "type": "HoradricCubePanel",
+  "name": "HoradricCubeLayout",
+  "fields": {
+    "rect": "$RightPanelRect",
+    "anchor": "$RightPanelAnchor",
+    "priority": -3
+  },
+  "children": [
+    {
+      "type": "ClickCatcherWidget",
+      "name": "click_catcher",
+      "fields": {
+        "anchor": {
+          "x": -0.42,
+          "y": 0.5302
+        },
+        "rect": {
+          "width": 486,
+          "height": 748
+        }
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "CubingArea",
+      "fields": {
+        "anchor": {
+          "x": -0.42,
+          "y": 0.5302
+        },
+        "filename": "PANEL\\Horadric_Cube\\CubingAreaWhitBTN"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "LeftHinge",
+      "fields": {
+        "rect": "$LeftHingeRect",
+        "filename": "Blank"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "close",
+      "fields": {
+        "rect": {
+          "x": -89,
+          "y": 806
+        },
+        "filename": "PANEL\\closebtn_4x",
+        "hoveredFrame": 3,
+        "tooltipString": "@strClose",
+        "sound": "cursor_close_window_hd",
+        "onClickMessage": "HoradricCubePanelMessage:Close"
+      }
+    },
+    {
+      "type": "InventoryGridWidget",
+      "name": "grid",
+      "fields": {
+        "rect": {
+          "x": -392,
+          "y": 896
+        },
+        "cellCount": {
+          "x": 3,
+          "y": 4
+        },
+        "cellSize": "$ItemCellSize",
+        "gemSocketFilename": "PANEL\\gemsocket"
+      },
+      "children": [
+        {
+          "type": "AnimatedImageWidget",
+          "name": "chronicleFlourish",
+          "fields": {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 370,
+              "height": 540,
+              "scale": 2
+            },
+            "filename": "PANEL\\Chronicle\\RewardAnims\\PANEL_ChronicleReward_1x1",
+            "blendMode": "black",
+            "fps": 30,
+            "playing": false,
+            "loop": false,
+            "frame": 30
+          }
+        }
+      ]
+    },
+    {
+      "type": "AnimatedImageWidget",
+      "name": "flourish",
+      "fields": {
+        "rect": {
+          "x": -643,
+          "y": 566,
+          "scale": 2
+        },
+        "filename": "PANEL\\Horadric_Cube\\Flourish",
+        "blendMode": "black",
+        "fps": 14,
+        "playing": false,
+        "loop": false
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "emptybt",
+      "fields": {
+        "rect": {
+          "x": -421,
+          "y": 1350,
+          "scale": 0.8
+        },
+        "tooltipString": "@cubeinfo1",
+        "filename": "PANEL/emptybtn"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "hddo8",
+      "fields": {
+        "rect": {
+          "x": -299,
+          "y": 1350,
+          "scale": 0.8
+        },
+        "tooltipString": "@cubeinfo2",
+        "filename": "PANEL/emptybtn"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "hddo9",
+      "fields": {
+        "rect": {
+          "x": -187,
+          "y": 1350,
+          "scale": 0.8
+        },
+        "tooltipString": "@hudpanelStr2",
+        "filename": "PANEL/emptybtn"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "D2RHudCubeDictBtn",
+      "fields": {
+        "rect": {
+          "x": -330,
+          "y": 808,
+          "scale": 0.62
+        },
+        "filename": "PANEL/infobutton",
+        "hoveredFrame": 3,
+        "textString": "큐빙·룬 사전",
+        "onClickMessage": "PanelManager:OpenPanel:D2RHudMainPanel",
+        "tooltipString": "호라드림 큐빙 60종 조합법 및 룬워드 98종 대사전 열기",
+        "textColor": "$FontColorGoldYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    }
+  ]
+}

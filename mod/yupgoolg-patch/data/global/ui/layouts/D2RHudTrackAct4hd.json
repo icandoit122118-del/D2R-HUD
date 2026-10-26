@@ -1,0 +1,375 @@
+{
+  "type": "VideoOptionsPanel",
+  "name": "D2RHudTrackAct4",
+  "fields": {
+    "priority": 201,
+    "rect": {
+      "x": 40,
+      "y": 172,
+      "width": 1285,
+      "height": 310
+    },
+    "anchor": {
+      "x": 0,
+      "y": 0
+    },
+    "applySettingsImmediately": false
+  },
+  "children": [
+    {
+      "type": "ImageWidget",
+      "name": "ScrollBarBackground",
+      "fields": {
+        "rect": {
+          "x": -16,
+          "y": 0,
+          "width": 24,
+          "height": 300
+        },
+        "anchor": {
+          "x": 1
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ScrollbarSmall"
+      },
+      "children": [
+        {
+          "type": "ScrollControllerWidget",
+          "name": "ScrollController",
+          "fields": {
+            "rect": {
+              "x": -24,
+              "y": 24,
+              "width": 24,
+              "height": 252
+            },
+            "anchor": {
+              "x": 1
+            },
+            "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+            "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+            "barFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollIndicator",
+            "viewName": "ScrollView",
+            "wheelScrollSound": "cursor_scroll_hd",
+            "buttonScrollSound": "cursor_scroll_hd"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ScrollViewWidget",
+      "name": "ScrollView",
+      "fields": {
+        "fitToParent": true,
+        "scrollControllerName": "ScrollController"
+      },
+      "children": [
+        {
+          "type": "TableWidget",
+          "name": "OptionsTable",
+          "fields": {
+            "columns": [
+              {
+                "width": 1235,
+                "alignment": {
+                  "h": "fit",
+                  "v": "fit"
+                }
+              }
+            ],
+            "rowHeight": 54
+          },
+          "children": [
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_0",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_0",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "■ [Act 4] 4막 — 타락한 천사(이주얼) ~ 혼돈의 성역(디아블로)",
+                    "style": {
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": true,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_1",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_1",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  ▶ 동선: 외부 평원 → 절망의 평원(이주얼, 스킬+2) → 저주받은 자들의 도시(WP) → 불길의 강(WP/지옥불 제단) → 혼돈의 성역 봉인 5개 → 디아블로",
+                    "style": {
+                      "fontColor": "$FontColorLightTeal",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": true,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_2",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_2",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  ✓ 1. [필수/보상] 절망의 평원에서 이주얼 처치 후 영혼 대화 → 티리엘에게 스킬 포인트 +2 획득",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": true,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_3",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_3",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  ✓ 2. 불길의 강 지옥불 제단에서 대장장이 헤파스토 처치 후 메피스토 영혼석 파괴(룬/보석 보상)",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": true,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_4",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_4",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  ✓ 3. 불길의 강 웨이포인트 활성화 후 혼돈의 성역 진입",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": true,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_5",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_5",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  ✓ 4. 혼돈의 성역 5개 봉인 해제 및 군주 드 사이스 / 영혼의 감염자 / 혼돈의 대장군 3보스 처치",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": true,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_6",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_6",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  ✓ 5. 디아블로 처치 후 티리엘의 포탈을 통해 5막 해로개스 이동",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": true,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_7",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_7",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  ★ 길찾기: 악몽 난이도 헬포지에서는 최대 우움(#22), 지옥 난이도 헬포지에서는 최대 굴(#25) 룬이 드랍됩니다.",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": true,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_8",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_8",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  ★ 공략팁: 보통 난이도 디아블로의 번개 숨결(레드 라이트닝)은 캐릭터와 완전히 밀착하면 판정이 닿지 않거나 대각선 이동으로 피할 수 있습니다.",
+                    "style": {
+                      "fontColor": "$FontColorGreen",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": true,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

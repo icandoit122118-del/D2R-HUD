@@ -1,0 +1,191 @@
+{
+  "type": "SettingsPanel",
+  "name": "D2RHudTrackerPanel",
+  "fields": {
+    "priority": 200,
+    "rect": {
+      "x": 24,
+      "y": 24,
+      "width": 1320,
+      "height": 470
+    },
+    "anchor": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "children": [
+    {
+      "type": "NineTileImageWidget",
+      "name": "HudFrameBG",
+      "fields": {
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1320,
+          "height": 470
+        },
+        "filename": "PANEL/TooltipBorder/TooltipBorder",
+        "backgroundColor": [
+          0.02,
+          0.02,
+          0.03,
+          0.86
+        ],
+        "tileScale": 1
+      }
+    },
+    {
+      "type": "TextBoxWidget",
+      "name": "HudTitle",
+      "fields": {
+        "rect": {
+          "x": 26,
+          "y": 14,
+          "width": 820,
+          "height": 44
+        },
+        "text": "★ D2R-HUD v1.3 인게임 성역 퀘스트·길찾기 내비게이터",
+        "style": {
+          "fontColor": "$FontColorGoldYellow",
+          "pointSize": "$MediumFontSize",
+          "alignment": {
+            "h": "left",
+            "v": "center"
+          },
+          "options": {
+            "lineWrap": false,
+            "newlineHandling": "standard",
+            "pipeCharacterBehavior": "handle"
+          },
+          "spacing": {
+            "leading": 1.15,
+            "kerning": 0.94
+          },
+          "dropShadow": "$DefaultDropShadow"
+        }
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "OpenFullDictBtn",
+      "fields": {
+        "rect": {
+          "x": 960,
+          "y": 10,
+          "scale": 0.62
+        },
+        "filename": "PANEL/infobutton",
+        "hoveredFrame": 3,
+        "textString": "호라드림 대사전 열기",
+        "onClickMessage": "PanelManager:OpenPanel:D2RHudMainPanel",
+        "tooltipString": "룬워드 98종, 큐빙 60종, 전체 액트 상세 공략이 수록된 호라드림 대사전(D2RHudMainPanel)을 엽니다.",
+        "textColor": "$FontColorLightGold",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "CloseTrackerBtn",
+      "fields": {
+        "rect": {
+          "x": 1252,
+          "y": 8,
+          "scale": 0.78
+        },
+        "filename": "PANEL\\closebtn_4x",
+        "hoveredFrame": 3,
+        "onClickMessage": "PanelManager:ClosePanel:D2RHudTrackerPanel",
+        "tooltipString": "미니 성역 HUD 닫기",
+        "sound": "cursor_close_window_hd"
+      }
+    },
+    {
+      "type": "TabBarWidget",
+      "name": "OptionsTabs",
+      "fields": {
+        "rect": {
+          "x": 18,
+          "y": 60,
+          "scale": 0.72,
+          "width": 1780,
+          "height": 110
+        },
+        "anchor": {
+          "x": 0,
+          "y": 0
+        },
+        "tabCount": 7,
+        "tabSize": {
+          "x": 248,
+          "y": 110
+        },
+        "tabPadding": {
+          "x": 2,
+          "y": 0
+        },
+        "unavailableTabsLeaveGaps": false,
+        "tabSizingMethod": "fixedCenter",
+        "filename": "Controller/Panel/Stash/V2/StashTabs",
+        "inactiveFrames": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "activeFrames": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "activeTextColor": "$TabsActiveTextColor",
+        "inactiveTextColor": "$TabsInactiveTextColor",
+        "tabTextOffset": {
+          "x": 0,
+          "y": -4
+        },
+        "textStyle": {
+          "options": {
+            "lineWrap": true
+          },
+          "pointSize": "$SmallFontSize",
+          "alignment": {
+            "h": "center",
+            "v": "center"
+          },
+          "fontColor": "$FontColorWhite",
+          "spacing": {
+            "leading": 0.9,
+            "kerning": 0.95
+          }
+        },
+        "textStrings": [
+          "1막 자매단",
+          "2막 루트골레인",
+          "3막 쿠라스트",
+          "4막 혼돈성역",
+          "5막 해로개스",
+          "길찾기 공식",
+          "초반 스타터"
+        ],
+        "tabMessages": [
+          "SettingsPanelMessage:CheckChanges:D2RHudTrackAct1",
+          "SettingsPanelMessage:CheckChanges:D2RHudTrackAct2",
+          "SettingsPanelMessage:CheckChanges:D2RHudTrackAct3",
+          "SettingsPanelMessage:CheckChanges:D2RHudTrackAct4",
+          "SettingsPanelMessage:CheckChanges:D2RHudTrackAct5",
+          "SettingsPanelMessage:CheckChanges:D2RHudTrackMap",
+          "SettingsPanelMessage:CheckChanges:D2RHudTrackStarter"
+        ]
+      }
+    }
+  ]
+}

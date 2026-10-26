@@ -1,0 +1,178 @@
+{
+  "installedMpqPath": "D:\\Diablo II Resurrected\\mods\\yupgoolg\\yupgoolg.mpq",
+  "backupMpqPath": "D:\\Diablo II Resurrected\\mods\\yupgoolg\\yupgoolg.before-d2rhud.mpq",
+  "beforeSha256": "148245374f03c31b001cc2746dc3a73d9111b0bff6e1cdd933f15380198f94a1",
+  "afterSha256": "826348cb9fd9adb3b2268bdb9b7b867c19b894409a5dc0373fffe28aa2f33b6f",
+  "totalInjectedFiles": 21,
+  "allVerifiedByteExact": true,
+  "files": [
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudCamp1Panelhd.json",
+      "panelType": "VideoOptionsPanel",
+      "panelName": "D2RHudCamp1Panel",
+      "bytes": 153897,
+      "sha256": "661e6082e436d66107aa08042a043a75fc1d2b5b008bb82a22eb7a139d23aec2",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudCamp2Panelhd.json",
+      "panelType": "VideoOptionsPanel",
+      "panelName": "D2RHudCamp2Panel",
+      "bytes": 116869,
+      "sha256": "ed845c8a8277a52a0cf3565998953796aaa8a9f8586eb643955fd6b787a53859",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudCubePanelhd.json",
+      "panelType": "VideoOptionsPanel",
+      "panelName": "D2RHudCubePanel",
+      "bytes": 389273,
+      "sha256": "d2420595e6712d77628ccf120671f625203ee6c8f26375f0dee253d9abe107c7",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudMainPanelhd.json",
+      "panelType": "SettingsPanel",
+      "panelName": "D2RHudMainPanel",
+      "bytes": 5184,
+      "sha256": "ad36f28e8add376e48c1f5d5fd6efbc457737127fdc3292d1bd53d2c28ba3155",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudRw23Panelhd.json",
+      "panelType": "VideoOptionsPanel",
+      "panelName": "D2RHudRw23Panel",
+      "bytes": 370520,
+      "sha256": "21bd2dbb6634139c3ff16227479e3de386065c58edf405689e64561e475b0ee6",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudRw4Panelhd.json",
+      "panelType": "VideoOptionsPanel",
+      "panelName": "D2RHudRw4Panel",
+      "bytes": 194922,
+      "sha256": "7a3371c34a3310e02cff05547925ab6360267695d67e5f769a5de876c70cd9b3",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudRw56Panelhd.json",
+      "panelType": "VideoOptionsPanel",
+      "panelName": "D2RHudRw56Panel",
+      "bytes": 107329,
+      "sha256": "006c296c7fd829a81af5ee06a5b4e2d5c9092b5f503eb1075054d4d95603e89d",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudStarterPanelhd.json",
+      "panelType": "VideoOptionsPanel",
+      "panelName": "D2RHudStarterPanel",
+      "bytes": 88924,
+      "sha256": "5ad4813d6704e2a734db3380e506b4eb3931552777da104e1037765c0bdc55ae",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackAct1hd.json",
+      "panelType": "VideoOptionsPanel",
+      "panelName": "D2RHudTrackAct1",
+      "bytes": 23970,
+      "sha256": "917fb56e9d3eece04d2ade5c6caa05ccb6c5c42cd98cbb3d286627438faf9cb7",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackAct2hd.json",
+      "panelType": "VideoOptionsPanel",
+      "panelName": "D2RHudTrackAct2",
+      "bytes": 25363,
+      "sha256": "6c195096c47315a1b213dea3a25f0988aa8eb9b49c0cd9cdf7c1b44b2b74eb2b",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackAct3hd.json",
+      "panelType": "VideoOptionsPanel",
+      "panelName": "D2RHudTrackAct3",
+      "bytes": 22944,
+      "sha256": "2d004ab359672100216236f33c9ae47bbe10576c2998fd4c2b55359210bcc0a5",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackAct4hd.json",
+      "panelType": "VideoOptionsPanel",
+      "panelName": "D2RHudTrackAct4",
+      "bytes": 13076,
+      "sha256": "3824879724845f44b6b5dac9386687354224a405576a474d67effcbed542c815",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackAct5hd.json",
+      "panelType": "VideoOptionsPanel",
+      "panelName": "D2RHudTrackAct5",
+      "bytes": 23006,
+      "sha256": "216d0c283657c40f9b25f0d0a1e92395beca2d0c6f0604ec713ab7fb9ce7e65c",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackMaphd.json",
+      "panelType": "VideoOptionsPanel",
+      "panelName": "D2RHudTrackMap",
+      "bytes": 33247,
+      "sha256": "a68baa59314470a036aaa714e4ab8bdc905b9ea19027d6bc200052b6d463857d",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackStarterhd.json",
+      "panelType": "VideoOptionsPanel",
+      "panelName": "D2RHudTrackStarter",
+      "bytes": 32772,
+      "sha256": "9cf0b4bfc316b4f48b27a6b4dc29991799ecc57f6536bfa44c4c99133a688beb",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\D2RHudTrackerPanelhd.json",
+      "panelType": "SettingsPanel",
+      "panelName": "D2RHudTrackerPanel",
+      "bytes": 4687,
+      "sha256": "c22cd71bdf089898183a36e7004907a60da8c0ffd6146cb70b1ec788ae08bd30",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\horadriccubelayouthd.json",
+      "panelType": "HoradricCubePanel",
+      "panelName": "HoradricCubeLayout",
+      "bytes": 3803,
+      "sha256": "15b69dca4015a1d8651e1e37f4fb47932a213f058083ec35f5676b33881ab84d",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\hudpanelhd.json",
+      "panelType": "HUDPanelHD",
+      "panelName": "HUDPanel",
+      "bytes": 21137,
+      "sha256": "929f04c12f3fdc9710ca7d3b61b29d4a0cd9b5151b9cae8b18cdc3e5d6d2fe09",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\mainmenubuttonribbonhd.json",
+      "panelType": "Panel",
+      "panelName": "MainMenuButtonRibbon",
+      "bytes": 9985,
+      "sha256": "a9802a6e1ed13b5ce982b443ac3b87ce6d7534485d9406c67a886aad72ec32ee",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\pauselayouthd.json",
+      "panelType": "PausePanel",
+      "panelName": "PauseLayout",
+      "bytes": 6654,
+      "sha256": "908f9198d937c5a3cdecab29f2c325aa3ae9d43922d24f649e841bf0fe85e0fd",
+      "verifiedInMpq": true
+    },
+    {
+      "mpqPath": "data\\global\\ui\\layouts\\playerinventoryexpansionlayouthd.json",
+      "panelType": "PlayerInventoryPanel",
+      "panelName": "PlayerInventoryExpansionLayout",
+      "bytes": 8695,
+      "sha256": "43eb74cf7c651c1233bf4ffa10ad4022c447535fa6f4bb76efe3ffb829061b5f",
+      "verifiedInMpq": true
+    }
+  ]
+}

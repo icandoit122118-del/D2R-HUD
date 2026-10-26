@@ -1,0 +1,407 @@
+{
+  "basedOn": "PlayerInventoryOriginalLayoutHD.json",
+  "type": "PlayerInventoryPanel",
+  "name": "PlayerInventoryExpansionLayout",
+  "fields": {
+    "activeWeaponSwapFontColor": "$TabsActiveTextColorInGame",
+    "inactiveWeaponSwapFontColor": "$TabsInactiveTextColor"
+  },
+  "children": [
+    {
+      "type": "ClickCatcherWidget",
+      "name": "click_catcher"
+    },
+    {
+      "type": "ImageWidget",
+      "name": "background",
+      "fields": {
+        "filename": "PANEL\\Inventory\\Background"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "RightHinge"
+    },
+    {
+      "type": "TextBoxWidget",
+      "name": "title"
+    },
+    {
+      "type": "TextBoxWidget",
+      "name": "gold_amount",
+      "children": [
+        {
+          "type": "FocusableWidget",
+          "name": "gold_amount_tooltip"
+        }
+      ]
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "gold_button"
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "close"
+    },
+    {
+      "type": "InventoryGridWidget",
+      "name": "grid",
+      "children": [
+        {
+          "type": "AnimatedImageWidget",
+          "name": "chronicleFlourish"
+        }
+      ]
+    },
+    {
+      "type": "InventorySlotWidget",
+      "name": "slot_right_hand"
+    },
+    {
+      "type": "InventorySlotWidget",
+      "name": "slot_left_hand"
+    },
+    {
+      "type": "InventorySlotWidget",
+      "name": "slot_belt"
+    },
+    {
+      "type": "InventorySlotWidget",
+      "name": "slot_feet"
+    },
+    {
+      "type": "InventorySlotWidget",
+      "name": "slot_gloves"
+    },
+    {
+      "type": "InventorySlotWidget",
+      "name": "slot_head"
+    },
+    {
+      "type": "InventorySlotWidget",
+      "name": "slot_neck"
+    },
+    {
+      "type": "InventorySlotWidget",
+      "name": "slot_torso"
+    },
+    {
+      "type": "InventorySlotWidget",
+      "name": "slot_right_arm"
+    },
+    {
+      "type": "InventorySlotWidget",
+      "name": "slot_left_arm"
+    },
+    {
+      "type": "ImageWidget",
+      "name": "background_right_arm_selected",
+      "fields": {
+        "rect": {
+          "x": 99,
+          "y": 179
+        },
+        "filename": "PANEL\\Inventory\\Tab"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "background_left_arm_selected",
+      "fields": {
+        "rect": {
+          "x": 850,
+          "y": 179
+        },
+        "filename": "PANEL\\Inventory\\Tab"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "background_right_arm",
+      "fields": {
+        "rect": {
+          "x": 99,
+          "y": 179
+        },
+        "filename": "PANEL\\Inventory\\Tab",
+        "frame": 1
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "background_left_arm",
+      "fields": {
+        "rect": {
+          "x": 850,
+          "y": 179
+        },
+        "filename": "PANEL\\Inventory\\Tab",
+        "frame": 1
+      }
+    },
+    {
+      "type": "TextBoxWidget",
+      "name": "text_i_left",
+      "fields": {
+        "rect": {
+          "x": 99,
+          "y": 180,
+          "width": 107,
+          "height": 48
+        },
+        "text": "I",
+        "style": "$StyleWeaponSwapTabs"
+      }
+    },
+    {
+      "type": "TextBoxWidget",
+      "name": "text_ii_left",
+      "fields": {
+        "rect": {
+          "x": 205,
+          "y": 180,
+          "width": 107,
+          "height": 48
+        },
+        "text": "II",
+        "style": "$StyleWeaponSwapTabs"
+      }
+    },
+    {
+      "type": "TextBoxWidget",
+      "name": "text_i_right",
+      "fields": {
+        "rect": {
+          "x": 850,
+          "y": 180,
+          "width": 107,
+          "height": 48
+        },
+        "text": "I",
+        "style": "$StyleWeaponSwapTabs"
+      }
+    },
+    {
+      "type": "TextBoxWidget",
+      "name": "text_ii_right",
+      "fields": {
+        "rect": {
+          "x": 956,
+          "y": 180,
+          "width": 107,
+          "height": 48
+        },
+        "text": "II",
+        "style": "$StyleWeaponSwapTabs"
+      }
+    },
+    {
+      "type": "FocusableWidget",
+      "name": "weaponswap_right_arm",
+      "fields": {
+        "rect": {
+          "x": 99,
+          "y": 179,
+          "width": 215,
+          "height": 48
+        }
+      }
+    },
+    {
+      "type": "FocusableWidget",
+      "name": "weaponswap_left_arm",
+      "fields": {
+        "rect": {
+          "x": 850,
+          "y": 179,
+          "width": 215,
+          "height": 48
+        }
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "hudStr16",
+      "fields": {
+        "rect": {
+          "x": 93,
+          "y": 52,
+          "scale": 0.67
+        },
+        "filename": "PANEL/infobutton",
+        "hoveredFrame": 3,
+        "textString": "@IvButtonOn",
+        "pressLabelOffset": [
+          0,
+          0
+        ],
+        "onClickMessage": "PanelManager:OpenPanel:ModSettingsPanel",
+        "textColor": "$FontColorWhite",
+        "text/style": "$StyleFEButtonText",
+        "acceptsReturnKey": true,
+        "focusOnMouseOver": false,
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "convert",
+      "fields": {
+        "rect": {
+          "x": 100,
+          "y": 1315
+        },
+        "filename": "PANEL\\Horadric_Cube\\TransmuteButton",
+        "tooltipString": "@strUiMenu2",
+        "hoveredFrame": 2,
+        "onClickMessage": "HoradricCubePanelMessage:Convert"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "hudStr10",
+      "fields": {
+        "rect": {
+          "x": 1070,
+          "y": 600
+        },
+        "tooltipString": "@hudpanelStr10",
+        "filename": "PANEL/suf_hud10"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "hudStr3",
+      "fields": {
+        "rect": {
+          "x": 1070,
+          "y": 700
+        },
+        "tooltipString": "@hudpanelStr3",
+        "filename": "PANEL/suf_hud3"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "hudStr4",
+      "fields": {
+        "rect": {
+          "x": 1070,
+          "y": 800
+        },
+        "tooltipString": "@hudpanelStr4",
+        "filename": "PANEL/suf_hud4"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "hudStr5",
+      "fields": {
+        "rect": {
+          "x": 1070,
+          "y": 900
+        },
+        "tooltipString": "@hudpanelStr5",
+        "filename": "PANEL/suf_hud5"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "hudStr6",
+      "fields": {
+        "rect": {
+          "x": 1070,
+          "y": 1000
+        },
+        "tooltipString": "@hudpanelStr6",
+        "filename": "PANEL/suf_hud6"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "hudStr7",
+      "fields": {
+        "rect": {
+          "x": 1070,
+          "y": 1100
+        },
+        "tooltipString": "@hudpanelStr7",
+        "filename": "PANEL/suf_hud7"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "hudStr8",
+      "fields": {
+        "rect": {
+          "x": 1070,
+          "y": 1200
+        },
+        "tooltipString": "@hudpanelStr8",
+        "filename": "PANEL/suf_hud8"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "hudStr9",
+      "fields": {
+        "rect": {
+          "x": 1070,
+          "y": 1300
+        },
+        "tooltipString": "@hudpanelStr9",
+        "filename": "PANEL/suf_hud9"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "hudStr16",
+      "fields": {
+        "rect": {
+          "x": 850,
+          "y": 52,
+          "scale": 0.67
+        },
+        "filename": "PANEL/infobutton",
+        "hoveredFrame": 3,
+        "textString": "@Chronicle",
+        "pressLabelOffset": [
+          0,
+          0
+        ],
+        "onClickMessage": "PanelManager:OpenPanel:ChroniclePanel",
+        "textColor": "$FontColorWhite",
+        "text/style": "$StyleFEButtonText",
+        "acceptsReturnKey": true,
+        "focusOnMouseOver": false,
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "D2RHudInvBtn",
+      "fields": {
+        "rect": {
+          "x": 472,
+          "y": 52,
+          "scale": 0.67
+        },
+        "filename": "PANEL/infobutton",
+        "hoveredFrame": 3,
+        "textString": "성역 HUD v1.3",
+        "pressLabelOffset": [
+          0,
+          0
+        ],
+        "onClickMessage": "PanelManager:OpenPanel:D2RHudMainPanel",
+        "tooltipString": "D2R-HUD v1.3 성역 퀘스트 동선·길찾기·룬워드 98종·큐빙 60종 사전 열기",
+        "textColor": "$FontColorGoldYellow",
+        "text/style": "$StyleFEButtonText",
+        "acceptsReturnKey": true,
+        "focusOnMouseOver": false,
+        "sound": "select"
+      }
+    }
+  ]
+}

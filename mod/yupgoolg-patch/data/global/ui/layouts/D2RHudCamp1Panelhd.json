@@ -1,0 +1,3979 @@
+{
+  "type": "VideoOptionsPanel",
+  "name": "D2RHudCamp1Panel",
+  "fields": {
+    "priority": 9003,
+    "rect": "$OptionsPanelRect",
+    "anchor": {
+      "x": 0.5
+    },
+    "applySettingsImmediately": false
+  },
+  "children": [
+    {
+      "type": "ImageWidget",
+      "name": "ScrollBarBackground",
+      "fields": {
+        "rect": "$OptionsScrollBarBackgroundRect",
+        "anchor": {
+          "x": 1
+        },
+        "filename": "PauseMenu\\VerticalScroll"
+      },
+      "children": [
+        {
+          "type": "ScrollControllerWidget",
+          "name": "ScrollController",
+          "fields": {
+            "rect": "$OptionsScrollBarRect",
+            "anchor": {
+              "x": 1
+            },
+            "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+            "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+            "barFilepath": "PauseMenu\\VerticalIndicator",
+            "viewName": "ScrollView",
+            "wheelScrollSound": "cursor_scroll_hd",
+            "buttonScrollSound": "cursor_scroll_hd"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ScrollViewWidget",
+      "name": "ScrollView",
+      "fields": {
+        "fitToParent": true,
+        "scrollControllerName": "ScrollController"
+      },
+      "children": [
+        {
+          "type": "TableWidget",
+          "name": "OptionsTable",
+          "fields": {
+            "columns": [
+              {
+                "width": 1180,
+                "alignment": {
+                  "h": "fit",
+                  "v": "fit"
+                }
+              },
+              {
+                "width": 510,
+                "alignment": {
+                  "h": "center",
+                  "v": "center"
+                }
+              }
+            ],
+            "rowHeight": 96
+          },
+          "children": [
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "★ D2R-HUD v1.3 성역 원정대 필수 퀘스트 & 동선 가이드 (우측 버튼에 마우스를 올리면 보스 공략 툴팁이 표시됩니다)",
+                        "style": {
+                          "fontColor": "$FontColorGreen",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "마우스 오버 팁",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 10,
+                      "y": 42,
+                      "width": 1620,
+                      "height": 6
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "[Act 1-1] 1막 — 자매단 야영지 ~ 케인 구출",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumLargeFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.68
+                        },
+                        "filename": "PANEL/infobutton",
+                        "hoveredFrame": 3,
+                        "textString": "공략 툴팁 보기",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc8[Act 1-1] 1막 — 자매단 야영지 ~ 케인 구출\n\nÿc2[최적 동선]ÿc0\n핏빛 황무지 → 악의 소굴(스킬+1) → 차가운 평야(WP) → 바위 벌판(케인 돌기둥) → 어둠숲(이주얼 나무) → 트리스트럼\n\nÿc4[길찾기 노트]ÿc0\n지하 통로 1층 출구는 입구 방향 기준 직진(좌/우 갈림길 무시) 지형에 주로 생성됩니다.\n\nÿc1[보스 & 전략 팁]ÿc0\n레벨 6~12 구간: 검은 습지 잊힌 탑의 백작(카운테스)을 반복 처치해 탈+에드(잠행, 17레벨), 티르+랄(꽃봉오리, 19레벨), 네프+티르(구렁텅이) 룬을 확보하세요.",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "▶ 핵심 동선: 핏빛 황무지 → 악의 소굴(스킬+1) → 차가운 평야(WP) → 바위 벌판(케인 돌기둥) → 어둠숲(이주얼 나무) → 트리스트럼",
+                        "style": {
+                          "fontColor": "$FontColorLightTeal",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "Act 1-1",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  1. [필수/보상] 악의 소굴 모든 괴물 처치 → 아카라 보상으로 스킬 포인트 +1 획득",
+                        "style": {
+                          "fontColor": "$FontColorLightYellow",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "★ 필수 보상",
+                        "style": {
+                          "fontColor": "$FontColorOrange",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  2. 차가운 평야 웨이포인트(WP) 활성화 (매장지의 핏빛 큰까마귀는 선택 사항)",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  3. 어둠숲에서 이니푸스 나무 클릭 후 아카라에게 스크롤 해독 의뢰",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  4. 바위 벌판 케인 돌기둥 작동 → 트리스트럼 진입 후 데커드 케인 구출 & 워트의 의족 확보",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  5. 아카라 상점에서 2홈 지팡이(꽃봉오리 재료) 및 2홈 갑옷(잠행 재료) 상점작 체크",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  ※ 길찾기/공략: 지하 통로 1층 출구는 입구 방향 기준 직진(좌/우 갈림길 무시) 지형에 주로 생성됩니다.",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "핵심 팁",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 10,
+                      "y": 42,
+                      "width": 1620,
+                      "height": 6
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "[Act 1-2] 1막 — 잊힌 탑(백작) ~ 안다리엘 처치",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumLargeFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.68
+                        },
+                        "filename": "PANEL/infobutton",
+                        "hoveredFrame": 3,
+                        "textString": "공략 툴팁 보기",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc8[Act 1-2] 1막 — 잊힌 탑(백작) ~ 안다리엘 처치\n\nÿc2[최적 동선]ÿc0\n검은 습지(WP) → 잊힌 탑 5층(룬 파밍) → 외부 회랑 → 병영(호라드림 망치) → 감옥 → 내부 회랑(WP) → 지하 묘지 4층\n\nÿc4[길찾기 노트]ÿc0\n해독 물약과 해동 물약은 마실 때마다 지속시간이 30초씩 누적되며 최대 저항도 +10% 증가합니다.\n\nÿc1[보스 & 전략 팁]ÿc0\n안다리엘은 화염 저항이 -50%이므로 화염 스킬이나 화염 보석/랄 룬 무기에 매우 취약합니다.",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "▶ 핵심 동선: 검은 습지(WP) → 잊힌 탑 5층(룬 파밍) → 외부 회랑 → 병영(호라드림 망치) → 감옥 → 내부 회랑(WP) → 지하 묘지 4층",
+                        "style": {
+                          "fontColor": "$FontColorLightTeal",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "Act 1-2",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  1. 검은 습지 잊힌 탑 5층 백작 처치 — 잠행(탈+에드) / 강철(티르+엘) 룬 확보",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  2. 병영 대장장이 처치 후 호라드림 망치 회수 (찰시 마법부여 보상 오픈)",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  3. 지하 묘지 2층 웨이포인트 활성화 (3층 계단은 2층 WP 방 기준 시계방향 90도 벽면)",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  4. 마을에서 해독 물약 3~4개 음용 후(독 저항 +50% 중첩) 안다리엘 처치",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  5. 와리브와 대화해 2막 루트 골레인 이동",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  ※ 길찾기/공략: 해독 물약과 해동 물약은 마실 때마다 지속시간이 30초씩 누적되며 최대 저항도 +10% 증가합니다.",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "핵심 팁",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 10,
+                      "y": 42,
+                      "width": 1620,
+                      "height": 6
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "[Act 2-1] 2막 — 하수구(라다먼트) & 호라드림의 함/지팡이",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumLargeFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.68
+                        },
+                        "filename": "PANEL/infobutton",
+                        "hoveredFrame": 3,
+                        "textString": "공략 툴팁 보기",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc8[Act 2-1] 2막 — 하수구(라다먼트) & 호라드림의 함/지팡이\n\nÿc2[최적 동선]ÿc0\n하수구 3층(스킬+1) → 메마른 언덕 → 죽음의 전당 3층(큐브) → 머나먼 오아시스 → 구더기 굴 3층(지팡이) → 잊힌 도시 → 발톱 독사 사원 2층(목걸이)\n\nÿc4[길찾기 노트]ÿc0\n파라 상점에서 2홈 본 실드(제왕운시 재료), 3홈 방패(고대인의 서약 재료), 3홈 프레일(강철/원환)을 구매할 수 있습니다.\n\nÿc1[보스 & 전략 팁]ÿc0\n구더기 굴 1~2층은 입구 방향 기준 오른쪽(시계방향) 벽을 따라 이동하면 가장 빠르게 다음 층 계단을 찾습니다.",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "▶ 핵심 동선: 하수구 3층(스킬+1) → 메마른 언덕 → 죽음의 전당 3층(큐브) → 머나먼 오아시스 → 구더기 굴 3층(지팡이) → 잊힌 도시 → 발톱 독사 사원 2층(목걸이)",
+                        "style": {
+                          "fontColor": "$FontColorLightTeal",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "Act 2-1",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  1. [필수/보상] 루트 골레인 하수구 3층 라다먼트 처치 → 기술의 책(스킬 +1) 획득",
+                        "style": {
+                          "fontColor": "$FontColorLightYellow",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "★ 필수 보상",
+                        "style": {
+                          "fontColor": "$FontColorOrange",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  2. 그리즈에게 전투/기도/축복받은 조준 2막 사막 용병 고용",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  3. 죽음의 전당 3층에서 호라드림의 함(큐브) 획득 (악몽/지옥 난이도 생략 가능)",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  4. 머나먼 오아시스 구더기 굴 3층에서 왕들의 지팡이 획득 (입구 기준 시계방향 벽타기)",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  5. 잊힌 도시 웨이포인트 활성화 후 발톱 독사 사원 2층 제단에서 독사의 목걸이 획득",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  6. 호라드림의 함에 왕들의 지팡이 + 독사의 목걸이를 넣어 호라드림 지팡이 조합",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  ※ 길찾기/공략: 파라 상점에서 2홈 본 실드(제왕운시 재료), 3홈 방패(고대인의 서약 재료), 3홈 프레일(강철/원환)을 구매할 수 있습니다.",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "핵심 팁",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 10,
+                      "y": 42,
+                      "width": 1620,
+                      "height": 6
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "[Act 2-2] 2막 — 비전 성역 ~ 탈 라샤의 무덤(두리엘)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumLargeFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.68
+                        },
+                        "filename": "PANEL/infobutton",
+                        "hoveredFrame": 3,
+                        "textString": "공략 툴팁 보기",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc8[Act 2-2] 2막 — 비전 성역 ~ 탈 라샤의 무덤(두리엘)\n\nÿc2[최적 동선]ÿc0\n하렘 → 궁전 지하 3층(포탈) → 비전 성역(소환술사) → 신비술사의 협곡(WP) → 진짜 탈 라샤의 무덤 → 두리엘 처치\n\nÿc4[길찾기 노트]ÿc0\n탈 라샤의 무덤 진행 방향은 입구 타일 기준 왼쪽(반시계방향 90도) 벽면을 따라가면 지팡이 꽂는 방이 나옵니다.\n\nÿc1[보스 & 전략 팁]ÿc0\n원소술사는 전자기장(Static Field)으로 두리엘 체력을 즉시 깎고, 근접 캐릭터는 강타(Crushing Blow) 무기를 활용하세요.",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "▶ 핵심 동선: 하렘 → 궁전 지하 3층(포탈) → 비전 성역(소환술사) → 신비술사의 협곡(WP) → 진짜 탈 라샤의 무덤 → 두리엘 처치",
+                        "style": {
+                          "fontColor": "$FontColorLightTeal",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "Act 2-2",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  1. 드로그난과 대화 후 궁전 진입 (대화하지 않으면 제르힌 경비병이 길을 막음)",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  2. 비전 성역 4방향 중 소환술사 처치 후 호라드림 일지 클릭 → 진짜 무덤 문양 확인",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  3. 신비술사의 협곡 웨이포인트에서 퀘스트 창(Q)의 문양과 일치하는 탈 라샤 무덤 진입",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  4. 용병과 캐릭터에게 해동 물약 4개씩 복용(냉기 저항 +50%) 후 두리엘 처치",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  5. 무덤 안쪽 티리엘과 대화 → 마을 복귀 후 제르힌 및 메쉬프와 대화해 3막 이동",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  ※ 길찾기/공략: 탈 라샤의 무덤 진행 방향은 입구 타일 기준 왼쪽(반시계방향 90도) 벽면을 따라가면 지팡이 꽂는 방이 나옵니다.",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "핵심 팁",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 10,
+                      "y": 42,
+                      "width": 1620,
+                      "height": 6
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "[Act 3-1] 3막 — 비취 조각상/기드빈 & 칼림의 유물 3종",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumLargeFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.68
+                        },
+                        "filename": "PANEL/infobutton",
+                        "hoveredFrame": 3,
+                        "textString": "공략 툴팁 보기",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc8[Act 3-1] 3막 — 비취 조각상/기드빈 & 칼림의 유물 3종\n\nÿc2[최적 동선]ÿc0\n거미 숲 → 거미 동굴(칼림의 눈) → 거대한 습지 → 약탈자 밀림(기드빈) → 약탈자 던전 3층(칼림의 뇌) → 쿠라스트 하류~상류 → 하수구 2층(칼림의 심장)\n\nÿc4[길찾기 노트]ÿc0\n3막 오르무스 상점에서 텔포봉(순간이동 충전 지팡이, 요구 레벨 24)을 미리 구매해 두면 3~5막 벽 넘기에 필수입니다.\n\nÿc1[보스 & 전략 팁]ÿc0\n자폭 인형(언데드 스티지언 돌)은 처치 순간 큰 물리 폭발 피해를 주므로 용병 뒤에서 처치하거나 텔포로 지나가세요.",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "▶ 핵심 동선: 거미 숲 → 거미 동굴(칼림의 눈) → 거대한 습지 → 약탈자 밀림(기드빈) → 약탈자 던전 3층(칼림의 뇌) → 쿠라스트 하류~상류 → 하수구 2층(칼림의 심장)",
+                        "style": {
+                          "fontColor": "$FontColorLightTeal",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "Act 3-1",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  1. [필수/보상] 첫 정예 괴물 드랍 비취 조각상 → 메쉬프 → 알코어 대화로 영구 생명력 +20 물약 획득",
+                        "style": {
+                          "fontColor": "$FontColorLightYellow",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "★ 필수 보상",
+                        "style": {
+                          "fontColor": "$FontColorOrange",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  2. 거미 숲의 거미 동굴(아라크니드 동굴 아님!)에서 칼림의 눈 획득",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  3. 약탈자 밀림의 약탈자 던전 3층에서 칼림의 뇌 획득",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  4. 쿠라스트 시장/상류 지하 하수구 2층 레버 작동 후 칼림의 심장 획득",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  5. [필수/보상] 쿠라스트 시장 폐허의 사원에서 람 에센의 고서 회수 → 알코어에게 스탯 +5 획득",
+                        "style": {
+                          "fontColor": "$FontColorLightYellow",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "★ 필수 보상",
+                        "style": {
+                          "fontColor": "$FontColorOrange",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  ※ 길찾기/공략: 3막 오르무스 상점에서 텔포봉(순간이동 충전 지팡이, 요구 레벨 24)을 미리 구매해 두면 3~5막 벽 넘기에 필수입니다.",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "핵심 팁",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 10,
+                      "y": 42,
+                      "width": 1620,
+                      "height": 6
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "[Act 3-2] 3막 — 트라빈칼 의회 ~ 증오의 억류지(메피스토)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumLargeFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.68
+                        },
+                        "filename": "PANEL/infobutton",
+                        "hoveredFrame": 3,
+                        "textString": "공략 툴팁 보기",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc8[Act 3-2] 3막 — 트라빈칼 의회 ~ 증오의 억류지(메피스토)\n\nÿc2[최적 동선]ÿc0\n트라빈칼(WP) → 대의회 처치(칼림의 도리깨) → 칼림의 의지 조합 후 생체구슬 파괴 → 증오의 억류지 2층(WP) → 3층 메피스토\n\nÿc4[길찾기 노트]ÿc0\n증오의 억류지 2층에서 3층으로 내려가는 계단은 입구 캐릭터 시선 기준 왼쪽 벽면을 따라 돌면 빠르게 나옵니다.\n\nÿc1[보스 & 전략 팁]ÿc0\n메피스토는 강 건너편 지형에 걸치기(강가 파이어볼/블리자드 딜링)가 가능해 원거리 캐릭터의 핵심 파밍처입니다.",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "▶ 핵심 동선: 트라빈칼(WP) → 대의회 처치(칼림의 도리깨) → 칼림의 의지 조합 후 생체구슬 파괴 → 증오의 억류지 2층(WP) → 3층 메피스토",
+                        "style": {
+                          "fontColor": "$FontColorLightTeal",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "Act 3-2",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  1. 트라빈칼 웨이포인트 활성화 후 대의회 처치 → 칼림의 도리깨 획득",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  2. 큐브에 눈 + 뇌 + 심장 + 도리깨를 조합해 칼림의 의지 제작 후 장착·타격으로 생체구슬 파괴",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  3. 증오의 억류지 2층 웨이포인트 확보 후 입구 기준 왼쪽(시계방향) 벽을 따라 3층 진입",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  4. 메피스토 처치 후 붉은 포탈을 타고 4막 혼돈의 요새 진입",
+                        "style": {
+                          "fontColor": "$FontColorWhite",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "진행 체크",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  ※ 길찾기/공략: 증오의 억류지 2층에서 3층으로 내려가는 계단은 입구 캐릭터 시선 기준 왼쪽 벽면을 따라 돌면 빠르게 나옵니다.",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 10,
+                    "marginBottom": 10
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "핵심 팁",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": true,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.15,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": "$DefaultDropShadow"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 10,
+                      "y": 42,
+                      "width": 1620,
+                      "height": 6
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
