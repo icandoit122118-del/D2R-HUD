@@ -5,9 +5,9 @@
     "priority": 201,
     "rect": {
       "x": 40,
-      "y": 172,
-      "width": 1285,
-      "height": 310
+      "y": 178,
+      "width": 1280,
+      "height": 342
     },
     "anchor": {
       "x": 0,
@@ -24,7 +24,7 @@
           "x": -16,
           "y": 0,
           "width": 24,
-          "height": 300
+          "height": 332
         },
         "anchor": {
           "x": 1
@@ -40,7 +40,7 @@
               "x": -24,
               "y": 24,
               "width": 24,
-              "height": 252
+              "height": 284
             },
             "anchor": {
               "x": 1
@@ -60,7 +60,8 @@
       "name": "ScrollView",
       "fields": {
         "fitToParent": true,
-        "scrollControllerName": "ScrollController"
+        "scrollControllerName": "ScrollController",
+        "clipChildrenDraw": true
       },
       "children": [
         {
@@ -69,14 +70,14 @@
           "fields": {
             "columns": [
               {
-                "width": 1235,
+                "width": 1230,
                 "alignment": {
                   "h": "fit",
                   "v": "fit"
                 }
               }
             ],
-            "rowHeight": 54
+            "rowHeight": 46
           },
           "children": [
             {
@@ -88,7 +89,7 @@
                   "name": "TrackText_0",
                   "fields": {
                     "fitToText": true,
-                    "text": "■ [Act 5-1] 5막 — 쉔크(소켓 보상) & 앤야 구출(모든 저항 +10)",
+                    "text": "■ [Act 5-1] 5막 - 쉔크(소켓 보상) & 앤야 구출(모든 저항",
                     "style": {
                       "fontColor": "$FontColorGoldYellow",
                       "pointSize": "$MediumFontSize",
@@ -97,7 +98,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -120,16 +121,16 @@
                   "name": "TrackText_1",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ▶ 동선: 핏빛 기슭(쉔크) → 혹한의 고산지(WP/바바리안 3명 구출) → 고대인의 길 → 수정 동굴 → 얼어붙은 강(앤야 구출)",
+                    "text": "     +10)",
                     "style": {
-                      "fontColor": "$FontColorLightTeal",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -152,16 +153,16 @@
                   "name": "TrackText_2",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ✓ 1. [필수/보상] 핏빛 기슭 감독관 쉔크 처치 → 라르주크 장비 홈(소켓) 추가 보상 해금",
+                    "text": "▶ 동선: 핏빛 기슭(쉔크) → 혹한의 고산지(WP/바바리안 3명 구출) → 고대인의",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
+                      "fontColor": "$FontColorLightTeal",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -184,16 +185,16 @@
                   "name": "TrackText_3",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ✓ 2. [보상] 혹한의 고산지에서 포로 바바리안 15명 구출 → 퀄케크에게 랄+오르트+탈(고대인의 서약) 룬 획득",
+                    "text": "     길 → 수정 동굴 → 얼어붙은 강(앤야 구출)",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
+                      "fontColor": "$FontColorLightTeal",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -216,7 +217,7 @@
                   "name": "TrackText_4",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ✓ 3. [필수/보상] 수정 동굴 아래 얼어붙은 강에서 얼어붙은 앤야 확인 → 마라에게 해동 물약 수령 → 앤야 구출",
+                    "text": "[1] [필수/보상] 핏빛 기슭 감독관 쉔크 처치 → 라르주크 장비 홈(소켓) 추가",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -225,7 +226,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -248,16 +249,16 @@
                   "name": "TrackText_5",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ✓ 4. 마라와 대화해 저항의 두루마리 수령 후 우클릭 사용 → 모든 저항 영구 +10% 증가",
+                    "text": "     보상 해금",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -280,16 +281,16 @@
                   "name": "TrackText_6",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ✓ 5. 고대인의 길 웨이포인트 활성화 (아리앗 정상 진입용 거점)",
+                    "text": "[2] [보상] 혹한의 고산지에서 포로 바바리안 15명 구출 → 퀄케크에게",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -312,16 +313,16 @@
                   "name": "TrackText_7",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ★ 길찾기: 보통 카우방이나 결정의 통로에서 드랍된 흰색 크리스탈 소드/브로드 소드를 라르주크에게 주면 확정 4홈(영혼 재료)이 뚫립니다.",
+                    "text": "     랄+오르트+탈(고대인의 서약) 룬 획득",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -344,16 +345,16 @@
                   "name": "TrackText_8",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ★ 공략팁: 얼어붙은 강에는 영혼(버닝 소울)과 마녀가 등장하므로 번개 저항 75%를 반드시 맞추고 진입하세요.",
+                    "text": "[3] [필수/보상] 수정 동굴 아래 얼어붙은 강에서 얼어붙은 앤야 확인 → 마라에게",
                     "style": {
-                      "fontColor": "$FontColorGreen",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -376,16 +377,16 @@
                   "name": "TrackText_9",
                   "fields": {
                     "fitToText": true,
-                    "text": "■ [Act 5-2] 5막 — 아리앗 정상(삼바바) & 세계석 성채(바알)",
+                    "text": "     해동 물약 수령 → 앤야 구출",
                     "style": {
-                      "fontColor": "$FontColorGoldYellow",
-                      "pointSize": "$MediumFontSize",
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -408,16 +409,16 @@
                   "name": "TrackText_10",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ▶ 동선: 고대인의 길(WP) → 아리앗 정상(삼바바, 20/40/60레벨 제한) → 세계석 성채 2층(WP) → 파괴의 왕좌(5웨이브) → 바알 처치",
+                    "text": "[4] 마라와 대화해 저항의 두루마리 수령 후 우클릭 사용 → 모든 저항 영구 +10%",
                     "style": {
-                      "fontColor": "$FontColorLightTeal",
+                      "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -440,16 +441,16 @@
                   "name": "TrackText_11",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ✓ 1. [필수] 아리앗 정상에서 고대인 3인(탈릭·매덕·코릭)을 포탈 열지 않고 한 번에 처치 (레벨 20/40/60 필요)",
+                    "text": "     증가",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
+                      "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -472,7 +473,7 @@
                   "name": "TrackText_12",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ✓ 2. 세계석 성채 2층 웨이포인트 활성화 (3층 계단은 2층 WP 방 기준 오른쪽 시계방향 벽면)",
+                    "text": "  [5] 고대인의 길 웨이포인트 활성화 (아리앗 정상 진입용 거점)",
                     "style": {
                       "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
@@ -481,7 +482,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -504,16 +505,16 @@
                   "name": "TrackText_13",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ✓ 3. 파괴의 왕좌에서 바알의 소환수 5웨이브(콜렌조~리스터) 전멸",
+                    "text": "★ 길찾기: 보통 카우방이나 결정의 통로에서 드랍된 흰색 크리스탈 소드/브로드 소드를",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -536,16 +537,16 @@
                   "name": "TrackText_14",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ✓ 4. 세계석 보관실 진입 후 바알 처치 → 다음 난이도 및 비밀 카우방 해금!",
+                    "text": "     라르주크에게 주면 확정 4홈(영혼 재료)이 뚫립니다.",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -568,16 +569,16 @@
                   "name": "TrackText_15",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ★ 길찾기: 지옥 난이도 고대인 3인 전투 전에는 바닥에 물약을 미리 뿌려 두고, 텔포봉으로 고대인을 한 명씩 분리해 각개격파하세요.",
+                    "text": "★ 공략팁: 얼어붙은 강에는 영혼(버닝 소울)과 마녀가 등장하므로 번개 저항 75%를",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
+                      "fontColor": "$FontColorGreen",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -600,7 +601,7 @@
                   "name": "TrackText_16",
                   "fields": {
                     "fitToText": true,
-                    "text": "  ★ 공략팁: 바알 클리어 후 공포의 영역(Terror Zone)이 활성화되면 현 난이도 최고 효율로 경험치와 룬/부적을 파밍할 수 있습니다.",
+                    "text": "     반드시 맞추고 진입하세요.",
                     "style": {
                       "fontColor": "$FontColorGreen",
                       "pointSize": "$SmallFontSize",
@@ -609,7 +610,423 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_17",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_17",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "■ [Act 5-2] 5막 - 아리앗 정상(삼바바) & 세계석 성채(바알)",
+                    "style": {
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_18",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_18",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "▶ 동선: 고대인의 길(WP) → 아리앗 정상(삼바바, 20/40/60레벨 제한) →",
+                    "style": {
+                      "fontColor": "$FontColorLightTeal",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_19",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_19",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     세계석 성채 2층(WP) → 파괴의 왕좌(5웨이브) → 바알 처치",
+                    "style": {
+                      "fontColor": "$FontColorLightTeal",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_20",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_20",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[1] [필수] 아리앗 정상에서 고대인 3인(탈릭·매덕·코릭)을 포탈 열지 않고 한",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_21",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_21",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     번에 처치 (레벨 20/40/60 필요)",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_22",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_22",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[2] 세계석 성채 2층 웨이포인트 활성화 (3층 계단은 2층 WP 방 기준 오른쪽",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_23",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_23",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     시계방향 벽면)",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_24",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_24",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  [3] 파괴의 왕좌에서 바알의 소환수 5웨이브(콜렌조~리스터) 전멸",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_25",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_25",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  [4] 세계석 보관실 진입 후 바알 처치 → 다음 난이도 및 비밀 카우방 해금!",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_26",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_26",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 길찾기: 지옥 난이도 고대인 3인 전투 전에는 바닥에 물약을 미리 뿌려 두고,",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_27",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_27",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     텔포봉으로 고대인을 한 명씩 분리해 각개격파하세요.",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_28",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_28",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 공략팁: 바알 클리어 후 공포의 영역(Terror Zone)이 활성화되면 현 난이도",
+                    "style": {
+                      "fontColor": "$FontColorGreen",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_29",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_29",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     최고 효율로 경험치와 룬/부적을 파밍할 수 있습니다.",
+                    "style": {
+                      "fontColor": "$FontColorGreen",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },

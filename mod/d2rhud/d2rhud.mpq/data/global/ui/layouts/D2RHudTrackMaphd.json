@@ -5,9 +5,9 @@
     "priority": 201,
     "rect": {
       "x": 40,
-      "y": 172,
-      "width": 1285,
-      "height": 310
+      "y": 178,
+      "width": 1280,
+      "height": 342
     },
     "anchor": {
       "x": 0,
@@ -24,7 +24,7 @@
           "x": -16,
           "y": 0,
           "width": 24,
-          "height": 300
+          "height": 332
         },
         "anchor": {
           "x": 1
@@ -40,7 +40,7 @@
               "x": -24,
               "y": 24,
               "width": 24,
-              "height": 252
+              "height": 284
             },
             "anchor": {
               "x": 1
@@ -60,7 +60,8 @@
       "name": "ScrollView",
       "fields": {
         "fitToParent": true,
-        "scrollControllerName": "ScrollController"
+        "scrollControllerName": "ScrollController",
+        "clipChildrenDraw": true
       },
       "children": [
         {
@@ -69,14 +70,14 @@
           "fields": {
             "columns": [
               {
-                "width": 1235,
+                "width": 1230,
                 "alignment": {
                   "h": "fit",
                   "v": "fit"
                 }
               }
             ],
-            "rowHeight": 54
+            "rowHeight": 46
           },
           "children": [
             {
@@ -97,7 +98,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -120,7 +121,7 @@
                   "name": "TrackText_1",
                   "fields": {
                     "fitToText": true,
-                    "text": "• [1막] 검은 습지 — 잊힌 탑 1~4층 (백작) → 입구 타일 진입 방향 기준 왼쪽(시계방향 90도) 벽면을 따라 진행",
+                    "text": "· [1막] 검은 습지 - 잊힌 탑 1~4층 (백작) → 입구 타일 진입 방향 기준",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -129,7 +130,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -152,16 +153,16 @@
                   "name": "TrackText_2",
                   "fields": {
                     "fitToText": true,
-                    "text": "   └ 백작(카운테스) 룬 파밍 시 매 층 입구에서 캐릭터 시선 좌측 벽을 타면 가장 빠르게 다음 층 계단이 나옵니다.",
+                    "text": "     왼쪽(시계방향 90도) 벽면을 따라 진행",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -184,16 +185,16 @@
                   "name": "TrackText_3",
                   "fields": {
                     "fitToText": true,
-                    "text": "• [1막] 지하 통로 1층 / 감옥 1~3층 → 입구 방향 기준 직진 지형에 출구, 좌측(시계방향)에 2층/웨이포인트",
+                    "text": "→ 백작(카운테스) 룬 파밍 시 매 층 입구에서 캐릭터 시선 좌측 벽을 타면 가장",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
+                      "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -216,7 +217,7 @@
                   "name": "TrackText_4",
                   "fields": {
                     "fitToText": true,
-                    "text": "   └ 바위 벌판으로 나가는 지하 통로 1층 출구는 입구 방향 정면(직진) 라인 끝에 배치됩니다.",
+                    "text": "     빠르게 다음 층 계단이 나옵니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -225,7 +226,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -248,7 +249,7 @@
                   "name": "TrackText_5",
                   "fields": {
                     "fitToText": true,
-                    "text": "• [1막] 내부 회랑 — 지하 묘지 2층 → 3층 (안다리엘) → 지하 묘지 2층 웨이포인트(WP) 방 출구 기준 오른쪽(반시계방향 90도)",
+                    "text": "· [1막] 지하 통로 1층 / 감옥 1~3층 → 입구 방향 기준 직진 지형에 출구,",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -257,7 +258,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -280,16 +281,16 @@
                   "name": "TrackText_6",
                   "fields": {
                     "fitToText": true,
-                    "text": "   └ 2층 WP 방에서 빠져나오는 방향을 기준으로 우측(시계 반대방향) 모서리에 3층 계단이 위치합니다.",
+                    "text": "     좌측(시계방향)에 2층/웨이포인트",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -312,16 +313,16 @@
                   "name": "TrackText_7",
                   "fields": {
                     "fitToText": true,
-                    "text": "• [2막] 머나먼 오아시스 — 구더기 굴 1~2층 → 입구 타일 기준 오른쪽(반시계방향 90도) 벽면을 따라 이동",
+                    "text": "→ 바위 벌판으로 나가는 지하 통로 1층 출구는 입구 방향 정면(직진) 라인 끝에",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
+                      "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -344,7 +345,7 @@
                   "name": "TrackText_8",
                   "fields": {
                     "fitToText": true,
-                    "text": "   └ 좁은 통로 지형이므로 입구에서 우측 벽만 계속 따라가면 2층·3층(왕들의 지팡이) 계단이 바로 나옵니다.",
+                    "text": "     배치됩니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -353,7 +354,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -376,7 +377,7 @@
                   "name": "TrackText_9",
                   "fields": {
                     "fitToText": true,
-                    "text": "• [2막] 죽음의 전당 1~2층 / 발톱 독사 사원 1층 → 입구 타일 기준 왼쪽(시계방향 90도) 벽면을 따라 이동",
+                    "text": "· [1막] 내부 회랑 - 지하 묘지 2층 → 3층 (안다리엘) → 지하 묘지 2층",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -385,7 +386,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -408,16 +409,16 @@
                   "name": "TrackText_10",
                   "fields": {
                     "fitToText": true,
-                    "text": "   └ 호라드림의 함(죽음의 전당 3층)과 독사의 목걸이(독사 사원 2층) 모두 입구 기준 좌측 벽타기 공식이 적용됩니다.",
+                    "text": "     웨이포인트(WP) 방 출구 기준 오른쪽(반시계방향 90도)",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -440,16 +441,16 @@
                   "name": "TrackText_11",
                   "fields": {
                     "fitToText": true,
-                    "text": "• [2막] 비전 성역 (소환술사 4방향) → 웨이포인트 기준 4갈래 중 막다른 끝 — 포탈/계단 유무로 지형 판별",
+                    "text": "→ 2층 WP 방에서 빠져나오는 방향을 기준으로 우측(시계 반대방향) 모서리에 3층",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
+                      "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -472,7 +473,7 @@
                   "name": "TrackText_12",
                   "fields": {
                     "fitToText": true,
-                    "text": "   └ 소환술사 처치 후 호라드림 일지를 읽고 퀘스트(Q) 창의 문양과 일치하는 탈 라샤 무덤을 확인하세요.",
+                    "text": "     계단이 위치합니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -481,7 +482,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -504,7 +505,7 @@
                   "name": "TrackText_13",
                   "fields": {
                     "fitToText": true,
-                    "text": "• [2막] 신비술사의 협곡 — 탈 라샤의 무덤 (두리엘) → 무덤 입구 기준 왼쪽(시계방향 90도) 벽면을 따라가면 지팡이 홈 방 등장",
+                    "text": "· [2막] 머나먼 오아시스 - 구더기 굴 1~2층 → 입구 타일 기준",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -513,7 +514,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -536,16 +537,16 @@
                   "name": "TrackText_14",
                   "fields": {
                     "fitToText": true,
-                    "text": "   └ 7개 무덤의 문양 순서(원 → 반달 → 네모 → 별 → 아래세모 → 동그라미세모 → 위세모)는 항상 고정입니다.",
+                    "text": "     오른쪽(반시계방향 90도) 벽면을 따라 이동",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -568,16 +569,16 @@
                   "name": "TrackText_15",
                   "fields": {
                     "fitToText": true,
-                    "text": "• [3막] 증오의 억류지 2층 → 3층 (메피스토) → 증오 2층 입구 타일 기준 왼쪽(시계방향 90도) 벽면을 따라 이동",
+                    "text": "→ 좁은 통로 지형이므로 입구에서 우측 벽만 계속 따라가면 2층·3층(왕들의 지팡이)",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
+                      "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -600,7 +601,7 @@
                   "name": "TrackText_16",
                   "fields": {
                     "fitToText": true,
-                    "text": "   └ 2층 웨이포인트(WP) 기준이 아니라 1층에서 2층으로 내려온 입구 타일 기준 좌측 벽면입니다.",
+                    "text": "     계단이 바로 나옵니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -609,7 +610,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -632,7 +633,7 @@
                   "name": "TrackText_17",
                   "fields": {
                     "fitToText": true,
-                    "text": "• [4막] 절망의 평원(이주얼) / 불길의 강(헬포지) → 외곽 벽면을 따라 이동하며 미니맵 성소/제단 아이콘 확인",
+                    "text": "· [2막] 죽음의 전당 1~2층 / 발톱 독사 사원 1층 → 입구 타일 기준",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -641,7 +642,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -664,16 +665,16 @@
                   "name": "TrackText_18",
                   "fields": {
                     "fitToText": true,
-                    "text": "   └ 불길의 강은 웨이포인트 직전 갈림길 반대편에 대장장이 헤파스토의 지옥불 제단이 생성됩니다.",
+                    "text": "     왼쪽(시계방향 90도) 벽면을 따라 이동",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -696,16 +697,16 @@
                   "name": "TrackText_19",
                   "fields": {
                     "fitToText": true,
-                    "text": "• [5막] 고대인의 길 / 수정 동굴 / 혹한의 지하도 → 입구 타일 기준 왼쪽(시계방향 90도)에 다음 지역(아리앗 정상/얼어붙은 강) 출구",
+                    "text": "→ 호라드림의 함(죽음의 전당 3층)과 독사의 목걸이(독사 사원 2층) 모두 입구 기준",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
+                      "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -728,7 +729,7 @@
                   "name": "TrackText_20",
                   "fields": {
                     "fitToText": true,
-                    "text": "   └ 웨이포인트는 주로 직진 방향에, 다음 퀘스트 지역 출구는 좌측(시계방향)에 배치됩니다.",
+                    "text": "     좌측 벽타기 공식이 적용됩니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -737,7 +738,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -760,7 +761,7 @@
                   "name": "TrackText_21",
                   "fields": {
                     "fitToText": true,
-                    "text": "• [5막] 고통의 전당 — 보트의 전당 (니라트하크) → 보트의 전당 WP에서 내린 후 벽면 눈동자 벽화가 그려진 방향이 진짜 니라트하크 방",
+                    "text": "· [2막] 비전 성역 (소환술사 4방향) → 웨이포인트 기준 4갈래 중 막다른 끝 -",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -769,7 +770,7 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -792,16 +793,16 @@
                   "name": "TrackText_22",
                   "fields": {
                     "fitToText": true,
-                    "text": "   └ 4갈래 갈림길 중 중앙 기둥 또는 입구 벽면에 붉은 눈동자 문양이 있는 쪽으로 직진하면 니라트하크가 있습니다.",
+                    "text": "     포탈/계단 유무로 지형 판별",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -824,16 +825,16 @@
                   "name": "TrackText_23",
                   "fields": {
                     "fitToText": true,
-                    "text": "• [5막] 세계석 성채 2층 → 3층 (바알) → 세계석 성채 2층 웨이포인트(WP) 방 출구 기준 오른쪽(반시계방향 90도) 벽면",
+                    "text": "→ 소환술사 처치 후 호라드림 일지를 읽고 퀘스트(Q) 창의 문양과 일치하는 탈 라샤",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
+                      "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },
@@ -856,7 +857,7 @@
                   "name": "TrackText_24",
                   "fields": {
                     "fitToText": true,
-                    "text": "   └ 2층 WP 방에서 나오는 방향 기준 우측 벽면을 따라 돌면 3층 계단이 가장 빠르게 나타납니다.",
+                    "text": "     무덤을 확인하세요.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -865,7 +866,775 @@
                         "v": "center"
                       },
                       "options": {
-                        "lineWrap": true,
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_25",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_25",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "· [2막] 신비술사의 협곡 - 탈 라샤의 무덤 (두리엘) → 무덤 입구 기준",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_26",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_26",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     왼쪽(시계방향 90도) 벽면을 따라가면 지팡이 홈 방 등장",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_27",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_27",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "→ 7개 무덤의 문양 순서(원 → 반달 → 네모 → 별 → 아래세모 → 동그라미세모 →",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_28",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_28",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     위세모)는 항상 고정입니다.",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_29",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_29",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "· [3막] 증오의 억류지 2층 → 3층 (메피스토) → 증오 2층 입구 타일 기준",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_30",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_30",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     왼쪽(시계방향 90도) 벽면을 따라 이동",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_31",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_31",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "→ 2층 웨이포인트(WP) 기준이 아니라 1층에서 2층으로 내려온 입구 타일 기준 좌측",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_32",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_32",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     벽면입니다.",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_33",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_33",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "· [4막] 절망의 평원(이주얼) / 불길의 강(헬포지) → 외곽 벽면을 따라 이동하며",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_34",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_34",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     미니맵 성소/제단 아이콘 확인",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_35",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_35",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "→ 불길의 강은 웨이포인트 직전 갈림길 반대편에 대장장이 헤파스토의 지옥불 제단이",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_36",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_36",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     생성됩니다.",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_37",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_37",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "· [5막] 고대인의 길 / 수정 동굴 / 혹한의 지하도 → 입구 타일 기준",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_38",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_38",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     왼쪽(시계방향 90도)에 다음 지역(아리앗 정상/얼어붙은 강) 출구",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_39",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_39",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "→ 웨이포인트는 주로 직진 방향에, 다음 퀘스트 지역 출구는 좌측(시계방향)에",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_40",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_40",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     배치됩니다.",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_41",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_41",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "· [5막] 고통의 전당 - 보트의 전당 (니라트하크) → 보트의 전당 WP에서 내린",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_42",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_42",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     후 벽면 눈동자 벽화가 그려진 방향이 진짜 니라트하크 방",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_43",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_43",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "→ 4갈래 갈림길 중 중앙 기둥 또는 입구 벽면에 붉은 눈동자 문양이 있는 쪽으로",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_44",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_44",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     직진하면 니라트하크가 있습니다.",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_45",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_45",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "· [5막] 세계석 성채 2층 → 3층 (바알) → 세계석 성채 2층 웨이포인트(WP)",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_46",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_46",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     방 출구 기준 오른쪽(반시계방향 90도) 벽면",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_47",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_47",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "→ 2층 WP 방에서 나오는 방향 기준 우측 벽면을 따라 돌면 3층 계단이 가장 빠르게",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.15,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": "$DefaultDropShadow"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_48",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_48",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "     나타납니다.",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
                         "newlineHandling": "standard",
                         "pipeCharacterBehavior": "handle"
                       },

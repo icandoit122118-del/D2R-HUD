@@ -1099,9 +1099,13 @@
     "material_sources": "3홈 투구 (요구 레벨 65)"
   },
   {
-    "name": "dictRunewordDreamShield",
+    "name": "꿈 (방패)",
     "original_name": "Dream (Shield)",
-    "runes": [],
+    "runes": [
+      "이오",
+      "자",
+      "풀"
+    ],
     "item_types": [
       "3홈 방패"
     ],
@@ -1206,9 +1210,14 @@
     "material_sources": "추천장비 : 크리스탈 소드 (※난이도 '보통' 카우방 드랍은 라르주크 4소켓 확정)"
   },
   {
-    "name": "dictRunewordSpiritShield",
+    "name": "영혼 (방패)",
     "original_name": "Spirit (Shield)",
-    "runes": [],
+    "runes": [
+      "탈",
+      "주울",
+      "오르트",
+      "앰"
+    ],
     "item_types": [
       "4홈 방패"
     ],
@@ -1581,9 +1590,14 @@
     "material_sources": "4홈 무기 (요구 레벨 59)"
   },
   {
-    "name": "dictRunewordFortitudeArmor",
+    "name": "인내 (갑옷)",
     "original_name": "Fortitude (Armor)",
-    "runes": [],
+    "runes": [
+      "엘",
+      "솔",
+      "돌",
+      "로"
+    ],
     "item_types": [
       "4홈 갑옷"
     ],
@@ -1862,9 +1876,14 @@
     "material_sources": "4홈 무기 (요구 레벨 65)"
   },
   {
-    "name": "dictRunewordPhoenixShield",
+    "name": "불사조 (방패)",
     "original_name": "Phoenix (Shield)",
-    "runes": [],
+    "runes": [
+      "벡스",
+      "벡스",
+      "로",
+      "자"
+    ],
     "item_types": [
       "4홈 방패"
     ],

@@ -54,7 +54,7 @@
                   "width": 1950,
                   "height": 103
                 },
-                "text": "D2R-HUD v1.3 — 성역 내비게이터 & 호라드림 사전",
+                "text": "D2R-HUD v1.3 - 성역 내비게이터 & 호라드림 대사전",
                 "style": "$StyleTitleBlock"
               }
             },
@@ -63,13 +63,13 @@
               "name": "OpenMiniTrackerBtn",
               "fields": {
                 "rect": {
-                  "x": 110,
-                  "y": 38,
-                  "scale": 0.72
+                  "x": 84,
+                  "y": 30,
+                  "scale": 0.58
                 },
-                "filename": "PANEL/infobutton",
+                "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                 "hoveredFrame": 3,
-                "textString": "인게임 미니 HUD 켜기",
+                "textString": "인게임 미니 HUD",
                 "onClickMessage": "PanelManager:OpenPanel:D2RHudTrackerPanel",
                 "tooltipString": "화면 좌측 상단에 전투를 가리지 않는 미니 퀘스트 내비게이터(D2RHudTrackerPanel)를 띄웁니다.",
                 "textColor": "$FontColorGoldYellow",

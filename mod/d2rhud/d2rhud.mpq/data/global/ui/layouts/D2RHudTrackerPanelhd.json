@@ -7,7 +7,7 @@
       "x": 24,
       "y": 24,
       "width": 1320,
-      "height": 470
+      "height": 565
     },
     "anchor": {
       "x": 0,
@@ -23,14 +23,14 @@
           "x": 0,
           "y": 0,
           "width": 1320,
-          "height": 470
+          "height": 565
         },
         "filename": "PANEL/TooltipBorder/TooltipBorder",
         "backgroundColor": [
           0.02,
           0.02,
           0.03,
-          0.86
+          0.88
         ],
         "tileScale": 1
       }
@@ -40,8 +40,8 @@
       "name": "HudTitle",
       "fields": {
         "rect": {
-          "x": 26,
-          "y": 14,
+          "x": 28,
+          "y": 18,
           "width": 820,
           "height": 44
         },
@@ -71,16 +71,16 @@
       "name": "OpenFullDictBtn",
       "fields": {
         "rect": {
-          "x": 960,
+          "x": 920,
           "y": 10,
-          "scale": 0.62
+          "scale": 0.56
         },
-        "filename": "PANEL/infobutton",
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
-        "textString": "호라드림 대사전 열기",
+        "textString": "호라드림 대사전",
         "onClickMessage": "PanelManager:OpenPanel:D2RHudMainPanel",
         "tooltipString": "룬워드 98종, 큐빙 60종, 전체 액트 상세 공략이 수록된 호라드림 대사전(D2RHudMainPanel)을 엽니다.",
-        "textColor": "$FontColorLightGold",
+        "textColor": "$FontColorGoldYellow",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }
@@ -90,8 +90,8 @@
       "name": "CloseTrackerBtn",
       "fields": {
         "rect": {
-          "x": 1252,
-          "y": 8,
+          "x": 1246,
+          "y": 12,
           "scale": 0.78
         },
         "filename": "PANEL\\closebtn_4x",
@@ -107,7 +107,7 @@
       "fields": {
         "rect": {
           "x": 18,
-          "y": 60,
+          "y": 66,
           "scale": 0.72,
           "width": 1780,
           "height": 110

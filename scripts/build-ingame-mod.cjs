@@ -145,7 +145,35 @@ const MAP_CHEATSHEET = [
 ];
 
 // Helper styles using standard _profilehd.json variables
-function makeTextStyle(colorVar, sizeVar, alignH = 'left', alignV = 'top', lineWrap = true) {
+function sanitizeD2RText(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/[•✓✔]/g, '·')
+    .replace(/[▸▹►]/g, '▶')
+    .replace(/[└┗]/g, '→')
+    .replace(/[—–]/g, '-');
+}
+
+function splitIntoSingleLines(str, maxLen = 46, contPrefix = '   ') {
+  const clean = sanitizeD2RText(str);
+  if (clean.length <= maxLen) return [clean];
+  const words = clean.split(' ');
+  const lines = [];
+  let cur = '';
+  for (const w of words) {
+    const candidate = cur ? `${cur} ${w}` : w;
+    if (candidate.length > maxLen && cur.length > 0) {
+      lines.push(cur);
+      cur = `${contPrefix}${w}`;
+    } else {
+      cur = candidate;
+    }
+  }
+  if (cur) lines.push(cur);
+  return lines;
+}
+
+function makeTextStyle(colorVar, sizeVar, alignH = 'left', alignV = 'center', lineWrap = false) {
   return {
     fontColor: colorVar,
     pointSize: sizeVar,
@@ -165,7 +193,7 @@ function makeDividerRow(width = 1620) {
         type: 'ImageWidget',
         name: 'Divider',
         fields: {
-          rect: { x: 10, y: 42, width, height: 6 },
+          rect: { x: 10, y: 28, width, height: 6 },
           filename: 'PauseMenu\\Divider'
         }
       }
@@ -173,20 +201,20 @@ function makeDividerRow(width = 1620) {
   };
 }
 
-function makeTextRow(col1Text, col1Color, col1Size, col2Text = '', col2Color = '$FontColorLightGold', col2Size = '$MediumFontSize', tooltip = '') {
+function makeSingleTextRow(col1Text, col1Color, col1Size, col2Text = '', col2Color = '$FontColorLightGold', col2Size = '$SmallFontSize', tooltip = '') {
   const children = [
     {
       type: 'LayoutItemWidget',
       name: 'Col1Wrap',
-      fields: { marginTop: 10, marginBottom: 10 },
+      fields: { marginTop: 4, marginBottom: 4 },
       children: [
         {
           type: 'TextBoxWidget',
           name: 'Col1Text',
           fields: {
             fitToText: true,
-            text: col1Text,
-            style: makeTextStyle(col1Color, col1Size, 'left', 'center', true)
+            text: sanitizeD2RText(col1Text),
+            style: makeTextStyle(col1Color, col1Size, 'left', 'center', false)
           }
         }
       ]
@@ -199,13 +227,13 @@ function makeTextRow(col1Text, col1Color, col1Size, col2Text = '', col2Color = '
           type: 'ButtonWidget',
           name: 'Col2TooltipBtn',
           fields: {
-            rect: { scale: 0.68 },
-            filename: 'PANEL/infobutton',
+            rect: { scale: 0.56 },
+            filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
             hoveredFrame: 3,
-            textString: col2Text || '상세 옵션 보기',
+            textString: sanitizeD2RText(col2Text || '상세 옵션'),
             textColor: col2Color,
             'text/style': '$StyleFEButtonText',
-            tooltipString: tooltip,
+            tooltipString: sanitizeD2RText(tooltip),
             pressedFrame: 0,
             sound: 'cursor_select'
           }
@@ -215,15 +243,15 @@ function makeTextRow(col1Text, col1Color, col1Size, col2Text = '', col2Color = '
           name: 'Col2Text',
           fields: {
             fitToText: true,
-            text: col2Text,
-            style: makeTextStyle(col2Color, col2Size, 'center', 'center', true)
+            text: sanitizeD2RText(col2Text),
+            style: makeTextStyle(col2Color, col2Size, 'center', 'center', false)
           }
         };
 
     children.push({
       type: 'LayoutItemWidget',
       name: 'Col2Wrap',
-      fields: { marginTop: 10, marginBottom: 10 },
+      fields: { marginTop: 4, marginBottom: 4 },
       children: [col2Child]
     });
   }
@@ -233,6 +261,22 @@ function makeTextRow(col1Text, col1Color, col1Size, col2Text = '', col2Color = '
     name: 'DataRow',
     children
   };
+}
+
+function pushWrappedRows(rows, col1Text, col1Color, col1Size, col2Text = '', col2Color = '$FontColorLightGold', col2Size = '$SmallFontSize', tooltip = '') {
+  const maxLen = col1Size === '$MediumLargeFontSize' ? 38 : col1Size === '$MediumFontSize' ? 42 : 48;
+  const lines = splitIntoSingleLines(col1Text, maxLen, '   ');
+  lines.forEach((line, idx) => {
+    if (idx === 0) {
+      rows.push(makeSingleTextRow(line, col1Color, col1Size, col2Text, col2Color, col2Size, tooltip));
+    } else {
+      rows.push(makeSingleTextRow(line, col1Color, col1Size, '', col2Color, col2Size, ''));
+    }
+  });
+}
+
+function makeTextRow(col1Text, col1Color, col1Size, col2Text = '', col2Color = '$FontColorLightGold', col2Size = '$SmallFontSize', tooltip = '') {
+  return makeSingleTextRow(col1Text, col1Color, col1Size, col2Text, col2Color, col2Size, tooltip);
 }
 
 // ============================================================================
@@ -282,7 +326,7 @@ function buildMainPanel() {
                 name: 'Title',
                 fields: {
                   rect: { x: 0, y: 45, width: 1950, height: 103 },
-                  text: 'D2R-HUD v1.3 — 성역 내비게이터 & 호라드림 사전',
+                  text: 'D2R-HUD v1.3 - 성역 내비게이터 & 호라드림 대사전',
                   style: '$StyleTitleBlock'
                 }
               },
@@ -290,10 +334,10 @@ function buildMainPanel() {
                 type: 'ButtonWidget',
                 name: 'OpenMiniTrackerBtn',
                 fields: {
-                  rect: { x: 110, y: 38, scale: 0.72 },
-                  filename: 'PANEL/infobutton',
+                  rect: { x: 84, y: 30, scale: 0.58 },
+                  filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
                   hoveredFrame: 3,
-                  textString: '인게임 미니 HUD 켜기',
+                  textString: '인게임 미니 HUD',
                   onClickMessage: 'PanelManager:OpenPanel:D2RHudTrackerPanel',
                   tooltipString: '화면 좌측 상단에 전투를 가리지 않는 미니 퀘스트 내비게이터(D2RHudTrackerPanel)를 띄웁니다.',
                   textColor: '$FontColorGoldYellow',
@@ -376,7 +420,7 @@ function buildMainPanel() {
   };
 }
 
-function buildEncyclopediaSubPanel(panelName, rows, rowHeight = 96) {
+function buildEncyclopediaSubPanel(panelName, rows, rowHeight = 62) {
   return {
     type: 'VideoOptionsPanel',
     name: panelName,
@@ -417,7 +461,8 @@ function buildEncyclopediaSubPanel(panelName, rows, rowHeight = 96) {
         name: 'ScrollView',
         fields: {
           fitToParent: true,
-          scrollControllerName: 'ScrollController'
+          scrollControllerName: 'ScrollController',
+          clipChildrenDraw: true
         },
         children: [
           {
@@ -425,8 +470,8 @@ function buildEncyclopediaSubPanel(panelName, rows, rowHeight = 96) {
             name: 'OptionsTable',
             fields: {
               columns: [
-                { width: 1180, alignment: { h: 'fit', v: 'fit' } },
-                { width: 510, alignment: { h: 'center', v: 'center' } }
+                { width: 1220, alignment: { h: 'fit', v: 'fit' } },
+                { width: 470, alignment: { h: 'center', v: 'center' } }
               ],
               rowHeight
             },
@@ -440,14 +485,13 @@ function buildEncyclopediaSubPanel(panelName, rows, rowHeight = 96) {
 
 function generateCampaignRows(stepsSubset, includeMapRules = false) {
   const rows = [];
-  rows.push(
-    makeTextRow(
-      '★ D2R-HUD v1.3 성역 원정대 필수 퀘스트 & 동선 가이드 (우측 버튼에 마우스를 올리면 보스 공략 툴팁이 표시됩니다)',
-      '$FontColorGreen',
-      '$MediumFontSize',
-      '마우스 오버 팁',
-      '$FontColorGoldYellow'
-    )
+  pushWrappedRows(
+    rows,
+    '★ D2R-HUD v1.3 성역 원정대 필수 퀘스트 & 동선 가이드',
+    '$FontColorGreen',
+    '$MediumFontSize',
+    '마우스 오버 팁',
+    '$FontColorGoldYellow'
   );
   rows.push(makeDividerRow());
 
@@ -465,78 +509,72 @@ function generateCampaignRows(stepsSubset, includeMapRules = false) {
       step.strategic_tip
     ].join('\n');
 
-    rows.push(
-      makeTextRow(
-        `[${step.condition.value}] ${step.location}`,
-        '$FontColorGoldYellow',
-        '$MediumLargeFontSize',
-        '공략 툴팁 보기',
-        '$FontColorLightGold',
-        '$MediumFontSize',
-        tooltip
-      )
+    pushWrappedRows(
+      rows,
+      `■ [${step.condition.value}] ${step.location}`,
+      '$FontColorGoldYellow',
+      '$MediumFontSize',
+      '공략 툴팁 보기',
+      '$FontColorLightGold',
+      '$SmallFontSize',
+      tooltip
     );
-    rows.push(
-      makeTextRow(
-        `▶ 핵심 동선: ${step.route}`,
-        '$FontColorLightTeal',
-        '$SmallFontSize',
-        step.condition.value,
-        '$FontColorGoldYellow',
-        '$SmallFontSize'
-      )
+    pushWrappedRows(
+      rows,
+      `▶ 핵심 동선: ${step.route}`,
+      '$FontColorLightTeal',
+      '$SmallFontSize',
+      step.condition.value,
+      '$FontColorGoldYellow',
+      '$SmallFontSize'
     );
     for (let i = 0; i < step.tasks.length; i++) {
       const t = step.tasks[i];
       const isReward = t.text.includes('[필수') || t.text.includes('[보상');
-      rows.push(
-        makeTextRow(
-          `  ${i + 1}. ${t.text}`,
-          isReward ? '$FontColorLightYellow' : '$FontColorWhite',
-          '$SmallFontSize',
-          isReward ? '★ 필수 보상' : '진행 체크',
-          isReward ? '$FontColorOrange' : '$FontColorLightGray',
-          '$SmallFontSize'
-        )
+      pushWrappedRows(
+        rows,
+        `  [${i + 1}] ${t.text}`,
+        isReward ? '$FontColorLightYellow' : '$FontColorWhite',
+        '$SmallFontSize',
+        isReward ? '★ 필수 보상' : '진행 체크',
+        isReward ? '$FontColorOrange' : '$FontColorLightGray',
+        '$SmallFontSize'
       );
     }
-    rows.push(
-      makeTextRow(
-        `  ※ 길찾기/공략: ${step.note}`,
-        '$FontColorLightBlue',
-        '$SmallFontSize',
-        '핵심 팁',
-        '$FontColorLightBlue',
-        '$SmallFontSize'
-      )
+    pushWrappedRows(
+      rows,
+      `  ★ 길찾기: ${step.note}`,
+      '$FontColorLightBlue',
+      '$SmallFontSize',
+      '핵심 팁',
+      '$FontColorLightBlue',
+      '$SmallFontSize'
     );
     rows.push(makeDividerRow());
   }
 
   if (includeMapRules) {
-    rows.push(
-      makeTextRow(
-        '★ 성역 던전 길찾기 방향 공식 12선 (입구 타일/웨이포인트 기준)',
-        '$FontColorGoldYellow',
-        '$MediumLargeFontSize',
-        '12개 핵심 던전',
-        '$FontColorGreen',
-        '$MediumFontSize'
-      )
+    pushWrappedRows(
+      rows,
+      '★ 성역 던전 길찾기 방향 공식 12선 (입구 타일/웨이포인트 기준)',
+      '$FontColorGoldYellow',
+      '$MediumFontSize',
+      '12개 핵심 던전',
+      '$FontColorGreen',
+      '$SmallFontSize'
     );
     rows.push(makeDividerRow());
     for (const m of MAP_CHEATSHEET) {
       const tip = `ÿc8[${m.act}] ${m.zone}\n\nÿc2[길찾기 공식]ÿc0\n${m.rule}\n\nÿc0${m.detail}`;
-      rows.push(
-        makeTextRow(
-          `[${m.act}] ${m.zone} — ${m.rule}`,
-          '$FontColorLightYellow',
-          '$SmallFontSize',
-          '상세 설명 툴팁',
-          '$FontColorLightGold',
-          '$SmallFontSize',
-          tip
-        )
+      pushWrappedRows(
+        rows,
+        `· [${m.act}] ${m.zone} → ${m.rule}`,
+        '$FontColorLightYellow',
+        '$SmallFontSize',
+        '상세 설명 툴팁',
+        '$FontColorLightGold',
+        '$SmallFontSize',
+        tip
       );
     }
     rows.push(makeDividerRow());
@@ -547,14 +585,13 @@ function generateCampaignRows(stepsSubset, includeMapRules = false) {
 
 function generateStarterRows() {
   const rows = [];
-  rows.push(
-    makeTextRow(
-      '★ 맨땅 스타터 & 악마술사/원소술사/성기사 레벨업 고속 빌드업 가이드',
-      '$FontColorGreen',
-      '$MediumFontSize',
-      '레벨별 로드맵',
-      '$FontColorGoldYellow'
-    )
+  pushWrappedRows(
+    rows,
+    '★ 맨땅 스타터 & 악마술사/원소술사/성기사 레벨업 고속 빌드업 가이드',
+    '$FontColorGreen',
+    '$MediumFontSize',
+    '레벨별 로드맵',
+    '$FontColorGoldYellow'
   );
   rows.push(makeDividerRow());
 
@@ -569,48 +606,44 @@ function generateStarterRows() {
       `ÿc1[시너지 & 팁]ÿc0 ${step.strategic_tip}`
     ].join('\n');
 
-    rows.push(
-      makeTextRow(
-        `[${step.condition.value}] ${step.location}`,
-        '$FontColorGoldYellow',
-        '$MediumLargeFontSize',
-        '세팅 툴팁 보기',
-        '$FontColorLightGold',
-        '$MediumFontSize',
-        tip
-      )
+    pushWrappedRows(
+      rows,
+      `■ [${step.condition.value}] ${step.location}`,
+      '$FontColorGoldYellow',
+      '$MediumFontSize',
+      '세팅 툴팁 보기',
+      '$FontColorLightGold',
+      '$SmallFontSize',
+      tip
     );
-    rows.push(
-      makeTextRow(
-        `▶ 파밍 루트: ${step.route}`,
-        '$FontColorLightTeal',
-        '$SmallFontSize',
-        step.condition.value,
-        '$FontColorGoldYellow',
-        '$SmallFontSize'
-      )
+    pushWrappedRows(
+      rows,
+      `▶ 파밍 루트: ${step.route}`,
+      '$FontColorLightTeal',
+      '$SmallFontSize',
+      step.condition.value,
+      '$FontColorGoldYellow',
+      '$SmallFontSize'
     );
     for (let i = 0; i < step.tasks.length; i++) {
-      rows.push(
-        makeTextRow(
-          `  ${i + 1}. ${step.tasks[i].text}`,
-          '$FontColorWhite',
-          '$SmallFontSize',
-          '필수 세팅',
-          '$FontColorGreen',
-          '$SmallFontSize'
-        )
+      pushWrappedRows(
+        rows,
+        `  [${i + 1}] ${step.tasks[i].text}`,
+        '$FontColorWhite',
+        '$SmallFontSize',
+        '필수 세팅',
+        '$FontColorGreen',
+        '$SmallFontSize'
       );
     }
-    rows.push(
-      makeTextRow(
-        `  ※ 팁: ${step.strategic_tip}`,
-        '$FontColorLightBlue',
-        '$SmallFontSize',
-        '꿀팁',
-        '$FontColorLightBlue',
-        '$SmallFontSize'
-      )
+    pushWrappedRows(
+      rows,
+      `  ★ 팁: ${step.strategic_tip}`,
+      '$FontColorLightBlue',
+      '$SmallFontSize',
+      '꿀팁',
+      '$FontColorLightBlue',
+      '$SmallFontSize'
     );
     rows.push(makeDividerRow());
   }
@@ -624,23 +657,19 @@ function generateStarterRows() {
     },
     {
       title: '[용병 삼신기] 2막 기도 용병 + 통찰(랄+티르+탈+솔) + 치료(샤엘+이오+탈) + 배신(샤엘+주울+렘)',
-      sub: '기도 오라 + 통찰 명상 오라 + 치료 정화 오라 3중 중첩으로 생명력·마나 초당 고속 회복 & 저주/독 단축',
+      sub: '기도 오라 + 통찰 명상 오라 + 치료 정화 오라 3중 중첩으로 생명력·마나 초당 고속 회복',
       badge: '용병 완성'
     },
     {
-      title: '[패캐/패힛 프레임 핵심] 원소술사 패캐: 63%(9프레임) → 105%(8프레임) / 번개·연쇄번개: 117%',
+      title: '[패캐/패힛 프레임 핵심] 원소술사 패캐: 63%(9프레임) → 105%(8프레임) / 번개: 117%',
       sub: '성기사(해머/피스트) 패캐: 75%(10프레임) → 125%(9프레임) / 영혼(Spirit) 35% 패캐가 핵심',
       badge: '프레임 표'
     }
   ];
 
   for (const g of extraGuides) {
-    rows.push(
-      makeTextRow(g.title, '$FontColorGoldYellow', '$SmallFontSize', g.badge, '$FontColorOrange', '$SmallFontSize')
-    );
-    rows.push(
-      makeTextRow(`  • ${g.sub}`, '$FontColorWhite', '$SmallFontSize', '', '$FontColorWhite', '$SmallFontSize')
-    );
+    pushWrappedRows(rows, g.title, '$FontColorGoldYellow', '$SmallFontSize', g.badge, '$FontColorOrange', '$SmallFontSize');
+    pushWrappedRows(rows, `  · ${g.sub}`, '$FontColorWhite', '$SmallFontSize', '', '$FontColorWhite', '$SmallFontSize');
     rows.push(makeDividerRow());
   }
 
@@ -649,21 +678,20 @@ function generateStarterRows() {
 
 function generateRunewordRows(rwList, headerTitle) {
   const rows = [];
-  rows.push(
-    makeTextRow(
-      `★ ${headerTitle} (총 ${rwList.length}종 — 우측 버튼에 마우스를 올리면 전체 세부 옵션이 표시됩니다)`,
-      '$FontColorGreen',
-      '$MediumFontSize',
-      `총 ${rwList.length}종 수록`,
-      '$FontColorGoldYellow'
-    )
+  pushWrappedRows(
+    rows,
+    `★ ${headerTitle} (총 ${rwList.length}종 - 우측 버튼 마우스 오버 시 전체 세부 옵션 표시)`,
+    '$FontColorGreen',
+    '$MediumFontSize',
+    `총 ${rwList.length}종 수록`,
+    '$FontColorGoldYellow'
   );
   rows.push(makeDividerRow());
 
   for (const rw of rwList) {
     const runeCombo = (rw.runes || []).join(' + ');
     const itemTypes = (rw.item_types || []).join(', ');
-    const statsLines = (rw.stats || []).map((s) => `• ${s}`).join('\n');
+    const statsLines = (rw.stats || []).map((s) => `· ${s}`).join('\n');
     const tooltip = [
       `ÿc4${rw.name} (${rw.original_name})ÿc0`,
       `ÿc8룬 조합: ${runeCombo}ÿc0`,
@@ -674,27 +702,25 @@ function generateRunewordRows(rwList, headerTitle) {
       rw.material_sources ? `\nÿc5${rw.material_sources}ÿc0` : ''
     ].join('\n');
 
-    const topStats = (rw.stats || []).slice(0, 3).join(' / ');
-    rows.push(
-      makeTextRow(
-        `${rw.name} [${rw.original_name}] — 룬: ${runeCombo}  |  ${itemTypes} (Lv.${rw.level})`,
-        '$FontColorGoldYellow',
-        '$MediumFontSize',
-        '전체 옵션 툴팁',
-        '$FontColorLightGold',
-        '$SmallFontSize',
-        tooltip
-      )
+    const topStats = (rw.stats || []).slice(0, 2).join(' / ');
+    pushWrappedRows(
+      rows,
+      `■ ${rw.name} [${rw.original_name}] - 룬: ${runeCombo} (${itemTypes}, Lv.${rw.level})`,
+      '$FontColorGoldYellow',
+      '$MediumFontSize',
+      '전체 옵션 툴팁',
+      '$FontColorLightGold',
+      '$SmallFontSize',
+      tooltip
     );
-    rows.push(
-      makeTextRow(
-        `  ▸ 핵심 옵션: ${topStats}`,
-        '$FontColorLightBlue',
-        '$SmallFontSize',
-        `${rw.category || ''}`,
-        '$FontColorLightGray',
-        '$SmallFontSize'
-      )
+    pushWrappedRows(
+      rows,
+      `  ▶ 핵심 옵션: ${topStats}`,
+      '$FontColorLightBlue',
+      '$SmallFontSize',
+      `${rw.category || ''}`,
+      '$FontColorLightGray',
+      '$SmallFontSize'
     );
     rows.push(makeDividerRow());
   }
@@ -703,14 +729,13 @@ function generateRunewordRows(rwList, headerTitle) {
 
 function generateCubeRows() {
   const rows = [];
-  rows.push(
-    makeTextRow(
-      `★ 호라드림의 함(큐브) 필수 조합법 ${cubing.length}종 총정리 (홈 뚫기·업그레이드·룬 합성·크래프트·우버/면죄)`,
-      '$FontColorGreen',
-      '$MediumFontSize',
-      `총 ${cubing.length}종 레시피`,
-      '$FontColorGoldYellow'
-    )
+  pushWrappedRows(
+    rows,
+    `★ 호라드림의 함(큐브) 필수 조합법 ${cubing.length}종 총정리 (홈 뚫기·업그레이드·룬 합성·크래프트·면죄)`,
+    '$FontColorGreen',
+    '$MediumFontSize',
+    `총 ${cubing.length}종 레시피`,
+    '$FontColorGoldYellow'
   );
   rows.push(makeDividerRow());
 
@@ -727,26 +752,24 @@ function generateCubeRows() {
       `ÿc0${c.description || ''}`
     ].join('\n');
 
-    rows.push(
-      makeTextRow(
-        `[${c.category}] ${c.name} — 재료: ${c.recipe}`,
-        '$FontColorGoldYellow',
-        '$SmallFontSize',
-        '상세 설명 툴팁',
-        '$FontColorLightGold',
-        '$SmallFontSize',
-        tooltip
-      )
+    pushWrappedRows(
+      rows,
+      `■ [${c.category}] ${c.name} - 재료: ${c.recipe}`,
+      '$FontColorGoldYellow',
+      '$SmallFontSize',
+      '상세 설명 툴팁',
+      '$FontColorLightGold',
+      '$SmallFontSize',
+      tooltip
     );
-    rows.push(
-      makeTextRow(
-        `  ▸ 결과: ${c.result} (${c.description || ''})`,
-        '$FontColorWhite',
-        '$SmallFontSize',
-        c.category,
-        '$FontColorLightTeal',
-        '$SmallFontSize'
-      )
+    pushWrappedRows(
+      rows,
+      `  ▶ 결과: ${c.result} (${c.description || ''})`,
+      '$FontColorWhite',
+      '$SmallFontSize',
+      c.category,
+      '$FontColorLightTeal',
+      '$SmallFontSize'
     );
     rows.push(makeDividerRow());
   }
@@ -765,7 +788,7 @@ function buildTrackerMainPanel() {
     name: 'D2RHudTrackerPanel',
     fields: {
       priority: 200,
-      rect: { x: 24, y: 24, width: 1320, height: 470 },
+      rect: { x: 24, y: 24, width: 1320, height: 565 },
       anchor: { x: 0.0, y: 0.0 }
     },
     children: [
@@ -773,9 +796,9 @@ function buildTrackerMainPanel() {
         type: 'NineTileImageWidget',
         name: 'HudFrameBG',
         fields: {
-          rect: { x: 0, y: 0, width: 1320, height: 470 },
+          rect: { x: 0, y: 0, width: 1320, height: 565 },
           filename: 'PANEL/TooltipBorder/TooltipBorder',
-          backgroundColor: [0.02, 0.02, 0.03, 0.86],
+          backgroundColor: [0.02, 0.02, 0.03, 0.88],
           tileScale: 1.0
         }
       },
@@ -783,7 +806,7 @@ function buildTrackerMainPanel() {
         type: 'TextBoxWidget',
         name: 'HudTitle',
         fields: {
-          rect: { x: 26, y: 14, width: 820, height: 44 },
+          rect: { x: 28, y: 18, width: 820, height: 44 },
           text: '★ D2R-HUD v1.3 인게임 성역 퀘스트·길찾기 내비게이터',
           style: makeTextStyle('$FontColorGoldYellow', '$MediumFontSize', 'left', 'center', false)
         }
@@ -792,13 +815,13 @@ function buildTrackerMainPanel() {
         type: 'ButtonWidget',
         name: 'OpenFullDictBtn',
         fields: {
-          rect: { x: 960, y: 10, scale: 0.62 },
-          filename: 'PANEL/infobutton',
+          rect: { x: 920, y: 10, scale: 0.56 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
           hoveredFrame: 3,
-          textString: '호라드림 대사전 열기',
+          textString: '호라드림 대사전',
           onClickMessage: 'PanelManager:OpenPanel:D2RHudMainPanel',
           tooltipString: '룬워드 98종, 큐빙 60종, 전체 액트 상세 공략이 수록된 호라드림 대사전(D2RHudMainPanel)을 엽니다.',
-          textColor: '$FontColorLightGold',
+          textColor: '$FontColorGoldYellow',
           'text/style': '$StyleFEButtonText',
           sound: 'select'
         }
@@ -807,7 +830,7 @@ function buildTrackerMainPanel() {
         type: 'ButtonWidget',
         name: 'CloseTrackerBtn',
         fields: {
-          rect: { x: 1252, y: 8, scale: 0.78 },
+          rect: { x: 1246, y: 12, scale: 0.78 },
           filename: 'PANEL\\closebtn_4x',
           hoveredFrame: 3,
           onClickMessage: 'PanelManager:ClosePanel:D2RHudTrackerPanel',
@@ -819,7 +842,7 @@ function buildTrackerMainPanel() {
         type: 'TabBarWidget',
         name: 'OptionsTabs',
         fields: {
-          rect: { x: 18, y: 60, scale: 0.72, width: 1780, height: 110 },
+          rect: { x: 18, y: 66, scale: 0.72, width: 1780, height: 110 },
           anchor: { x: 0.0, y: 0.0 },
           tabCount: 7,
           tabSize: { x: 248, y: 110 },
@@ -864,7 +887,20 @@ function buildTrackerMainPanel() {
 }
 
 function buildTrackerSubPanel(panelName, lines) {
-  const tableRows = lines.map((item, idx) => ({
+  const expandedRows = [];
+  for (const item of lines) {
+    const maxLen = item.size === '$MediumFontSize' ? 42 : 48;
+    const chunks = splitIntoSingleLines(item.text, maxLen, '     ');
+    for (const ch of chunks) {
+      expandedRows.push({
+        text: ch,
+        color: item.color || '$FontColorWhite',
+        size: item.size || '$SmallFontSize'
+      });
+    }
+  }
+
+  const tableRows = expandedRows.map((item, idx) => ({
     type: 'TableRowWidget',
     name: `TrackRow_${idx}`,
     children: [
@@ -874,7 +910,7 @@ function buildTrackerSubPanel(panelName, lines) {
         fields: {
           fitToText: true,
           text: item.text,
-          style: makeTextStyle(item.color || '$FontColorWhite', item.size || '$SmallFontSize', 'left', 'center', true)
+          style: makeTextStyle(item.color, item.size, 'left', 'center', false)
         }
       }
     ]
@@ -885,7 +921,7 @@ function buildTrackerSubPanel(panelName, lines) {
     name: panelName,
     fields: {
       priority: 201,
-      rect: { x: 40, y: 172, width: 1285, height: 310 },
+      rect: { x: 40, y: 178, width: 1280, height: 342 },
       anchor: { x: 0.0, y: 0.0 },
       applySettingsImmediately: false
     },
@@ -894,7 +930,7 @@ function buildTrackerSubPanel(panelName, lines) {
         type: 'ImageWidget',
         name: 'ScrollBarBackground',
         fields: {
-          rect: { x: -16, y: 0, width: 24, height: 300 },
+          rect: { x: -16, y: 0, width: 24, height: 332 },
           anchor: { x: 1.0 },
           filename: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollbarSmall'
         },
@@ -903,7 +939,7 @@ function buildTrackerSubPanel(panelName, lines) {
             type: 'ScrollControllerWidget',
             name: 'ScrollController',
             fields: {
-              rect: { x: -24, y: 24, width: 24, height: 252 },
+              rect: { x: -24, y: 24, width: 24, height: 284 },
               anchor: { x: 1.0 },
               upArrowFilepath: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn',
               downArrowFilepath: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn',
@@ -920,15 +956,16 @@ function buildTrackerSubPanel(panelName, lines) {
         name: 'ScrollView',
         fields: {
           fitToParent: true,
-          scrollControllerName: 'ScrollController'
+          scrollControllerName: 'ScrollController',
+          clipChildrenDraw: true
         },
         children: [
           {
             type: 'TableWidget',
             name: 'OptionsTable',
             fields: {
-              columns: [{ width: 1235, alignment: { h: 'fit', v: 'fit' } }],
-              rowHeight: 54
+              columns: [{ width: 1230, alignment: { h: 'fit', v: 'fit' } }],
+              rowHeight: 46
             },
             children: tableRows
           }
@@ -942,12 +979,12 @@ function stepsToTrackerLines(stepsSubset) {
   const lines = [];
   for (const s of stepsSubset) {
     lines.push({
-      text: `■ [${s.condition.value}] ${s.location}`,
+      text: `■ [${s.condition.value}] ${ sanitizeD2RText(s.location) }`,
       color: '$FontColorGoldYellow',
       size: '$MediumFontSize'
     });
     lines.push({
-      text: `  ▶ 동선: ${s.route}`,
+      text: `  ▶ 동선: ${ sanitizeD2RText(s.route) }`,
       color: '$FontColorLightTeal',
       size: '$SmallFontSize'
     });
@@ -955,18 +992,18 @@ function stepsToTrackerLines(stepsSubset) {
       const t = s.tasks[i];
       const isReward = t.text.includes('[필수') || t.text.includes('[보상');
       lines.push({
-        text: `  ✓ ${i + 1}. ${t.text}`,
+        text: `  [${i + 1}] ${ sanitizeD2RText(t.text) }`,
         color: isReward ? '$FontColorLightYellow' : '$FontColorWhite',
         size: '$SmallFontSize'
       });
     }
     lines.push({
-      text: `  ★ 길찾기: ${s.note}`,
+      text: `  ★ 길찾기: ${ sanitizeD2RText(s.note) }`,
       color: '$FontColorLightBlue',
       size: '$SmallFontSize'
     });
     lines.push({
-      text: `  ★ 공략팁: ${s.strategic_tip}`,
+      text: `  ★ 공략팁: ${ sanitizeD2RText(s.strategic_tip) }`,
       color: '$FontColorGreen',
       size: '$SmallFontSize'
     });
