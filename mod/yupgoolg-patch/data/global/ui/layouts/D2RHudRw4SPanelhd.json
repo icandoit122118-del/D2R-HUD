@@ -29,7 +29,7 @@
         "hoveredFrame": 3,
         "textString": "▲ 창 접기",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudMainFold",
-        "textColor": "$FontColorLightYellow",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }
@@ -65,7 +65,7 @@
         "hoveredFrame": 3,
         "textString": "중형 11줄",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudRw4Panel",
-        "textColor": "$FontColorGreen",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }
@@ -83,7 +83,7 @@
         "hoveredFrame": 3,
         "textString": "대형 18줄",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudRw4LPanel",
-        "textColor": "$FontColorWhite",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }
@@ -213,7 +213,7 @@
                         "fitToText": true,
                         "text": "■ 4홈 핵심 룬워드 사전 (영혼·통찰·무공·오심·인내·불사조 등) (총",
                         "style": {
-                          "fontColor": "$FontColorGreen",
+                          "fontColor": "$FontColorGoldYellow",
                           "pointSize": "$MediumFontSize",
                           "alignment": {
                             "h": "left",
@@ -225,8 +225,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -260,7 +260,7 @@
                         "fitToText": true,
                         "text": "총 28종 수록",
                         "style": {
-                          "fontColor": "$FontColorGoldYellow",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -272,8 +272,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -313,7 +313,7 @@
                         "fitToText": true,
                         "text": "   28종 - 우측 버튼 마우스 오버 시 전체 세부 옵션 표시)",
                         "style": {
-                          "fontColor": "$FontColorGreen",
+                          "fontColor": "$FontColorGoldYellow",
                           "pointSize": "$MediumFontSize",
                           "alignment": {
                             "h": "left",
@@ -325,8 +325,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -397,8 +397,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -435,9 +435,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4신성한 천둥 (신성한 번개) (Holy Thunder)ÿc0\nÿc8룬 조합: 에드 + 랄 + 오르트 + 탈ÿc0\nÿc2재료: 4홈 홀 (요구 레벨 24)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 피해 +60% 증가\n· 최대 피해 +10\n· 대상의 방어력 -25%\n· 화염 피해 5 - 30 추가\n· 번개 피해 21 - 110 추가\n· 독 피해 +75 (5초에 걸쳐)\n· +3 신성한 충격 (성기사 전용)\n· 최대 번개 저항 +5%\n· 번개 저항 +60%\n· 7 레벨 연쇄 번개 (충전 60회)\n\nÿc54홈 홀 (요구 레벨 24)ÿc0",
+                        "tooltipString": "ÿc4신성한 천둥 (신성한 번개) (Holy Thunder)ÿc0\nÿc4룬 조합: 에드 + 랄 + 오르트 + 탈ÿc0\nÿc4재료: 4홈 홀 (요구 레벨 24)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 피해 +60% 증가\n· 최대 피해 +10\n· 대상의 방어력 -25%\n· 화염 피해 5 - 30 추가\n· 번개 피해 21 - 110 추가\n· 독 피해 +75 (5초에 걸쳐)\n· +3 신성한 충격 (성기사 전용)\n· 최대 번개 저항 +5%\n· 번개 저항 +60%\n· 7 레벨 연쇄 번개 (충전 60회)\n\nÿc04홈 홀 (요구 레벨 24)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -477,8 +477,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -518,7 +518,7 @@
                         "fitToText": true,
                         "text": "  ▶ 핵심 옵션: 피해 +60% 증가 / 최대 피해 +10",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -530,8 +530,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -565,7 +565,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -577,8 +577,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -649,8 +649,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -687,9 +687,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4영혼 (스피리트) (Spirit (Sword))ÿc0\nÿc8룬 조합: 탈 + 주울 + 오르트 + 앰ÿc0\nÿc2재료: 4홈 도검 (요구 레벨 25)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 모든 기술 +2\n· 시전 속도 +25~35% (변함)\n· 타격 회복 속도 +55%\n· 번개 피해 1 - 50 추가\n· 냉기 피해 3 - 14 추가\n· 독 피해 +75 (5초에 걸쳐)\n· 적중당 생명력 7% 훔침\n· 원거리 공격 방어력 +250\n· 활력 +22\n· 마나 +89~112 (변함)\n· 마법 흡수 +3~8 (변함)\n\nÿc5추천장비 : 크리스탈 소드 (※난이도 '보통' 카우방 드랍은 라르주크 4소켓 확정)ÿc0",
+                        "tooltipString": "ÿc4영혼 (스피리트) (Spirit (Sword))ÿc0\nÿc4룬 조합: 탈 + 주울 + 오르트 + 앰ÿc0\nÿc4재료: 4홈 도검 (요구 레벨 25)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 모든 기술 +2\n· 시전 속도 +25~35% (변함)\n· 타격 회복 속도 +55%\n· 번개 피해 1 - 50 추가\n· 냉기 피해 3 - 14 추가\n· 독 피해 +75 (5초에 걸쳐)\n· 적중당 생명력 7% 훔침\n· 원거리 공격 방어력 +250\n· 활력 +22\n· 마나 +89~112 (변함)\n· 마법 흡수 +3~8 (변함)\n\nÿc0추천장비 : 크리스탈 소드 (※난이도 '보통' 카우방 드랍은 라르주크 4소켓 확정)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -729,8 +729,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -770,7 +770,7 @@
                         "fitToText": true,
                         "text": "  ▶ 핵심 옵션: 모든 기술 +2 / 시전 속도 +25~35% (변함)",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -782,8 +782,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -817,7 +817,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -829,8 +829,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -901,8 +901,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -939,9 +939,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4영혼 (방패) (Spirit (Shield))ÿc0\nÿc8룬 조합: 탈 + 주울 + 오르트 + 앰ÿc0\nÿc2재료: 4홈 방패 (요구 레벨 25)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 모든 기술 +2\n· 시전 속도 +25~35% (변함)\n· 타격 회복 속도 +55%\n· 원거리 공격 방어력 +250\n· 활력 +22\n· 마나 +89~112 (변함)\n· 냉기 저항 +35%\n· 번개 저항 +35%\n· 독 저항 +35%\n· 마법 흡수 +3~8 (변함)\n· 공격자가 피해를 14 받음\n\nÿc54홈 방패 (요구 레벨 25)ÿc0",
+                        "tooltipString": "ÿc4영혼 (방패) (Spirit (Shield))ÿc0\nÿc4룬 조합: 탈 + 주울 + 오르트 + 앰ÿc0\nÿc4재료: 4홈 방패 (요구 레벨 25)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 모든 기술 +2\n· 시전 속도 +25~35% (변함)\n· 타격 회복 속도 +55%\n· 원거리 공격 방어력 +250\n· 활력 +22\n· 마나 +89~112 (변함)\n· 냉기 저항 +35%\n· 번개 저항 +35%\n· 독 저항 +35%\n· 마법 흡수 +3~8 (변함)\n· 공격자가 피해를 14 받음\n\nÿc04홈 방패 (요구 레벨 25)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -981,8 +981,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1022,7 +1022,7 @@
                         "fitToText": true,
                         "text": "  ▶ 핵심 옵션: 모든 기술 +2 / 시전 속도 +25~35% (변함)",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1034,8 +1034,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1069,7 +1069,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -1081,8 +1081,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1153,8 +1153,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1191,9 +1191,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4통찰 (통찰력) (Insight)ÿc0\nÿc8룬 조합: 랄 + 티르 + 탈 + 솔ÿc0\nÿc2재료: 4홈 미늘창/지팡이/활/쇠뇌 (요구 레벨 27)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 장착 시 12~17 레벨 명상 오라 효과 적용 (변함)\n· 시전 속도 +35%\n· 피해 200~260% 증가 (변함)\n· 최소 피해 +9\n· 명중률 보너스 180~250% (변함)\n· 화염 피해 5 - 30 추가\n· 독 피해 +75 (5초에 걸쳐)\n· +1~6 치명타 (변함)\n· 모든 능력치 +5\n· 적 저치 시 마나 +2\n· 마법 아이템 발견 확률 23% 증가\n\nÿc5추천 장비 : 미늘창 계열 (4소켓)ÿc0",
+                        "tooltipString": "ÿc4통찰 (통찰력) (Insight)ÿc0\nÿc4룬 조합: 랄 + 티르 + 탈 + 솔ÿc0\nÿc4재료: 4홈 미늘창/지팡이/활/쇠뇌 (요구 레벨 27)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 장착 시 12~17 레벨 명상 오라 효과 적용 (변함)\n· 시전 속도 +35%\n· 피해 200~260% 증가 (변함)\n· 최소 피해 +9\n· 명중률 보너스 180~250% (변함)\n· 화염 피해 5 - 30 추가\n· 독 피해 +75 (5초에 걸쳐)\n· +1~6 치명타 (변함)\n· 모든 능력치 +5\n· 적 저치 시 마나 +2\n· 마법 아이템 발견 확률 23% 증가\n\nÿc0추천 장비 : 미늘창 계열 (4소켓)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -1233,8 +1233,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1274,7 +1274,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 장착 시 12~17 레벨 명상 오라 효과 적용 (변함) / 시전 속도",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1286,8 +1286,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1321,7 +1321,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -1333,8 +1333,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1374,7 +1374,7 @@
                         "fitToText": true,
                         "text": "   +35%",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1386,8 +1386,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1458,8 +1458,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1496,9 +1496,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4기억 (Memory)ÿc0\nÿc8룬 조합: 룸 + 이오 + 솔 + 에드ÿc0\nÿc2재료: 4홈 지팡이 (요구 레벨 37)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 원소술사 기술 레벨 +3\n· 시전 속도 +33%\n· 최소 피해 +9\n· +3 마력 보호막 (원소술사 전용)\n· +2 전자기장 (원소술사 전용)\n· 방어력 +50% 증가\n· 활력 +10\n· 마력 +10\n· 최대 마나 20% 증가\n· 마법 피해 7 감소\n· 대상의 방어력 -25%\n\nÿc54홈 지팡이 (요구 레벨 37)ÿc0",
+                        "tooltipString": "ÿc4기억 (Memory)ÿc0\nÿc4룬 조합: 룸 + 이오 + 솔 + 에드ÿc0\nÿc4재료: 4홈 지팡이 (요구 레벨 37)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 원소술사 기술 레벨 +3\n· 시전 속도 +33%\n· 최소 피해 +9\n· +3 마력 보호막 (원소술사 전용)\n· +2 전자기장 (원소술사 전용)\n· 방어력 +50% 증가\n· 활력 +10\n· 마력 +10\n· 최대 마나 20% 증가\n· 마법 피해 7 감소\n· 대상의 방어력 -25%\n\nÿc04홈 지팡이 (요구 레벨 37)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -1538,8 +1538,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1579,7 +1579,7 @@
                         "fitToText": true,
                         "text": "  ▶ 핵심 옵션: 원소술사 기술 레벨 +3 / 시전 속도 +33%",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1591,8 +1591,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1626,7 +1626,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -1638,8 +1638,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1710,8 +1710,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1748,9 +1748,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4조화 (Harmony)ÿc0\nÿc8룬 조합: 티르 + 아이드 + 솔 + 코ÿc0\nÿc2재료: 4홈 활/쇠뇌 (요구 레벨 39)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 장착 시 10 레벨 원기 오라 효과 적용\n· 피해 +200~275% 증가 (변함)\n· 최소 피해 +9\n· 최대 피해 +9\n· 화염 피해 55 - 160 추가\n· 번개 피해 55 - 160 추가\n· 냉기 피해 55 - 160 추가\n· +2~6 발키리 (변함)\n· 민첩 +10\n· 마나 재생 20%\n· 적 처치 시 마나 +2\n· 시야 +2\n· 20 레벨 부활 (충전 25회)\n\nÿc54홈 활/쇠뇌 (요구 레벨 39)ÿc0",
+                        "tooltipString": "ÿc4조화 (Harmony)ÿc0\nÿc4룬 조합: 티르 + 아이드 + 솔 + 코ÿc0\nÿc4재료: 4홈 활/쇠뇌 (요구 레벨 39)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 장착 시 10 레벨 원기 오라 효과 적용\n· 피해 +200~275% 증가 (변함)\n· 최소 피해 +9\n· 최대 피해 +9\n· 화염 피해 55 - 160 추가\n· 번개 피해 55 - 160 추가\n· 냉기 피해 55 - 160 추가\n· +2~6 발키리 (변함)\n· 민첩 +10\n· 마나 재생 20%\n· 적 처치 시 마나 +2\n· 시야 +2\n· 20 레벨 부활 (충전 25회)\n\nÿc04홈 활/쇠뇌 (요구 레벨 39)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -1790,8 +1790,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1831,7 +1831,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 장착 시 10 레벨 원기 오라 효과 적용 / 피해 +200~275%",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1843,8 +1843,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1878,7 +1878,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -1890,8 +1890,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1931,7 +1931,7 @@
                         "fitToText": true,
                         "text": "   증가 (변함)",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1943,8 +1943,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2015,8 +2015,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2053,9 +2053,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4열정 (Passion)ÿc0\nÿc8룬 조합: 돌 + 오르트 + 엘드 + 렘ÿc0\nÿc2재료: 4홈 무기 (요구 레벨 43)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 공격 속도 +25%\n· 피해 +160~210% 증가 (변함)\n· 명중률 보너스 50~80% (변함)\n· 언데드에게 주는 피해 +75%\n· 언데드에 대한 명중률 +50\n· 번개 피해 1 - 50 추가\n· +1 광폭화\n· +1 열의\n· 적중 시 대상 실명 +10\n· 적중 시 괴물 도주 +25%\n· 괴물에게서 얻는 금화 75% 증가\n· 3 레벨 울버린의 심장 (충전 12회)\n\nÿc54홈 무기 (요구 레벨 43)ÿc0",
+                        "tooltipString": "ÿc4열정 (Passion)ÿc0\nÿc4룬 조합: 돌 + 오르트 + 엘드 + 렘ÿc0\nÿc4재료: 4홈 무기 (요구 레벨 43)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 공격 속도 +25%\n· 피해 +160~210% 증가 (변함)\n· 명중률 보너스 50~80% (변함)\n· 언데드에게 주는 피해 +75%\n· 언데드에 대한 명중률 +50\n· 번개 피해 1 - 50 추가\n· +1 광폭화\n· +1 열의\n· 적중 시 대상 실명 +10\n· 적중 시 괴물 도주 +25%\n· 괴물에게서 얻는 금화 75% 증가\n· 3 레벨 울버린의 심장 (충전 12회)\n\nÿc04홈 무기 (요구 레벨 43)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -2095,8 +2095,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2136,7 +2136,7 @@
                         "fitToText": true,
                         "text": "  ▶ 핵심 옵션: 공격 속도 +25% / 피해 +160~210% 증가 (변함)",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2148,8 +2148,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2183,7 +2183,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -2195,8 +2195,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2267,8 +2267,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2305,9 +2305,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4이성의 목소리 (이유있는 항변) (Voice of Reason)ÿc0\nÿc8룬 조합: 렘 + 코 + 엘 + 엘드ÿc0\nÿc2재료: 4홈 도검/철퇴* (요구 레벨 43)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 타격 시 15% 확률로 13 레벨 얼음 보주 시전\n· 타격 시 18% 확률로 20 레벨 얼음 작렬 시전\n· 명중률 +50\n· 악마에게 주는 피해 +220~350% (변함)\n· 언데드에게 주는 피해 +355~375% (변함)\n· 언데드에 대한 명중률 +50\n· 냉기 피해 100 - 220 추가\n· 적의 냉기 저항 -24%\n· 민첩 +10\n· 빙결되지 않음\n· 괴물에게서 얻는 금화 75% 증가\n· 시야 +1\n\nÿc54홈 도검/철퇴* (요구 레벨 43)ÿc0",
+                        "tooltipString": "ÿc4이성의 목소리 (이유있는 항변) (Voice of Reason)ÿc0\nÿc4룬 조합: 렘 + 코 + 엘 + 엘드ÿc0\nÿc4재료: 4홈 도검/철퇴* (요구 레벨 43)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 타격 시 15% 확률로 13 레벨 얼음 보주 시전\n· 타격 시 18% 확률로 20 레벨 얼음 작렬 시전\n· 명중률 +50\n· 악마에게 주는 피해 +220~350% (변함)\n· 언데드에게 주는 피해 +355~375% (변함)\n· 언데드에 대한 명중률 +50\n· 냉기 피해 100 - 220 추가\n· 적의 냉기 저항 -24%\n· 민첩 +10\n· 빙결되지 않음\n· 괴물에게서 얻는 금화 75% 증가\n· 시야 +1\n\nÿc04홈 도검/철퇴* (요구 레벨 43)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -2347,8 +2347,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2388,7 +2388,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 타격 시 15% 확률로 13 레벨 얼음 보주 시전 / 타격 시 18%",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2400,8 +2400,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2435,7 +2435,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -2447,8 +2447,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2488,7 +2488,7 @@
                         "fitToText": true,
                         "text": "   확률로 20 레벨 얼음 작렬 시전",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2500,8 +2500,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2572,8 +2572,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2610,9 +2610,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4돌 (스톤) (Stone)ÿc0\nÿc8룬 조합: 샤엘 + 우움 + 풀 + 룸ÿc0\nÿc2재료: 4홈 갑옷 (요구 레벨 47)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 타격 회복 속도 +60%\n· 방어력 +250~290% 증가 (변함)\n· 원거리 공격 방어력 +300\n· 힘 +16\n· 활력 +16\n· 마력 +10\n· 모든 저항 +15\n· 16 레벨 타오르는 바위 (충전 80회)\n· 16 레벨 점토 골렘 (충전 16회)\n\nÿc54홈 갑옷 (요구 레벨 47)ÿc0",
+                        "tooltipString": "ÿc4돌 (스톤) (Stone)ÿc0\nÿc4룬 조합: 샤엘 + 우움 + 풀 + 룸ÿc0\nÿc4재료: 4홈 갑옷 (요구 레벨 47)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 타격 회복 속도 +60%\n· 방어력 +250~290% 증가 (변함)\n· 원거리 공격 방어력 +300\n· 힘 +16\n· 활력 +16\n· 마력 +10\n· 모든 저항 +15\n· 16 레벨 타오르는 바위 (충전 80회)\n· 16 레벨 점토 골렘 (충전 16회)\n\nÿc04홈 갑옷 (요구 레벨 47)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -2652,8 +2652,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2693,7 +2693,7 @@
                         "fitToText": true,
                         "text": "  ▶ 핵심 옵션: 타격 회복 속도 +60% / 방어력 +250~290% 증가 (변함)",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2705,8 +2705,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2740,7 +2740,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -2752,8 +2752,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2824,8 +2824,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2862,9 +2862,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4서약 (Oath)ÿc0\nÿc8룬 조합: 샤엘 + 풀 + 말 + 룸ÿc0\nÿc2재료: 4홈 도검/도끼/철퇴* (요구 레벨 49)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 파괴 불가\n· 타격 시 30% 확률로 20 레벨 뼈 영혼 시전\n· 공격 속도 +50%\n· 피해 +210~340% 증가 (변함)\n· 악마에게 주는 피해 +75%\n· 악마에 대한 명중률 +100\n· 괴물 회복 저지\n· 마력 +10\n· 마법 흡수 +10~15 (변함)\n· 16 레벨 울버린의 심장 (충전 20회)\n· 17 레벨 강철 골렘 (충전 14회)\n\nÿc54홈 도검/도끼/철퇴* (요구 레벨 49)ÿc0",
+                        "tooltipString": "ÿc4서약 (Oath)ÿc0\nÿc4룬 조합: 샤엘 + 풀 + 말 + 룸ÿc0\nÿc4재료: 4홈 도검/도끼/철퇴* (요구 레벨 49)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 파괴 불가\n· 타격 시 30% 확률로 20 레벨 뼈 영혼 시전\n· 공격 속도 +50%\n· 피해 +210~340% 증가 (변함)\n· 악마에게 주는 피해 +75%\n· 악마에 대한 명중률 +100\n· 괴물 회복 저지\n· 마력 +10\n· 마법 흡수 +10~15 (변함)\n· 16 레벨 울버린의 심장 (충전 20회)\n· 17 레벨 강철 골렘 (충전 14회)\n\nÿc04홈 도검/도끼/철퇴* (요구 레벨 49)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -2904,8 +2904,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2945,7 +2945,7 @@
                         "fitToText": true,
                         "text": "  ▶ 핵심 옵션: 파괴 불가 / 타격 시 30% 확률로 20 레벨 뼈 영혼 시전",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2957,8 +2957,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2992,7 +2992,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -3004,8 +3004,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3076,8 +3076,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3114,9 +3114,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4왕 시해자 (킹슬레이어) (Kingslayer)ÿc0\nÿc8룬 조합: 말 + 우움 + 굴 + 팔ÿc0\nÿc2재료: 4홈 도검/도끼 (요구 레벨 53)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 공격 속도 +30%\n· 피해 +230~270% 증가 (변함)\n· 대상의 방어력 -25%\n· 명중률 보너스 20%\n· 강타 확률 +33%\n· 상처 악화 확률 +50%\n· +1 복수\n· 괴물 회복 저지\n· 힘 +10\n· 괴물에게서 얻는 금화 40% 증가\n\nÿc54홈 도검/도끼 (요구 레벨 53)ÿc0",
+                        "tooltipString": "ÿc4왕 시해자 (킹슬레이어) (Kingslayer)ÿc0\nÿc4룬 조합: 말 + 우움 + 굴 + 팔ÿc0\nÿc4재료: 4홈 도검/도끼 (요구 레벨 53)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 공격 속도 +30%\n· 피해 +230~270% 증가 (변함)\n· 대상의 방어력 -25%\n· 명중률 보너스 20%\n· 강타 확률 +33%\n· 상처 악화 확률 +50%\n· +1 복수\n· 괴물 회복 저지\n· 힘 +10\n· 괴물에게서 얻는 금화 40% 증가\n\nÿc04홈 도검/도끼 (요구 레벨 53)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -3156,8 +3156,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3197,7 +3197,7 @@
                         "fitToText": true,
                         "text": "  ▶ 핵심 옵션: 공격 속도 +30% / 피해 +230~270% 증가 (변함)",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3209,8 +3209,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3244,7 +3244,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -3256,8 +3256,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3328,8 +3328,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3366,9 +3366,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4균열 (Rift)ÿc0\nÿc8룬 조합: 헬 + 코 + 렘 + 굴ÿc0\nÿc2재료: 4홈 미늘창/홀 (요구 레벨 53)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 타격 시 20% 확률로 16 레벨 회오리바람 시전\n· 공격 시 16% 확률로 21 레벨 얼음 보주 시전\n· 명중률 보너스 20%\n· 마법 피해 160 - 250 추가\n· 화염 피해 60 - 180 추가\n· 모든 능력치 +5~10 (변함)\n· 민첩 +10\n· 받는 피해의 +38%만큼 마나 회복\n· 괴물에게서 얻는 금화 75% 증가\n· 15 레벨 가시 박힌 철관 (충전 40회)\n· 착용 조건 -20%\n\nÿc54홈 미늘창/홀 (요구 레벨 53)ÿc0",
+                        "tooltipString": "ÿc4균열 (Rift)ÿc0\nÿc4룬 조합: 헬 + 코 + 렘 + 굴ÿc0\nÿc4재료: 4홈 미늘창/홀 (요구 레벨 53)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 타격 시 20% 확률로 16 레벨 회오리바람 시전\n· 공격 시 16% 확률로 21 레벨 얼음 보주 시전\n· 명중률 보너스 20%\n· 마법 피해 160 - 250 추가\n· 화염 피해 60 - 180 추가\n· 모든 능력치 +5~10 (변함)\n· 민첩 +10\n· 받는 피해의 +38%만큼 마나 회복\n· 괴물에게서 얻는 금화 75% 증가\n· 15 레벨 가시 박힌 철관 (충전 40회)\n· 착용 조건 -20%\n\nÿc04홈 미늘창/홀 (요구 레벨 53)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -3408,8 +3408,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3449,7 +3449,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 타격 시 20% 확률로 16 레벨 회오리바람 시전 / 공격 시 16%",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3461,8 +3461,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3496,7 +3496,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -3508,8 +3508,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3549,7 +3549,7 @@
                         "fitToText": true,
                         "text": "   확률로 21 레벨 얼음 보주 시전",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3561,8 +3561,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3633,8 +3633,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3671,9 +3671,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4참나무의 심장 (오크의 심장) (Heart of the Oak)ÿc0\nÿc8룬 조합: 코 + 벡스 + 풀 + 주울ÿc0\nÿc2재료: 4홈 지팡이/철퇴* (요구 레벨 55)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 모든 기술 +3\n· 시전 속도 +40%\n· 악마에게 주는 피해 +75%\n· 악마에 대한 명중률 +100\n· 냉기 피해 3 - 14 추가\n· 적중당 마나 7% 훔침\n· 민첩 +10\n· 생명력 회복 +20\n· 최대 마나 15% 증가\n· 모든 저항 +30~40 (변함)\n· 4 레벨 참나무 현자 (충전 25회)\n· 14 레벨 큰까마귀 (충전 60회)\n\nÿc5추천 장비 : 프레일 (4소켓)ÿc0",
+                        "tooltipString": "ÿc4참나무의 심장 (오크의 심장) (Heart of the Oak)ÿc0\nÿc4룬 조합: 코 + 벡스 + 풀 + 주울ÿc0\nÿc4재료: 4홈 지팡이/철퇴* (요구 레벨 55)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 모든 기술 +3\n· 시전 속도 +40%\n· 악마에게 주는 피해 +75%\n· 악마에 대한 명중률 +100\n· 냉기 피해 3 - 14 추가\n· 적중당 마나 7% 훔침\n· 민첩 +10\n· 생명력 회복 +20\n· 최대 마나 15% 증가\n· 모든 저항 +30~40 (변함)\n· 4 레벨 참나무 현자 (충전 25회)\n· 14 레벨 큰까마귀 (충전 60회)\n\nÿc0추천 장비 : 프레일 (4소켓)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -3713,8 +3713,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3754,7 +3754,7 @@
                         "fitToText": true,
                         "text": "  ▶ 핵심 옵션: 모든 기술 +3 / 시전 속도 +40%",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3766,8 +3766,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3801,7 +3801,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -3813,8 +3813,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3885,8 +3885,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3923,9 +3923,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4추방 (망명) (Exile)ÿc0\nÿc8룬 조합: 벡스 + 오움 + 이스트 + 돌ÿc0\nÿc2재료: 4홈 성기사 전용 방패 (요구 레벨 57)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 타격 시 15% 확률로 5 레벨 생명력 추출 시전\n· 장착 시 13~16 레벨 인내 오라 효과 적용 (변함)\n· 공격 오라 +2 (성기사 전용)\n· 막기 속도 +30%\n· 대상 빙결\n· 방어력 +220~260% 증가 (변함)\n· 생명력 회복 +7\n· 최대 냉기 저항 +5%\n· 최대 화염 저항 +5%\n· 마법 아이템 발견 확률 25% 증가\n· 내구도 1 회복 (4초마다)\n\nÿc54홈 성기사 전용 방패 (요구 레벨 57)ÿc0",
+                        "tooltipString": "ÿc4추방 (망명) (Exile)ÿc0\nÿc4룬 조합: 벡스 + 오움 + 이스트 + 돌ÿc0\nÿc4재료: 4홈 성기사 전용 방패 (요구 레벨 57)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 타격 시 15% 확률로 5 레벨 생명력 추출 시전\n· 장착 시 13~16 레벨 인내 오라 효과 적용 (변함)\n· 공격 오라 +2 (성기사 전용)\n· 막기 속도 +30%\n· 대상 빙결\n· 방어력 +220~260% 증가 (변함)\n· 생명력 회복 +7\n· 최대 냉기 저항 +5%\n· 최대 화염 저항 +5%\n· 마법 아이템 발견 확률 25% 증가\n· 내구도 1 회복 (4초마다)\n\nÿc04홈 성기사 전용 방패 (요구 레벨 57)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -3965,8 +3965,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4006,7 +4006,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 타격 시 15% 확률로 5 레벨 생명력 추출 시전 / 장착 시",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4018,8 +4018,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4053,7 +4053,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -4065,8 +4065,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4106,7 +4106,7 @@
                         "fitToText": true,
                         "text": "   13~16 레벨 인내 오라 효과 적용 (변함)",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4118,8 +4118,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4190,8 +4190,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4228,9 +4228,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4인내 (Fortitude (Weapon))ÿc0\nÿc8룬 조합: 엘 + 솔 + 돌 + 로ÿc0\nÿc2재료: 4홈 무기 (요구 레벨 59)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 피격 시 20% 확률로 15 레벨 냉기 갑옷 시전\n· 시전 속도 +25%\n· 피해 +300% 증가\n· 최소 피해 +9\n· 명중률 +50\n· 치명적 공격 +20%\n· 적중 시 괴물 도주 +25%\n· 방어력 +200% 증가\n· 생명력 +1~(99~148) (캐릭터 레벨에 비례) (변함)\n· 모든 저항 +25~30 (변함)\n· 받는 피해의 +12%만큼 마나 회복\n· 시야 +1\n\nÿc54홈 무기 (요구 레벨 59)ÿc0",
+                        "tooltipString": "ÿc4인내 (Fortitude (Weapon))ÿc0\nÿc4룬 조합: 엘 + 솔 + 돌 + 로ÿc0\nÿc4재료: 4홈 무기 (요구 레벨 59)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 피격 시 20% 확률로 15 레벨 냉기 갑옷 시전\n· 시전 속도 +25%\n· 피해 +300% 증가\n· 최소 피해 +9\n· 명중률 +50\n· 치명적 공격 +20%\n· 적중 시 괴물 도주 +25%\n· 방어력 +200% 증가\n· 생명력 +1~(99~148) (캐릭터 레벨에 비례) (변함)\n· 모든 저항 +25~30 (변함)\n· 받는 피해의 +12%만큼 마나 회복\n· 시야 +1\n\nÿc04홈 무기 (요구 레벨 59)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -4270,8 +4270,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4311,7 +4311,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 피격 시 20% 확률로 15 레벨 냉기 갑옷 시전 / 시전 속도",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4323,8 +4323,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4358,7 +4358,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -4370,8 +4370,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4411,7 +4411,7 @@
                         "fitToText": true,
                         "text": "   +25%",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4423,8 +4423,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4495,8 +4495,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4533,9 +4533,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4인내 (갑옷) (Fortitude (Armor))ÿc0\nÿc8룬 조합: 엘 + 솔 + 돌 + 로ÿc0\nÿc2재료: 4홈 갑옷 (요구 레벨 59)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 피격 시 20% 확률로 15 레벨 냉기 갑옷 시전\n· 시전 속도 +25%\n· 피해 +300% 증가\n· 방어력 +200% 증가\n· 방어력 +15\n· 생명력 +1~(99~148) (캐릭터 레벨에 비례) (변함)\n· 생명력 회복 +7\n· 최대 번개 저항 +5%\n· 모든 저항 +25~30 (변함)\n· 피해 7 감소\n· 받는 피해의 +12%만큼 마나 회복\n· 시야 +1\n\nÿc54홈 갑옷 (요구 레벨 59)ÿc0",
+                        "tooltipString": "ÿc4인내 (갑옷) (Fortitude (Armor))ÿc0\nÿc4룬 조합: 엘 + 솔 + 돌 + 로ÿc0\nÿc4재료: 4홈 갑옷 (요구 레벨 59)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 피격 시 20% 확률로 15 레벨 냉기 갑옷 시전\n· 시전 속도 +25%\n· 피해 +300% 증가\n· 방어력 +200% 증가\n· 방어력 +15\n· 생명력 +1~(99~148) (캐릭터 레벨에 비례) (변함)\n· 생명력 회복 +7\n· 최대 번개 저항 +5%\n· 모든 저항 +25~30 (변함)\n· 피해 7 감소\n· 받는 피해의 +12%만큼 마나 회복\n· 시야 +1\n\nÿc04홈 갑옷 (요구 레벨 59)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -4575,8 +4575,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4616,7 +4616,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 피격 시 20% 확률로 15 레벨 냉기 갑옷 시전 / 시전 속도",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4628,8 +4628,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4663,7 +4663,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -4675,8 +4675,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4716,7 +4716,7 @@
                         "fitToText": true,
                         "text": "   +25%",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4728,8 +4728,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4800,8 +4800,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4838,9 +4838,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4찔레 (검은딸기) (Bramble)ÿc0\nÿc8룬 조합: 랄 + 오움 + 수르 + 에드ÿc0\nÿc2재료: 4홈 갑옷 (요구 레벨 61)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 장착 시 15~21 레벨 가시 오라 효과 적용 (변함)\n· 타격 회복 속도 +50%\n· 독 기술 피해 +25~50% (변함)\n· 방어력 +300\n· 최대 마나 5% 증가\n· 마나 재생 15%\n· 최대 냉기 저항 +5%\n· 화염 저항 +30%\n· 독 저항 +100%\n· 적 처치 시 생명력 +13\n· 13 레벨 가시의 영혼 (충전 33회)\n\nÿc54홈 갑옷 (요구 레벨 61)ÿc0",
+                        "tooltipString": "ÿc4찔레 (검은딸기) (Bramble)ÿc0\nÿc4룬 조합: 랄 + 오움 + 수르 + 에드ÿc0\nÿc4재료: 4홈 갑옷 (요구 레벨 61)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 장착 시 15~21 레벨 가시 오라 효과 적용 (변함)\n· 타격 회복 속도 +50%\n· 독 기술 피해 +25~50% (변함)\n· 방어력 +300\n· 최대 마나 5% 증가\n· 마나 재생 15%\n· 최대 냉기 저항 +5%\n· 화염 저항 +30%\n· 독 저항 +100%\n· 적 처치 시 생명력 +13\n· 13 레벨 가시의 영혼 (충전 33회)\n\nÿc04홈 갑옷 (요구 레벨 61)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -4880,8 +4880,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4921,7 +4921,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 장착 시 15~21 레벨 가시 오라 효과 적용 (변함) / 타격 회복",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4933,8 +4933,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4968,7 +4968,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -4980,8 +4980,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5021,7 +5021,7 @@
                         "fitToText": true,
                         "text": "   속도 +50%",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -5033,8 +5033,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5105,8 +5105,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5143,9 +5143,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4명예의 굴레 (Chains of Honor)ÿc0\nÿc8룬 조합: 돌 + 우움 + 베르 + 이스트ÿc0\nÿc2재료: 4홈 갑옷 (요구 레벨 63)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 모든 기술 +2\n· 악마에게 주는 피해 +200%\n· 언데드에게 주는 피해 +100%\n· 적중당 생명력 8% 훔침\n· 방어력 +70% 증가\n· 힘 +20\n· 생명력 회복 +7\n· 모든 저항 +65\n· 받는 물리 피해 8% 감소\n· 마법 아이템 발견 확률 25% 증가\n\nÿc54홈 갑옷 (요구 레벨 63)ÿc0",
+                        "tooltipString": "ÿc4명예의 굴레 (Chains of Honor)ÿc0\nÿc4룬 조합: 돌 + 우움 + 베르 + 이스트ÿc0\nÿc4재료: 4홈 갑옷 (요구 레벨 63)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 모든 기술 +2\n· 악마에게 주는 피해 +200%\n· 언데드에게 주는 피해 +100%\n· 적중당 생명력 8% 훔침\n· 방어력 +70% 증가\n· 힘 +20\n· 생명력 회복 +7\n· 모든 저항 +65\n· 받는 물리 피해 8% 감소\n· 마법 아이템 발견 확률 25% 증가\n\nÿc04홈 갑옷 (요구 레벨 63)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -5185,8 +5185,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5226,7 +5226,7 @@
                         "fitToText": true,
                         "text": "  ▶ 핵심 옵션: 모든 기술 +2 / 악마에게 주는 피해 +200%",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -5238,8 +5238,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5273,7 +5273,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -5285,8 +5285,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5357,8 +5357,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5395,9 +5395,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4무한 (무한의 공간) (Infinity)ÿc0\nÿc8룬 조합: 베르 + 말 + 베르 + 이스트ÿc0\nÿc2재료: 4홈 미늘창/창 (요구 레벨 63)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 적 처치 시 50% 확률로 20 레벨 연쇄 번개 시전\n· 장착 시 12 레벨 선고 오라 효과 적용\n· 이동속도 +35%\n· 피해 255~325% 증가 (변함)\n· 적의 번개 저항 -(45~55)% (변함)\n· 강타 확률 +40%\n· 괴물 회복 저지\n· 활력 +0~49 (캐릭터 레벨에 비례)\n· 마법 아이템 발견 확률 30% 증가\n· 21 레벨 회오리 갑옷(충전 30회)\n\nÿc54홈 미늘창/창 (요구 레벨 63)ÿc0",
+                        "tooltipString": "ÿc4무한 (무한의 공간) (Infinity)ÿc0\nÿc4룬 조합: 베르 + 말 + 베르 + 이스트ÿc0\nÿc4재료: 4홈 미늘창/창 (요구 레벨 63)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 적 처치 시 50% 확률로 20 레벨 연쇄 번개 시전\n· 장착 시 12 레벨 선고 오라 효과 적용\n· 이동속도 +35%\n· 피해 255~325% 증가 (변함)\n· 적의 번개 저항 -(45~55)% (변함)\n· 강타 확률 +40%\n· 괴물 회복 저지\n· 활력 +0~49 (캐릭터 레벨에 비례)\n· 마법 아이템 발견 확률 30% 증가\n· 21 레벨 회오리 갑옷(충전 30회)\n\nÿc04홈 미늘창/창 (요구 레벨 63)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -5437,8 +5437,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5478,7 +5478,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 적 처치 시 50% 확률로 20 레벨 연쇄 번개 시전 / 장착 시 12",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -5490,8 +5490,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5525,7 +5525,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -5537,8 +5537,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5578,7 +5578,7 @@
                         "fitToText": true,
                         "text": "   레벨 선고 오라 효과 적용",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -5590,8 +5590,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5662,8 +5662,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5700,9 +5700,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4진노 (래쓰) (Wrath)ÿc0\nÿc8룬 조합: 풀 + 룸 + 베르 + 말ÿc0\nÿc2재료: 4홈 활/쇠뇌 (요구 레벨 63)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 타격 시 30% 확률로 1 레벨 노화 시전\n· 타격 시 5% 확률로 10 레벨 생명력 추출 시전\n· 악마에게 주는 피해 +375%\n· 악마에 대한 명중률 +100\n· 언데드에게 주는 피해 +250~300% (변함)\n· 마법 피해 85 - 120 추가\n· 번개 피해 41 - 240 추가\n· 강타 확률 +20%\n· 괴물 회복 저지\n· 마력 +10\n· 빙결되지 않음\n\nÿc54홈 활/쇠뇌 (요구 레벨 63)ÿc0",
+                        "tooltipString": "ÿc4진노 (래쓰) (Wrath)ÿc0\nÿc4룬 조합: 풀 + 룸 + 베르 + 말ÿc0\nÿc4재료: 4홈 활/쇠뇌 (요구 레벨 63)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 타격 시 30% 확률로 1 레벨 노화 시전\n· 타격 시 5% 확률로 10 레벨 생명력 추출 시전\n· 악마에게 주는 피해 +375%\n· 악마에 대한 명중률 +100\n· 언데드에게 주는 피해 +250~300% (변함)\n· 마법 피해 85 - 120 추가\n· 번개 피해 41 - 240 추가\n· 강타 확률 +20%\n· 괴물 회복 저지\n· 마력 +10\n· 빙결되지 않음\n\nÿc04홈 활/쇠뇌 (요구 레벨 63)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -5742,8 +5742,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5783,7 +5783,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 타격 시 30% 확률로 1 레벨 노화 시전 / 타격 시 5% 확률로",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -5795,8 +5795,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5830,7 +5830,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -5842,8 +5842,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5883,7 +5883,7 @@
                         "fitToText": true,
                         "text": "   10 레벨 생명력 추출 시전",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -5895,8 +5895,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5967,8 +5967,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6005,9 +6005,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4낙인 (인두) (Brand)ÿc0\nÿc8룬 조합: 자 + 로 + 말 + 굴ÿc0\nÿc2재료: 4홈 활/쇠뇌 (요구 레벨 65)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 피격 시 35% 확률로 14 레벨 피해 증폭 시전\n· 타격 시 100% 확률로 18 레벨 뼈 창 시전\n· 폭발하는 화살 발사\n· 피해 +260~340% 증가 (변함)\n· 대상의 방어력 무시\n· 명중률 보너스 20%\n· 악마에게 주는 피해 +280~330% (변함)\n· 치명적 공격 +20%\n· 괴물 회복 저지\n· 밀쳐내기\n\nÿc54홈 활/쇠뇌 (요구 레벨 65)ÿc0",
+                        "tooltipString": "ÿc4낙인 (인두) (Brand)ÿc0\nÿc4룬 조합: 자 + 로 + 말 + 굴ÿc0\nÿc4재료: 4홈 활/쇠뇌 (요구 레벨 65)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 피격 시 35% 확률로 14 레벨 피해 증폭 시전\n· 타격 시 100% 확률로 18 레벨 뼈 창 시전\n· 폭발하는 화살 발사\n· 피해 +260~340% 증가 (변함)\n· 대상의 방어력 무시\n· 명중률 보너스 20%\n· 악마에게 주는 피해 +280~330% (변함)\n· 치명적 공격 +20%\n· 괴물 회복 저지\n· 밀쳐내기\n\nÿc04홈 활/쇠뇌 (요구 레벨 65)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -6047,8 +6047,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6088,7 +6088,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 피격 시 35% 확률로 14 레벨 피해 증폭 시전 / 타격 시 100%",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -6100,8 +6100,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6135,7 +6135,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -6147,8 +6147,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6188,7 +6188,7 @@
                         "fitToText": true,
                         "text": "   확률로 18 레벨 뼈 창 시전",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -6200,8 +6200,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6272,8 +6272,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6310,9 +6310,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4신념 (신뢰) (Faith)ÿc0\nÿc8룬 조합: 오움 + 자 + 렘 + 엘드ÿc0\nÿc2재료: 4홈 활/쇠뇌 (요구 레벨 65)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 장착 시 12~15 레벨 광신 오라 효과 적용 (변함)\n· 모든 기술 +1~2 (변함)\n· 피해 330% 증가\n· 대상의 방어력 무시\n· 명중률 보너스 300%\n· 언데드에게 주는 피해 +75%\n· 언데드에 대한 명중률 +50\n· 화염 피해 +120\n· 모든 저항 +15\n· 처치 시 10% 확률로 되돌아온 자 소생\n· 괴물에게서 얻는 금화 75% 증가\n\nÿc54홈 활/쇠뇌 (요구 레벨 65)ÿc0",
+                        "tooltipString": "ÿc4신념 (신뢰) (Faith)ÿc0\nÿc4룬 조합: 오움 + 자 + 렘 + 엘드ÿc0\nÿc4재료: 4홈 활/쇠뇌 (요구 레벨 65)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 장착 시 12~15 레벨 광신 오라 효과 적용 (변함)\n· 모든 기술 +1~2 (변함)\n· 피해 330% 증가\n· 대상의 방어력 무시\n· 명중률 보너스 300%\n· 언데드에게 주는 피해 +75%\n· 언데드에 대한 명중률 +50\n· 화염 피해 +120\n· 모든 저항 +15\n· 처치 시 10% 확률로 되돌아온 자 소생\n· 괴물에게서 얻는 금화 75% 증가\n\nÿc04홈 활/쇠뇌 (요구 레벨 65)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -6352,8 +6352,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6393,7 +6393,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 장착 시 12~15 레벨 광신 오라 효과 적용 (변함) / 모든 기술",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -6405,8 +6405,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6440,7 +6440,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -6452,8 +6452,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6493,7 +6493,7 @@
                         "fitToText": true,
                         "text": "   +1~2 (변함)",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -6505,8 +6505,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6577,8 +6577,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6615,9 +6615,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4기근 (Famine)ÿc0\nÿc8룬 조합: 팔 + 오움 + 오르트 + 자ÿc0\nÿc2재료: 4홈 도끼/망치 (요구 레벨 65)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 공격 속도 +30%\n· 피해 +320~370% 증가 (변함)\n· 대상의 방어력 무시\n· 마법 피해 180 - 200 추가\n· 화염 피해 50 - 200 추가\n· 번개 피해 51 - 250 추가\n· 냉기 피해 50 - 200 추가\n· 적중당 생명력 12% 훔침\n· 괴물 회복 저지\n· 힘 +10\n\nÿc54홈 도끼/망치 (요구 레벨 65)ÿc0",
+                        "tooltipString": "ÿc4기근 (Famine)ÿc0\nÿc4룬 조합: 팔 + 오움 + 오르트 + 자ÿc0\nÿc4재료: 4홈 도끼/망치 (요구 레벨 65)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 공격 속도 +30%\n· 피해 +320~370% 증가 (변함)\n· 대상의 방어력 무시\n· 마법 피해 180 - 200 추가\n· 화염 피해 50 - 200 추가\n· 번개 피해 51 - 250 추가\n· 냉기 피해 50 - 200 추가\n· 적중당 생명력 12% 훔침\n· 괴물 회복 저지\n· 힘 +10\n\nÿc04홈 도끼/망치 (요구 레벨 65)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -6657,8 +6657,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6698,7 +6698,7 @@
                         "fitToText": true,
                         "text": "  ▶ 핵심 옵션: 공격 속도 +30% / 피해 +320~370% 증가 (변함)",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -6710,8 +6710,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6745,7 +6745,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -6757,8 +6757,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6829,8 +6829,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6867,9 +6867,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4얼음 (Ice)ÿc0\nÿc8룬 조합: 앰 + 샤엘 + 자 + 로ÿc0\nÿc2재료: 4홈 활/쇠뇌 (요구 레벨 65)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 레벨 상승 시 100% 확률로 40 레벨 눈보라 시전\n· 타격 시 25% 확률로 22 레벨 서릿발 시전\n· 장착 시 18 레벨 신성한 빙결 오라 효과 적용\n· 공격 속도 +20%\n· 피해 +140~210% 증가 (변함)\n· 대상의 방어력 무시\n· 냉기 기술 피해 +25~30% (변함)\n· 적중당 생명력 7% 훔침\n· 적의 냉기 저항 -20%\n· 치명적 공격 +20%\n· 괴물에게서 얻는 금화 3~309% 증가 (캐릭터 레벨에 비례)\n\nÿc54홈 활/쇠뇌 (요구 레벨 65)ÿc0",
+                        "tooltipString": "ÿc4얼음 (Ice)ÿc0\nÿc4룬 조합: 앰 + 샤엘 + 자 + 로ÿc0\nÿc4재료: 4홈 활/쇠뇌 (요구 레벨 65)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 레벨 상승 시 100% 확률로 40 레벨 눈보라 시전\n· 타격 시 25% 확률로 22 레벨 서릿발 시전\n· 장착 시 18 레벨 신성한 빙결 오라 효과 적용\n· 공격 속도 +20%\n· 피해 +140~210% 증가 (변함)\n· 대상의 방어력 무시\n· 냉기 기술 피해 +25~30% (변함)\n· 적중당 생명력 7% 훔침\n· 적의 냉기 저항 -20%\n· 치명적 공격 +20%\n· 괴물에게서 얻는 금화 3~309% 증가 (캐릭터 레벨에 비례)\n\nÿc04홈 활/쇠뇌 (요구 레벨 65)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -6909,8 +6909,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6950,7 +6950,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 레벨 상승 시 100% 확률로 40 레벨 눈보라 시전 / 타격 시",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -6962,8 +6962,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -6997,7 +6997,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -7009,8 +7009,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7050,7 +7050,7 @@
                         "fitToText": true,
                         "text": "   25% 확률로 22 레벨 서릿발 시전",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -7062,8 +7062,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7134,8 +7134,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7172,9 +7172,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4불사조 (Phoenix (Weapon))ÿc0\nÿc8룬 조합: 벡스 + 벡스 + 로 + 자ÿc0\nÿc2재료: 4홈 무기 (요구 레벨 65)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 레벨 상승 시 100% 확률로 40 레벨 불길 시전\n· 타격 시 40% 확률로 22 레벨 화염폭풍 시전\n· 장착 시 10~15 레벨 속죄 오라 효과 적용 (변함)\n· 피해 +350~400% 증가 (변함)\n· 대상의 방어력 무시\n· 적중당 마나 14% 훔침\n· 적의 화염 저항 -28%\n· 치명적 공격 +20%\n· 원거리 공격 방어력 +350~400 (변함)\n· 화염 흡수 +15~21 (변함)\n\nÿc54홈 무기 (요구 레벨 65)ÿc0",
+                        "tooltipString": "ÿc4불사조 (Phoenix (Weapon))ÿc0\nÿc4룬 조합: 벡스 + 벡스 + 로 + 자ÿc0\nÿc4재료: 4홈 무기 (요구 레벨 65)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 레벨 상승 시 100% 확률로 40 레벨 불길 시전\n· 타격 시 40% 확률로 22 레벨 화염폭풍 시전\n· 장착 시 10~15 레벨 속죄 오라 효과 적용 (변함)\n· 피해 +350~400% 증가 (변함)\n· 대상의 방어력 무시\n· 적중당 마나 14% 훔침\n· 적의 화염 저항 -28%\n· 치명적 공격 +20%\n· 원거리 공격 방어력 +350~400 (변함)\n· 화염 흡수 +15~21 (변함)\n\nÿc04홈 무기 (요구 레벨 65)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -7214,8 +7214,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7255,7 +7255,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 레벨 상승 시 100% 확률로 40 레벨 불길 시전 / 타격 시 40%",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -7267,8 +7267,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7302,7 +7302,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -7314,8 +7314,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7355,7 +7355,7 @@
                         "fitToText": true,
                         "text": "   확률로 22 레벨 화염폭풍 시전",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -7367,8 +7367,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7439,8 +7439,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7477,9 +7477,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4불사조 (방패) (Phoenix (Shield))ÿc0\nÿc8룬 조합: 벡스 + 벡스 + 로 + 자ÿc0\nÿc2재료: 4홈 방패 (요구 레벨 65)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 레벨 상승 시 100% 확률로 40 레벨 불길 시전\n· 타격 시 40% 확률로 22 레벨 화염폭풍 시전\n· 장착 시 10~15 레벨 속죄 오라 효과 적용 (변함)\n· 피해 350~400% 증가 (변함)\n· 적의 화염 저항 -28%\n· 원거리 공격 방어력 +350~400 (변함)\n· 생명력 +50\n· 최대 번개 저항 +5%\n· 최대 화염 저항 +10%\n· 화염 흡수 +15~21 (변함)\n\nÿc54홈 방패 (요구 레벨 65)ÿc0",
+                        "tooltipString": "ÿc4불사조 (방패) (Phoenix (Shield))ÿc0\nÿc4룬 조합: 벡스 + 벡스 + 로 + 자ÿc0\nÿc4재료: 4홈 방패 (요구 레벨 65)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 레벨 상승 시 100% 확률로 40 레벨 불길 시전\n· 타격 시 40% 확률로 22 레벨 화염폭풍 시전\n· 장착 시 10~15 레벨 속죄 오라 효과 적용 (변함)\n· 피해 350~400% 증가 (변함)\n· 적의 화염 저항 -28%\n· 원거리 공격 방어력 +350~400 (변함)\n· 생명력 +50\n· 최대 번개 저항 +5%\n· 최대 화염 저항 +10%\n· 화염 흡수 +15~21 (변함)\n\nÿc04홈 방패 (요구 레벨 65)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -7519,8 +7519,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7560,7 +7560,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 레벨 상승 시 100% 확률로 40 레벨 불길 시전 / 타격 시 40%",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -7572,8 +7572,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7607,7 +7607,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -7619,8 +7619,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7660,7 +7660,7 @@
                         "fitToText": true,
                         "text": "   확률로 22 레벨 화염폭풍 시전",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -7672,8 +7672,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7744,8 +7744,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7782,9 +7782,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4정의의 손길 (Hand of Justice)ÿc0\nÿc8룬 조합: 수르 + 참 + 앰 + 로ÿc0\nÿc2재료: 4홈 무기 (요구 레벨 67)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 레벨 상승 시 100% 확률로 36 레벨 불길 시전\n· 사망 시 100% 확률로 48 레벨 운석 낙하 시전\n· 장착 시 16 레벨 신성한 불꽃 오라 효과 적용\n· 공격 속도 +33%\n· 피해 +280~330% 증가 (변함)\n· 대상의 방어력 무시\n· 적의 화염 저항 -20%\n· 적중당 생명력 7% 훔침\n· 치명적 공격 +20%\n· 적중 시 대상 실명\n· 대상 빙결 +3\n\nÿc54홈 무기 (요구 레벨 67)ÿc0",
+                        "tooltipString": "ÿc4정의의 손길 (Hand of Justice)ÿc0\nÿc4룬 조합: 수르 + 참 + 앰 + 로ÿc0\nÿc4재료: 4홈 무기 (요구 레벨 67)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 레벨 상승 시 100% 확률로 36 레벨 불길 시전\n· 사망 시 100% 확률로 48 레벨 운석 낙하 시전\n· 장착 시 16 레벨 신성한 불꽃 오라 효과 적용\n· 공격 속도 +33%\n· 피해 +280~330% 증가 (변함)\n· 대상의 방어력 무시\n· 적의 화염 저항 -20%\n· 적중당 생명력 7% 훔침\n· 치명적 공격 +20%\n· 적중 시 대상 실명\n· 대상 빙결 +3\n\nÿc04홈 무기 (요구 레벨 67)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -7824,8 +7824,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7865,7 +7865,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 레벨 상승 시 100% 확률로 36 레벨 불길 시전 / 사망 시",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -7877,8 +7877,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7912,7 +7912,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -7924,8 +7924,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -7965,7 +7965,7 @@
                         "fitToText": true,
                         "text": "   100% 확률로 48 레벨 운석 낙하 시전",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -7977,8 +7977,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -8049,8 +8049,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -8087,9 +8087,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "전체 옵션 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc4긍지 (자존심) (Pride)ÿc0\nÿc8룬 조합: 참 + 수르 + 이오 + 로ÿc0\nÿc2재료: 4홈 미늘창/창 (요구 레벨 67)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 피격 시 25% 확률로 17 레벨 화염벽 시전\n· 장착 시 16~20 레벨 집중 오라 효과 적용 (변함)\n· 명중률 보너스 260~300% (변함)\n· 악마에게 주는 피해 +1~99% (캐릭터 레벨에 비례)\n· 번개 피해 50 - 280 추가\n· 치명적 공격 +20%\n· 적중 시 대상 실명\n· 대상 빙결 +3\n· 활력 +10\n· 생명력 회복 +8\n· 괴물에게서 얻는 금화 1~185% 증가 (캐릭터 레벨에 비례)\n\nÿc54홈 미늘창/창 (요구 레벨 67)ÿc0",
+                        "tooltipString": "ÿc4긍지 (자존심) (Pride)ÿc0\nÿc4룬 조합: 참 + 수르 + 이오 + 로ÿc0\nÿc4재료: 4홈 미늘창/창 (요구 레벨 67)ÿc0\n\nÿc4[완성 옵션]ÿc0\n· 피격 시 25% 확률로 17 레벨 화염벽 시전\n· 장착 시 16~20 레벨 집중 오라 효과 적용 (변함)\n· 명중률 보너스 260~300% (변함)\n· 악마에게 주는 피해 +1~99% (캐릭터 레벨에 비례)\n· 번개 피해 50 - 280 추가\n· 치명적 공격 +20%\n· 적중 시 대상 실명\n· 대상 빙결 +3\n· 활력 +10\n· 생명력 회복 +8\n· 괴물에게서 얻는 금화 1~185% 증가 (캐릭터 레벨에 비례)\n\nÿc04홈 미늘창/창 (요구 레벨 67)",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -8129,8 +8129,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -8170,7 +8170,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 옵션: 피격 시 25% 확률로 17 레벨 화염벽 시전 / 장착 시 16~20",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -8182,8 +8182,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -8217,7 +8217,7 @@
                         "fitToText": true,
                         "text": "4홈 룬어",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -8229,8 +8229,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -8270,7 +8270,7 @@
                         "fitToText": true,
                         "text": "   레벨 집중 오라 효과 적용 (변함)",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -8282,8 +8282,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {

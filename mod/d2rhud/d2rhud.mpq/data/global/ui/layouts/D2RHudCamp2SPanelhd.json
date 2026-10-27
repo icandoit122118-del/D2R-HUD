@@ -29,7 +29,7 @@
         "hoveredFrame": 3,
         "textString": "▲ 창 접기",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudMainFold",
-        "textColor": "$FontColorLightYellow",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }
@@ -65,7 +65,7 @@
         "hoveredFrame": 3,
         "textString": "중형 11줄",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudCamp2Panel",
-        "textColor": "$FontColorGreen",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }
@@ -83,7 +83,7 @@
         "hoveredFrame": 3,
         "textString": "대형 18줄",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudCamp2LPanel",
-        "textColor": "$FontColorWhite",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }
@@ -225,8 +225,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -263,9 +263,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "공략 툴팁 보기",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[Act 4] 4막 - 타락한 천사(이주얼) ~ 혼돈의 성역(디아블로)\n\nÿc2[최적 동선]ÿc0\n외부 평원 → 절망의 평원(이주얼, 스킬+2) → 저주받은 자들의 도시(WP) → 불길의 강(WP/지옥불 제단) → 혼돈의 성역 봉인 5개 → 디아블로\n\nÿc4[길찾기 노트]ÿc0\n악몽 난이도 헬포지에서는 최대 우움(#22), 지옥 난이도 헬포지에서는 최대 굴(#25) 룬이 드랍됩니다.\n\nÿc1[보스 & 전략 팁]ÿc0\n보통 난이도 디아블로의 번개 숨결(레드 라이트닝)은 캐릭터와 완전히 밀착하면 판정이 닿지 않거나 대각선 이동으로 피할 수 있습니다.",
+                        "tooltipString": "ÿc4[Act 4] 4막 - 타락한 천사(이주얼) ~ 혼돈의 성역(디아블로)ÿc0\n\nÿc4[최적 동선]ÿc0\n외부 평원 → 절망의 평원(이주얼, 스킬+2) → 저주받은 자들의 도시(WP) → 불길의 강(WP/지옥불 제단) → 혼돈의 성역 봉인 5개 → 디아블로\n\nÿc4[길찾기 노트]ÿc0\n악몽 난이도 헬포지에서는 최대 우움(#22), 지옥 난이도 헬포지에서는 최대 굴(#25) 룬이 드랍됩니다.\n\nÿc4[보스 & 전략 팁]ÿc0\n보통 난이도 디아블로의 번개 숨결(레드 라이트닝)은 캐릭터와 완전히 밀착하면 판정이 닿지 않거나 대각선 이동으로 피할 수 있습니다.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -293,7 +293,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 동선: 외부 평원 → 절망의 평원(이주얼, 스킬+2) → 저주받은 자들의",
                         "style": {
-                          "fontColor": "$FontColorLightTeal",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -305,8 +305,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -352,8 +352,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -393,7 +393,7 @@
                         "fitToText": true,
                         "text": "   도시(WP) → 불길의 강(WP/지옥불 제단) → 혼돈의 성역 봉인 5개 →",
                         "style": {
-                          "fontColor": "$FontColorLightTeal",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -405,8 +405,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -446,7 +446,7 @@
                         "fitToText": true,
                         "text": "   디아블로",
                         "style": {
-                          "fontColor": "$FontColorLightTeal",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -458,8 +458,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -499,7 +499,7 @@
                         "fitToText": true,
                         "text": "[1] [필수/보상] 절망의 평원에서 이주얼 처치 후 영혼 대화 → 티리엘에게 스킬",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -511,8 +511,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -546,7 +546,7 @@
                         "fitToText": true,
                         "text": "★ 필수 보상",
                         "style": {
-                          "fontColor": "$FontColorOrange",
+                          "fontColor": "$FontColorGoldYellow",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -558,8 +558,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -599,7 +599,7 @@
                         "fitToText": true,
                         "text": "   포인트 +2 획득",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -611,8 +611,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -652,7 +652,7 @@
                         "fitToText": true,
                         "text": "[2] 불길의 강 지옥불 제단에서 대장장이 헤파스토 처치 후 메피스토 영혼석",
                         "style": {
-                          "fontColor": "$FontColorWhite",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -664,8 +664,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -699,7 +699,7 @@
                         "fitToText": true,
                         "text": "진행 체크",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -711,8 +711,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -752,7 +752,7 @@
                         "fitToText": true,
                         "text": "   파괴(룬/보석 보상)",
                         "style": {
-                          "fontColor": "$FontColorWhite",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -764,8 +764,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -805,7 +805,7 @@
                         "fitToText": true,
                         "text": "  [3] 불길의 강 웨이포인트 활성화 후 혼돈의 성역 진입",
                         "style": {
-                          "fontColor": "$FontColorWhite",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -817,8 +817,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -852,7 +852,7 @@
                         "fitToText": true,
                         "text": "진행 체크",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -864,8 +864,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -905,7 +905,7 @@
                         "fitToText": true,
                         "text": "[4] 혼돈의 성역 5개 봉인 해제 및 군주 드 사이스 / 영혼의 감염자 / 혼돈의",
                         "style": {
-                          "fontColor": "$FontColorWhite",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -917,8 +917,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -952,7 +952,7 @@
                         "fitToText": true,
                         "text": "진행 체크",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -964,8 +964,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1005,7 +1005,7 @@
                         "fitToText": true,
                         "text": "   대장군 3보스 처치",
                         "style": {
-                          "fontColor": "$FontColorWhite",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1017,8 +1017,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1058,7 +1058,7 @@
                         "fitToText": true,
                         "text": "  [5] 디아블로 처치 후 티리엘의 포탈을 통해 5막 해로개스 이동",
                         "style": {
-                          "fontColor": "$FontColorWhite",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1070,8 +1070,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1105,7 +1105,7 @@
                         "fitToText": true,
                         "text": "진행 체크",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -1117,8 +1117,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1158,7 +1158,7 @@
                         "fitToText": true,
                         "text": "★ 길찾기: 악몽 난이도 헬포지에서는 최대 우움(#22), 지옥 난이도 헬포지에서는",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1170,8 +1170,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1205,7 +1205,7 @@
                         "fitToText": true,
                         "text": "핵심 팁",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -1217,8 +1217,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1258,7 +1258,7 @@
                         "fitToText": true,
                         "text": "   최대 굴(#25) 룬이 드랍됩니다.",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1270,8 +1270,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1342,8 +1342,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1380,9 +1380,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "공략 툴팁 보기",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[Act 5-1] 5막 - 쉔크(소켓 보상) & 앤야 구출(모든 저항 +10)\n\nÿc2[최적 동선]ÿc0\n핏빛 기슭(쉔크) → 혹한의 고산지(WP/바바리안 3명 구출) → 고대인의 길 → 수정 동굴 → 얼어붙은 강(앤야 구출)\n\nÿc4[길찾기 노트]ÿc0\n보통 카우방이나 결정의 통로에서 드랍된 흰색 크리스탈 소드/브로드 소드를 라르주크에게 주면 확정 4홈(영혼 재료)이 뚫립니다.\n\nÿc1[보스 & 전략 팁]ÿc0\n얼어붙은 강에는 영혼(버닝 소울)과 마녀가 등장하므로 번개 저항 75%를 반드시 맞추고 진입하세요.",
+                        "tooltipString": "ÿc4[Act 5-1] 5막 - 쉔크(소켓 보상) & 앤야 구출(모든 저항 +10)ÿc0\n\nÿc4[최적 동선]ÿc0\n핏빛 기슭(쉔크) → 혹한의 고산지(WP/바바리안 3명 구출) → 고대인의 길 → 수정 동굴 → 얼어붙은 강(앤야 구출)\n\nÿc4[길찾기 노트]ÿc0\n보통 카우방이나 결정의 통로에서 드랍된 흰색 크리스탈 소드/브로드 소드를 라르주크에게 주면 확정 4홈(영혼 재료)이 뚫립니다.\n\nÿc4[보스 & 전략 팁]ÿc0\n얼어붙은 강에는 영혼(버닝 소울)과 마녀가 등장하므로 번개 저항 75%를 반드시 맞추고 진입하세요.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -1422,8 +1422,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1463,7 +1463,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 동선: 핏빛 기슭(쉔크) → 혹한의 고산지(WP/바바리안 3명 구출) →",
                         "style": {
-                          "fontColor": "$FontColorLightTeal",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1475,8 +1475,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1522,8 +1522,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1563,7 +1563,7 @@
                         "fitToText": true,
                         "text": "   고대인의 길 → 수정 동굴 → 얼어붙은 강(앤야 구출)",
                         "style": {
-                          "fontColor": "$FontColorLightTeal",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1575,8 +1575,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1616,7 +1616,7 @@
                         "fitToText": true,
                         "text": "[1] [필수/보상] 핏빛 기슭 감독관 쉔크 처치 → 라르주크 장비 홈(소켓) 추가",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1628,8 +1628,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1663,7 +1663,7 @@
                         "fitToText": true,
                         "text": "★ 필수 보상",
                         "style": {
-                          "fontColor": "$FontColorOrange",
+                          "fontColor": "$FontColorGoldYellow",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -1675,8 +1675,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1716,7 +1716,7 @@
                         "fitToText": true,
                         "text": "   보상 해금",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1728,8 +1728,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1769,7 +1769,7 @@
                         "fitToText": true,
                         "text": "[2] [보상] 혹한의 고산지에서 포로 바바리안 15명 구출 → 퀄케크에게",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1781,8 +1781,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1816,7 +1816,7 @@
                         "fitToText": true,
                         "text": "★ 필수 보상",
                         "style": {
-                          "fontColor": "$FontColorOrange",
+                          "fontColor": "$FontColorGoldYellow",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -1828,8 +1828,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1869,7 +1869,7 @@
                         "fitToText": true,
                         "text": "   랄+오르트+탈(고대인의 서약) 룬 획득",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1881,8 +1881,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1922,7 +1922,7 @@
                         "fitToText": true,
                         "text": "[3] [필수/보상] 수정 동굴 아래 얼어붙은 강에서 얼어붙은 앤야 확인 → 마라에게",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -1934,8 +1934,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -1969,7 +1969,7 @@
                         "fitToText": true,
                         "text": "★ 필수 보상",
                         "style": {
-                          "fontColor": "$FontColorOrange",
+                          "fontColor": "$FontColorGoldYellow",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -1981,8 +1981,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2022,7 +2022,7 @@
                         "fitToText": true,
                         "text": "   해동 물약 수령 → 앤야 구출",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2034,8 +2034,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2075,7 +2075,7 @@
                         "fitToText": true,
                         "text": "[4] 마라와 대화해 저항의 두루마리 수령 후 우클릭 사용 → 모든 저항 영구 +10%",
                         "style": {
-                          "fontColor": "$FontColorWhite",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2087,8 +2087,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2122,7 +2122,7 @@
                         "fitToText": true,
                         "text": "진행 체크",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -2134,8 +2134,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2175,7 +2175,7 @@
                         "fitToText": true,
                         "text": "   증가",
                         "style": {
-                          "fontColor": "$FontColorWhite",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2187,8 +2187,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2228,7 +2228,7 @@
                         "fitToText": true,
                         "text": "  [5] 고대인의 길 웨이포인트 활성화 (아리앗 정상 진입용 거점)",
                         "style": {
-                          "fontColor": "$FontColorWhite",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2240,8 +2240,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2275,7 +2275,7 @@
                         "fitToText": true,
                         "text": "진행 체크",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -2287,8 +2287,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2328,7 +2328,7 @@
                         "fitToText": true,
                         "text": "★ 길찾기: 보통 카우방이나 결정의 통로에서 드랍된 흰색 크리스탈 소드/브로드 소드를",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2340,8 +2340,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2375,7 +2375,7 @@
                         "fitToText": true,
                         "text": "핵심 팁",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -2387,8 +2387,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2428,7 +2428,7 @@
                         "fitToText": true,
                         "text": "   라르주크에게 주면 확정 4홈(영혼 재료)이 뚫립니다.",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2440,8 +2440,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2512,8 +2512,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2550,9 +2550,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "공략 툴팁 보기",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[Act 5-2] 5막 - 아리앗 정상(삼바바) & 세계석 성채(바알)\n\nÿc2[최적 동선]ÿc0\n고대인의 길(WP) → 아리앗 정상(삼바바, 20/40/60레벨 제한) → 세계석 성채 2층(WP) → 파괴의 왕좌(5웨이브) → 바알 처치\n\nÿc4[길찾기 노트]ÿc0\n지옥 난이도 고대인 3인 전투 전에는 바닥에 물약을 미리 뿌려 두고, 텔포봉으로 고대인을 한 명씩 분리해 각개격파하세요.\n\nÿc1[보스 & 전략 팁]ÿc0\n바알 클리어 후 공포의 영역(Terror Zone)이 활성화되면 현 난이도 최고 효율로 경험치와 룬/부적을 파밍할 수 있습니다.",
+                        "tooltipString": "ÿc4[Act 5-2] 5막 - 아리앗 정상(삼바바) & 세계석 성채(바알)ÿc0\n\nÿc4[최적 동선]ÿc0\n고대인의 길(WP) → 아리앗 정상(삼바바, 20/40/60레벨 제한) → 세계석 성채 2층(WP) → 파괴의 왕좌(5웨이브) → 바알 처치\n\nÿc4[길찾기 노트]ÿc0\n지옥 난이도 고대인 3인 전투 전에는 바닥에 물약을 미리 뿌려 두고, 텔포봉으로 고대인을 한 명씩 분리해 각개격파하세요.\n\nÿc4[보스 & 전략 팁]ÿc0\n바알 클리어 후 공포의 영역(Terror Zone)이 활성화되면 현 난이도 최고 효율로 경험치와 룬/부적을 파밍할 수 있습니다.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -2580,7 +2580,7 @@
                         "fitToText": true,
                         "text": "▶ 핵심 동선: 고대인의 길(WP) → 아리앗 정상(삼바바, 20/40/60레벨 제한)",
                         "style": {
-                          "fontColor": "$FontColorLightTeal",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2592,8 +2592,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2639,8 +2639,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2680,7 +2680,7 @@
                         "fitToText": true,
                         "text": "   → 세계석 성채 2층(WP) → 파괴의 왕좌(5웨이브) → 바알 처치",
                         "style": {
-                          "fontColor": "$FontColorLightTeal",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2692,8 +2692,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2733,7 +2733,7 @@
                         "fitToText": true,
                         "text": "[1] [필수] 아리앗 정상에서 고대인 3인(탈릭·매덕·코릭)을 포탈 열지 않고 한",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2745,8 +2745,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2780,7 +2780,7 @@
                         "fitToText": true,
                         "text": "★ 필수 보상",
                         "style": {
-                          "fontColor": "$FontColorOrange",
+                          "fontColor": "$FontColorGoldYellow",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -2792,8 +2792,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2833,7 +2833,7 @@
                         "fitToText": true,
                         "text": "   번에 처치 (레벨 20/40/60 필요)",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2845,8 +2845,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2886,7 +2886,7 @@
                         "fitToText": true,
                         "text": "[2] 세계석 성채 2층 웨이포인트 활성화 (3층 계단은 2층 WP 방 기준 오른쪽",
                         "style": {
-                          "fontColor": "$FontColorWhite",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2898,8 +2898,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2933,7 +2933,7 @@
                         "fitToText": true,
                         "text": "진행 체크",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -2945,8 +2945,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -2986,7 +2986,7 @@
                         "fitToText": true,
                         "text": "   시계방향 벽면)",
                         "style": {
-                          "fontColor": "$FontColorWhite",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -2998,8 +2998,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3039,7 +3039,7 @@
                         "fitToText": true,
                         "text": "  [3] 파괴의 왕좌에서 바알의 소환수 5웨이브(콜렌조~리스터) 전멸",
                         "style": {
-                          "fontColor": "$FontColorWhite",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3051,8 +3051,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3086,7 +3086,7 @@
                         "fitToText": true,
                         "text": "진행 체크",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -3098,8 +3098,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3139,7 +3139,7 @@
                         "fitToText": true,
                         "text": "  [4] 세계석 보관실 진입 후 바알 처치 → 다음 난이도 및 비밀 카우방 해금!",
                         "style": {
-                          "fontColor": "$FontColorWhite",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3151,8 +3151,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3186,7 +3186,7 @@
                         "fitToText": true,
                         "text": "진행 체크",
                         "style": {
-                          "fontColor": "$FontColorLightGray",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -3198,8 +3198,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3239,7 +3239,7 @@
                         "fitToText": true,
                         "text": "★ 길찾기: 지옥 난이도 고대인 3인 전투 전에는 바닥에 물약을 미리 뿌려 두고,",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3251,8 +3251,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3286,7 +3286,7 @@
                         "fitToText": true,
                         "text": "핵심 팁",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -3298,8 +3298,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3339,7 +3339,7 @@
                         "fitToText": true,
                         "text": "   텔포봉으로 고대인을 한 명씩 분리해 각개격파하세요.",
                         "style": {
-                          "fontColor": "$FontColorLightBlue",
+                          "fontColor": "$PanelNoteTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3351,8 +3351,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3423,8 +3423,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3458,7 +3458,7 @@
                         "fitToText": true,
                         "text": "12개 핵심 던전",
                         "style": {
-                          "fontColor": "$FontColorGreen",
+                          "fontColor": "$FontColorLightGold",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "center",
@@ -3470,8 +3470,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3530,7 +3530,7 @@
                         "fitToText": true,
                         "text": "· [1막] 검은 습지 - 잊힌 탑 1~4층 (백작) → 입구 타일 진입 방향 기준",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3542,8 +3542,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3580,9 +3580,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "상세 설명 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[1막] 검은 습지 - 잊힌 탑 1~4층 (백작)\n\nÿc2[길찾기 공식]ÿc0\n입구 타일 진입 방향 기준 왼쪽(시계방향 90도) 벽면을 따라 진행\n\nÿc0백작(카운테스) 룬 파밍 시 매 층 입구에서 캐릭터 시선 좌측 벽을 타면 가장 빠르게 다음 층 계단이 나옵니다.",
+                        "tooltipString": "ÿc4[1막] 검은 습지 - 잊힌 탑 1~4층 (백작)ÿc0\n\nÿc4[길찾기 공식]ÿc0\n입구 타일 진입 방향 기준 왼쪽(시계방향 90도) 벽면을 따라 진행\n\nÿc0백작(카운테스) 룬 파밍 시 매 층 입구에서 캐릭터 시선 좌측 벽을 타면 가장 빠르게 다음 층 계단이 나옵니다.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -3610,7 +3610,7 @@
                         "fitToText": true,
                         "text": "   왼쪽(시계방향 90도) 벽면을 따라 진행",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3622,8 +3622,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3663,7 +3663,7 @@
                         "fitToText": true,
                         "text": "· [1막] 지하 통로 1층 / 감옥 1~3층 → 입구 방향 기준 직진 지형에 출구,",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3675,8 +3675,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3713,9 +3713,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "상세 설명 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[1막] 지하 통로 1층 / 감옥 1~3층\n\nÿc2[길찾기 공식]ÿc0\n입구 방향 기준 직진 지형에 출구, 좌측(시계방향)에 2층/웨이포인트\n\nÿc0바위 벌판으로 나가는 지하 통로 1층 출구는 입구 방향 정면(직진) 라인 끝에 배치됩니다.",
+                        "tooltipString": "ÿc4[1막] 지하 통로 1층 / 감옥 1~3층ÿc0\n\nÿc4[길찾기 공식]ÿc0\n입구 방향 기준 직진 지형에 출구, 좌측(시계방향)에 2층/웨이포인트\n\nÿc0바위 벌판으로 나가는 지하 통로 1층 출구는 입구 방향 정면(직진) 라인 끝에 배치됩니다.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -3743,7 +3743,7 @@
                         "fitToText": true,
                         "text": "   좌측(시계방향)에 2층/웨이포인트",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3755,8 +3755,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3796,7 +3796,7 @@
                         "fitToText": true,
                         "text": "· [1막] 내부 회랑 - 지하 묘지 2층 → 3층 (안다리엘) → 지하 묘지 2층",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3808,8 +3808,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3846,9 +3846,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "상세 설명 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[1막] 내부 회랑 - 지하 묘지 2층 → 3층 (안다리엘)\n\nÿc2[길찾기 공식]ÿc0\n지하 묘지 2층 웨이포인트(WP) 방 출구 기준 오른쪽(반시계방향 90도)\n\nÿc02층 WP 방에서 빠져나오는 방향을 기준으로 우측(시계 반대방향) 모서리에 3층 계단이 위치합니다.",
+                        "tooltipString": "ÿc4[1막] 내부 회랑 - 지하 묘지 2층 → 3층 (안다리엘)ÿc0\n\nÿc4[길찾기 공식]ÿc0\n지하 묘지 2층 웨이포인트(WP) 방 출구 기준 오른쪽(반시계방향 90도)\n\nÿc02층 WP 방에서 빠져나오는 방향을 기준으로 우측(시계 반대방향) 모서리에 3층 계단이 위치합니다.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -3876,7 +3876,7 @@
                         "fitToText": true,
                         "text": "   웨이포인트(WP) 방 출구 기준 오른쪽(반시계방향 90도)",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3888,8 +3888,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3929,7 +3929,7 @@
                         "fitToText": true,
                         "text": "· [2막] 머나먼 오아시스 - 구더기 굴 1~2층 → 입구 타일 기준",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -3941,8 +3941,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -3979,9 +3979,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "상세 설명 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[2막] 머나먼 오아시스 - 구더기 굴 1~2층\n\nÿc2[길찾기 공식]ÿc0\n입구 타일 기준 오른쪽(반시계방향 90도) 벽면을 따라 이동\n\nÿc0좁은 통로 지형이므로 입구에서 우측 벽만 계속 따라가면 2층·3층(왕들의 지팡이) 계단이 바로 나옵니다.",
+                        "tooltipString": "ÿc4[2막] 머나먼 오아시스 - 구더기 굴 1~2층ÿc0\n\nÿc4[길찾기 공식]ÿc0\n입구 타일 기준 오른쪽(반시계방향 90도) 벽면을 따라 이동\n\nÿc0좁은 통로 지형이므로 입구에서 우측 벽만 계속 따라가면 2층·3층(왕들의 지팡이) 계단이 바로 나옵니다.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -4009,7 +4009,7 @@
                         "fitToText": true,
                         "text": "   오른쪽(반시계방향 90도) 벽면을 따라 이동",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4021,8 +4021,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4062,7 +4062,7 @@
                         "fitToText": true,
                         "text": "· [2막] 죽음의 전당 1~2층 / 발톱 독사 사원 1층 → 입구 타일 기준",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4074,8 +4074,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4112,9 +4112,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "상세 설명 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[2막] 죽음의 전당 1~2층 / 발톱 독사 사원 1층\n\nÿc2[길찾기 공식]ÿc0\n입구 타일 기준 왼쪽(시계방향 90도) 벽면을 따라 이동\n\nÿc0호라드림의 함(죽음의 전당 3층)과 독사의 목걸이(독사 사원 2층) 모두 입구 기준 좌측 벽타기 공식이 적용됩니다.",
+                        "tooltipString": "ÿc4[2막] 죽음의 전당 1~2층 / 발톱 독사 사원 1층ÿc0\n\nÿc4[길찾기 공식]ÿc0\n입구 타일 기준 왼쪽(시계방향 90도) 벽면을 따라 이동\n\nÿc0호라드림의 함(죽음의 전당 3층)과 독사의 목걸이(독사 사원 2층) 모두 입구 기준 좌측 벽타기 공식이 적용됩니다.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -4142,7 +4142,7 @@
                         "fitToText": true,
                         "text": "   왼쪽(시계방향 90도) 벽면을 따라 이동",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4154,8 +4154,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4195,7 +4195,7 @@
                         "fitToText": true,
                         "text": "· [2막] 비전 성역 (소환술사 4방향) → 웨이포인트 기준 4갈래 중 막다른 끝 -",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4207,8 +4207,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4245,9 +4245,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "상세 설명 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[2막] 비전 성역 (소환술사 4방향)\n\nÿc2[길찾기 공식]ÿc0\n웨이포인트 기준 4갈래 중 막다른 끝 - 포탈/계단 유무로 지형 판별\n\nÿc0소환술사 처치 후 호라드림 일지를 읽고 퀘스트(Q) 창의 문양과 일치하는 탈 라샤 무덤을 확인하세요.",
+                        "tooltipString": "ÿc4[2막] 비전 성역 (소환술사 4방향)ÿc0\n\nÿc4[길찾기 공식]ÿc0\n웨이포인트 기준 4갈래 중 막다른 끝 - 포탈/계단 유무로 지형 판별\n\nÿc0소환술사 처치 후 호라드림 일지를 읽고 퀘스트(Q) 창의 문양과 일치하는 탈 라샤 무덤을 확인하세요.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -4275,7 +4275,7 @@
                         "fitToText": true,
                         "text": "   포탈/계단 유무로 지형 판별",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4287,8 +4287,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4328,7 +4328,7 @@
                         "fitToText": true,
                         "text": "· [2막] 신비술사의 협곡 - 탈 라샤의 무덤 (두리엘) → 무덤 입구 기준",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4340,8 +4340,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4378,9 +4378,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "상세 설명 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[2막] 신비술사의 협곡 - 탈 라샤의 무덤 (두리엘)\n\nÿc2[길찾기 공식]ÿc0\n무덤 입구 기준 왼쪽(시계방향 90도) 벽면을 따라가면 지팡이 홈 방 등장\n\nÿc07개 무덤의 문양 순서(원 → 반달 → 네모 → 별 → 아래세모 → 동그라미세모 → 위세모)는 항상 고정입니다.",
+                        "tooltipString": "ÿc4[2막] 신비술사의 협곡 - 탈 라샤의 무덤 (두리엘)ÿc0\n\nÿc4[길찾기 공식]ÿc0\n무덤 입구 기준 왼쪽(시계방향 90도) 벽면을 따라가면 지팡이 홈 방 등장\n\nÿc07개 무덤의 문양 순서(원 → 반달 → 네모 → 별 → 아래세모 → 동그라미세모 → 위세모)는 항상 고정입니다.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -4408,7 +4408,7 @@
                         "fitToText": true,
                         "text": "   왼쪽(시계방향 90도) 벽면을 따라가면 지팡이 홈 방 등장",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4420,8 +4420,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4461,7 +4461,7 @@
                         "fitToText": true,
                         "text": "· [3막] 증오의 억류지 2층 → 3층 (메피스토) → 증오 2층 입구 타일 기준",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4473,8 +4473,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4511,9 +4511,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "상세 설명 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[3막] 증오의 억류지 2층 → 3층 (메피스토)\n\nÿc2[길찾기 공식]ÿc0\n증오 2층 입구 타일 기준 왼쪽(시계방향 90도) 벽면을 따라 이동\n\nÿc02층 웨이포인트(WP) 기준이 아니라 1층에서 2층으로 내려온 입구 타일 기준 좌측 벽면입니다.",
+                        "tooltipString": "ÿc4[3막] 증오의 억류지 2층 → 3층 (메피스토)ÿc0\n\nÿc4[길찾기 공식]ÿc0\n증오 2층 입구 타일 기준 왼쪽(시계방향 90도) 벽면을 따라 이동\n\nÿc02층 웨이포인트(WP) 기준이 아니라 1층에서 2층으로 내려온 입구 타일 기준 좌측 벽면입니다.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -4541,7 +4541,7 @@
                         "fitToText": true,
                         "text": "   왼쪽(시계방향 90도) 벽면을 따라 이동",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4553,8 +4553,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4594,7 +4594,7 @@
                         "fitToText": true,
                         "text": "· [4막] 절망의 평원(이주얼) / 불길의 강(헬포지) → 외곽 벽면을 따라 이동하며",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4606,8 +4606,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4644,9 +4644,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "상세 설명 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[4막] 절망의 평원(이주얼) / 불길의 강(헬포지)\n\nÿc2[길찾기 공식]ÿc0\n외곽 벽면을 따라 이동하며 미니맵 성소/제단 아이콘 확인\n\nÿc0불길의 강은 웨이포인트 직전 갈림길 반대편에 대장장이 헤파스토의 지옥불 제단이 생성됩니다.",
+                        "tooltipString": "ÿc4[4막] 절망의 평원(이주얼) / 불길의 강(헬포지)ÿc0\n\nÿc4[길찾기 공식]ÿc0\n외곽 벽면을 따라 이동하며 미니맵 성소/제단 아이콘 확인\n\nÿc0불길의 강은 웨이포인트 직전 갈림길 반대편에 대장장이 헤파스토의 지옥불 제단이 생성됩니다.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -4674,7 +4674,7 @@
                         "fitToText": true,
                         "text": "   미니맵 성소/제단 아이콘 확인",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4686,8 +4686,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4727,7 +4727,7 @@
                         "fitToText": true,
                         "text": "· [5막] 고대인의 길 / 수정 동굴 / 혹한의 지하도 → 입구 타일 기준",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4739,8 +4739,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4777,9 +4777,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "상세 설명 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[5막] 고대인의 길 / 수정 동굴 / 혹한의 지하도\n\nÿc2[길찾기 공식]ÿc0\n입구 타일 기준 왼쪽(시계방향 90도)에 다음 지역(아리앗 정상/얼어붙은 강) 출구\n\nÿc0웨이포인트는 주로 직진 방향에, 다음 퀘스트 지역 출구는 좌측(시계방향)에 배치됩니다.",
+                        "tooltipString": "ÿc4[5막] 고대인의 길 / 수정 동굴 / 혹한의 지하도ÿc0\n\nÿc4[길찾기 공식]ÿc0\n입구 타일 기준 왼쪽(시계방향 90도)에 다음 지역(아리앗 정상/얼어붙은 강) 출구\n\nÿc0웨이포인트는 주로 직진 방향에, 다음 퀘스트 지역 출구는 좌측(시계방향)에 배치됩니다.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -4807,7 +4807,7 @@
                         "fitToText": true,
                         "text": "   왼쪽(시계방향 90도)에 다음 지역(아리앗 정상/얼어붙은 강) 출구",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4819,8 +4819,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4860,7 +4860,7 @@
                         "fitToText": true,
                         "text": "· [5막] 고통의 전당 - 보트의 전당 (니라트하크) → 보트의 전당 WP에서 내린",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4872,8 +4872,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4910,9 +4910,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "상세 설명 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[5막] 고통의 전당 - 보트의 전당 (니라트하크)\n\nÿc2[길찾기 공식]ÿc0\n보트의 전당 WP에서 내린 후 벽면 눈동자 벽화가 그려진 방향이 진짜 니라트하크 방\n\nÿc04갈래 갈림길 중 중앙 기둥 또는 입구 벽면에 붉은 눈동자 문양이 있는 쪽으로 직진하면 니라트하크가 있습니다.",
+                        "tooltipString": "ÿc4[5막] 고통의 전당 - 보트의 전당 (니라트하크)ÿc0\n\nÿc4[길찾기 공식]ÿc0\n보트의 전당 WP에서 내린 후 벽면 눈동자 벽화가 그려진 방향이 진짜 니라트하크 방\n\nÿc04갈래 갈림길 중 중앙 기둥 또는 입구 벽면에 붉은 눈동자 문양이 있는 쪽으로 직진하면 니라트하크가 있습니다.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -4940,7 +4940,7 @@
                         "fitToText": true,
                         "text": "   후 벽면 눈동자 벽화가 그려진 방향이 진짜 니라트하크 방",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -4952,8 +4952,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -4993,7 +4993,7 @@
                         "fitToText": true,
                         "text": "· [5막] 세계석 성채 2층 → 3층 (바알) → 세계석 성채 2층 웨이포인트(WP)",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -5005,8 +5005,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {
@@ -5043,9 +5043,9 @@
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
                         "textString": "상세 설명 툴팁",
-                        "textColor": "$FontColorLightGold",
+                        "textColor": "$LightButtonTextColor",
                         "text/style": "$StyleFEButtonText",
-                        "tooltipString": "ÿc8[5막] 세계석 성채 2층 → 3층 (바알)\n\nÿc2[길찾기 공식]ÿc0\n세계석 성채 2층 웨이포인트(WP) 방 출구 기준 오른쪽(반시계방향 90도) 벽면\n\nÿc02층 WP 방에서 나오는 방향 기준 우측 벽면을 따라 돌면 3층 계단이 가장 빠르게 나타납니다.",
+                        "tooltipString": "ÿc4[5막] 세계석 성채 2층 → 3층 (바알)ÿc0\n\nÿc4[길찾기 공식]ÿc0\n세계석 성채 2층 웨이포인트(WP) 방 출구 기준 오른쪽(반시계방향 90도) 벽면\n\nÿc02층 WP 방에서 나오는 방향 기준 우측 벽면을 따라 돌면 3층 계단이 가장 빠르게 나타납니다.",
                         "pressedFrame": 0,
                         "sound": "cursor_select"
                       }
@@ -5073,7 +5073,7 @@
                         "fitToText": true,
                         "text": "   방 출구 기준 오른쪽(반시계방향 90도) 벽면",
                         "style": {
-                          "fontColor": "$FontColorLightYellow",
+                          "fontColor": "$DescriptionTextColor",
                           "pointSize": "$SmallFontSize",
                           "alignment": {
                             "h": "left",
@@ -5085,8 +5085,8 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
+                            "leading": 1.24,
+                            "kerning": 1
                           },
                           "dropShadow": {
                             "shadowColor": {

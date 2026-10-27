@@ -29,8 +29,9 @@
         "hoveredFrame": 3,
         "textString": "▼ 소형 6줄 펴기",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudRw23SPanel",
-        "textColor": "$FontColorLightTeal",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
+        "acceptsReturnKey": true,
         "sound": "select"
       }
     },
@@ -47,7 +48,7 @@
         "hoveredFrame": 3,
         "textString": "▼ 중형 11줄 펴기",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudRw23Panel",
-        "textColor": "$FontColorGreen",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }
@@ -65,7 +66,7 @@
         "hoveredFrame": 3,
         "textString": "▼ 대형 18줄 펴기",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudRw23LPanel",
-        "textColor": "$FontColorGoldYellow",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }

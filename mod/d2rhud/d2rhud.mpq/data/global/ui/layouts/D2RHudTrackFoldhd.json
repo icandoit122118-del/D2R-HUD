@@ -5,7 +5,7 @@
     "priority": 201,
     "rect": {
       "x": 24,
-      "y": 12,
+      "y": 452,
       "width": 680,
       "height": 42
     },
@@ -29,8 +29,9 @@
         "hoveredFrame": 3,
         "textString": "▼ 소형 4줄",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct1S",
-        "textColor": "$FontColorLightTeal",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
+        "acceptsReturnKey": true,
         "sound": "select"
       }
     },
@@ -47,7 +48,7 @@
         "hoveredFrame": 3,
         "textString": "▼ 중형 8줄",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct1",
-        "textColor": "$FontColorGreen",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }
@@ -65,7 +66,7 @@
         "hoveredFrame": 3,
         "textString": "▼ 대형 15줄",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct1L",
-        "textColor": "$FontColorGoldYellow",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }

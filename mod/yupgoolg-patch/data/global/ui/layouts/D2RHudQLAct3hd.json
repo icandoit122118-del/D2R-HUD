@@ -1,0 +1,2319 @@
+{
+  "type": "VideoOptionsPanel",
+  "name": "D2RHudQLAct3",
+  "fields": {
+    "priority": 201,
+    "anchor": "$LeftPanelAnchor",
+    "rect": "$LeftPanelRect",
+    "applySettingsImmediately": false
+  },
+  "children": [
+    {
+      "type": "ImageWidget",
+      "name": "Background",
+      "fields": {
+        "filename": "PANEL\\Quest_Log\\QuestLog_BG"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "LeftHinge",
+      "fields": {
+        "rect": "$LeftHingeRect",
+        "filename": "$LeftHingeSprite"
+      }
+    },
+    {
+      "type": "TabBarWidget",
+      "name": "D2RHudQuestLogExtraTabs",
+      "fields": {
+        "rect": {
+          "x": 75,
+          "y": 72,
+          "scale": 0.71
+        },
+        "tabCount": 7,
+        "filename": "PANEL\\Quest_Log\\QuestLogTab",
+        "tabSize": {
+          "x": 205,
+          "y": 70
+        },
+        "tabPadding": {
+          "x": -2,
+          "y": 0
+        },
+        "inactiveFrames": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "activeFrames": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "textStyle": {
+          "pointSize": "$SmallFontSize",
+          "alignment": {
+            "h": "center",
+            "v": "center"
+          }
+        },
+        "activeTextColor": "$TabsActiveTextColorInGame",
+        "inactiveTextColor": "$TabsInactiveTextColor",
+        "textStrings": [
+          "1막HUD",
+          "2막HUD",
+          "3막HUD",
+          "4막HUD",
+          "5막HUD",
+          "길찾기맵",
+          "스타터"
+        ],
+        "tabMessages": [
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct1",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct2",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct3",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct4",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct5",
+          "SettingsPanelMessage:CheckChanges:D2RHudTrackMap",
+          "SettingsPanelMessage:CheckChanges:D2RHudTrackStarter"
+        ]
+      }
+    },
+    {
+      "type": "TabBarWidget",
+      "name": "Tabs",
+      "fields": {
+        "rect": {
+          "x": 75,
+          "y": 148
+        },
+        "tabCount": 5,
+        "filename": "PANEL\\Quest_Log\\QuestLogTab",
+        "tabSize": {
+          "x": 205,
+          "y": 70
+        },
+        "tabPadding": {
+          "x": -2,
+          "y": 0
+        },
+        "inactiveFrames": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "activeFrames": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "textStrings": [
+          "I",
+          "II",
+          "III",
+          "IV",
+          "V"
+        ],
+        "textStyle": {
+          "pointSize": "$MediumLargeFontSize"
+        },
+        "activeTextColor": "$TabsActiveTextColorInGame",
+        "inactiveTextColor": "$TabsInactiveTextColor",
+        "tabMessages": [
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct1",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct2",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct3",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct4",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct5"
+        ]
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLSocket_3_0",
+      "fields": {
+        "rect": {
+          "x": 160,
+          "y": 234
+        },
+        "filename": "QuestIcons\\GoldFrame"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLIcon_3_0",
+      "fields": {
+        "rect": {
+          "x": 190,
+          "y": 312
+        },
+        "filename": "QuestIcons\\a3q1"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLSocket_3_1",
+      "fields": {
+        "rect": {
+          "x": 467,
+          "y": 234
+        },
+        "filename": "QuestIcons\\GoldFrame"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLIcon_3_1",
+      "fields": {
+        "rect": {
+          "x": 497,
+          "y": 312
+        },
+        "filename": "QuestIcons\\a3q2"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLSocket_3_2",
+      "fields": {
+        "rect": {
+          "x": 775,
+          "y": 234
+        },
+        "filename": "QuestIcons\\GoldFrame"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLIcon_3_2",
+      "fields": {
+        "rect": {
+          "x": 805,
+          "y": 312
+        },
+        "filename": "QuestIcons\\a3q3"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLSocket_3_3",
+      "fields": {
+        "rect": {
+          "x": 160,
+          "y": 539
+        },
+        "filename": "QuestIcons\\GoldFrame"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLIcon_3_3",
+      "fields": {
+        "rect": {
+          "x": 190,
+          "y": 617
+        },
+        "filename": "QuestIcons\\a3q4"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLSocket_3_4",
+      "fields": {
+        "rect": {
+          "x": 467,
+          "y": 539
+        },
+        "filename": "QuestIcons\\GoldFrame"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLIcon_3_4",
+      "fields": {
+        "rect": {
+          "x": 497,
+          "y": 617
+        },
+        "filename": "QuestIcons\\a3q5"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLSocket_3_5",
+      "fields": {
+        "rect": {
+          "x": 775,
+          "y": 539
+        },
+        "filename": "QuestIcons\\GoldFrame"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLIcon_3_5",
+      "fields": {
+        "rect": {
+          "x": 805,
+          "y": 617
+        },
+        "filename": "QuestIcons\\a3q6"
+      }
+    },
+    {
+      "type": "RectangleWidget",
+      "name": "QLAct3Bg",
+      "fields": {
+        "rect": {
+          "x": 88,
+          "y": 886,
+          "width": 984,
+          "height": 432
+        },
+        "color": [
+          0.02,
+          0.02,
+          0.02,
+          0.88
+        ]
+      }
+    },
+    {
+      "type": "TextBoxWidget",
+      "name": "QLAct3Header",
+      "fields": {
+        "rect": {
+          "x": 96,
+          "y": 846,
+          "width": 445,
+          "height": 34
+        },
+        "text": "▶ [3막 쿠라스트 부두] 핵심 동선",
+        "style": {
+          "fontColor": "$FontColorGoldYellow",
+          "pointSize": "$SmallFontSize",
+          "alignment": {
+            "h": "left",
+            "v": "center"
+          },
+          "options": {
+            "lineWrap": false,
+            "newlineHandling": "standard",
+            "pipeCharacterBehavior": "handle"
+          },
+          "spacing": {
+            "leading": 1.24,
+            "kerning": 1
+          },
+          "dropShadow": {
+            "shadowColor": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 255
+            },
+            "offset": {
+              "x": 3,
+              "y": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "QLAct3PinHudBtn",
+      "fields": {
+        "rect": {
+          "x": 553,
+          "y": 842,
+          "scale": 0.41
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "3막 투명HUD 전환",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct3",
+        "tooltipString": "좌측 상단 투명 HUD 출력창을 3막 내용으로 즉시 전환합니다.",
+        "textColor": "$LightButtonTextColor",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "QLAct3ToggleHudBtn",
+      "fields": {
+        "rect": {
+          "x": 730,
+          "y": 842,
+          "scale": 0.41
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "투명HUD 켜기/끄기",
+        "onClickMessage": "PanelManager:TogglePanel:D2RHudTrackerPanel",
+        "tooltipString": "화면 좌측 상단 투명 글자 출력창(크기 조절 가능)을 켜거나 끕니다.",
+        "textColor": "$LightButtonTextColor",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "QLAct3OpenDictBtn",
+      "fields": {
+        "rect": {
+          "x": 906,
+          "y": 842,
+          "scale": 0.41
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "룬·큐빙 사전",
+        "onClickMessage": "PanelManager:TogglePanel:D2RHudMainPanel",
+        "tooltipString": "룬워드 98종 및 호라드림 큐빙 60종 투명 대사전을 엽니다.",
+        "textColor": "$LightButtonTextColor",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "Widget",
+      "name": "ScrollBarWrap_ScrollController",
+      "fields": {
+        "rect": {
+          "x": 1042,
+          "y": 890,
+          "width": 24,
+          "height": 420
+        }
+      },
+      "children": [
+        {
+          "type": "RectangleWidget",
+          "name": "ScrollTrackBg_ScrollController",
+          "fields": {
+            "rect": {
+              "x": 8,
+              "y": 22,
+              "width": 8,
+              "height": 376
+            },
+            "color": [
+              0.08,
+              0.07,
+              0.05,
+              0.72
+            ]
+          }
+        },
+        {
+          "type": "RectangleWidget",
+          "name": "ScrollTrackLine_ScrollController",
+          "fields": {
+            "rect": {
+              "x": 10,
+              "y": 22,
+              "width": 4,
+              "height": 376
+            },
+            "color": [
+              0.55,
+              0.44,
+              0.22,
+              0.85
+            ]
+          }
+        },
+        {
+          "type": "ScrollControllerWidget",
+          "name": "ScrollController",
+          "fields": {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 24,
+              "height": 420
+            },
+            "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+            "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+            "barFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollIndicator",
+            "viewName": "ScrollView",
+            "buttonScrollAmount": 76,
+            "wheelScrollSound": "cursor_scroll_hd",
+            "buttonScrollSound": "cursor_scroll_hd"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ScrollViewWidget",
+      "name": "ScrollView",
+      "fields": {
+        "rect": {
+          "x": 98,
+          "y": 890,
+          "width": 936,
+          "height": 420
+        },
+        "scrollControllerName": "ScrollController",
+        "clipChildrenDraw": true
+      },
+      "children": [
+        {
+          "type": "TableWidget",
+          "name": "OptionsTable",
+          "fields": {
+            "columns": [
+              {
+                "width": 920,
+                "alignment": {
+                  "h": "fit",
+                  "v": "center"
+                }
+              }
+            ],
+            "rowHeight": 46
+          },
+          "children": [
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_0",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_0",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ [3막 핵심 던전 길찾기 방향 공식]",
+                    "style": {
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumLargeFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_1",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_1",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "· 증오의 억류지 2층 → 3층 (메피스토): 증오 2층 입구",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_2",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_2",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   타일 기준 왼쪽(시계방향 90도) 벽면을 따라 이동",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_3",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_3",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "■ [Act 3-1] 3막 - 비취 조각상/기드빈 &",
+                    "style": {
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumLargeFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_4",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_4",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   칼림의 유물 3종",
+                    "style": {
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumLargeFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_5",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_5",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "▶ 동선: 거미 숲 → 거미 동굴(칼림의 눈) → 거대한 습지",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_6",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_6",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   → 약탈자 밀림(기드빈) → 약탈자 던전 3층(칼림의 뇌)",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_7",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_7",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   → 쿠라스트 하류~상류 → 하수구 2층(칼림의 심장)",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_8",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_8",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[1] [필수/보상] 첫 정예 괴물 드랍 비취 조각상 → 메쉬프",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_9",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_9",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   → 알코어 대화로 영구 생명력 +20 물약 획득",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_10",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_10",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[2] 거미 숲의 거미 동굴(아라크니드 동굴 아님!)에서 칼림의",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_11",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_11",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   눈 획득",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_12",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_12",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  [3] 약탈자 밀림의 약탈자 던전 3층에서 칼림의 뇌 획득",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_13",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_13",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[4] 쿠라스트 시장/상류 지하 하수구 2층 레버 작동 후",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_14",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_14",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   칼림의 심장 획득",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_15",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_15",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[5] [필수/보상] 쿠라스트 시장 폐허의 사원에서 람 에센의",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_16",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_16",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   고서 회수 → 알코어에게 스탯 +5 획득",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_17",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_17",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 길찾기: 3막 오르무스 상점에서 텔포봉(순간이동 충전",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_18",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_18",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   지팡이, 요구 레벨 24)을 미리 구매해 두면 3~5막 벽",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_19",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_19",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   넘기에 필수입니다.",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_20",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_20",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 공략팁: 자폭 인형(언데드 스티지언 돌)은 처치 순간 큰",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_21",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_21",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   물리 폭발 피해를 주므로 용병 뒤에서 처치하거나 텔포로",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_22",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_22",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   지나가세요.",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_23",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_23",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "■ [Act 3-2] 3막 - 트라빈칼 의회 ~ 증오의",
+                    "style": {
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumLargeFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_24",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_24",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   억류지(메피스토)",
+                    "style": {
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumLargeFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_25",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_25",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "▶ 동선: 트라빈칼(WP) → 대의회 처치(칼림의 도리깨) →",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_26",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_26",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   칼림의 의지 조합 후 생체구슬 파괴 → 증오의 억류지",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_27",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_27",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   2층(WP) → 3층 메피스토",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_28",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_28",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[1] 트라빈칼 웨이포인트 활성화 후 대의회 처치 → 칼림의",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_29",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_29",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   도리깨 획득",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_30",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_30",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[2] 큐브에 눈 + 뇌 + 심장 + 도리깨를 조합해 칼림의",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_31",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_31",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   의지 제작 후 장착·타격으로 생체구슬 파괴",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_32",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_32",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[3] 증오의 억류지 2층 웨이포인트 확보 후 입구 기준",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_33",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_33",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   왼쪽(시계방향) 벽을 따라 3층 진입",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_34",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_34",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[4] 메피스토 처치 후 붉은 포탈을 타고 4막 혼돈의 요새",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_35",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_35",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   진입",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_36",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_36",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 길찾기: 증오의 억류지 2층에서 3층으로 내려가는 계단은",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_37",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_37",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   입구 캐릭터 시선 기준 왼쪽 벽면을 따라 돌면 빠르게",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_38",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_38",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   나옵니다.",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_39",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_39",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 공략팁: 메피스토는 강 건너편 지형에 걸치기(강가",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_40",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_40",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   파이어볼/블리자드 딜링)가 가능해 원거리 캐릭터의 핵심",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct3Row_41",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct3Text_41",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   파밍처입니다.",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "Cancel",
+      "fields": {
+        "rect": {
+          "x": 1075,
+          "y": 9
+        },
+        "filename": "PANEL\\closebtn_4x",
+        "hoveredFrame": 3,
+        "tooltipString": "@strClose",
+        "sound": "cursor_close_window_hd",
+        "onClickMessage": "PanelManager:ClosePanel:D2RHudTrackerPanel"
+      }
+    }
+  ]
+}

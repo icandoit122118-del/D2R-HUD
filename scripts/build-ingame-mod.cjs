@@ -184,7 +184,7 @@ function makeTextStyle(colorVar, sizeVar, alignH = 'left', alignV = 'center', li
     pointSize: sizeVar,
     alignment: { h: alignH, v: alignV },
     options: { lineWrap, newlineHandling: 'standard', pipeCharacterBehavior: 'handle' },
-    spacing: { leading: 1.12, kerning: 0.94 },
+    spacing: { leading: 1.24, kerning: 1.0 },
     dropShadow: HUD_TRANSPARENT_SHADOW
   };
 }
@@ -430,8 +430,9 @@ function buildMainFoldSubPanel() {
           hoveredFrame: 3,
           textString: '▼ 소형 6줄 펴기',
           onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudRw23SPanel',
-          textColor: '$FontColorLightTeal',
+          textColor: '$LightButtonTextColor',
           'text/style': '$StyleFEButtonText',
+          acceptsReturnKey: true,
           sound: 'select'
         }
       },
@@ -444,7 +445,7 @@ function buildMainFoldSubPanel() {
           hoveredFrame: 3,
           textString: '▼ 중형 11줄 펴기',
           onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudRw23Panel',
-          textColor: '$FontColorGreen',
+          textColor: '$LightButtonTextColor',
           'text/style': '$StyleFEButtonText',
           sound: 'select'
         }
@@ -458,7 +459,7 @@ function buildMainFoldSubPanel() {
           hoveredFrame: 3,
           textString: '▼ 대형 18줄 펴기',
           onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudRw23LPanel',
-          textColor: '$FontColorGoldYellow',
+          textColor: '$LightButtonTextColor',
           'text/style': '$StyleFEButtonText',
           sound: 'select'
         }
@@ -489,7 +490,7 @@ function buildEncyclopediaSubPanel(baseKey, suffix, rows, heightPx = 640, rowHei
           hoveredFrame: 3,
           textString: '▲ 창 접기',
           onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudMainFold',
-          textColor: '$FontColorLightYellow',
+          textColor: '$LightButtonTextColor',
           'text/style': '$StyleFEButtonText',
           sound: 'select'
         }
@@ -503,7 +504,7 @@ function buildEncyclopediaSubPanel(baseKey, suffix, rows, heightPx = 640, rowHei
           hoveredFrame: 3,
           textString: '소형 6줄',
           onClickMessage: `SettingsPanelMessage:CheckChanges:D2RHud${baseKey}SPanel`,
-          textColor: suffix === 'S' ? '$FontColorGoldYellow' : '$FontColorLightTeal',
+          textColor: suffix === 'S' ? '$FontColorGoldYellow' : '$LightButtonTextColor',
           'text/style': '$StyleFEButtonText',
           sound: 'select'
         }
@@ -517,7 +518,7 @@ function buildEncyclopediaSubPanel(baseKey, suffix, rows, heightPx = 640, rowHei
           hoveredFrame: 3,
           textString: '중형 11줄',
           onClickMessage: `SettingsPanelMessage:CheckChanges:D2RHud${baseKey}Panel`,
-          textColor: suffix === '' ? '$FontColorGoldYellow' : '$FontColorGreen',
+          textColor: suffix === '' ? '$FontColorGoldYellow' : '$LightButtonTextColor',
           'text/style': '$StyleFEButtonText',
           sound: 'select'
         }
@@ -531,7 +532,7 @@ function buildEncyclopediaSubPanel(baseKey, suffix, rows, heightPx = 640, rowHei
           hoveredFrame: 3,
           textString: '대형 18줄',
           onClickMessage: `SettingsPanelMessage:CheckChanges:D2RHud${baseKey}LPanel`,
-          textColor: suffix === 'L' ? '$FontColorGoldYellow' : '$FontColorWhite',
+          textColor: suffix === 'L' ? '$FontColorGoldYellow' : '$LightButtonTextColor',
           'text/style': '$StyleFEButtonText',
           sound: 'select'
         }
@@ -568,15 +569,15 @@ function generateCampaignRows(stepsSubset, includeMapRules = false) {
   const rows = [];
   for (const step of stepsSubset) {
     const tooltip = [
-      `ÿc8[${step.condition.value}] ${step.location}`,
+      `ÿc4[${step.condition.value}] ${step.location}ÿc0`,
       '',
-      `ÿc2[최적 동선]ÿc0`,
+      `ÿc4[최적 동선]ÿc0`,
       step.route,
       '',
       `ÿc4[길찾기 노트]ÿc0`,
       step.note,
       '',
-      `ÿc1[보스 & 전략 팁]ÿc0`,
+      `ÿc4[보스 & 전략 팁]ÿc0`,
       step.strategic_tip
     ].join('\n');
 
@@ -586,14 +587,14 @@ function generateCampaignRows(stepsSubset, includeMapRules = false) {
       '$FontColorGoldYellow',
       '$MediumFontSize',
       '공략 툴팁 보기',
-      '$FontColorLightGold',
+      '$LightButtonTextColor',
       '$SmallFontSize',
       tooltip
     );
     pushWrappedRows(
       rows,
       `▶ 핵심 동선: ${step.route}`,
-      '$FontColorLightTeal',
+      '$FontColorLightGold',
       '$SmallFontSize',
       step.condition.value,
       '$FontColorGoldYellow',
@@ -605,20 +606,20 @@ function generateCampaignRows(stepsSubset, includeMapRules = false) {
       pushWrappedRows(
         rows,
         `  [${i + 1}] ${t.text}`,
-        isReward ? '$FontColorLightYellow' : '$FontColorWhite',
+        isReward ? '$FontColorLightGold' : '$DescriptionTextColor',
         '$SmallFontSize',
         isReward ? '★ 필수 보상' : '진행 체크',
-        isReward ? '$FontColorOrange' : '$FontColorLightGray',
+        isReward ? '$FontColorGoldYellow' : '$PanelNoteTextColor',
         '$SmallFontSize'
       );
     }
     pushWrappedRows(
       rows,
       `  ★ 길찾기: ${step.note}`,
-      '$FontColorLightBlue',
+      '$PanelNoteTextColor',
       '$SmallFontSize',
       '핵심 팁',
-      '$FontColorLightBlue',
+      '$PanelNoteTextColor',
       '$SmallFontSize'
     );
     rows.push(makeDividerRow());
@@ -631,19 +632,19 @@ function generateCampaignRows(stepsSubset, includeMapRules = false) {
       '$FontColorGoldYellow',
       '$MediumFontSize',
       '12개 핵심 던전',
-      '$FontColorGreen',
+      '$FontColorLightGold',
       '$SmallFontSize'
     );
     rows.push(makeDividerRow());
     for (const m of MAP_CHEATSHEET) {
-      const tip = `ÿc8[${m.act}] ${m.zone}\n\nÿc2[길찾기 공식]ÿc0\n${m.rule}\n\nÿc0${m.detail}`;
+      const tip = `ÿc4[${m.act}] ${m.zone}ÿc0\n\nÿc4[길찾기 공식]ÿc0\n${m.rule}\n\nÿc0${m.detail}`;
       pushWrappedRows(
         rows,
         `· [${m.act}] ${m.zone} → ${m.rule}`,
-        '$FontColorLightYellow',
+        '$DescriptionTextColor',
         '$SmallFontSize',
         '상세 설명 툴팁',
-        '$FontColorLightGold',
+        '$LightButtonTextColor',
         '$SmallFontSize',
         tip
       );
@@ -658,13 +659,13 @@ function generateStarterRows() {
   const rows = [];
   for (const step of warlockGuide.steps) {
     const tip = [
-      `ÿc8[${step.condition.value}] ${step.location}`,
+      `ÿc4[${step.condition.value}] ${step.location}ÿc0`,
       '',
-      `ÿc2[파밍 루트]ÿc0 ${step.route}`,
+      `ÿc4[파밍 루트]ÿc0 ${step.route}`,
       '',
       `ÿc4[핵심 주의사항]ÿc0 ${step.note}`,
       '',
-      `ÿc1[시너지 & 팁]ÿc0 ${step.strategic_tip}`
+      `ÿc4[시너지 & 팁]ÿc0 ${step.strategic_tip}`
     ].join('\n');
 
     pushWrappedRows(
@@ -673,14 +674,14 @@ function generateStarterRows() {
       '$FontColorGoldYellow',
       '$MediumFontSize',
       '세팅 툴팁 보기',
-      '$FontColorLightGold',
+      '$LightButtonTextColor',
       '$SmallFontSize',
       tip
     );
     pushWrappedRows(
       rows,
       `▶ 파밍 루트: ${step.route}`,
-      '$FontColorLightTeal',
+      '$FontColorLightGold',
       '$SmallFontSize',
       step.condition.value,
       '$FontColorGoldYellow',
@@ -690,20 +691,20 @@ function generateStarterRows() {
       pushWrappedRows(
         rows,
         `  [${i + 1}] ${step.tasks[i].text}`,
-        '$FontColorWhite',
+        '$DescriptionTextColor',
         '$SmallFontSize',
         '필수 세팅',
-        '$FontColorGreen',
+        '$FontColorLightGold',
         '$SmallFontSize'
       );
     }
     pushWrappedRows(
       rows,
       `  ★ 팁: ${step.strategic_tip}`,
-      '$FontColorLightBlue',
+      '$PanelNoteTextColor',
       '$SmallFontSize',
       '꿀팁',
-      '$FontColorLightBlue',
+      '$PanelNoteTextColor',
       '$SmallFontSize'
     );
     rows.push(makeDividerRow());
@@ -728,8 +729,8 @@ function generateStarterRows() {
   ];
 
   for (const g of extraGuides) {
-    pushWrappedRows(rows, g.title, '$FontColorGoldYellow', '$SmallFontSize', g.badge, '$FontColorOrange', '$SmallFontSize');
-    pushWrappedRows(rows, `  · ${g.sub}`, '$FontColorWhite', '$SmallFontSize', '', '$FontColorWhite', '$SmallFontSize');
+    pushWrappedRows(rows, g.title, '$FontColorGoldYellow', '$SmallFontSize', g.badge, '$FontColorLightGold', '$SmallFontSize');
+    pushWrappedRows(rows, `  · ${g.sub}`, '$DescriptionTextColor', '$SmallFontSize', '', '$DescriptionTextColor', '$SmallFontSize');
     rows.push(makeDividerRow());
   }
 
@@ -741,10 +742,10 @@ function generateRunewordRows(rwList, headerTitle) {
   pushWrappedRows(
     rows,
     `■ ${headerTitle} (총 ${rwList.length}종 - 우측 버튼 마우스 오버 시 전체 세부 옵션 표시)`,
-    '$FontColorGreen',
+    '$FontColorGoldYellow',
     '$MediumFontSize',
     `총 ${rwList.length}종 수록`,
-    '$FontColorGoldYellow'
+    '$FontColorLightGold'
   );
   rows.push(makeDividerRow());
 
@@ -754,12 +755,12 @@ function generateRunewordRows(rwList, headerTitle) {
     const statsLines = (rw.stats || []).map((s) => `· ${s}`).join('\n');
     const tooltip = [
       `ÿc4${rw.name} (${rw.original_name})ÿc0`,
-      `ÿc8룬 조합: ${runeCombo}ÿc0`,
-      `ÿc2재료: ${itemTypes} (요구 레벨 ${rw.level})ÿc0`,
+      `ÿc4룬 조합: ${runeCombo}ÿc0`,
+      `ÿc4재료: ${itemTypes} (요구 레벨 ${rw.level})ÿc0`,
       '',
-      `ÿc3[완성 옵션]ÿc0`,
+      `ÿc4[완성 옵션]ÿc0`,
       statsLines,
-      rw.material_sources ? `\nÿc5${rw.material_sources}ÿc0` : ''
+      rw.material_sources ? `\nÿc0${rw.material_sources}` : ''
     ].join('\n');
 
     const topStats = (rw.stats || []).slice(0, 2).join(' / ');
@@ -769,17 +770,17 @@ function generateRunewordRows(rwList, headerTitle) {
       '$FontColorGoldYellow',
       '$MediumFontSize',
       '전체 옵션 툴팁',
-      '$FontColorLightGold',
+      '$LightButtonTextColor',
       '$SmallFontSize',
       tooltip
     );
     pushWrappedRows(
       rows,
       `  ▶ 핵심 옵션: ${topStats}`,
-      '$FontColorLightBlue',
+      '$DescriptionTextColor',
       '$SmallFontSize',
       `${rw.category || ''}`,
-      '$FontColorLightGray',
+      '$PanelNoteTextColor',
       '$SmallFontSize'
     );
     rows.push(makeDividerRow());
@@ -792,18 +793,18 @@ function generateCubeRows() {
   pushWrappedRows(
     rows,
     `■ 호라드림의 함(큐브) 필수 조합법 ${cubing.length}종 (홈 뚫기·업그레이드·룬 합성·크래프트·면죄)`,
-    '$FontColorGreen',
+    '$FontColorGoldYellow',
     '$MediumFontSize',
     `총 ${cubing.length}종 레시피`,
-    '$FontColorGoldYellow'
+    '$FontColorLightGold'
   );
   rows.push(makeDividerRow());
 
   for (const c of cubing) {
     const tooltip = [
-      `ÿc8[${c.category}] ${c.name}ÿc0`,
+      `ÿc4[${c.category}] ${c.name}ÿc0`,
       '',
-      `ÿc2[조합 재료]ÿc0`,
+      `ÿc4[조합 재료]ÿc0`,
       c.recipe,
       '',
       `ÿc4[변환 결과]ÿc0`,
@@ -818,17 +819,17 @@ function generateCubeRows() {
       '$FontColorGoldYellow',
       '$SmallFontSize',
       '상세 설명 툴팁',
-      '$FontColorLightGold',
+      '$LightButtonTextColor',
       '$SmallFontSize',
       tooltip
     );
     pushWrappedRows(
       rows,
       `  ▶ 결과: ${c.result} (${c.description || ''})`,
-      '$FontColorWhite',
+      '$DescriptionTextColor',
       '$SmallFontSize',
       c.category,
-      '$FontColorLightTeal',
+      '$PanelNoteTextColor',
       '$SmallFontSize'
     );
     rows.push(makeDividerRow());
@@ -849,8 +850,8 @@ function buildTrackerMainPanel() {
     type: 'SettingsPanel',
     name: 'D2RHudTrackerPanel',
     fields: {
-      priority: 200,
-      rect: { x: 24, y: 12, width: 868, height: 36 },
+      priority: 205,
+      rect: { x: 0, y: 0, width: 960, height: 36 },
       anchor: { x: 0.0, y: 0.0 }
     },
     children: [
@@ -891,7 +892,7 @@ function buildTrackerFoldSubPanel() {
     name: 'D2RHudTrackFold',
     fields: {
       priority: 201,
-      rect: { x: 24, y: 12, width: 680, height: 42 },
+      rect: { x: 24, y: 452, width: 680, height: 42 },
       anchor: { x: 0.0, y: 0.0 },
       applySettingsImmediately: false
     },
@@ -905,8 +906,9 @@ function buildTrackerFoldSubPanel() {
           hoveredFrame: 3,
           textString: '▼ 소형 4줄',
           onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudTrackAct1S',
-          textColor: '$FontColorLightTeal',
+          textColor: '$LightButtonTextColor',
           'text/style': '$StyleFEButtonText',
+          acceptsReturnKey: true,
           sound: 'select'
         }
       },
@@ -919,7 +921,7 @@ function buildTrackerFoldSubPanel() {
           hoveredFrame: 3,
           textString: '▼ 중형 8줄',
           onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudTrackAct1',
-          textColor: '$FontColorGreen',
+          textColor: '$LightButtonTextColor',
           'text/style': '$StyleFEButtonText',
           sound: 'select'
         }
@@ -933,7 +935,7 @@ function buildTrackerFoldSubPanel() {
           hoveredFrame: 3,
           textString: '▼ 대형 15줄',
           onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudTrackAct1L',
-          textColor: '$FontColorGoldYellow',
+          textColor: '$LightButtonTextColor',
           'text/style': '$StyleFEButtonText',
           sound: 'select'
         }
@@ -957,13 +959,15 @@ function buildTrackerFoldSubPanel() {
 function expandTrackerLinesToTableRows(lines, prefix = 'Track') {
   const expandedRows = [];
   for (const item of lines) {
-    const maxLen = item.size === '$MediumFontSize' ? 40 : 45;
-    const chunks = splitIntoSingleLines(item.text, maxLen, '    ');
+    const isHeader = item.size === '$MediumFontSize' || item.size === '$MediumLargeFontSize' || item.size === '$XMediumLargeFontSize';
+    const maxLen = isHeader ? 31 : 35;
+    const resolvedSize = isHeader ? '$MediumLargeFontSize' : '$XMediumFontSize';
+    const chunks = splitIntoSingleLines(item.text, maxLen, '   ');
     for (const ch of chunks) {
       expandedRows.push({
         text: ch,
         color: item.color || '$FontColorWhite',
-        size: item.size || '$SmallFontSize'
+        size: resolvedSize
       });
     }
   }
@@ -987,28 +991,38 @@ function expandTrackerLinesToTableRows(lines, prefix = 'Track') {
 
 /**
  * Generates an adjustable transparent text output window sub-panel:
- *   suffix === 'S' : Small 4-line window (height 156px, 100% transparent)
- *   suffix === ''  : Medium 8-line window (height 296px, 100% transparent)
- *   suffix === 'L' : Large 15-line window (height 540px, 100% transparent)
- *   suffix === 'B' : Subtle 28% dim tint 8-line window (height 296px, optional tint)
+ *   suffix === 'S' : Small 4-line window (height 184px, dark readability backing)
+ *   suffix === ''  : Medium 7-line window (height 322px, dark readability backing)
+ *   suffix === 'L' : Large 12-line window (height 552px, dark readability backing)
+ *   suffix === 'B' : 100% pure transparent 7-line window (height 322px, 0% tint)
  */
-function buildTrackerSubPanel(tabKey, suffix, lines) {
+function buildTrackerSubPanel(tabKey, suffix, lines, escMessage = null) {
   const panelName = `D2RHudTrack${tabKey}${suffix}`;
-  const heightPx = suffix === 'S' ? 156 : suffix === 'L' ? 540 : 296;
-  const showSubtleTint = suffix === 'B';
+  const heightPx = suffix === 'S' ? 230 : suffix === 'L' ? 598 : 368;
+  const showReadabilityBg = suffix !== 'B';
 
   const tableRows = expandTrackerLinesToTableRows(lines, 'Track');
   const children = [];
 
-  if (showSubtleTint) {
-    children.push({
-      type: 'RectangleWidget',
-      name: 'SubtleTintBG',
-      fields: {
-        rect: { x: 0, y: 36, width: 868, height: heightPx },
-        color: [0.0, 0.0, 0.0, 0.28]
+  if (showReadabilityBg) {
+    children.push(
+      {
+        type: 'RectangleWidget',
+        name: 'SubtleTintBG',
+        fields: {
+          rect: { x: 0, y: 38, width: 952, height: heightPx + 10 },
+          color: [0.02, 0.02, 0.04, 0.80]
+        }
+      },
+      {
+        type: 'RectangleWidget',
+        name: 'SubtleTopAccent',
+        fields: {
+          rect: { x: 0, y: 38, width: 952, height: 3 },
+          color: [0.78, 0.66, 0.38, 0.88]
+        }
       }
-    });
+    );
   }
 
   // Clean Window Size Adjustment Bar (NO app name, NO top tabs!)
@@ -1023,7 +1037,7 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
         textString: '▲ 접기',
         onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudTrackFold',
         tooltipString: '글자 출력창 접기',
-        textColor: '$FontColorLightYellow',
+        textColor: '$LightButtonTextColor',
         'text/style': '$StyleFEButtonText',
         sound: 'select'
       }
@@ -1037,8 +1051,8 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
         hoveredFrame: 3,
         textString: '소형 4줄',
         onClickMessage: `SettingsPanelMessage:CheckChanges:D2RHudTrack${tabKey}S`,
-        tooltipString: '글자 출력창을 소형(4줄, 완전투명)으로 줄입니다.',
-        textColor: suffix === 'S' ? '$FontColorGoldYellow' : '$FontColorLightTeal',
+        tooltipString: '글자 출력창을 소형(4줄)으로 줄입니다.',
+        textColor: suffix === 'S' ? '$FontColorGoldYellow' : '$LightButtonTextColor',
         'text/style': '$StyleFEButtonText',
         sound: 'select'
       }
@@ -1050,10 +1064,10 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
         rect: { x: 276, y: 0, scale: 0.38 },
         filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
         hoveredFrame: 3,
-        textString: '중형 8줄',
+        textString: '중형 7줄',
         onClickMessage: `SettingsPanelMessage:CheckChanges:D2RHudTrack${tabKey}`,
-        tooltipString: '글자 출력창을 기본 중형(8줄, 완전투명)으로 조절합니다.',
-        textColor: suffix === '' ? '$FontColorGoldYellow' : '$FontColorGreen',
+        tooltipString: '글자 출력창을 기본 중형(7줄)으로 조절합니다.',
+        textColor: suffix === '' ? '$FontColorGoldYellow' : '$LightButtonTextColor',
         'text/style': '$StyleFEButtonText',
         sound: 'select'
       }
@@ -1065,10 +1079,10 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
         rect: { x: 414, y: 0, scale: 0.38 },
         filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
         hoveredFrame: 3,
-        textString: '대형 15줄',
+        textString: '대형 12줄',
         onClickMessage: `SettingsPanelMessage:CheckChanges:D2RHudTrack${tabKey}L`,
-        tooltipString: '글자 출력창을 대형(15줄, 완전투명)으로 넓힙니다.',
-        textColor: suffix === 'L' ? '$FontColorGoldYellow' : '$FontColorWhite',
+        tooltipString: '글자 출력창을 대형(12줄)으로 넓힙니다.',
+        textColor: suffix === 'L' ? '$FontColorGoldYellow' : '$LightButtonTextColor',
         'text/style': '$StyleFEButtonText',
         sound: 'select'
       }
@@ -1080,12 +1094,12 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
         rect: { x: 552, y: 0, scale: 0.38 },
         filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
         hoveredFrame: 3,
-        textString: showSubtleTint ? '완전투명' : '반투명막',
-        onClickMessage: showSubtleTint
-          ? `SettingsPanelMessage:CheckChanges:D2RHudTrack${tabKey}`
-          : `SettingsPanelMessage:CheckChanges:D2RHudTrack${tabKey}B`,
-        tooltipString: '배경 완전투명 / 28% 옅은 반투명막 전환',
-        textColor: showSubtleTint ? '$FontColorGoldYellow' : '$FontColorLightGray',
+        textString: showReadabilityBg ? '완전투명' : '가독배경',
+        onClickMessage: showReadabilityBg
+          ? `SettingsPanelMessage:CheckChanges:D2RHudTrack${tabKey}B`
+          : `SettingsPanelMessage:CheckChanges:D2RHudTrack${tabKey}`,
+        tooltipString: '가독성 반투명 배경 / 배경 완전투명 전환',
+        textColor: showReadabilityBg ? '$LightButtonTextColor' : '$FontColorGoldYellow',
         'text/style': '$StyleFEButtonText',
         sound: 'select'
       }
@@ -1103,12 +1117,12 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
       }
     },
     // 100% 1:1 aligned ScrollBar UI matching heightPx!
-    makeAlignedScrollBar(840, 36, heightPx, 'ScrollController', 'ScrollView'),
+    makeAlignedScrollBar(922, 42, heightPx, 'ScrollController', 'ScrollView'),
     {
       type: 'ScrollViewWidget',
       name: 'ScrollView',
       fields: {
-        rect: { x: 4, y: 36, width: 828, height: heightPx },
+        rect: { x: 12, y: 42, width: 902, height: heightPx },
         scrollControllerName: 'ScrollController',
         clipChildrenDraw: true
       },
@@ -1117,8 +1131,8 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
           type: 'TableWidget',
           name: 'OptionsTable',
           fields: {
-            columns: [{ width: 816, alignment: { h: 'fit', v: 'fit' } }],
-            rowHeight: 37
+            columns: [{ width: 890, alignment: { h: 'fit', v: 'center' } }],
+            rowHeight: 46
           },
           children: tableRows
         }
@@ -1126,12 +1140,26 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
     }
   );
 
+  if (escMessage) {
+    children.push({
+      type: 'ButtonWidget',
+      name: 'D2RHudTrackEscActionBtn',
+      fields: {
+        rect: { x: -9999, y: -9999, scale: 0.01 },
+        filename: 'PANEL/minihealthon',
+        onClickMessage: escMessage,
+        acceptsEscKeyEverywhere: true,
+        focusOnMouseOver: false
+      }
+    });
+  }
+
   return {
     type: 'VideoOptionsPanel',
     name: panelName,
     fields: {
       priority: 201,
-      rect: { x: 24, y: 12, width: 868, height: heightPx + 42 },
+      rect: { x: 24, y: 468, width: 960, height: heightPx + 50 },
       anchor: { x: 0.0, y: 0.0 },
       applySettingsImmediately: false
     },
@@ -1152,7 +1180,7 @@ function stepsToTrackerLines(stepsSubset, actNumber = null) {
       for (const r of actRules) {
         lines.push({
           text: `  · ${r.zone}: ${r.rule}`,
-          color: '$FontColorLightYellow',
+          color: '$DescriptionTextColor',
           size: '$SmallFontSize'
         });
       }
@@ -1166,7 +1194,7 @@ function stepsToTrackerLines(stepsSubset, actNumber = null) {
     });
     lines.push({
       text: `  ▶ 동선: ${sanitizeD2RText(s.route)}`,
-      color: '$FontColorLightTeal',
+      color: '$FontColorLightGold',
       size: '$SmallFontSize'
     });
     for (let i = 0; i < s.tasks.length; i++) {
@@ -1174,18 +1202,18 @@ function stepsToTrackerLines(stepsSubset, actNumber = null) {
       const isReward = t.text.includes('[필수') || t.text.includes('[보상');
       lines.push({
         text: `  [${i + 1}] ${sanitizeD2RText(t.text)}`,
-        color: isReward ? '$FontColorLightYellow' : '$FontColorWhite',
+        color: isReward ? '$FontColorLightGold' : '$DescriptionTextColor',
         size: '$SmallFontSize'
       });
     }
     lines.push({
       text: `  ★ 길찾기: ${sanitizeD2RText(s.note)}`,
-      color: '$FontColorLightBlue',
+      color: '$PanelNoteTextColor',
       size: '$SmallFontSize'
     });
     lines.push({
       text: `  ★ 공략팁: ${sanitizeD2RText(s.strategic_tip)}`,
-      color: '$FontColorGreen',
+      color: '$PanelNoteTextColor',
       size: '$SmallFontSize'
     });
   }
@@ -1225,8 +1253,8 @@ function buildQuestLogActGuideWidget(actIdx, actTitle, lines, hudTargetPanel) {
         type: 'TextBoxWidget',
         name: `QLAct${actIdx}Header`,
         fields: {
-          rect: { x: 8, y: 4, width: 450, height: 34 },
-          text: `▶ [${actTitle} 선택됨] 핵심 동선 & 길찾기 출력`,
+          rect: { x: 8, y: 4, width: 445, height: 34 },
+          text: `▶ [${actTitle}] 핵심 동선`,
           style: makeTextStyle('$FontColorGoldYellow', '$SmallFontSize', 'left', 'center', false)
         }
       },
@@ -1240,7 +1268,7 @@ function buildQuestLogActGuideWidget(actIdx, actTitle, lines, hudTargetPanel) {
           textString: `${actIdx}막 투명HUD 전환`,
           onClickMessage: `SettingsPanelMessage:CheckChanges:${hudTargetPanel}`,
           tooltipString: `좌측 상단 투명 HUD 출력창을 ${actIdx}막 내용으로 즉시 전환합니다.`,
-          textColor: '$FontColorGreen',
+          textColor: '$LightButtonTextColor',
           'text/style': '$StyleFEButtonText',
           sound: 'select'
         }
@@ -1255,7 +1283,7 @@ function buildQuestLogActGuideWidget(actIdx, actTitle, lines, hudTargetPanel) {
           textString: '투명HUD 켜기/끄기',
           onClickMessage: 'PanelManager:TogglePanel:D2RHudTrackerPanel',
           tooltipString: '화면 좌측 상단 투명 글자 출력창(크기 조절 가능)을 켜거나 끕니다.',
-          textColor: '$FontColorLightTeal',
+          textColor: '$LightButtonTextColor',
           'text/style': '$StyleFEButtonText',
           sound: 'select'
         }
@@ -1270,7 +1298,7 @@ function buildQuestLogActGuideWidget(actIdx, actTitle, lines, hudTargetPanel) {
           textString: '룬·큐빙 사전',
           onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
           tooltipString: '룬워드 98종 및 호라드림 큐빙 60종 투명 대사전을 엽니다.',
-          textColor: '$FontColorLightYellow',
+          textColor: '$LightButtonTextColor',
           'text/style': '$StyleFEButtonText',
           sound: 'select'
         }
@@ -1289,8 +1317,8 @@ function buildQuestLogActGuideWidget(actIdx, actTitle, lines, hudTargetPanel) {
             type: 'TableWidget',
             name: `QLAct${actIdx}Table`,
             fields: {
-              columns: [{ width: 920, alignment: { h: 'fit', v: 'fit' } }],
-              rowHeight: 37
+              columns: [{ width: 920, alignment: { h: 'fit', v: 'center' } }],
+              rowHeight: 46
             },
             children: tableRows
           }
@@ -1300,11 +1328,240 @@ function buildQuestLogActGuideWidget(actIdx, actTitle, lines, hudTargetPanel) {
   };
 }
 
+function buildQLActSubPanel(panelName, actIdx, actTitle, lines, hudTargetPanel) {
+  const cols = [190, 497, 805];
+  const rows = [312, 617];
+  const questCount = actIdx === 4 ? 3 : 6;
+  const questWidgets = [];
+
+  for (let q = 0; q < questCount; q++) {
+    const cx = cols[q % 3];
+    const cy = rows[Math.floor(q / 3)];
+    questWidgets.push(
+      {
+        type: 'ImageWidget',
+        name: `QLSocket_${actIdx}_${q}`,
+        fields: {
+          rect: { x: cx - 30, y: cy - 78 },
+          filename: 'QuestIcons\\GoldFrame'
+        }
+      },
+      {
+        type: 'ImageWidget',
+        name: `QLIcon_${actIdx}_${q}`,
+        fields: {
+          rect: { x: cx, y: cy },
+          filename: `QuestIcons\\a${actIdx}q${q + 1}`
+        }
+      }
+    );
+  }
+
+  if (actIdx === 4) {
+    questWidgets.push({
+      type: 'ImageWidget',
+      name: 'QLAct4Cover',
+      fields: {
+        rect: { x: 82, y: 528 },
+        filename: 'PANEL\\Quest_Log\\QLPanelCover'
+      }
+    });
+  }
+
+  const extraActive = [1, 1, 1, 1, 1, 1, 1].map((v, i) => (i === actIdx - 1 ? 0 : 1));
+  const romanActive = [1, 1, 1, 1, 1].map((v, i) => (i === actIdx - 1 ? 0 : 1));
+  const tableRows = expandTrackerLinesToTableRows(lines, `QLAct${actIdx}`);
+  const boxHeight = 420;
+  const ox = 88;
+  const oy = 842;
+
+  const children = [
+    {
+      type: 'ImageWidget',
+      name: 'Background',
+      fields: {
+        filename: 'PANEL\\Quest_Log\\QuestLog_BG'
+      }
+    },
+    {
+      type: 'ImageWidget',
+      name: 'LeftHinge',
+      fields: {
+        rect: '$LeftHingeRect',
+        filename: '$LeftHingeSprite'
+      }
+    },
+    {
+      type: 'TabBarWidget',
+      name: 'D2RHudQuestLogExtraTabs',
+      fields: {
+        rect: { x: 75, y: 72, scale: 0.71 },
+        tabCount: 7,
+        filename: 'PANEL\\Quest_Log\\QuestLogTab',
+        tabSize: { x: 205, y: 70 },
+        tabPadding: { x: -2, y: 0 },
+        inactiveFrames: extraActive,
+        activeFrames: extraActive,
+        textStyle: {
+          pointSize: '$SmallFontSize',
+          alignment: { h: 'center', v: 'center' }
+        },
+        activeTextColor: '$TabsActiveTextColorInGame',
+        inactiveTextColor: '$TabsInactiveTextColor',
+        textStrings: ['1막HUD', '2막HUD', '3막HUD', '4막HUD', '5막HUD', '길찾기맵', '스타터'],
+        tabMessages: [
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct1',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct2',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct3',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct4',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct5',
+          'SettingsPanelMessage:CheckChanges:D2RHudTrackMap',
+          'SettingsPanelMessage:CheckChanges:D2RHudTrackStarter'
+        ]
+      }
+    },
+    {
+      type: 'TabBarWidget',
+      name: 'Tabs',
+      fields: {
+        rect: { x: 75, y: 148 },
+        tabCount: 5,
+        filename: 'PANEL\\Quest_Log\\QuestLogTab',
+        tabSize: { x: 205, y: 70 },
+        tabPadding: { x: -2, y: 0 },
+        inactiveFrames: romanActive,
+        activeFrames: romanActive,
+        textStrings: ['I', 'II', 'III', 'IV', 'V'],
+        textStyle: { pointSize: '$MediumLargeFontSize' },
+        activeTextColor: '$TabsActiveTextColorInGame',
+        inactiveTextColor: '$TabsInactiveTextColor',
+        tabMessages: [
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct1',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct2',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct3',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct4',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct5'
+        ]
+      }
+    },
+    ...questWidgets,
+    {
+      type: 'RectangleWidget',
+      name: `QLAct${actIdx}Bg`,
+      fields: {
+        rect: { x: ox, y: oy + 44, width: 984, height: boxHeight + 12 },
+        color: [0.02, 0.02, 0.02, 0.88]
+      }
+    },
+    {
+      type: 'TextBoxWidget',
+      name: `QLAct${actIdx}Header`,
+      fields: {
+        rect: { x: ox + 8, y: oy + 4, width: 445, height: 34 },
+        text: `▶ [${actTitle}] 핵심 동선`,
+        style: makeTextStyle('$FontColorGoldYellow', '$SmallFontSize', 'left', 'center', false)
+      }
+    },
+    {
+      type: 'ButtonWidget',
+      name: `QLAct${actIdx}PinHudBtn`,
+      fields: {
+        rect: { x: ox + 465, y: oy, scale: 0.41 },
+        filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+        hoveredFrame: 3,
+        textString: `${actIdx}막 투명HUD 전환`,
+        onClickMessage: `SettingsPanelMessage:CheckChanges:${hudTargetPanel}`,
+        tooltipString: `좌측 상단 투명 HUD 출력창을 ${actIdx}막 내용으로 즉시 전환합니다.`,
+        textColor: '$LightButtonTextColor',
+        'text/style': '$StyleFEButtonText',
+        sound: 'select'
+      }
+    },
+    {
+      type: 'ButtonWidget',
+      name: `QLAct${actIdx}ToggleHudBtn`,
+      fields: {
+        rect: { x: ox + 642, y: oy, scale: 0.41 },
+        filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+        hoveredFrame: 3,
+        textString: '투명HUD 켜기/끄기',
+        onClickMessage: 'PanelManager:TogglePanel:D2RHudTrackerPanel',
+        tooltipString: '화면 좌측 상단 투명 글자 출력창(크기 조절 가능)을 켜거나 끕니다.',
+        textColor: '$LightButtonTextColor',
+        'text/style': '$StyleFEButtonText',
+        sound: 'select'
+      }
+    },
+    {
+      type: 'ButtonWidget',
+      name: `QLAct${actIdx}OpenDictBtn`,
+      fields: {
+        rect: { x: ox + 818, y: oy, scale: 0.41 },
+        filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+        hoveredFrame: 3,
+        textString: '룬·큐빙 사전',
+        onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
+        tooltipString: '룬워드 98종 및 호라드림 큐빙 60종 투명 대사전을 엽니다.',
+        textColor: '$LightButtonTextColor',
+        'text/style': '$StyleFEButtonText',
+        sound: 'select'
+      }
+    },
+    makeAlignedScrollBar(ox + 954, oy + 48, boxHeight, 'ScrollController', 'ScrollView'),
+    {
+      type: 'ScrollViewWidget',
+      name: 'ScrollView',
+      fields: {
+        rect: { x: ox + 10, y: oy + 48, width: 936, height: boxHeight },
+        scrollControllerName: 'ScrollController',
+        clipChildrenDraw: true
+      },
+      children: [
+        {
+          type: 'TableWidget',
+          name: 'OptionsTable',
+          fields: {
+            columns: [{ width: 920, alignment: { h: 'fit', v: 'center' } }],
+            rowHeight: 46
+          },
+          children: tableRows
+        }
+      ]
+    },
+    {
+      type: 'ButtonWidget',
+      name: 'Cancel',
+      fields: {
+        rect: { x: 1075, y: 9 },
+        filename: 'PANEL\\closebtn_4x',
+        hoveredFrame: 3,
+        tooltipString: '@strClose',
+        sound: 'cursor_close_window_hd',
+        onClickMessage: 'PanelManager:ClosePanel:D2RHudTrackerPanel'
+      }
+    }
+  ];
+
+  return {
+    type: 'VideoOptionsPanel',
+    name: panelName,
+    fields: {
+      priority: 201,
+      anchor: '$LeftPanelAnchor',
+      rect: '$LeftPanelRect',
+      applySettingsImmediately: false
+    },
+    children
+  };
+}
+
 function buildPatchedQuestLogLayouts(actLinesMap) {
   const qlOrig = readD2RJson(path.join(EXTRACTED_VANILLA, 'questlogpaneloriginalhd.json'));
   const qlExp = readD2RJson(path.join(EXTRACTED_VANILLA, 'questlogpanelexpansionhd.json'));
 
   function patchQuestLog(ql, isExpansion) {
+    ql.fields = ql.fields || {};
+    ql.fields.defaultWidget = 'QLAct1ToggleHudBtn';
     // Move Title, ShortDescription, LongDescription, Speech off-screen so
     // our Extra Tabs (y: 72) and Act 1~5 Output Box (y: 842..1328) are 100% clean
     for (const c of ql.children) {
@@ -1317,17 +1574,17 @@ function buildPatchedQuestLogLayouts(actLinesMap) {
         c.fields.onSwitchTabMessage = 'QuestLogPanelMessage:SelectTab';
         c.fields.tabMessages = isExpansion
           ? [
-              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct1',
-              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct2',
-              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct3',
-              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct4',
-              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct5'
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct1',
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct2',
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct3',
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct4',
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct5'
             ]
           : [
-              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct1',
-              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct2',
-              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct3',
-              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct4'
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct1',
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct2',
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct3',
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct4'
             ];
       }
     }
@@ -1349,15 +1606,15 @@ function buildPatchedQuestLogLayouts(actLinesMap) {
           pointSize: '$SmallFontSize',
           alignment: { h: 'center', v: 'center' }
         },
-        activeTextColor: '$FontColorGoldYellow',
-        inactiveTextColor: '$FontColorLightGold',
+        activeTextColor: '$TabsActiveTextColorInGame',
+        inactiveTextColor: '$TabsInactiveTextColor',
         textStrings: ['1막HUD', '2막HUD', '3막HUD', '4막HUD', '5막HUD', '길찾기맵', '스타터'],
         tabMessages: [
-          'SettingsPanelMessage:CheckChanges:D2RHudTrackAct1',
-          'SettingsPanelMessage:CheckChanges:D2RHudTrackAct2',
-          'SettingsPanelMessage:CheckChanges:D2RHudTrackAct3',
-          'SettingsPanelMessage:CheckChanges:D2RHudTrackAct4',
-          'SettingsPanelMessage:CheckChanges:D2RHudTrackAct5',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct1',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct2',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct3',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct4',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct5',
           'SettingsPanelMessage:CheckChanges:D2RHudTrackMap',
           'SettingsPanelMessage:CheckChanges:D2RHudTrackStarter'
         ]
@@ -1380,6 +1637,8 @@ function buildPatchedQuestLogLayouts(actLinesMap) {
         tabWidget.children.push(buildQuestLogActGuideWidget(tm.actIdx, tm.title, tm.lines, tm.target));
       }
     }
+
+    ql.children = ql.children.filter((c) => c.name !== 'D2RHudOpenTrackerEscBtn');
   }
 
   patchQuestLog(qlOrig, false);
@@ -1387,41 +1646,70 @@ function buildPatchedQuestLogLayouts(actLinesMap) {
 
   return {
     'questlogpaneloriginalhd.json': qlOrig,
-    'questlogpanelexpansionhd.json': qlExp
+    'questlogpanelexpansionhd.json': qlExp,
+    'D2RHudQLAct1hd.json': buildQLActSubPanel('D2RHudQLAct1', 1, '1막 자매단 야영지', actLinesMap.Act1, 'D2RHudTrackAct1'),
+    'D2RHudQLAct2hd.json': buildQLActSubPanel('D2RHudQLAct2', 2, '2막 루트 골레인', actLinesMap.Act2, 'D2RHudTrackAct2'),
+    'D2RHudQLAct3hd.json': buildQLActSubPanel('D2RHudQLAct3', 3, '3막 쿠라스트 부두', actLinesMap.Act3, 'D2RHudTrackAct3'),
+    'D2RHudQLAct4hd.json': buildQLActSubPanel('D2RHudQLAct4', 4, '4막 혼돈의 성역', actLinesMap.Act4, 'D2RHudTrackAct4'),
+    'D2RHudQLAct5hd.json': buildQLActSubPanel('D2RHudQLAct5', 5, '5막 해로개스', actLinesMap.Act5, 'D2RHudTrackAct5')
   };
 }
 
 // ============================================================================
 // 4. AUTOMAP (TAB KEY) INTEGRATION (automaphd.json)
 //    - "탭 누르면 맵이랑 같이 나오게가고"
-//    - Whenever the player presses Tab to toggle the AutoMap on/off, this
-//      transparent Map & Route Guide renders together with the map!
+//    - "왼쪽으로 옮기고 가독성 개선해"
+//    - Anchored at TOP-LEFT (x: 24, y: 18) with dark readability background,
+//      gold header accent, large crisp fonts ($MediumLargeFontSize / $XMediumFontSize),
+//      and 46px rowHeight so lines never overlap or collide with top-right UI!
 // ============================================================================
 function buildPatchedAutoMapLayout(mapLines) {
   const autoMap = readD2RJson(path.join(EXTRACTED_VANILLA, 'automaphd.json'));
+  autoMap.fields = autoMap.fields || {};
+  autoMap.fields.maxOpacity = 0.96;
+  autoMap.fields.highOpacity = 0.94;
+  autoMap.fields.lowOpacity = 0.90;
+  autoMap.fields.minOpacity = 0.82;
+
   const tableRows = expandTrackerLinesToTableRows(mapLines, 'AutoMapHud');
-  const mapHudHeight = 296;
+  const mapHudHeight = 368; // 8 crisp rows at rowHeight 46
 
   autoMap.children = [
     {
       type: 'Widget',
       name: 'D2RHudAutoMapContainer',
       fields: {
-        anchor: { x: 1.0, y: 0.0 },
-        rect: { x: -860, y: 92, width: 836, height: mapHudHeight + 44 }
+        anchor: { x: 0.0, y: 0.0 },
+        rect: { x: -2536, y: -60, width: 960, height: mapHudHeight + 52 }
       },
       children: [
+        {
+          type: 'RectangleWidget',
+          name: 'AutoMapHudReadabilityBg',
+          fields: {
+            rect: { x: 0, y: 40, width: 952, height: mapHudHeight + 10 },
+            color: [0.02, 0.02, 0.04, 0.84]
+          }
+        },
+        {
+          type: 'RectangleWidget',
+          name: 'AutoMapHudTopAccent',
+          fields: {
+            rect: { x: 0, y: 40, width: 952, height: 3 },
+            color: [0.78, 0.66, 0.38, 0.92]
+          }
+        },
         {
           type: 'ButtonWidget',
           name: 'AutoMapToggleQuestHudBtn',
           fields: {
-            rect: { x: 0, y: 0, scale: 0.40 },
+            rect: { x: 0, y: 0, scale: 0.42 },
             filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
             hoveredFrame: 3,
             textString: '퀘스트HUD 크기조절창',
             onClickMessage: 'PanelManager:TogglePanel:D2RHudTrackerPanel',
-            tooltipString: '좌측 상단 투명 퀘스트 출력창(소형/중형/대형 조절)을 켜거나 끕니다.',
-            textColor: '$FontColorGoldYellow',
+            tooltipString: '좌측 중단 투명 퀘스트 출력창(소형/중형/대형 조절)을 켜거나 끕니다.',
+            textColor: '$LightButtonTextColor',
             'text/style': '$StyleFEButtonText',
             sound: 'select'
           }
@@ -1430,23 +1718,23 @@ function buildPatchedAutoMapLayout(mapLines) {
           type: 'ButtonWidget',
           name: 'AutoMapToggleDictBtn',
           fields: {
-            rect: { x: 165, y: 0, scale: 0.40 },
+            rect: { x: 175, y: 0, scale: 0.42 },
             filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
             hoveredFrame: 3,
             textString: '룬워드·큐빙 사전',
             onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
             tooltipString: '투명 호라드림 대사전(룬워드 98종·큐빙 60종)을 켜거나 끕니다.',
-            textColor: '$FontColorLightTeal',
+            textColor: '$LightButtonTextColor',
             'text/style': '$StyleFEButtonText',
             sound: 'select'
           }
         },
-        makeAlignedScrollBar(806, 38, mapHudHeight, 'AutoMapScrollCtrl', 'AutoMapScrollView'),
+        makeAlignedScrollBar(922, 44, mapHudHeight, 'AutoMapScrollCtrl', 'AutoMapScrollView'),
         {
           type: 'ScrollViewWidget',
           name: 'AutoMapScrollView',
           fields: {
-            rect: { x: 0, y: 38, width: 798, height: mapHudHeight },
+            rect: { x: 12, y: 44, width: 902, height: mapHudHeight },
             scrollControllerName: 'AutoMapScrollCtrl',
             clipChildrenDraw: true
           },
@@ -1455,8 +1743,8 @@ function buildPatchedAutoMapLayout(mapLines) {
               type: 'TableWidget',
               name: 'AutoMapHudTable',
               fields: {
-                columns: [{ width: 786, alignment: { h: 'fit', v: 'fit' } }],
-                rowHeight: 37
+                columns: [{ width: 890, alignment: { h: 'fit', v: 'center' } }],
+                rowHeight: 46
               },
               children: tableRows
             }
@@ -1483,7 +1771,8 @@ function buildPatchedEntryLayouts(actLinesMap, mapTrackerLines) {
     'D2RHudDictToggleBtn',
     'miniHealthBar',
     'minihpBar',
-    'minimanaBar'
+    'minimanaBar',
+    'D2RHudHuDOpenTrackerEscBtn'
   ]);
   hudPanel.children = hudPanel.children.filter((c) => !removedHudWidgets.has(c.name));
 
@@ -1503,35 +1792,98 @@ function buildPatchedEntryLayouts(actLinesMap, mapTrackerLines) {
   const mainRibbon = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\mainmenubuttonribbonhd.json'));
   const ribbonImg = mainRibbon.children.find((c) => c.name === 'Ribbon');
   if (ribbonImg && Array.isArray(ribbonImg.children)) {
-    ribbonImg.children = ribbonImg.children.filter((c) => c.name !== 'D2RHudMainMenuBtn');
+    ribbonImg.children = ribbonImg.children.filter((c) => c.name !== 'D2RHudMainMenuBtn' && c.name !== 'D2RHudQuickPlayKeyBtn');
   }
 
-  // 5.3 pauselayouthd.json — ESC Pause Menu entry for Dictionary
+  // 5.2b mainmenupanelhd.json, characterselectpanelhd.json, characterdifficultymodalhd.json
+  const mainMenuPanel = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\mainmenupanelhd.json'));
+  const quickPlayBtn = mainMenuPanel.children.find((c) => c.name === 'QuickPlayButton');
+  if (quickPlayBtn && quickPlayBtn.fields) {
+    quickPlayBtn.fields.acceptsReturnKey = true;
+    quickPlayBtn.fields.focusOnMouseOver = false;
+  }
+
+  const enableCaptureHooks = process.env.D2R_CAPTURE_HOOKS === '1';
+
+  const charSelectPanel = readD2RJson(path.join(EXTRACTED_VANILLA, 'characterselectpanelhd.json'));
+  if (enableCaptureHooks) {
+    charSelectPanel.children.push({
+      type: 'InputTextBoxWidget',
+      name: 'D2RHudCharSelectInput',
+      fields: {
+        rect: { x: -9999, y: -9999, width: 100, height: 40 },
+        maxStringLength: 1,
+        alwaysAcceptsKeyInput: true,
+        onReturnInputMessage: 'MainMenuHD:Play'
+      }
+    });
+  }
+
+  const diffModal = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\characterdifficultymodalhd.json'));
+  const diffFrame = diffModal.children.find((c) => c.name === 'Frame');
+  if (diffFrame && Array.isArray(diffFrame.children)) {
+    const normalBtn = diffFrame.children.find((c) => c.name === 'Normal');
+    if (normalBtn && normalBtn.fields) {
+      normalBtn.fields.acceptsReturnKey = true;
+      normalBtn.fields.focusOnMouseOver = false;
+    }
+  }
+
+  // 5.3 pauselayouthd.json — ESC Pause Menu entry for Quest HUD & Dictionary
   const pauseLayout = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\pauselayouthd.json'));
+  pauseLayout.fields = pauseLayout.fields || {};
+  pauseLayout.fields.defaultWidget = 'ReturnToGame';
   const pauseTable = pauseLayout.children.find((c) => c.name === 'PauseTable');
   if (pauseTable && Array.isArray(pauseTable.children)) {
-    pauseTable.children = pauseTable.children.filter((c) => c.name !== 'Row D2RHudMenu');
-    pauseTable.children.splice(1, 0, {
-      type: 'TableRowWidget',
-      name: 'Row D2RHudMenu',
-      children: [
-        {
-          type: 'ButtonWidget',
-          name: 'D2RHudPauseBtn',
-          fields: {
-            filename: 'PauseMenu\\PauseButton',
-            hoveredFrame: 3,
-            textString: '룬워드·큐빙 사전',
-            onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
-            textColor: '$FontColorGoldYellow',
-            'text/style': '$StyleFEButtonText',
-            acceptsReturnKey: true,
-            focusOnMouseOver: true,
-            sound: 'select'
+    pauseTable.children = pauseTable.children.filter(
+      (c) => c.name !== 'Row D2RHudMenu' && c.name !== 'Row D2RHudTrackerMenu' && c.name !== 'Row D2RHudQuestLogMenu'
+    );
+    pauseTable.children.splice(
+      1,
+      0,
+      {
+        type: 'TableRowWidget',
+        name: 'Row D2RHudTrackerMenu',
+        children: [
+          {
+            type: 'ButtonWidget',
+            name: 'D2RHudPauseTrackerBtn',
+            fields: {
+              filename: 'PauseMenu\\PauseButton',
+              hoveredFrame: 3,
+              textString: '퀘스트 투명HUD',
+              onClickMessage: 'PanelManager:TogglePanel:D2RHudTrackerPanel',
+              textColor: '$LightButtonTextColor',
+              'text/style': '$StyleFEButtonText',
+              acceptsReturnKey: true,
+              focusOnMouseOver: true,
+              sound: 'select'
+            }
           }
-        }
-      ]
-    });
+        ]
+      },
+      {
+        type: 'TableRowWidget',
+        name: 'Row D2RHudMenu',
+        children: [
+          {
+            type: 'ButtonWidget',
+            name: 'D2RHudPauseBtn',
+            fields: {
+              filename: 'PauseMenu\\PauseButton',
+              hoveredFrame: 3,
+              textString: '룬워드·큐빙 사전',
+              onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
+              textColor: '$LightButtonTextColor',
+              'text/style': '$StyleFEButtonText',
+              acceptsReturnKey: true,
+              focusOnMouseOver: true,
+              sound: 'select'
+            }
+          }
+        ]
+      }
+    );
   }
 
   // 5.4 playerinventoryexpansionlayouthd.json — Inventory (I) button
@@ -1553,7 +1905,7 @@ function buildPatchedEntryLayouts(actLinesMap, mapTrackerLines) {
       textString: '큐빙·룬 사전',
       onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
       tooltipString: '호라드림 큐빙 60종 조합법 및 룬워드 98종 투명 대사전 켜기/끄기',
-      textColor: '$FontColorGoldYellow',
+      textColor: '$LightButtonTextColor',
       'text/style': '$StyleFEButtonText',
       sound: 'select'
     }
@@ -1563,18 +1915,78 @@ function buildPatchedEntryLayouts(actLinesMap, mapTrackerLines) {
   const questLogLayouts = buildPatchedQuestLogLayouts(actLinesMap);
   const autoMapLayout = buildPatchedAutoMapLayout(mapTrackerLines);
 
-  return {
+  const result = {
     'hudpanelhd.json': hudPanel,
     'healthProBarhd.json': emptyHealthBarPanel('healthProBar'),
     'hpProBarhd.json': emptyHealthBarPanel('hpProBar'),
     'manaProBarhd.json': emptyHealthBarPanel('manaProBar'),
     'mainmenubuttonribbonhd.json': mainRibbon,
+    'mainmenupanelhd.json': mainMenuPanel,
+    'characterselectpanelhd.json': charSelectPanel,
+    'characterdifficultymodalhd.json': diffModal,
     'pauselayouthd.json': pauseLayout,
     'playerinventoryexpansionlayouthd.json': invLayout,
     'horadriccubelayouthd.json': cubeLayout,
     'automaphd.json': autoMapLayout,
     ...questLogLayouts
   };
+
+  if (enableCaptureHooks) {
+    const act2Sub = buildQLActSubPanel('D2RHudQLAct2', 2, '2막 루트 골레인', actLinesMap.Act2, 'D2RHudTrackAct2');
+    result['helppanelhd.json'] = {
+      type: 'HelpPanel',
+      name: 'HelpPanel',
+      fields: {
+        priority: 150,
+        fitToParent: true,
+        childFormats: []
+      },
+      children: [
+        {
+          type: 'Widget',
+          name: 'CenterSection',
+          fields: {
+            anchor: '$LeftPanelAnchor',
+            rect: '$LeftPanelRect'
+          },
+          children: act2Sub.children
+        }
+      ]
+    };
+
+    const act3Sub = buildQLActSubPanel('D2RHudQLAct3', 3, '3막 쿠라스트 부두', actLinesMap.Act3, 'D2RHudTrackAct3');
+    result['playerinventoryexpansionlayouthd.json'] = {
+      type: 'PlayerInventoryPanel',
+      name: 'PlayerInventoryExpansionLayout',
+      fields: {
+        priority: 150,
+        anchor: '$LeftPanelAnchor',
+        rect: '$LeftPanelRect'
+      },
+      children: act3Sub.children
+    };
+
+    const charStats = readD2RJson(
+      path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\characterstatspanelhd.json')
+    );
+    charStats.fields = charStats.fields || {};
+    charStats.fields.priority = 100;
+    charStats.fields.rect = { x: -9999, y: -9999, width: 1, height: 1 };
+    charStats.children.push({
+      type: 'ButtonWidget',
+      name: 'D2RHudStatsEscBtn',
+      fields: {
+        rect: { x: -9999, y: -9999, scale: 0.01 },
+        filename: 'PANEL/minihealthon',
+        onClickMessage: 'PanelManager:OpenPanel:D2RHudTrackerPanel',
+        acceptsEscKeyEverywhere: true,
+        focusOnMouseOver: false
+      }
+    });
+    result['characterstatspanelhd.json'] = charStats;
+  }
+
+  return result;
 }
 
 // ============================================================================
@@ -1627,12 +2039,12 @@ function main() {
     ...MAP_CHEATSHEET.flatMap((m) => [
       {
         text: `· [${m.act}] ${m.zone} → ${m.rule}`,
-        color: '$FontColorLightYellow',
+        color: '$DescriptionTextColor',
         size: '$SmallFontSize'
       },
       {
         text: `   → ${m.detail}`,
-        color: '$FontColorLightBlue',
+        color: '$PanelNoteTextColor',
         size: '$SmallFontSize'
       }
     ])
@@ -1658,9 +2070,11 @@ function main() {
     { key: 'Starter', lines: actLinesMap.Starter }
   ];
 
+  const enableCaptureHooks = process.env.D2R_CAPTURE_HOOKS === '1';
   for (const t of trackerTabs) {
     for (const suffix of ['', 'S', 'L', 'B']) {
-      generatedLayouts[`D2RHudTrack${t.key}${suffix}hd.json`] = buildTrackerSubPanel(t.key, suffix, t.lines);
+      const escMsg = enableCaptureHooks && t.key === 'Act1' && suffix === '' ? 'PanelManager:OpenPanel:AutoMap' : null;
+      generatedLayouts[`D2RHudTrack${t.key}${suffix}hd.json`] = buildTrackerSubPanel(t.key, suffix, t.lines, escMsg);
     }
   }
 
@@ -1674,6 +2088,17 @@ function main() {
 
   ensureDir(outStandaloneLayouts);
   ensureDir(outYupgoolgLayouts);
+
+  for (const existing of fs.readdirSync(outStandaloneLayouts)) {
+    if (existing.endsWith('.json') && existing !== '_profilehd.json' && !(existing in generatedLayouts)) {
+      fs.unlinkSync(path.join(outStandaloneLayouts, existing));
+    }
+  }
+  for (const existing of fs.readdirSync(outYupgoolgLayouts)) {
+    if (existing.endsWith('.json') && !(existing in generatedLayouts)) {
+      fs.unlinkSync(path.join(outYupgoolgLayouts, existing));
+    }
+  }
 
   const profileHd = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\_profilehd.json'));
   writeJson(path.join(outStandaloneLayouts, '_profilehd.json'), profileHd);

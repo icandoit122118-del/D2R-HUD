@@ -5,9 +5,9 @@
     "priority": 201,
     "rect": {
       "x": 24,
-      "y": 12,
-      "width": 868,
-      "height": 338
+      "y": 468,
+      "width": 960,
+      "height": 418
     },
     "anchor": {
       "x": 0,
@@ -16,24 +16,6 @@
     "applySettingsImmediately": false
   },
   "children": [
-    {
-      "type": "RectangleWidget",
-      "name": "SubtleTintBG",
-      "fields": {
-        "rect": {
-          "x": 0,
-          "y": 36,
-          "width": 868,
-          "height": 296
-        },
-        "color": [
-          0,
-          0,
-          0,
-          0.28
-        ]
-      }
-    },
     {
       "type": "ButtonWidget",
       "name": "SizeFoldBtn",
@@ -48,7 +30,7 @@
         "textString": "▲ 접기",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackFold",
         "tooltipString": "글자 출력창 접기",
-        "textColor": "$FontColorLightYellow",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }
@@ -66,8 +48,8 @@
         "hoveredFrame": 3,
         "textString": "소형 4줄",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct5S",
-        "tooltipString": "글자 출력창을 소형(4줄, 완전투명)으로 줄입니다.",
-        "textColor": "$FontColorLightTeal",
+        "tooltipString": "글자 출력창을 소형(4줄)으로 줄입니다.",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }
@@ -83,10 +65,10 @@
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
-        "textString": "중형 8줄",
+        "textString": "중형 7줄",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct5",
-        "tooltipString": "글자 출력창을 기본 중형(8줄, 완전투명)으로 조절합니다.",
-        "textColor": "$FontColorGreen",
+        "tooltipString": "글자 출력창을 기본 중형(7줄)으로 조절합니다.",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }
@@ -102,10 +84,10 @@
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
-        "textString": "대형 15줄",
+        "textString": "대형 12줄",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct5L",
-        "tooltipString": "글자 출력창을 대형(15줄, 완전투명)으로 넓힙니다.",
-        "textColor": "$FontColorWhite",
+        "tooltipString": "글자 출력창을 대형(12줄)으로 넓힙니다.",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }
@@ -121,9 +103,9 @@
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
-        "textString": "완전투명",
+        "textString": "가독배경",
         "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct5",
-        "tooltipString": "배경 완전투명 / 28% 옅은 반투명막 전환",
+        "tooltipString": "가독성 반투명 배경 / 배경 완전투명 전환",
         "textColor": "$FontColorGoldYellow",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
@@ -150,10 +132,10 @@
       "name": "ScrollBarWrap_ScrollController",
       "fields": {
         "rect": {
-          "x": 840,
-          "y": 36,
+          "x": 922,
+          "y": 42,
           "width": 24,
-          "height": 296
+          "height": 368
         }
       },
       "children": [
@@ -165,7 +147,7 @@
               "x": 8,
               "y": 22,
               "width": 8,
-              "height": 252
+              "height": 324
             },
             "color": [
               0.08,
@@ -183,7 +165,7 @@
               "x": 10,
               "y": 22,
               "width": 4,
-              "height": 252
+              "height": 324
             },
             "color": [
               0.55,
@@ -201,7 +183,7 @@
               "x": 0,
               "y": 0,
               "width": 24,
-              "height": 296
+              "height": 368
             },
             "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
             "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
@@ -219,10 +201,10 @@
       "name": "ScrollView",
       "fields": {
         "rect": {
-          "x": 4,
-          "y": 36,
-          "width": 828,
-          "height": 296
+          "x": 12,
+          "y": 42,
+          "width": 902,
+          "height": 368
         },
         "scrollControllerName": "ScrollController",
         "clipChildrenDraw": true
@@ -234,14 +216,14 @@
           "fields": {
             "columns": [
               {
-                "width": 816,
+                "width": 890,
                 "alignment": {
                   "h": "fit",
-                  "v": "fit"
+                  "v": "center"
                 }
               }
             ],
-            "rowHeight": 37
+            "rowHeight": 46
           },
           "children": [
             {
@@ -256,7 +238,7 @@
                     "text": "★ [5막 핵심 던전 길찾기 방향 공식]",
                     "style": {
                       "fontColor": "$FontColorGoldYellow",
-                      "pointSize": "$MediumFontSize",
+                      "pointSize": "$MediumLargeFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -267,8 +249,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -296,10 +278,10 @@
                   "name": "TrackText_1",
                   "fields": {
                     "fitToText": true,
-                    "text": "· 고대인의 길 / 수정 동굴 / 혹한의 지하도: 입구 타일 기준 왼쪽(시계방향",
+                    "text": "· 고대인의 길 / 수정 동굴 / 혹한의 지하도: 입구 타일",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -310,8 +292,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -339,10 +321,10 @@
                   "name": "TrackText_2",
                   "fields": {
                     "fitToText": true,
-                    "text": "    90도)에 다음 지역(아리앗 정상/얼어붙은 강) 출구",
+                    "text": "   기준 왼쪽(시계방향 90도)에 다음 지역(아리앗",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -353,8 +335,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -382,10 +364,10 @@
                   "name": "TrackText_3",
                   "fields": {
                     "fitToText": true,
-                    "text": "· 고통의 전당 - 보트의 전당 (니라트하크): 보트의 전당 WP에서 내린 후",
+                    "text": "   정상/얼어붙은 강) 출구",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -396,8 +378,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -425,10 +407,10 @@
                   "name": "TrackText_4",
                   "fields": {
                     "fitToText": true,
-                    "text": "    벽면 눈동자 벽화가 그려진 방향이 진짜 니라트하크 방",
+                    "text": "· 고통의 전당 - 보트의 전당 (니라트하크): 보트의 전당",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -439,8 +421,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -468,10 +450,10 @@
                   "name": "TrackText_5",
                   "fields": {
                     "fitToText": true,
-                    "text": "· 세계석 성채 2층 → 3층 (바알): 세계석 성채 2층 웨이포인트(WP) 방",
+                    "text": "   WP에서 내린 후 벽면 눈동자 벽화가 그려진 방향이 진짜",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -482,8 +464,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -511,10 +493,10 @@
                   "name": "TrackText_6",
                   "fields": {
                     "fitToText": true,
-                    "text": "    출구 기준 오른쪽(반시계방향 90도) 벽면",
+                    "text": "   니라트하크 방",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -525,8 +507,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -554,10 +536,10 @@
                   "name": "TrackText_7",
                   "fields": {
                     "fitToText": true,
-                    "text": "■ [Act 5-1] 5막 - 쉔크(소켓 보상) & 앤야 구출(모든 저항",
+                    "text": "· 세계석 성채 2층 → 3층 (바알): 세계석 성채 2층",
                     "style": {
-                      "fontColor": "$FontColorGoldYellow",
-                      "pointSize": "$MediumFontSize",
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -568,8 +550,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -597,10 +579,10 @@
                   "name": "TrackText_8",
                   "fields": {
                     "fitToText": true,
-                    "text": "    +10)",
+                    "text": "   웨이포인트(WP) 방 출구 기준 오른쪽(반시계방향 90도)",
                     "style": {
-                      "fontColor": "$FontColorGoldYellow",
-                      "pointSize": "$MediumFontSize",
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -611,8 +593,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -640,10 +622,10 @@
                   "name": "TrackText_9",
                   "fields": {
                     "fitToText": true,
-                    "text": "▶ 동선: 핏빛 기슭(쉔크) → 혹한의 고산지(WP/바바리안 3명 구출) →",
+                    "text": "   벽면",
                     "style": {
-                      "fontColor": "$FontColorLightTeal",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -654,8 +636,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -683,10 +665,10 @@
                   "name": "TrackText_10",
                   "fields": {
                     "fitToText": true,
-                    "text": "    고대인의 길 → 수정 동굴 → 얼어붙은 강(앤야 구출)",
+                    "text": "■ [Act 5-1] 5막 - 쉔크(소켓 보상) & 앤야",
                     "style": {
-                      "fontColor": "$FontColorLightTeal",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumLargeFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -697,8 +679,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -726,10 +708,10 @@
                   "name": "TrackText_11",
                   "fields": {
                     "fitToText": true,
-                    "text": "[1] [필수/보상] 핏빛 기슭 감독관 쉔크 처치 → 라르주크 장비 홈(소켓)",
+                    "text": "   구출(모든 저항 +10)",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumLargeFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -740,8 +722,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -769,10 +751,10 @@
                   "name": "TrackText_12",
                   "fields": {
                     "fitToText": true,
-                    "text": "    추가 보상 해금",
+                    "text": "▶ 동선: 핏빛 기슭(쉔크) → 혹한의 고산지(WP/바바리안",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -783,8 +765,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -812,10 +794,10 @@
                   "name": "TrackText_13",
                   "fields": {
                     "fitToText": true,
-                    "text": "[2] [보상] 혹한의 고산지에서 포로 바바리안 15명 구출 → 퀄케크에게",
+                    "text": "   3명 구출) → 고대인의 길 → 수정 동굴 → 얼어붙은",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -826,8 +808,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -855,10 +837,10 @@
                   "name": "TrackText_14",
                   "fields": {
                     "fitToText": true,
-                    "text": "    랄+오르트+탈(고대인의 서약) 룬 획득",
+                    "text": "   강(앤야 구출)",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -869,8 +851,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -898,10 +880,10 @@
                   "name": "TrackText_15",
                   "fields": {
                     "fitToText": true,
-                    "text": "[3] [필수/보상] 수정 동굴 아래 얼어붙은 강에서 얼어붙은 앤야 확인 →",
+                    "text": "[1] [필수/보상] 핏빛 기슭 감독관 쉔크 처치 → 라르주크",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -912,8 +894,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -941,10 +923,10 @@
                   "name": "TrackText_16",
                   "fields": {
                     "fitToText": true,
-                    "text": "    마라에게 해동 물약 수령 → 앤야 구출",
+                    "text": "   장비 홈(소켓) 추가 보상 해금",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -955,8 +937,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -984,10 +966,10 @@
                   "name": "TrackText_17",
                   "fields": {
                     "fitToText": true,
-                    "text": "[4] 마라와 대화해 저항의 두루마리 수령 후 우클릭 사용 → 모든 저항 영구",
+                    "text": "[2] [보상] 혹한의 고산지에서 포로 바바리안 15명 구출 →",
                     "style": {
-                      "fontColor": "$FontColorWhite",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -998,8 +980,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1027,10 +1009,10 @@
                   "name": "TrackText_18",
                   "fields": {
                     "fitToText": true,
-                    "text": "    +10% 증가",
+                    "text": "   퀄케크에게 랄+오르트+탈(고대인의 서약) 룬 획득",
                     "style": {
-                      "fontColor": "$FontColorWhite",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1041,8 +1023,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1070,10 +1052,10 @@
                   "name": "TrackText_19",
                   "fields": {
                     "fitToText": true,
-                    "text": "  [5] 고대인의 길 웨이포인트 활성화 (아리앗 정상 진입용 거점)",
+                    "text": "[3] [필수/보상] 수정 동굴 아래 얼어붙은 강에서 얼어붙은",
                     "style": {
-                      "fontColor": "$FontColorWhite",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1084,8 +1066,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1113,10 +1095,10 @@
                   "name": "TrackText_20",
                   "fields": {
                     "fitToText": true,
-                    "text": "★ 길찾기: 보통 카우방이나 결정의 통로에서 드랍된 흰색 크리스탈 소드/브로드",
+                    "text": "   앤야 확인 → 마라에게 해동 물약 수령 → 앤야 구출",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1127,8 +1109,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1156,10 +1138,10 @@
                   "name": "TrackText_21",
                   "fields": {
                     "fitToText": true,
-                    "text": "    소드를 라르주크에게 주면 확정 4홈(영혼 재료)이 뚫립니다.",
+                    "text": "[4] 마라와 대화해 저항의 두루마리 수령 후 우클릭 사용 →",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1170,8 +1152,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1199,10 +1181,10 @@
                   "name": "TrackText_22",
                   "fields": {
                     "fitToText": true,
-                    "text": "★ 공략팁: 얼어붙은 강에는 영혼(버닝 소울)과 마녀가 등장하므로 번개 저항",
+                    "text": "   모든 저항 영구 +10% 증가",
                     "style": {
-                      "fontColor": "$FontColorGreen",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1213,8 +1195,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1242,10 +1224,10 @@
                   "name": "TrackText_23",
                   "fields": {
                     "fitToText": true,
-                    "text": "    75%를 반드시 맞추고 진입하세요.",
+                    "text": "[5] 고대인의 길 웨이포인트 활성화 (아리앗 정상 진입용",
                     "style": {
-                      "fontColor": "$FontColorGreen",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1256,8 +1238,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1285,10 +1267,10 @@
                   "name": "TrackText_24",
                   "fields": {
                     "fitToText": true,
-                    "text": "■ [Act 5-2] 5막 - 아리앗 정상(삼바바) & 세계석",
+                    "text": "   거점)",
                     "style": {
-                      "fontColor": "$FontColorGoldYellow",
-                      "pointSize": "$MediumFontSize",
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1299,8 +1281,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1328,10 +1310,10 @@
                   "name": "TrackText_25",
                   "fields": {
                     "fitToText": true,
-                    "text": "    성채(바알)",
+                    "text": "★ 길찾기: 보통 카우방이나 결정의 통로에서 드랍된 흰색",
                     "style": {
-                      "fontColor": "$FontColorGoldYellow",
-                      "pointSize": "$MediumFontSize",
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1342,8 +1324,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1371,10 +1353,10 @@
                   "name": "TrackText_26",
                   "fields": {
                     "fitToText": true,
-                    "text": "▶ 동선: 고대인의 길(WP) → 아리앗 정상(삼바바, 20/40/60레벨 제한)",
+                    "text": "   크리스탈 소드/브로드 소드를 라르주크에게 주면 확정",
                     "style": {
-                      "fontColor": "$FontColorLightTeal",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1385,8 +1367,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1414,10 +1396,10 @@
                   "name": "TrackText_27",
                   "fields": {
                     "fitToText": true,
-                    "text": "    → 세계석 성채 2층(WP) → 파괴의 왕좌(5웨이브) → 바알 처치",
+                    "text": "   4홈(영혼 재료)이 뚫립니다.",
                     "style": {
-                      "fontColor": "$FontColorLightTeal",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1428,8 +1410,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1457,10 +1439,10 @@
                   "name": "TrackText_28",
                   "fields": {
                     "fitToText": true,
-                    "text": "[1] [필수] 아리앗 정상에서 고대인 3인(탈릭·매덕·코릭)을 포탈 열지 않고",
+                    "text": "★ 공략팁: 얼어붙은 강에는 영혼(버닝 소울)과 마녀가",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1471,8 +1453,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1500,10 +1482,10 @@
                   "name": "TrackText_29",
                   "fields": {
                     "fitToText": true,
-                    "text": "    한 번에 처치 (레벨 20/40/60 필요)",
+                    "text": "   등장하므로 번개 저항 75%를 반드시 맞추고 진입하세요.",
                     "style": {
-                      "fontColor": "$FontColorLightYellow",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1514,8 +1496,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1543,10 +1525,10 @@
                   "name": "TrackText_30",
                   "fields": {
                     "fitToText": true,
-                    "text": "[2] 세계석 성채 2층 웨이포인트 활성화 (3층 계단은 2층 WP 방 기준",
+                    "text": "■ [Act 5-2] 5막 - 아리앗 정상(삼바바) &",
                     "style": {
-                      "fontColor": "$FontColorWhite",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumLargeFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1557,8 +1539,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1586,10 +1568,10 @@
                   "name": "TrackText_31",
                   "fields": {
                     "fitToText": true,
-                    "text": "    오른쪽 시계방향 벽면)",
+                    "text": "   세계석 성채(바알)",
                     "style": {
-                      "fontColor": "$FontColorWhite",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumLargeFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1600,8 +1582,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1629,10 +1611,10 @@
                   "name": "TrackText_32",
                   "fields": {
                     "fitToText": true,
-                    "text": "  [3] 파괴의 왕좌에서 바알의 소환수 5웨이브(콜렌조~리스터) 전멸",
+                    "text": "▶ 동선: 고대인의 길(WP) → 아리앗 정상(삼바바,",
                     "style": {
-                      "fontColor": "$FontColorWhite",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1643,8 +1625,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1672,10 +1654,10 @@
                   "name": "TrackText_33",
                   "fields": {
                     "fitToText": true,
-                    "text": "[4] 세계석 보관실 진입 후 바알 처치 → 다음 난이도 및 비밀 카우방 해금!",
+                    "text": "   20/40/60레벨 제한) → 세계석 성채 2층(WP) →",
                     "style": {
-                      "fontColor": "$FontColorWhite",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1686,8 +1668,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1715,10 +1697,10 @@
                   "name": "TrackText_34",
                   "fields": {
                     "fitToText": true,
-                    "text": "★ 길찾기: 지옥 난이도 고대인 3인 전투 전에는 바닥에 물약을 미리 뿌려 두고,",
+                    "text": "   파괴의 왕좌(5웨이브) → 바알 처치",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1729,8 +1711,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1758,10 +1740,10 @@
                   "name": "TrackText_35",
                   "fields": {
                     "fitToText": true,
-                    "text": "    텔포봉으로 고대인을 한 명씩 분리해 각개격파하세요.",
+                    "text": "[1] [필수] 아리앗 정상에서 고대인 3인(탈릭·매덕·코릭)을",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1772,8 +1754,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1801,10 +1783,10 @@
                   "name": "TrackText_36",
                   "fields": {
                     "fitToText": true,
-                    "text": "★ 공략팁: 바알 클리어 후 공포의 영역(Terror Zone)이 활성화되면 현",
+                    "text": "   포탈 열지 않고 한 번에 처치 (레벨 20/40/60",
                     "style": {
-                      "fontColor": "$FontColorGreen",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1815,8 +1797,8 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {
@@ -1844,10 +1826,10 @@
                   "name": "TrackText_37",
                   "fields": {
                     "fitToText": true,
-                    "text": "    난이도 최고 효율로 경험치와 룬/부적을 파밍할 수 있습니다.",
+                    "text": "   필요)",
                     "style": {
-                      "fontColor": "$FontColorGreen",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1858,8 +1840,524 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.12,
-                        "kerning": 0.94
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_38",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_38",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[2] 세계석 성채 2층 웨이포인트 활성화 (3층 계단은 2층",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_39",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_39",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   WP 방 기준 오른쪽 시계방향 벽면)",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_40",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_40",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[3] 파괴의 왕좌에서 바알의 소환수 5웨이브(콜렌조~리스터)",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_41",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_41",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   전멸",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_42",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_42",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[4] 세계석 보관실 진입 후 바알 처치 → 다음 난이도 및",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_43",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_43",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   비밀 카우방 해금!",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_44",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_44",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 길찾기: 지옥 난이도 고대인 3인 전투 전에는 바닥에 물약을",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_45",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_45",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   미리 뿌려 두고, 텔포봉으로 고대인을 한 명씩 분리해",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_46",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_46",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   각개격파하세요.",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_47",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_47",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 공략팁: 바알 클리어 후 공포의 영역(Terror",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_48",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_48",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   Zone)이 활성화되면 현 난이도 최고 효율로 경험치와",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_49",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_49",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   룬/부적을 파밍할 수 있습니다.",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
                       },
                       "dropShadow": {
                         "shadowColor": {

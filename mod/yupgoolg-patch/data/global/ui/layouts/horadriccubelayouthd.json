@@ -161,7 +161,7 @@
         "textString": "큐빙·룬 사전",
         "onClickMessage": "PanelManager:TogglePanel:D2RHudMainPanel",
         "tooltipString": "호라드림 큐빙 60종 조합법 및 룬워드 98종 투명 대사전 켜기/끄기",
-        "textColor": "$FontColorGoldYellow",
+        "textColor": "$LightButtonTextColor",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
       }

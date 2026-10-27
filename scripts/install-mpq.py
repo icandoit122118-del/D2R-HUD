@@ -120,6 +120,22 @@ def main():
                 raise RuntimeError(f"SFileAddFileEx failed for {mpq_path} (WinError {err})")
             injected.append((disk_path, mpq_path))
 
+        for restore_name in ("helppanelhd.json", "characterstatspanelhd.json"):
+            if not os.path.exists(os.path.join(PATCH_DIR, restore_name)):
+                orig_file = os.path.join(
+                    r"C:\Users\icand\Downloads\D2R-Yupgoolg-20261025\arrow\merged\mods\yupgoolg\yupgoolg.mpq\data\global\ui\layouts",
+                    restore_name,
+                )
+                if os.path.exists(orig_file):
+                    storm.SFileAddFileEx(
+                        hMpq,
+                        orig_file,
+                        f"data\\global\\ui\\layouts\\{restore_name}".encode("utf-8"),
+                        MPQ_FILE_COMPRESS | MPQ_FILE_REPLACEEXISTING,
+                        MPQ_COMPRESSION_ZLIB,
+                        MPQ_COMPRESSION_ZLIB,
+                    )
+
         storm.SFileFlushArchive(hMpq)
     finally:
         storm.SFileCloseArchive(hMpq)

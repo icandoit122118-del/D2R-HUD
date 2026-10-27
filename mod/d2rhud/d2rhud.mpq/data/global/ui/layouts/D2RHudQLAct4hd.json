@@ -1,0 +1,1404 @@
+{
+  "type": "VideoOptionsPanel",
+  "name": "D2RHudQLAct4",
+  "fields": {
+    "priority": 201,
+    "anchor": "$LeftPanelAnchor",
+    "rect": "$LeftPanelRect",
+    "applySettingsImmediately": false
+  },
+  "children": [
+    {
+      "type": "ImageWidget",
+      "name": "Background",
+      "fields": {
+        "filename": "PANEL\\Quest_Log\\QuestLog_BG"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "LeftHinge",
+      "fields": {
+        "rect": "$LeftHingeRect",
+        "filename": "$LeftHingeSprite"
+      }
+    },
+    {
+      "type": "TabBarWidget",
+      "name": "D2RHudQuestLogExtraTabs",
+      "fields": {
+        "rect": {
+          "x": 75,
+          "y": 72,
+          "scale": 0.71
+        },
+        "tabCount": 7,
+        "filename": "PANEL\\Quest_Log\\QuestLogTab",
+        "tabSize": {
+          "x": 205,
+          "y": 70
+        },
+        "tabPadding": {
+          "x": -2,
+          "y": 0
+        },
+        "inactiveFrames": [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "activeFrames": [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "textStyle": {
+          "pointSize": "$SmallFontSize",
+          "alignment": {
+            "h": "center",
+            "v": "center"
+          }
+        },
+        "activeTextColor": "$TabsActiveTextColorInGame",
+        "inactiveTextColor": "$TabsInactiveTextColor",
+        "textStrings": [
+          "1막HUD",
+          "2막HUD",
+          "3막HUD",
+          "4막HUD",
+          "5막HUD",
+          "길찾기맵",
+          "스타터"
+        ],
+        "tabMessages": [
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct1",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct2",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct3",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct4",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct5",
+          "SettingsPanelMessage:CheckChanges:D2RHudTrackMap",
+          "SettingsPanelMessage:CheckChanges:D2RHudTrackStarter"
+        ]
+      }
+    },
+    {
+      "type": "TabBarWidget",
+      "name": "Tabs",
+      "fields": {
+        "rect": {
+          "x": 75,
+          "y": 148
+        },
+        "tabCount": 5,
+        "filename": "PANEL\\Quest_Log\\QuestLogTab",
+        "tabSize": {
+          "x": 205,
+          "y": 70
+        },
+        "tabPadding": {
+          "x": -2,
+          "y": 0
+        },
+        "inactiveFrames": [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "activeFrames": [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "textStrings": [
+          "I",
+          "II",
+          "III",
+          "IV",
+          "V"
+        ],
+        "textStyle": {
+          "pointSize": "$MediumLargeFontSize"
+        },
+        "activeTextColor": "$TabsActiveTextColorInGame",
+        "inactiveTextColor": "$TabsInactiveTextColor",
+        "tabMessages": [
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct1",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct2",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct3",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct4",
+          "SettingsPanelMessage:CheckChanges:D2RHudQLAct5"
+        ]
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLSocket_4_0",
+      "fields": {
+        "rect": {
+          "x": 160,
+          "y": 234
+        },
+        "filename": "QuestIcons\\GoldFrame"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLIcon_4_0",
+      "fields": {
+        "rect": {
+          "x": 190,
+          "y": 312
+        },
+        "filename": "QuestIcons\\a4q1"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLSocket_4_1",
+      "fields": {
+        "rect": {
+          "x": 467,
+          "y": 234
+        },
+        "filename": "QuestIcons\\GoldFrame"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLIcon_4_1",
+      "fields": {
+        "rect": {
+          "x": 497,
+          "y": 312
+        },
+        "filename": "QuestIcons\\a4q2"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLSocket_4_2",
+      "fields": {
+        "rect": {
+          "x": 775,
+          "y": 234
+        },
+        "filename": "QuestIcons\\GoldFrame"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLIcon_4_2",
+      "fields": {
+        "rect": {
+          "x": 805,
+          "y": 312
+        },
+        "filename": "QuestIcons\\a4q3"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "QLAct4Cover",
+      "fields": {
+        "rect": {
+          "x": 82,
+          "y": 528
+        },
+        "filename": "PANEL\\Quest_Log\\QLPanelCover"
+      }
+    },
+    {
+      "type": "RectangleWidget",
+      "name": "QLAct4Bg",
+      "fields": {
+        "rect": {
+          "x": 88,
+          "y": 886,
+          "width": 984,
+          "height": 432
+        },
+        "color": [
+          0.02,
+          0.02,
+          0.02,
+          0.88
+        ]
+      }
+    },
+    {
+      "type": "TextBoxWidget",
+      "name": "QLAct4Header",
+      "fields": {
+        "rect": {
+          "x": 96,
+          "y": 846,
+          "width": 445,
+          "height": 34
+        },
+        "text": "▶ [4막 혼돈의 성역] 핵심 동선",
+        "style": {
+          "fontColor": "$FontColorGoldYellow",
+          "pointSize": "$SmallFontSize",
+          "alignment": {
+            "h": "left",
+            "v": "center"
+          },
+          "options": {
+            "lineWrap": false,
+            "newlineHandling": "standard",
+            "pipeCharacterBehavior": "handle"
+          },
+          "spacing": {
+            "leading": 1.24,
+            "kerning": 1
+          },
+          "dropShadow": {
+            "shadowColor": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 255
+            },
+            "offset": {
+              "x": 3,
+              "y": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "QLAct4PinHudBtn",
+      "fields": {
+        "rect": {
+          "x": 553,
+          "y": 842,
+          "scale": 0.41
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "4막 투명HUD 전환",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct4",
+        "tooltipString": "좌측 상단 투명 HUD 출력창을 4막 내용으로 즉시 전환합니다.",
+        "textColor": "$LightButtonTextColor",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "QLAct4ToggleHudBtn",
+      "fields": {
+        "rect": {
+          "x": 730,
+          "y": 842,
+          "scale": 0.41
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "투명HUD 켜기/끄기",
+        "onClickMessage": "PanelManager:TogglePanel:D2RHudTrackerPanel",
+        "tooltipString": "화면 좌측 상단 투명 글자 출력창(크기 조절 가능)을 켜거나 끕니다.",
+        "textColor": "$LightButtonTextColor",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "QLAct4OpenDictBtn",
+      "fields": {
+        "rect": {
+          "x": 906,
+          "y": 842,
+          "scale": 0.41
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "룬·큐빙 사전",
+        "onClickMessage": "PanelManager:TogglePanel:D2RHudMainPanel",
+        "tooltipString": "룬워드 98종 및 호라드림 큐빙 60종 투명 대사전을 엽니다.",
+        "textColor": "$LightButtonTextColor",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "Widget",
+      "name": "ScrollBarWrap_ScrollController",
+      "fields": {
+        "rect": {
+          "x": 1042,
+          "y": 890,
+          "width": 24,
+          "height": 420
+        }
+      },
+      "children": [
+        {
+          "type": "RectangleWidget",
+          "name": "ScrollTrackBg_ScrollController",
+          "fields": {
+            "rect": {
+              "x": 8,
+              "y": 22,
+              "width": 8,
+              "height": 376
+            },
+            "color": [
+              0.08,
+              0.07,
+              0.05,
+              0.72
+            ]
+          }
+        },
+        {
+          "type": "RectangleWidget",
+          "name": "ScrollTrackLine_ScrollController",
+          "fields": {
+            "rect": {
+              "x": 10,
+              "y": 22,
+              "width": 4,
+              "height": 376
+            },
+            "color": [
+              0.55,
+              0.44,
+              0.22,
+              0.85
+            ]
+          }
+        },
+        {
+          "type": "ScrollControllerWidget",
+          "name": "ScrollController",
+          "fields": {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 24,
+              "height": 420
+            },
+            "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+            "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+            "barFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollIndicator",
+            "viewName": "ScrollView",
+            "buttonScrollAmount": 76,
+            "wheelScrollSound": "cursor_scroll_hd",
+            "buttonScrollSound": "cursor_scroll_hd"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ScrollViewWidget",
+      "name": "ScrollView",
+      "fields": {
+        "rect": {
+          "x": 98,
+          "y": 890,
+          "width": 936,
+          "height": 420
+        },
+        "scrollControllerName": "ScrollController",
+        "clipChildrenDraw": true
+      },
+      "children": [
+        {
+          "type": "TableWidget",
+          "name": "OptionsTable",
+          "fields": {
+            "columns": [
+              {
+                "width": 920,
+                "alignment": {
+                  "h": "fit",
+                  "v": "center"
+                }
+              }
+            ],
+            "rowHeight": 46
+          },
+          "children": [
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_0",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_0",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ [4막 핵심 던전 길찾기 방향 공식]",
+                    "style": {
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumLargeFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_1",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_1",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "· 절망의 평원(이주얼) / 불길의 강(헬포지): 외곽 벽면을",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_2",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_2",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   따라 이동하며 미니맵 성소/제단 아이콘 확인",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_3",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_3",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "■ [Act 4] 4막 - 타락한 천사(이주얼) ~",
+                    "style": {
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumLargeFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_4",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_4",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   혼돈의 성역(디아블로)",
+                    "style": {
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumLargeFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_5",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_5",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "▶ 동선: 외부 평원 → 절망의 평원(이주얼, 스킬+2) →",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_6",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_6",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   저주받은 자들의 도시(WP) → 불길의 강(WP/지옥불",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_7",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_7",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   제단) → 혼돈의 성역 봉인 5개 → 디아블로",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_8",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_8",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[1] [필수/보상] 절망의 평원에서 이주얼 처치 후 영혼 대화",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_9",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_9",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   → 티리엘에게 스킬 포인트 +2 획득",
+                    "style": {
+                      "fontColor": "$FontColorLightGold",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_10",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_10",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[2] 불길의 강 지옥불 제단에서 대장장이 헤파스토 처치 후",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_11",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_11",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   메피스토 영혼석 파괴(룬/보석 보상)",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_12",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_12",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  [3] 불길의 강 웨이포인트 활성화 후 혼돈의 성역 진입",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_13",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_13",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[4] 혼돈의 성역 5개 봉인 해제 및 군주 드 사이스 /",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_14",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_14",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   영혼의 감염자 / 혼돈의 대장군 3보스 처치",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_15",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_15",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[5] 디아블로 처치 후 티리엘의 포탈을 통해 5막 해로개스",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_16",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_16",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   이동",
+                    "style": {
+                      "fontColor": "$DescriptionTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_17",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_17",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 길찾기: 악몽 난이도 헬포지에서는 최대 우움(#22), 지옥",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_18",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_18",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   난이도 헬포지에서는 최대 굴(#25) 룬이 드랍됩니다.",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_19",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_19",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 공략팁: 보통 난이도 디아블로의 번개 숨결(레드 라이트닝)은",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_20",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_20",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   캐릭터와 완전히 밀착하면 판정이 닿지 않거나 대각선",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "QLAct4Row_21",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "QLAct4Text_21",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "   이동으로 피할 수 있습니다.",
+                    "style": {
+                      "fontColor": "$PanelNoteTextColor",
+                      "pointSize": "$XMediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.24,
+                        "kerning": 1
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "Cancel",
+      "fields": {
+        "rect": {
+          "x": 1075,
+          "y": 9
+        },
+        "filename": "PANEL\\closebtn_4x",
+        "hoveredFrame": 3,
+        "tooltipString": "@strClose",
+        "sound": "cursor_close_window_hd",
+        "onClickMessage": "PanelManager:ClosePanel:D2RHudTrackerPanel"
+      }
+    }
+  ]
+}
