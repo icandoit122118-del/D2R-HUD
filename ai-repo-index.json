@@ -1,0 +1,425 @@
+{
+  "project": "디아2-인게임-내비게이터 (D2R-HUD v1.4)",
+  "repository": "https://github.com/icandoit122118-del/D2R-HUD",
+  "owner": "icandoit122118-del",
+  "repo": "D2R-HUD",
+  "branch": "main",
+  "rawBaseUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main",
+  "aiEntryPoints": {
+    "llmsSummaryUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/llms.txt",
+    "llmsFullSourceUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/llms-full.txt",
+    "aiRepoIndexUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/ai-repo-index.json"
+  },
+  "architecture": {
+    "generatorScript": "scripts/build-ingame-mod.cjs",
+    "mpqInstallerScript": "scripts/install-mpq.py",
+    "targetMpqPath": "D:\\Diablo II Resurrected\\mods\\yupgoolg\\yupgoolg.mpq",
+    "generatedLayoutCount": 72
+  },
+  "coreFiles": [
+    {
+      "path": "README.md",
+      "role": "프로젝트 개요, 인게임 캡처, 설치 및 실행 가이드",
+      "bytes": 4409,
+      "sha256": "a9daf3059084889cf9dd717b41a04182c14de2647f55bc4a687254230d37b6f2",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/README.md"
+    },
+    {
+      "path": "package.json",
+      "role": "패키지 메타데이터 및 NPM 실행 스크립트 정의",
+      "bytes": 1108,
+      "sha256": "327d464d80121f4bed3f6e8d36054217bdcafb973160f3aabc124e37e5bdeaef",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/package.json"
+    },
+    {
+      "path": "scripts/build-ingame-mod.cjs",
+      "role": "디아2 레저렉션 네이티브 HD UI 레이아웃 JSON 72종 컴파일러 (핵심 생성기)",
+      "bytes": 75636,
+      "sha256": "914d79830889d95897d4aae97c9a379ae4de87876f00ecf28d649303ced3ed15",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/scripts/build-ingame-mod.cjs"
+    },
+    {
+      "path": "scripts/install-mpq.py",
+      "role": "StormLib.dll을 이용해 yupgoolg.mpq 내부에 UI 레이아웃 JSON을 직접 패킹·검증하는 설치 스크립트",
+      "bytes": 6825,
+      "sha256": "fe30d153c15d0174819412c998c061f87664c8a4d5315887a6472fd160a06447",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/scripts/install-mpq.py"
+    },
+    {
+      "path": "scripts/verify-ingame-runtime.py",
+      "role": "D2R.exe 프로세스 구동 및 MPQ 마운트·레이아웃 그래프 무결성 검증 스크립트",
+      "bytes": 9513,
+      "sha256": "75a728584ed59f9f7b6da4cf85a14dd3c40e7347485e6ae4c3b45927c3e202b6",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/scripts/verify-ingame-runtime.py"
+    },
+    {
+      "path": "scripts/github-ai-sync.cjs",
+      "role": "GitHub 원클릭 저장/가져오기 및 AI 컨텍스트 번들(llms.txt / llms-full.txt) 생성기",
+      "bytes": 14432,
+      "sha256": "2cd721cdc21ace773c4ffa6ba81547f0218eb3a3f3bacc1d1434787f19cbf4fe",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/scripts/github-ai-sync.cjs"
+    }
+  ],
+  "generatedLayouts": [
+    {
+      "fileName": "D2RHudCamp1LPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudCamp1LPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudCamp1LPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudCamp1Panelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudCamp1Panelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudCamp1Panelhd.json"
+    },
+    {
+      "fileName": "D2RHudCamp1SPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudCamp1SPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudCamp1SPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudCamp2LPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudCamp2LPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudCamp2LPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudCamp2Panelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudCamp2Panelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudCamp2Panelhd.json"
+    },
+    {
+      "fileName": "D2RHudCamp2SPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudCamp2SPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudCamp2SPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudCubeLPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudCubeLPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudCubeLPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudCubePanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudCubePanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudCubePanelhd.json"
+    },
+    {
+      "fileName": "D2RHudCubeSPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudCubeSPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudCubeSPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudMainFoldhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudMainFoldhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudMainFoldhd.json"
+    },
+    {
+      "fileName": "D2RHudMainPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudMainPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudMainPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudQLAct1hd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudQLAct1hd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudQLAct1hd.json"
+    },
+    {
+      "fileName": "D2RHudQLAct2hd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudQLAct2hd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudQLAct2hd.json"
+    },
+    {
+      "fileName": "D2RHudQLAct3hd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudQLAct3hd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudQLAct3hd.json"
+    },
+    {
+      "fileName": "D2RHudQLAct4hd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudQLAct4hd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudQLAct4hd.json"
+    },
+    {
+      "fileName": "D2RHudQLAct5hd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudQLAct5hd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudQLAct5hd.json"
+    },
+    {
+      "fileName": "D2RHudRw23LPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudRw23LPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudRw23LPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudRw23Panelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudRw23Panelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudRw23Panelhd.json"
+    },
+    {
+      "fileName": "D2RHudRw23SPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudRw23SPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudRw23SPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudRw4LPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudRw4LPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudRw4LPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudRw4Panelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudRw4Panelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudRw4Panelhd.json"
+    },
+    {
+      "fileName": "D2RHudRw4SPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudRw4SPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudRw4SPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudRw56LPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudRw56LPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudRw56LPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudRw56Panelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudRw56Panelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudRw56Panelhd.json"
+    },
+    {
+      "fileName": "D2RHudRw56SPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudRw56SPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudRw56SPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudStarterLPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudStarterLPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudStarterLPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudStarterPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudStarterPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudStarterPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudStarterSPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudStarterSPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudStarterSPanelhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct1Bhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct1Bhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct1Bhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct1Lhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct1Lhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct1Lhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct1Shd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct1Shd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct1Shd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct1hd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct1hd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct1hd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct2Bhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct2Bhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct2Bhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct2Lhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct2Lhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct2Lhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct2Shd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct2Shd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct2Shd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct2hd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct2hd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct2hd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct3Bhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct3Bhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct3Bhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct3Lhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct3Lhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct3Lhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct3Shd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct3Shd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct3Shd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct3hd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct3hd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct3hd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct4Bhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct4Bhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct4Bhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct4Lhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct4Lhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct4Lhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct4Shd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct4Shd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct4Shd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct4hd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct4hd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct4hd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct5Bhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct5Bhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct5Bhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct5Lhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct5Lhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct5Lhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct5Shd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct5Shd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct5Shd.json"
+    },
+    {
+      "fileName": "D2RHudTrackAct5hd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackAct5hd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackAct5hd.json"
+    },
+    {
+      "fileName": "D2RHudTrackFoldhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackFoldhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackFoldhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackMapBhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackMapBhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackMapBhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackMapLhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackMapLhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackMapLhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackMapShd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackMapShd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackMapShd.json"
+    },
+    {
+      "fileName": "D2RHudTrackMaphd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackMaphd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackMaphd.json"
+    },
+    {
+      "fileName": "D2RHudTrackStarterBhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackStarterBhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackStarterBhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackStarterLhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackStarterLhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackStarterLhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackStarterShd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackStarterShd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackStarterShd.json"
+    },
+    {
+      "fileName": "D2RHudTrackStarterhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackStarterhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackStarterhd.json"
+    },
+    {
+      "fileName": "D2RHudTrackerPanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\D2RHudTrackerPanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/D2RHudTrackerPanelhd.json"
+    },
+    {
+      "fileName": "automaphd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\automaphd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/automaphd.json"
+    },
+    {
+      "fileName": "characterdifficultymodalhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\characterdifficultymodalhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/characterdifficultymodalhd.json"
+    },
+    {
+      "fileName": "characterselectpanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\characterselectpanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/characterselectpanelhd.json"
+    },
+    {
+      "fileName": "healthProBarhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\healthProBarhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/healthProBarhd.json"
+    },
+    {
+      "fileName": "horadriccubelayouthd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\horadriccubelayouthd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/horadriccubelayouthd.json"
+    },
+    {
+      "fileName": "hpProBarhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\hpProBarhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/hpProBarhd.json"
+    },
+    {
+      "fileName": "hudpanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\hudpanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/hudpanelhd.json"
+    },
+    {
+      "fileName": "mainmenubuttonribbonhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\mainmenubuttonribbonhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/mainmenubuttonribbonhd.json"
+    },
+    {
+      "fileName": "mainmenupanelhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\mainmenupanelhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/mainmenupanelhd.json"
+    },
+    {
+      "fileName": "manaProBarhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\manaProBarhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/manaProBarhd.json"
+    },
+    {
+      "fileName": "pauselayouthd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\pauselayouthd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/pauselayouthd.json"
+    },
+    {
+      "fileName": "playerinventoryexpansionlayouthd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\playerinventoryexpansionlayouthd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/playerinventoryexpansionlayouthd.json"
+    },
+    {
+      "fileName": "questlogpanelexpansionhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\questlogpanelexpansionhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/questlogpanelexpansionhd.json"
+    },
+    {
+      "fileName": "questlogpaneloriginalhd.json",
+      "mpqInternalPath": "data\\global\\ui\\layouts\\questlogpaneloriginalhd.json",
+      "rawUrl": "https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/mod/yupgoolg-patch/data/global/ui/layouts/questlogpaneloriginalhd.json"
+    }
+  ]
+}

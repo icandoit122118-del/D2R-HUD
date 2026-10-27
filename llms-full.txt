@@ -1,0 +1,3033 @@
+# 디아2-인게임-내비게이터 (D2R-HUD v1.4) — Full AI Source Bundle
+Repository: https://github.com/icandoit122118-del/D2R-HUD
+Raw Bundle URL: https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/llms-full.txt
+
+================================================================================
+FILE: README.md
+ROLE: 프로젝트 개요, 인게임 캡처, 설치 및 실행 가이드
+RAW_URL: https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/README.md
+================================================================================
+# 디아2-인게임-내비게이터 (D2R-HUD v1.4)
+
+외부 오버레이 프로그램 없이 **디아블로 II: 레저렉션(`D2R.exe`) 게임 클라이언트 자체 UI 엔진(`data/global/ui/layouts/*hd.json`)에서 직접 구동되는 순정 인게임 내비게이터 & 호라드림 대사전 모드**입니다.
+
+---
+
+## 1. 실제 인게임 구동 화면 (`1막 자매단 야영지`)
+
+| 원본 퀘스트 기록(`Q`) — 1~5막 동선·길찾기 연동 | `Tab` 미니맵 + 좌측 상단/중단 투명 HUD 수직 정렬 |
+| :---: | :---: |
+| ![퀘스트 기록 1막](docs/screenshots/d2r_real_ingame_2_questlog_act1.png) | ![Tab 미니맵 및 좌측 HUD](docs/screenshots/d2r_real_ingame_5_automap_tab.png) |
+| ![퀘스트 기록 2막](docs/screenshots/d2r_real_ingame_3_questlog_act2.png) | ![퀘스트 기록 3막](docs/screenshots/d2r_real_ingame_4_questlog_act3.png) |
+
+---
+
+## 2. 핵심 기능 (v1.4 최신 반영)
+
+1. **원본 퀘스트 기록(`Q`) 완벽 통합 (`questlogpanelexpansionhd.json` / `D2RHudQLAct1~5hd.json`)**
+   - 퀘스트 창(`Q`) 상단 확장 탭(`1막HUD` ~ `5막HUD`, `길찾기맵`, `스타터`) 및 로마자 탭(`I` ~ `V`) 클릭 시 **해당 막의 필수 보상 퀘스트·핵심 동선·던전 길찾기 방향 공식**을 하단 스크롤 창에 즉시 출력합니다.
+   - 우측 상단 버튼으로 **투명 HUD 전환**, **투명 HUD 켜기/끄기**, **룬·큐빙 사전 열기**를 바로 제어합니다.
+
+2. **좌측 정렬 `Tab` 지도 HUD & 크기 조절형 퀘스트 HUD (`automaphd.json` / `D2RHudTrackerPanelhd.json`)**
+   - **`Tab` 미니맵 연동 HUD (`x: 24, y: 18`)**: `Tab` 키로 미니맵을 켜면 우측 미니맵을 가리지 않고 **화면 좌측 상단**에 12대 핵심 던전 길찾기 방향 공식이 함께 표시됩니다.
+   - **크기 조절형 투명 퀘스트 HUD (`x: 24, y: 468`)**: 좌측 중단에 수직 정렬되며 `▲ 접기` / `소형 4줄` / `중형 7줄` / `대형 12줄` / `완전투명·가독배경`을 실시간으로 전환할 수 있습니다.
+
+3. **투명 호라드림 룬워드·큐빙 대사전 (`D2RHudMainPanelhd.json`)**
+   - `캠페인 1~3막`, `캠페인 4~5막·길찾기`, `초반육성·스타터`, `룬워드 2~3홈`, `룬워드 4홈`, `룬워드 5~6홈·신규(악마술사 포함 98종)`, `호라드림 큐빙 60종`을 소형/중형/대형 크기로 조회하며 마우스오버 툴팁으로 완성 옵션을 확인합니다.
+
+4. **디아블로 II: 레저렉션 원본 색상 토큰 100% 통일**
+   - 탭(`$TabsActiveTextColorInGame`/`$TabsInactiveTextColor`), 버튼(`$LightButtonTextColor`/`$FontColorGoldYellow`), 본문(`$FontColorGoldYellow`/`$FontColorLightGold`/`$DescriptionTextColor`/`$PanelNoteTextColor`), 툴팁(`ÿc4`/`ÿc0`) 모두 레저렉션 순정 UI 컬러 팔레트와 1:1로 통일했습니다.
+
+---
+
+## 3. 빌드 및 MPQ 설치 방법
+
+```bash
+npm run mod:build
+npm run mod:install
+```
+
+- `D:\Diablo II Resurrected\mods\yupgoolg\yupgoolg.mpq` 내부에 72개 네이티브 UI 레이아웃 JSON 파일이 자동 패킹·검증됩니다.
+- 게임 실행 인자: `-mod yupgoolg -txt`
+
+---
+
+## 4. GitHub 원클릭 저장/가져오기 & AI 에이전트 빠른 접근
+
+### A. 내 GitHub 저장소 원클릭 동기화 (`github-sync.bat` 또는 `npm run`)
+- **원클릭 저장 (AI 번들 자동 갱신 + Commit + Push + 원격 검증)**:
+  ```bash
+  github-sync.bat save "수정 내역 메시지"
+  # 또는: npm run github:save
+  ```
+- **최신 소스 가져오기 (Pull)**:
+  ```bash
+  github-sync.bat pull
+  # 또는: npm run github:pull
+  ```
+- **저장소 동기화 상태 확인 및 내 전체 GitHub 저장소 목록 조회**:
+  ```bash
+  github-sync.bat status
+  github-sync.bat repos
+  ```
+
+### B. 외부 AI (ChatGPT / Claude / Gemini / Cursor 등) 단일 URL 소스 접근
+다른 AI나 에이전트에게 아래 URL 하나만 전달하면 저장소를 클론하지 않고도 프로젝트 구조와 전체 핵심 소스를 즉시 읽어 작업할 수 있습니다.
+- **요약 및 Raw URL 맵 (`llms.txt`)**: `https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/llms.txt`
+- **전체 핵심 소스 통합 번들 (`llms-full.txt`)**: `https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/llms-full.txt`
+- **머신 리더블 JSON 매니페스트 (`ai-repo-index.json`)**: `https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/ai-repo-index.json`
+
+================================================================================
+FILE: package.json
+ROLE: 패키지 메타데이터 및 NPM 실행 스크립트 정의
+RAW_URL: https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/package.json
+================================================================================
+{
+  "name": "d2r-ingame-navigator",
+  "version": "1.4.0",
+  "description": "디아2-인게임-내비게이터 — 디아블로 II: 레저렉션 인게임 퀘스트·길찾기 HUD & 호라드림 룬워드·큐빙 대사전",
+  "main": "index.js",
+  "scripts": {
+    "mod:build": "node scripts/build-ingame-mod.cjs",
+    "mod:install": "python scripts/install-mpq.py",
+    "github:status": "node scripts/github-ai-sync.cjs status",
+    "github:save": "node scripts/github-ai-sync.cjs save",
+    "github:pull": "node scripts/github-ai-sync.cjs pull",
+    "github:repos": "node scripts/github-ai-sync.cjs repos",
+    "ai:bundle": "node scripts/github-ai-sync.cjs bundle",
+    "extract:assets": "node scripts/extract-d2r-assets.cjs",
+    "web:dev": "npm run dev --prefix web",
+    "web:build": "npm run build --prefix web",
+    "app:start": "electron .",
+    "verify": "node scripts/package-and-verify.cjs"
+  },
+  "build": {
+    "appId": "com.sanctuary.d2rhud",
+    "productName": "D2R-HUD",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "index.js",
+      "web/dist/**/*"
+    ]
+  }
+}
+
+================================================================================
+FILE: scripts/build-ingame-mod.cjs
+ROLE: 디아2 레저렉션 네이티브 HD UI 레이아웃 JSON 72종 컴파일러 (핵심 생성기)
+RAW_URL: https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/scripts/build-ingame-mod.cjs
+================================================================================
+const fs = require('fs');
+const path = require('path');
+
+const ROOT = path.resolve(__dirname, '..');
+const WEB_SRC = path.join(ROOT, 'web', 'src');
+const YUPGOOLG_MERGED = 'C:\\Users\\icand\\Downloads\\D2R-Yupgoolg-20261025\\arrow\\merged\\mods\\yupgoolg\\yupgoolg.mpq';
+const SEONHEE_MOD = 'D:\\Diablo II Resurrected\\mods\\seonheeCustom\\seonheeCustom.mpq';
+const OUT_MOD_DIR = path.join(ROOT, 'mod', 'd2rhud', 'd2rhud.mpq');
+const OUT_YUPGOOLG_OVERLAY = path.join(ROOT, 'mod', 'yupgoolg-patch');
+const EXTRACTED_VANILLA = 'C:\\Users\\icand\\.gemini\\antigravity\\brain\\d7a463cd-765d-4320-aa8a-76e378ac9945\\scratch\\extracted_layouts';
+
+function stripJsonComments(str) {
+  let out = '';
+  let inString = false;
+  let escape = false;
+  for (let i = 0; i < str.length; i++) {
+    const ch = str[i];
+    const next = str[i + 1];
+    if (inString) {
+      out += ch;
+      if (escape) {
+        escape = false;
+      } else if (ch === '\\') {
+        escape = true;
+      } else if (ch === '"') {
+        inString = false;
+      }
+      continue;
+    }
+    if (ch === '"') {
+      inString = true;
+      out += ch;
+      continue;
+    }
+    if (ch === '/' && next === '/') {
+      while (i < str.length && str[i] !== '\n') i++;
+      out += '\n';
+      continue;
+    }
+    if (ch === '/' && next === '*') {
+      i += 2;
+      while (i < str.length && !(str[i] === '*' && str[i + 1] === '/')) i++;
+      i++;
+      continue;
+    }
+    out += ch;
+  }
+  return out.replace(/,\s*([}\]])/g, '$1');
+}
+
+function readD2RJson(filePath) {
+  const raw = fs.readFileSync(filePath, 'utf8').replace(/^\uFEFF/, '');
+  return JSON.parse(stripJsonComments(raw));
+}
+
+function ensureDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+}
+
+function writeJson(filePath, obj) {
+  ensureDir(path.dirname(filePath));
+  fs.writeFileSync(filePath, JSON.stringify(obj, null, 2) + '\n', 'utf8');
+}
+
+// Load reverse-engineered datasets
+const questTimeline = JSON.parse(fs.readFileSync(path.join(WEB_SRC, 'quest_timeline.json'), 'utf8'));
+const warlockGuide = JSON.parse(fs.readFileSync(path.join(WEB_SRC, 'warlock_guide.json'), 'utf8'));
+const runewords = JSON.parse(fs.readFileSync(path.join(WEB_SRC, 'runewords.json'), 'utf8'));
+const cubing = JSON.parse(fs.readFileSync(path.join(WEB_SRC, 'cubing.json'), 'utf8'));
+
+// Map Reading Direction Formulas (12 core dungeon rules)
+const MAP_CHEATSHEET = [
+  {
+    act: '1막',
+    zone: '검은 습지 - 잊힌 탑 1~4층 (백작)',
+    rule: '입구 타일 진입 방향 기준 왼쪽(시계방향 90도) 벽면을 따라 진행',
+    detail: '백작(카운테스) 룬 파밍 시 매 층 입구에서 캐릭터 시선 좌측 벽을 타면 가장 빠르게 다음 층 계단이 나옵니다.'
+  },
+  {
+    act: '1막',
+    zone: '지하 통로 1층 / 감옥 1~3층',
+    rule: '입구 방향 기준 직진 지형에 출구, 좌측(시계방향)에 2층/웨이포인트',
+    detail: '바위 벌판으로 나가는 지하 통로 1층 출구는 입구 방향 정면(직진) 라인 끝에 배치됩니다.'
+  },
+  {
+    act: '1막',
+    zone: '내부 회랑 - 지하 묘지 2층 → 3층 (안다리엘)',
+    rule: '지하 묘지 2층 웨이포인트(WP) 방 출구 기준 오른쪽(반시계방향 90도)',
+    detail: '2층 WP 방에서 빠져나오는 방향을 기준으로 우측(시계 반대방향) 모서리에 3층 계단이 위치합니다.'
+  },
+  {
+    act: '2막',
+    zone: '머나먼 오아시스 - 구더기 굴 1~2층',
+    rule: '입구 타일 기준 오른쪽(반시계방향 90도) 벽면을 따라 이동',
+    detail: '좁은 통로 지형이므로 입구에서 우측 벽만 계속 따라가면 2층·3층(왕들의 지팡이) 계단이 바로 나옵니다.'
+  },
+  {
+    act: '2막',
+    zone: '죽음의 전당 1~2층 / 발톱 독사 사원 1층',
+    rule: '입구 타일 기준 왼쪽(시계방향 90도) 벽면을 따라 이동',
+    detail: '호라드림의 함(죽음의 전당 3층)과 독사의 목걸이(독사 사원 2층) 모두 입구 기준 좌측 벽타기 공식이 적용됩니다.'
+  },
+  {
+    act: '2막',
+    zone: '비전 성역 (소환술사 4방향)',
+    rule: '웨이포인트 기준 4갈래 중 막다른 끝 - 포탈/계단 유무로 지형 판별',
+    detail: '소환술사 처치 후 호라드림 일지를 읽고 퀘스트(Q) 창의 문양과 일치하는 탈 라샤 무덤을 확인하세요.'
+  },
+  {
+    act: '2막',
+    zone: '신비술사의 협곡 - 탈 라샤의 무덤 (두리엘)',
+    rule: '무덤 입구 기준 왼쪽(시계방향 90도) 벽면을 따라가면 지팡이 홈 방 등장',
+    detail: '7개 무덤의 문양 순서(원 → 반달 → 네모 → 별 → 아래세모 → 동그라미세모 → 위세모)는 항상 고정입니다.'
+  },
+  {
+    act: '3막',
+    zone: '증오의 억류지 2층 → 3층 (메피스토)',
+    rule: '증오 2층 입구 타일 기준 왼쪽(시계방향 90도) 벽면을 따라 이동',
+    detail: '2층 웨이포인트(WP) 기준이 아니라 1층에서 2층으로 내려온 입구 타일 기준 좌측 벽면입니다.'
+  },
+  {
+    act: '4막',
+    zone: '절망의 평원(이주얼) / 불길의 강(헬포지)',
+    rule: '외곽 벽면을 따라 이동하며 미니맵 성소/제단 아이콘 확인',
+    detail: '불길의 강은 웨이포인트 직전 갈림길 반대편에 대장장이 헤파스토의 지옥불 제단이 생성됩니다.'
+  },
+  {
+    act: '5막',
+    zone: '고대인의 길 / 수정 동굴 / 혹한의 지하도',
+    rule: '입구 타일 기준 왼쪽(시계방향 90도)에 다음 지역(아리앗 정상/얼어붙은 강) 출구',
+    detail: '웨이포인트는 주로 직진 방향에, 다음 퀘스트 지역 출구는 좌측(시계방향)에 배치됩니다.'
+  },
+  {
+    act: '5막',
+    zone: '고통의 전당 - 보트의 전당 (니라트하크)',
+    rule: '보트의 전당 WP에서 내린 후 벽면 눈동자 벽화가 그려진 방향이 진짜 니라트하크 방',
+    detail: '4갈래 갈림길 중 중앙 기둥 또는 입구 벽면에 붉은 눈동자 문양이 있는 쪽으로 직진하면 니라트하크가 있습니다.'
+  },
+  {
+    act: '5막',
+    zone: '세계석 성채 2층 → 3층 (바알)',
+    rule: '세계석 성채 2층 웨이포인트(WP) 방 출구 기준 오른쪽(반시계방향 90도) 벽면',
+    detail: '2층 WP 방에서 나오는 방향 기준 우측 벽면을 따라 돌면 3층 계단이 가장 빠르게 나타납니다.'
+  }
+];
+
+function sanitizeD2RText(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/[•✓✔]/g, '·')
+    .replace(/[▸▹►]/g, '▶')
+    .replace(/[└┗]/g, '→')
+    .replace(/[—–]/g, '-');
+}
+
+function splitIntoSingleLines(str, maxLen = 44, contPrefix = '   ') {
+  const clean = sanitizeD2RText(str);
+  if (clean.length <= maxLen) return [clean];
+  const words = clean.split(' ');
+  const lines = [];
+  let cur = '';
+  for (const w of words) {
+    const candidate = cur ? `${cur} ${w}` : w;
+    if (candidate.length > maxLen && cur.length > 0) {
+      lines.push(cur);
+      cur = `${contPrefix}${w}`;
+    } else {
+      cur = candidate;
+    }
+  }
+  if (cur) lines.push(cur);
+  return lines;
+}
+
+// High-contrast crisp drop shadow for transparent HUD text over live game world
+const HUD_TRANSPARENT_SHADOW = {
+  shadowColor: { r: 0, g: 0, b: 0, a: 255 },
+  offset: { x: 3, y: 3 }
+};
+
+function makeTextStyle(colorVar, sizeVar, alignH = 'left', alignV = 'center', lineWrap = false) {
+  return {
+    fontColor: colorVar,
+    pointSize: sizeVar,
+    alignment: { h: alignH, v: alignV },
+    options: { lineWrap, newlineHandling: 'standard', pipeCharacterBehavior: 'handle' },
+    spacing: { leading: 1.24, kerning: 1.0 },
+    dropShadow: HUD_TRANSPARENT_SHADOW
+  };
+}
+
+/**
+ * Builds a 100% aligned, dynamic-height ScrollBar widget that NEVER overflows
+ * regardless of whether the window height is 156px (4 lines), 296px (8 lines),
+ * 450px (QuestLog), or 540px (15 lines).
+ * - Uses a Widget container at { x, y, width: 24, height: heightPx }
+ * - Draws a centered 4px gold track bar between the up and down arrow buttons
+ * - Places ScrollControllerWidget at { x: 0, y: 0, width: 24, height: heightPx }
+ *   with NO anchor offset so the up arrow, thumb indicator, and down arrow sit
+ *   coaxially at x: 0..24.
+ */
+function makeAlignedScrollBar(xPos, yPos, heightPx, controllerName = 'ScrollController', viewName = 'ScrollView') {
+  const trackHeight = Math.max(40, heightPx - 44);
+  return {
+    type: 'Widget',
+    name: `ScrollBarWrap_${controllerName}`,
+    fields: {
+      rect: { x: xPos, y: yPos, width: 24, height: heightPx }
+    },
+    children: [
+      {
+        type: 'RectangleWidget',
+        name: `ScrollTrackBg_${controllerName}`,
+        fields: {
+          rect: { x: 8, y: 22, width: 8, height: trackHeight },
+          color: [0.08, 0.07, 0.05, 0.72]
+        }
+      },
+      {
+        type: 'RectangleWidget',
+        name: `ScrollTrackLine_${controllerName}`,
+        fields: {
+          rect: { x: 10, y: 22, width: 4, height: trackHeight },
+          color: [0.55, 0.44, 0.22, 0.85]
+        }
+      },
+      {
+        type: 'ScrollControllerWidget',
+        name: controllerName,
+        fields: {
+          rect: { x: 0, y: 0, width: 24, height: heightPx },
+          upArrowFilepath: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn',
+          downArrowFilepath: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn',
+          barFilepath: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollIndicator',
+          viewName,
+          buttonScrollAmount: 76,
+          wheelScrollSound: 'cursor_scroll_hd',
+          buttonScrollSound: 'cursor_scroll_hd'
+        }
+      }
+    ]
+  };
+}
+
+function makeDividerRow(width = 1480) {
+  return {
+    type: 'TableRowWidget',
+    name: 'RowDivider',
+    children: [
+      {
+        type: 'ImageWidget',
+        name: 'Divider',
+        fields: {
+          rect: { x: 4, y: 24, width, height: 4 },
+          filename: 'PauseMenu\\Divider'
+        }
+      }
+    ]
+  };
+}
+
+function makeSingleTextRow(col1Text, col1Color, col1Size, col2Text = '', col2Color = '$FontColorLightGold', col2Size = '$SmallFontSize', tooltip = '') {
+  const children = [
+    {
+      type: 'LayoutItemWidget',
+      name: 'Col1Wrap',
+      fields: { marginTop: 3, marginBottom: 3 },
+      children: [
+        {
+          type: 'TextBoxWidget',
+          name: 'Col1Text',
+          fields: {
+            fitToText: true,
+            text: sanitizeD2RText(col1Text),
+            style: makeTextStyle(col1Color, col1Size, 'left', 'center', false)
+          }
+        }
+      ]
+    }
+  ];
+
+  if (col2Text || tooltip) {
+    const col2Child = tooltip
+      ? {
+          type: 'ButtonWidget',
+          name: 'Col2TooltipBtn',
+          fields: {
+            rect: { scale: 0.54 },
+            filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+            hoveredFrame: 3,
+            textString: sanitizeD2RText(col2Text || '상세 옵션'),
+            textColor: col2Color,
+            'text/style': '$StyleFEButtonText',
+            tooltipString: sanitizeD2RText(tooltip),
+            pressedFrame: 0,
+            sound: 'cursor_select'
+          }
+        }
+      : {
+          type: 'TextBoxWidget',
+          name: 'Col2Text',
+          fields: {
+            fitToText: true,
+            text: sanitizeD2RText(col2Text),
+            style: makeTextStyle(col2Color, col2Size, 'center', 'center', false)
+          }
+        };
+
+    children.push({
+      type: 'LayoutItemWidget',
+      name: 'Col2Wrap',
+      fields: { marginTop: 3, marginBottom: 3 },
+      children: [col2Child]
+    });
+  }
+
+  return {
+    type: 'TableRowWidget',
+    name: 'DataRow',
+    children
+  };
+}
+
+function pushWrappedRows(rows, col1Text, col1Color, col1Size, col2Text = '', col2Color = '$FontColorLightGold', col2Size = '$SmallFontSize', tooltip = '') {
+  const maxLen = col1Size === '$MediumLargeFontSize' ? 38 : col1Size === '$MediumFontSize' ? 42 : 48;
+  const lines = splitIntoSingleLines(col1Text, maxLen, '   ');
+  lines.forEach((line, idx) => {
+    if (idx === 0) {
+      rows.push(makeSingleTextRow(line, col1Color, col1Size, col2Text, col2Color, col2Size, tooltip));
+    } else {
+      rows.push(makeSingleTextRow(line, col1Color, col1Size, '', col2Color, col2Size, ''));
+    }
+  });
+}
+
+// ============================================================================
+// 1. TRANSPARENT & ADJUSTABLE ENCYCLOPEDIA (D2RHudMainPanel + Sub-Panels)
+//    - App title removed per user instruction ("앱명도 삭제하고")
+//    - ScrollBar UI 1:1 aligned via makeAlignedScrollBar()
+// ============================================================================
+function buildMainPanel() {
+  return {
+    type: 'SettingsPanel',
+    name: 'D2RHudMainPanel',
+    fields: {
+      priority: 9002,
+      rect: { x: -860, y: 18, width: 1720, height: 110 },
+      anchor: { x: 0.5, y: 0.0 }
+    },
+    children: [
+      {
+        type: 'ButtonWidget',
+        name: 'CloseButton',
+        fields: {
+          rect: { x: 1662, y: 8, scale: 0.72 },
+          filename: 'PANEL\\closebtn_4x',
+          hoveredFrame: 3,
+          onClickMessage: 'PanelManager:ClosePanel:D2RHudMainPanel',
+          tooltipString: '@strClose',
+          sound: 'cursor_close_window_hd',
+          acceptsEscKeyEverywhere: true,
+          action: 'back'
+        }
+      },
+      {
+        type: 'TabBarWidget',
+        name: 'OptionsTabs',
+        fields: {
+          rect: { x: 12, y: 6, scale: 0.86, width: 1640, height: 100 },
+          anchor: { x: 0.0, y: 0.0 },
+          tabCount: 7,
+          tabSize: { x: 232, y: 96 },
+          tabPadding: { x: 2, y: 0 },
+          unavailableTabsLeaveGaps: false,
+          tabSizingMethod: 'fixedCenter',
+          filename: 'Controller/Panel/Stash/V2/StashTabs',
+          inactiveFrames: [1, 1, 1, 1, 1, 1, 1],
+          activeFrames: [0, 0, 0, 0, 0, 0, 0],
+          activeTextColor: '$TabsActiveTextColor',
+          inactiveTextColor: '$TabsInactiveTextColor',
+          tabTextOffset: { x: 0, y: -4 },
+          textStyle: {
+            options: { lineWrap: true },
+            pointSize: '$SmallFontSize',
+            alignment: { h: 'center', v: 'center' },
+            fontColor: '$FontColorWhite',
+            spacing: { leading: 0.9, kerning: 0.95 }
+          },
+          textStrings: [
+            '캠페인 1~3막',
+            '캠페인 4~5막·길찾기',
+            '초반육성·스타터',
+            '룬워드 (2~3홈)',
+            '룬워드 (4홈)',
+            '룬워드 (5~6홈·신규)',
+            '호라드림 큐빙 60종'
+          ],
+          tabMessages: [
+            'SettingsPanelMessage:CheckChanges:D2RHudCamp1Panel',
+            'SettingsPanelMessage:CheckChanges:D2RHudCamp2Panel',
+            'SettingsPanelMessage:CheckChanges:D2RHudStarterPanel',
+            'SettingsPanelMessage:CheckChanges:D2RHudRw23Panel',
+            'SettingsPanelMessage:CheckChanges:D2RHudRw4Panel',
+            'SettingsPanelMessage:CheckChanges:D2RHudRw56Panel',
+            'SettingsPanelMessage:CheckChanges:D2RHudCubePanel'
+          ]
+        }
+      }
+    ]
+  };
+}
+
+function buildMainFoldSubPanel() {
+  return {
+    type: 'VideoOptionsPanel',
+    name: 'D2RHudMainFold',
+    fields: {
+      priority: 9003,
+      rect: { x: -840, y: 112, width: 1680, height: 54 },
+      anchor: { x: 0.5, y: 0.0 },
+      applySettingsImmediately: false
+    },
+    children: [
+      {
+        type: 'ButtonWidget',
+        name: 'UnfoldSmallBtn',
+        fields: {
+          rect: { x: 16, y: 2, scale: 0.46 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: '▼ 소형 6줄 펴기',
+          onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudRw23SPanel',
+          textColor: '$LightButtonTextColor',
+          'text/style': '$StyleFEButtonText',
+          acceptsReturnKey: true,
+          sound: 'select'
+        }
+      },
+      {
+        type: 'ButtonWidget',
+        name: 'UnfoldMedBtn',
+        fields: {
+          rect: { x: 210, y: 2, scale: 0.46 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: '▼ 중형 11줄 펴기',
+          onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudRw23Panel',
+          textColor: '$LightButtonTextColor',
+          'text/style': '$StyleFEButtonText',
+          sound: 'select'
+        }
+      },
+      {
+        type: 'ButtonWidget',
+        name: 'UnfoldLargeBtn',
+        fields: {
+          rect: { x: 404, y: 2, scale: 0.46 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: '▼ 대형 18줄 펴기',
+          onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudRw23LPanel',
+          textColor: '$LightButtonTextColor',
+          'text/style': '$StyleFEButtonText',
+          sound: 'select'
+        }
+      }
+    ]
+  };
+}
+
+function buildEncyclopediaSubPanel(baseKey, suffix, rows, heightPx = 640, rowHeight = 56) {
+  const panelName = `D2RHud${baseKey}${suffix}Panel`;
+
+  return {
+    type: 'VideoOptionsPanel',
+    name: panelName,
+    fields: {
+      priority: 9003,
+      rect: { x: -840, y: 112, width: 1680, height: heightPx + 54 },
+      anchor: { x: 0.5, y: 0.0 },
+      applySettingsImmediately: false
+    },
+    children: [
+      {
+        type: 'ButtonWidget',
+        name: 'SubFoldBtn',
+        fields: {
+          rect: { x: 16, y: 0, scale: 0.44 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: '▲ 창 접기',
+          onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudMainFold',
+          textColor: '$LightButtonTextColor',
+          'text/style': '$StyleFEButtonText',
+          sound: 'select'
+        }
+      },
+      {
+        type: 'ButtonWidget',
+        name: 'SubSmallBtn',
+        fields: {
+          rect: { x: 196, y: 0, scale: 0.44 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: '소형 6줄',
+          onClickMessage: `SettingsPanelMessage:CheckChanges:D2RHud${baseKey}SPanel`,
+          textColor: suffix === 'S' ? '$FontColorGoldYellow' : '$LightButtonTextColor',
+          'text/style': '$StyleFEButtonText',
+          sound: 'select'
+        }
+      },
+      {
+        type: 'ButtonWidget',
+        name: 'SubMedBtn',
+        fields: {
+          rect: { x: 376, y: 0, scale: 0.44 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: '중형 11줄',
+          onClickMessage: `SettingsPanelMessage:CheckChanges:D2RHud${baseKey}Panel`,
+          textColor: suffix === '' ? '$FontColorGoldYellow' : '$LightButtonTextColor',
+          'text/style': '$StyleFEButtonText',
+          sound: 'select'
+        }
+      },
+      {
+        type: 'ButtonWidget',
+        name: 'SubLargeBtn',
+        fields: {
+          rect: { x: 556, y: 0, scale: 0.44 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: '대형 18줄',
+          onClickMessage: `SettingsPanelMessage:CheckChanges:D2RHud${baseKey}LPanel`,
+          textColor: suffix === 'L' ? '$FontColorGoldYellow' : '$LightButtonTextColor',
+          'text/style': '$StyleFEButtonText',
+          sound: 'select'
+        }
+      },
+      makeAlignedScrollBar(1644, 46, heightPx, 'ScrollController', 'ScrollView'),
+      {
+        type: 'ScrollViewWidget',
+        name: 'ScrollView',
+        fields: {
+          rect: { x: 16, y: 46, width: 1618, height: heightPx },
+          scrollControllerName: 'ScrollController',
+          clipChildrenDraw: true
+        },
+        children: [
+          {
+            type: 'TableWidget',
+            name: 'OptionsTable',
+            fields: {
+              columns: [
+                { width: 1180, alignment: { h: 'fit', v: 'fit' } },
+                { width: 420, alignment: { h: 'center', v: 'center' } }
+              ],
+              rowHeight
+            },
+            children: rows
+          }
+        ]
+      }
+    ]
+  };
+}
+
+function generateCampaignRows(stepsSubset, includeMapRules = false) {
+  const rows = [];
+  for (const step of stepsSubset) {
+    const tooltip = [
+      `ÿc4[${step.condition.value}] ${step.location}ÿc0`,
+      '',
+      `ÿc4[최적 동선]ÿc0`,
+      step.route,
+      '',
+      `ÿc4[길찾기 노트]ÿc0`,
+      step.note,
+      '',
+      `ÿc4[보스 & 전략 팁]ÿc0`,
+      step.strategic_tip
+    ].join('\n');
+
+    pushWrappedRows(
+      rows,
+      `■ [${step.condition.value}] ${step.location}`,
+      '$FontColorGoldYellow',
+      '$MediumFontSize',
+      '공략 툴팁 보기',
+      '$LightButtonTextColor',
+      '$SmallFontSize',
+      tooltip
+    );
+    pushWrappedRows(
+      rows,
+      `▶ 핵심 동선: ${step.route}`,
+      '$FontColorLightGold',
+      '$SmallFontSize',
+      step.condition.value,
+      '$FontColorGoldYellow',
+      '$SmallFontSize'
+    );
+    for (let i = 0; i < step.tasks.length; i++) {
+      const t = step.tasks[i];
+      const isReward = t.text.includes('[필수') || t.text.includes('[보상');
+      pushWrappedRows(
+        rows,
+        `  [${i + 1}] ${t.text}`,
+        isReward ? '$FontColorLightGold' : '$DescriptionTextColor',
+        '$SmallFontSize',
+        isReward ? '★ 필수 보상' : '진행 체크',
+        isReward ? '$FontColorGoldYellow' : '$PanelNoteTextColor',
+        '$SmallFontSize'
+      );
+    }
+    pushWrappedRows(
+      rows,
+      `  ★ 길찾기: ${step.note}`,
+      '$PanelNoteTextColor',
+      '$SmallFontSize',
+      '핵심 팁',
+      '$PanelNoteTextColor',
+      '$SmallFontSize'
+    );
+    rows.push(makeDividerRow());
+  }
+
+  if (includeMapRules) {
+    pushWrappedRows(
+      rows,
+      '★ 성역 던전 길찾기 방향 공식 12선 (입구 타일/웨이포인트 기준)',
+      '$FontColorGoldYellow',
+      '$MediumFontSize',
+      '12개 핵심 던전',
+      '$FontColorLightGold',
+      '$SmallFontSize'
+    );
+    rows.push(makeDividerRow());
+    for (const m of MAP_CHEATSHEET) {
+      const tip = `ÿc4[${m.act}] ${m.zone}ÿc0\n\nÿc4[길찾기 공식]ÿc0\n${m.rule}\n\nÿc0${m.detail}`;
+      pushWrappedRows(
+        rows,
+        `· [${m.act}] ${m.zone} → ${m.rule}`,
+        '$DescriptionTextColor',
+        '$SmallFontSize',
+        '상세 설명 툴팁',
+        '$LightButtonTextColor',
+        '$SmallFontSize',
+        tip
+      );
+    }
+    rows.push(makeDividerRow());
+  }
+
+  return rows;
+}
+
+function generateStarterRows() {
+  const rows = [];
+  for (const step of warlockGuide.steps) {
+    const tip = [
+      `ÿc4[${step.condition.value}] ${step.location}ÿc0`,
+      '',
+      `ÿc4[파밍 루트]ÿc0 ${step.route}`,
+      '',
+      `ÿc4[핵심 주의사항]ÿc0 ${step.note}`,
+      '',
+      `ÿc4[시너지 & 팁]ÿc0 ${step.strategic_tip}`
+    ].join('\n');
+
+    pushWrappedRows(
+      rows,
+      `■ [${step.condition.value}] ${step.location}`,
+      '$FontColorGoldYellow',
+      '$MediumFontSize',
+      '세팅 툴팁 보기',
+      '$LightButtonTextColor',
+      '$SmallFontSize',
+      tip
+    );
+    pushWrappedRows(
+      rows,
+      `▶ 파밍 루트: ${step.route}`,
+      '$FontColorLightGold',
+      '$SmallFontSize',
+      step.condition.value,
+      '$FontColorGoldYellow',
+      '$SmallFontSize'
+    );
+    for (let i = 0; i < step.tasks.length; i++) {
+      pushWrappedRows(
+        rows,
+        `  [${i + 1}] ${step.tasks[i].text}`,
+        '$DescriptionTextColor',
+        '$SmallFontSize',
+        '필수 세팅',
+        '$FontColorLightGold',
+        '$SmallFontSize'
+      );
+    }
+    pushWrappedRows(
+      rows,
+      `  ★ 팁: ${step.strategic_tip}`,
+      '$PanelNoteTextColor',
+      '$SmallFontSize',
+      '꿀팁',
+      '$PanelNoteTextColor',
+      '$SmallFontSize'
+    );
+    rows.push(makeDividerRow());
+  }
+
+  const extraGuides = [
+    {
+      title: '[레벨링 효율 구간] 1~15 트리스트럼 / 15~24 탈 라샤 무덤 / 24 고대인 / 25~40 보통 바알',
+      sub: '40~60 악몽 바알 / 60~75 지옥 바알 / 75+ 공포의 영역(TZ) & 파괴의 부적 파밍',
+      badge: '경험치 효율'
+    },
+    {
+      title: '[용병 삼신기] 2막 기도 용병 + 통찰(랄+티르+탈+솔) + 치료(샤엘+이오+탈) + 배신(샤엘+주울+렘)',
+      sub: '기도 오라 + 통찰 명상 오라 + 치료 정화 오라 3중 중첩으로 생명력·마나 초당 고속 회복',
+      badge: '용병 완성'
+    },
+    {
+      title: '[패캐/패힛 프레임 핵심] 원소술사 패캐: 63%(9프레임) → 105%(8프레임) / 번개: 117%',
+      sub: '성기사(해머/피스트) 패캐: 75%(10프레임) → 125%(9프레임) / 영혼(Spirit) 35% 패캐가 핵심',
+      badge: '프레임 표'
+    }
+  ];
+
+  for (const g of extraGuides) {
+    pushWrappedRows(rows, g.title, '$FontColorGoldYellow', '$SmallFontSize', g.badge, '$FontColorLightGold', '$SmallFontSize');
+    pushWrappedRows(rows, `  · ${g.sub}`, '$DescriptionTextColor', '$SmallFontSize', '', '$DescriptionTextColor', '$SmallFontSize');
+    rows.push(makeDividerRow());
+  }
+
+  return rows;
+}
+
+function generateRunewordRows(rwList, headerTitle) {
+  const rows = [];
+  pushWrappedRows(
+    rows,
+    `■ ${headerTitle} (총 ${rwList.length}종 - 우측 버튼 마우스 오버 시 전체 세부 옵션 표시)`,
+    '$FontColorGoldYellow',
+    '$MediumFontSize',
+    `총 ${rwList.length}종 수록`,
+    '$FontColorLightGold'
+  );
+  rows.push(makeDividerRow());
+
+  for (const rw of rwList) {
+    const runeCombo = (rw.runes || []).join(' + ');
+    const itemTypes = (rw.item_types || []).join(', ');
+    const statsLines = (rw.stats || []).map((s) => `· ${s}`).join('\n');
+    const tooltip = [
+      `ÿc4${rw.name} (${rw.original_name})ÿc0`,
+      `ÿc4룬 조합: ${runeCombo}ÿc0`,
+      `ÿc4재료: ${itemTypes} (요구 레벨 ${rw.level})ÿc0`,
+      '',
+      `ÿc4[완성 옵션]ÿc0`,
+      statsLines,
+      rw.material_sources ? `\nÿc0${rw.material_sources}` : ''
+    ].join('\n');
+
+    const topStats = (rw.stats || []).slice(0, 2).join(' / ');
+    pushWrappedRows(
+      rows,
+      `■ ${rw.name} [${rw.original_name}] - 룬: ${runeCombo} (${itemTypes}, Lv.${rw.level})`,
+      '$FontColorGoldYellow',
+      '$MediumFontSize',
+      '전체 옵션 툴팁',
+      '$LightButtonTextColor',
+      '$SmallFontSize',
+      tooltip
+    );
+    pushWrappedRows(
+      rows,
+      `  ▶ 핵심 옵션: ${topStats}`,
+      '$DescriptionTextColor',
+      '$SmallFontSize',
+      `${rw.category || ''}`,
+      '$PanelNoteTextColor',
+      '$SmallFontSize'
+    );
+    rows.push(makeDividerRow());
+  }
+  return rows;
+}
+
+function generateCubeRows() {
+  const rows = [];
+  pushWrappedRows(
+    rows,
+    `■ 호라드림의 함(큐브) 필수 조합법 ${cubing.length}종 (홈 뚫기·업그레이드·룬 합성·크래프트·면죄)`,
+    '$FontColorGoldYellow',
+    '$MediumFontSize',
+    `총 ${cubing.length}종 레시피`,
+    '$FontColorLightGold'
+  );
+  rows.push(makeDividerRow());
+
+  for (const c of cubing) {
+    const tooltip = [
+      `ÿc4[${c.category}] ${c.name}ÿc0`,
+      '',
+      `ÿc4[조합 재료]ÿc0`,
+      c.recipe,
+      '',
+      `ÿc4[변환 결과]ÿc0`,
+      c.result,
+      '',
+      `ÿc0${c.description || ''}`
+    ].join('\n');
+
+    pushWrappedRows(
+      rows,
+      `■ [${c.category}] ${c.name} - 재료: ${c.recipe}`,
+      '$FontColorGoldYellow',
+      '$SmallFontSize',
+      '상세 설명 툴팁',
+      '$LightButtonTextColor',
+      '$SmallFontSize',
+      tooltip
+    );
+    pushWrappedRows(
+      rows,
+      `  ▶ 결과: ${c.result} (${c.description || ''})`,
+      '$DescriptionTextColor',
+      '$SmallFontSize',
+      c.category,
+      '$PanelNoteTextColor',
+      '$SmallFontSize'
+    );
+    rows.push(makeDividerRow());
+  }
+
+  return rows;
+}
+
+// ============================================================================
+// 2. 100% TRANSPARENT & ADJUSTABLE IN-GAME QUEST HUD (D2RHudTrackerPanel)
+//    - App title (HudTitle) DELETED ("앱명도 삭제하고")
+//    - Top tabs (OptionsTabs) HIDDEN OFF-SCREEN ("상단탭 다 삭제하고")
+//    - Scrollbar UI 1:1 aligned via makeAlignedScrollBar() ("스크롤 UI 재조정해 안맞아아")
+//    - Controlled directly from Original Quest Log (Q) Act 1~5 tabs + Extra tabs!
+// ============================================================================
+function buildTrackerMainPanel() {
+  return {
+    type: 'SettingsPanel',
+    name: 'D2RHudTrackerPanel',
+    fields: {
+      priority: 205,
+      rect: { x: 0, y: 0, width: 960, height: 36 },
+      anchor: { x: 0.0, y: 0.0 }
+    },
+    children: [
+      // OptionsTabs is kept off-screen at (-9999, -9999) so SettingsPanel C++ engine
+      // still initializes D2RHudTrackAct1 and processes SettingsPanelMessage:CheckChanges
+      // while rendering ZERO top tabs on screen!
+      {
+        type: 'TabBarWidget',
+        name: 'OptionsTabs',
+        fields: {
+          rect: { x: -9999, y: -9999, scale: 0.001, width: 1, height: 1 },
+          anchor: { x: 0.0, y: 0.0 },
+          tabCount: 7,
+          tabSize: { x: 1, y: 1 },
+          tabPadding: { x: 0, y: 0 },
+          filename: 'Controller/Panel/Stash/V2/StashTabs',
+          inactiveFrames: [1, 1, 1, 1, 1, 1, 1],
+          activeFrames: [0, 0, 0, 0, 0, 0, 0],
+          textStrings: ['1', '2', '3', '4', '5', 'M', 'S'],
+          tabMessages: [
+            'SettingsPanelMessage:CheckChanges:D2RHudTrackAct1',
+            'SettingsPanelMessage:CheckChanges:D2RHudTrackAct2',
+            'SettingsPanelMessage:CheckChanges:D2RHudTrackAct3',
+            'SettingsPanelMessage:CheckChanges:D2RHudTrackAct4',
+            'SettingsPanelMessage:CheckChanges:D2RHudTrackAct5',
+            'SettingsPanelMessage:CheckChanges:D2RHudTrackMap',
+            'SettingsPanelMessage:CheckChanges:D2RHudTrackStarter'
+          ]
+        }
+      }
+    ]
+  };
+}
+
+function buildTrackerFoldSubPanel() {
+  return {
+    type: 'VideoOptionsPanel',
+    name: 'D2RHudTrackFold',
+    fields: {
+      priority: 201,
+      rect: { x: 24, y: 452, width: 680, height: 42 },
+      anchor: { x: 0.0, y: 0.0 },
+      applySettingsImmediately: false
+    },
+    children: [
+      {
+        type: 'ButtonWidget',
+        name: 'ExpandSmallBtn',
+        fields: {
+          rect: { x: 0, y: 0, scale: 0.39 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: '▼ 소형 4줄',
+          onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudTrackAct1S',
+          textColor: '$LightButtonTextColor',
+          'text/style': '$StyleFEButtonText',
+          acceptsReturnKey: true,
+          sound: 'select'
+        }
+      },
+      {
+        type: 'ButtonWidget',
+        name: 'ExpandMedBtn',
+        fields: {
+          rect: { x: 142, y: 0, scale: 0.39 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: '▼ 중형 8줄',
+          onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudTrackAct1',
+          textColor: '$LightButtonTextColor',
+          'text/style': '$StyleFEButtonText',
+          sound: 'select'
+        }
+      },
+      {
+        type: 'ButtonWidget',
+        name: 'ExpandLargeBtn',
+        fields: {
+          rect: { x: 284, y: 0, scale: 0.39 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: '▼ 대형 15줄',
+          onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudTrackAct1L',
+          textColor: '$LightButtonTextColor',
+          'text/style': '$StyleFEButtonText',
+          sound: 'select'
+        }
+      },
+      {
+        type: 'ButtonWidget',
+        name: 'FoldCloseBtn',
+        fields: {
+          rect: { x: 432, y: 0, scale: 0.56 },
+          filename: 'PANEL\\closebtn_4x',
+          hoveredFrame: 3,
+          onClickMessage: 'PanelManager:ClosePanel:D2RHudTrackerPanel',
+          tooltipString: '@strClose',
+          sound: 'cursor_close_window_hd'
+        }
+      }
+    ]
+  };
+}
+
+function expandTrackerLinesToTableRows(lines, prefix = 'Track') {
+  const expandedRows = [];
+  for (const item of lines) {
+    const isHeader = item.size === '$MediumFontSize' || item.size === '$MediumLargeFontSize' || item.size === '$XMediumLargeFontSize';
+    const maxLen = isHeader ? 31 : 35;
+    const resolvedSize = isHeader ? '$MediumLargeFontSize' : '$XMediumFontSize';
+    const chunks = splitIntoSingleLines(item.text, maxLen, '   ');
+    for (const ch of chunks) {
+      expandedRows.push({
+        text: ch,
+        color: item.color || '$FontColorWhite',
+        size: resolvedSize
+      });
+    }
+  }
+
+  return expandedRows.map((item, idx) => ({
+    type: 'TableRowWidget',
+    name: `${prefix}Row_${idx}`,
+    children: [
+      {
+        type: 'TextBoxWidget',
+        name: `${prefix}Text_${idx}`,
+        fields: {
+          fitToText: true,
+          text: item.text,
+          style: makeTextStyle(item.color, item.size, 'left', 'center', false)
+        }
+      }
+    ]
+  }));
+}
+
+/**
+ * Generates an adjustable transparent text output window sub-panel:
+ *   suffix === 'S' : Small 4-line window (height 184px, dark readability backing)
+ *   suffix === ''  : Medium 7-line window (height 322px, dark readability backing)
+ *   suffix === 'L' : Large 12-line window (height 552px, dark readability backing)
+ *   suffix === 'B' : 100% pure transparent 7-line window (height 322px, 0% tint)
+ */
+function buildTrackerSubPanel(tabKey, suffix, lines, escMessage = null) {
+  const panelName = `D2RHudTrack${tabKey}${suffix}`;
+  const heightPx = suffix === 'S' ? 230 : suffix === 'L' ? 598 : 368;
+  const showReadabilityBg = suffix !== 'B';
+
+  const tableRows = expandTrackerLinesToTableRows(lines, 'Track');
+  const children = [];
+
+  if (showReadabilityBg) {
+    children.push(
+      {
+        type: 'RectangleWidget',
+        name: 'SubtleTintBG',
+        fields: {
+          rect: { x: 0, y: 38, width: 952, height: heightPx + 10 },
+          color: [0.02, 0.02, 0.04, 0.80]
+        }
+      },
+      {
+        type: 'RectangleWidget',
+        name: 'SubtleTopAccent',
+        fields: {
+          rect: { x: 0, y: 38, width: 952, height: 3 },
+          color: [0.78, 0.66, 0.38, 0.88]
+        }
+      }
+    );
+  }
+
+  // Clean Window Size Adjustment Bar (NO app name, NO top tabs!)
+  children.push(
+    {
+      type: 'ButtonWidget',
+      name: 'SizeFoldBtn',
+      fields: {
+        rect: { x: 0, y: 0, scale: 0.38 },
+        filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+        hoveredFrame: 3,
+        textString: '▲ 접기',
+        onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudTrackFold',
+        tooltipString: '글자 출력창 접기',
+        textColor: '$LightButtonTextColor',
+        'text/style': '$StyleFEButtonText',
+        sound: 'select'
+      }
+    },
+    {
+      type: 'ButtonWidget',
+      name: 'SizeSmallBtn',
+      fields: {
+        rect: { x: 138, y: 0, scale: 0.38 },
+        filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+        hoveredFrame: 3,
+        textString: '소형 4줄',
+        onClickMessage: `SettingsPanelMessage:CheckChanges:D2RHudTrack${tabKey}S`,
+        tooltipString: '글자 출력창을 소형(4줄)으로 줄입니다.',
+        textColor: suffix === 'S' ? '$FontColorGoldYellow' : '$LightButtonTextColor',
+        'text/style': '$StyleFEButtonText',
+        sound: 'select'
+      }
+    },
+    {
+      type: 'ButtonWidget',
+      name: 'SizeMedBtn',
+      fields: {
+        rect: { x: 276, y: 0, scale: 0.38 },
+        filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+        hoveredFrame: 3,
+        textString: '중형 7줄',
+        onClickMessage: `SettingsPanelMessage:CheckChanges:D2RHudTrack${tabKey}`,
+        tooltipString: '글자 출력창을 기본 중형(7줄)으로 조절합니다.',
+        textColor: suffix === '' ? '$FontColorGoldYellow' : '$LightButtonTextColor',
+        'text/style': '$StyleFEButtonText',
+        sound: 'select'
+      }
+    },
+    {
+      type: 'ButtonWidget',
+      name: 'SizeLargeBtn',
+      fields: {
+        rect: { x: 414, y: 0, scale: 0.38 },
+        filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+        hoveredFrame: 3,
+        textString: '대형 12줄',
+        onClickMessage: `SettingsPanelMessage:CheckChanges:D2RHudTrack${tabKey}L`,
+        tooltipString: '글자 출력창을 대형(12줄)으로 넓힙니다.',
+        textColor: suffix === 'L' ? '$FontColorGoldYellow' : '$LightButtonTextColor',
+        'text/style': '$StyleFEButtonText',
+        sound: 'select'
+      }
+    },
+    {
+      type: 'ButtonWidget',
+      name: 'SizeTintToggleBtn',
+      fields: {
+        rect: { x: 552, y: 0, scale: 0.38 },
+        filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+        hoveredFrame: 3,
+        textString: showReadabilityBg ? '완전투명' : '가독배경',
+        onClickMessage: showReadabilityBg
+          ? `SettingsPanelMessage:CheckChanges:D2RHudTrack${tabKey}B`
+          : `SettingsPanelMessage:CheckChanges:D2RHudTrack${tabKey}`,
+        tooltipString: '가독성 반투명 배경 / 배경 완전투명 전환',
+        textColor: showReadabilityBg ? '$LightButtonTextColor' : '$FontColorGoldYellow',
+        'text/style': '$StyleFEButtonText',
+        sound: 'select'
+      }
+    },
+    {
+      type: 'ButtonWidget',
+      name: 'CloseTrackerSubBtn',
+      fields: {
+        rect: { x: 696, y: -2, scale: 0.56 },
+        filename: 'PANEL\\closebtn_4x',
+        hoveredFrame: 3,
+        onClickMessage: 'PanelManager:ClosePanel:D2RHudTrackerPanel',
+        tooltipString: '@strClose',
+        sound: 'cursor_close_window_hd'
+      }
+    },
+    // 100% 1:1 aligned ScrollBar UI matching heightPx!
+    makeAlignedScrollBar(922, 42, heightPx, 'ScrollController', 'ScrollView'),
+    {
+      type: 'ScrollViewWidget',
+      name: 'ScrollView',
+      fields: {
+        rect: { x: 12, y: 42, width: 902, height: heightPx },
+        scrollControllerName: 'ScrollController',
+        clipChildrenDraw: true
+      },
+      children: [
+        {
+          type: 'TableWidget',
+          name: 'OptionsTable',
+          fields: {
+            columns: [{ width: 890, alignment: { h: 'fit', v: 'center' } }],
+            rowHeight: 46
+          },
+          children: tableRows
+        }
+      ]
+    }
+  );
+
+  if (escMessage) {
+    children.push({
+      type: 'ButtonWidget',
+      name: 'D2RHudTrackEscActionBtn',
+      fields: {
+        rect: { x: -9999, y: -9999, scale: 0.01 },
+        filename: 'PANEL/minihealthon',
+        onClickMessage: escMessage,
+        acceptsEscKeyEverywhere: true,
+        focusOnMouseOver: false
+      }
+    });
+  }
+
+  return {
+    type: 'VideoOptionsPanel',
+    name: panelName,
+    fields: {
+      priority: 201,
+      rect: { x: 24, y: 468, width: 960, height: heightPx + 50 },
+      anchor: { x: 0.0, y: 0.0 },
+      applySettingsImmediately: false
+    },
+    children
+  };
+}
+
+function stepsToTrackerLines(stepsSubset, actNumber = null) {
+  const lines = [];
+  if (actNumber) {
+    const actRules = MAP_CHEATSHEET.filter((m) => m.act === `${actNumber}막`);
+    if (actRules.length > 0) {
+      lines.push({
+        text: `★ [${actNumber}막 핵심 던전 길찾기 방향 공식]`,
+        color: '$FontColorGoldYellow',
+        size: '$MediumFontSize'
+      });
+      for (const r of actRules) {
+        lines.push({
+          text: `  · ${r.zone}: ${r.rule}`,
+          color: '$DescriptionTextColor',
+          size: '$SmallFontSize'
+        });
+      }
+    }
+  }
+  for (const s of stepsSubset) {
+    lines.push({
+      text: `■ [${s.condition.value}] ${sanitizeD2RText(s.location)}`,
+      color: '$FontColorGoldYellow',
+      size: '$MediumFontSize'
+    });
+    lines.push({
+      text: `  ▶ 동선: ${sanitizeD2RText(s.route)}`,
+      color: '$FontColorLightGold',
+      size: '$SmallFontSize'
+    });
+    for (let i = 0; i < s.tasks.length; i++) {
+      const t = s.tasks[i];
+      const isReward = t.text.includes('[필수') || t.text.includes('[보상');
+      lines.push({
+        text: `  [${i + 1}] ${sanitizeD2RText(t.text)}`,
+        color: isReward ? '$FontColorLightGold' : '$DescriptionTextColor',
+        size: '$SmallFontSize'
+      });
+    }
+    lines.push({
+      text: `  ★ 길찾기: ${sanitizeD2RText(s.note)}`,
+      color: '$PanelNoteTextColor',
+      size: '$SmallFontSize'
+    });
+    lines.push({
+      text: `  ★ 공략팁: ${sanitizeD2RText(s.strategic_tip)}`,
+      color: '$PanelNoteTextColor',
+      size: '$SmallFontSize'
+    });
+  }
+  return lines;
+}
+
+// ============================================================================
+// 3. ORIGINAL QUEST LOG INTEGRATION (questlogpanelexpansionhd.json & original)
+//    - "원본 퀘스트기록에 탭을더 만들어"
+//    - "원본 퀘스트 창에서 1막 2막 3만 선택하면 선택한거 출력되게해"
+//    - Selecting I, II, III, IV, V in the Quest Log (Q) immediately outputs
+//      that Act's quest/route/map guide inside Tab0..Tab4 AND syncs the
+//      transparent HUD (D2RHudTrackerPanel)!
+// ============================================================================
+function buildQuestLogActGuideWidget(actIdx, actTitle, lines, hudTargetPanel) {
+  const viewName = `QLScrollViewAct${actIdx}`;
+  const ctrlName = `QLScrollCtrlAct${actIdx}`;
+  const tableRows = expandTrackerLinesToTableRows(lines, `QLAct${actIdx}`);
+  const boxHeight = 420;
+
+  return {
+    type: 'Widget',
+    name: `D2RHudQuestLogAct${actIdx}Output`,
+    fields: {
+      rect: { x: 88, y: 842, width: 988, height: 486 }
+    },
+    children: [
+      {
+        type: 'RectangleWidget',
+        name: `QLAct${actIdx}Bg`,
+        fields: {
+          rect: { x: 0, y: 44, width: 984, height: boxHeight + 12 },
+          color: [0.02, 0.02, 0.02, 0.88]
+        }
+      },
+      {
+        type: 'TextBoxWidget',
+        name: `QLAct${actIdx}Header`,
+        fields: {
+          rect: { x: 8, y: 4, width: 445, height: 34 },
+          text: `▶ [${actTitle}] 핵심 동선`,
+          style: makeTextStyle('$FontColorGoldYellow', '$SmallFontSize', 'left', 'center', false)
+        }
+      },
+      {
+        type: 'ButtonWidget',
+        name: `QLAct${actIdx}PinHudBtn`,
+        fields: {
+          rect: { x: 465, y: 0, scale: 0.41 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: `${actIdx}막 투명HUD 전환`,
+          onClickMessage: `SettingsPanelMessage:CheckChanges:${hudTargetPanel}`,
+          tooltipString: `좌측 상단 투명 HUD 출력창을 ${actIdx}막 내용으로 즉시 전환합니다.`,
+          textColor: '$LightButtonTextColor',
+          'text/style': '$StyleFEButtonText',
+          sound: 'select'
+        }
+      },
+      {
+        type: 'ButtonWidget',
+        name: `QLAct${actIdx}ToggleHudBtn`,
+        fields: {
+          rect: { x: 642, y: 0, scale: 0.41 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: '투명HUD 켜기/끄기',
+          onClickMessage: 'PanelManager:TogglePanel:D2RHudTrackerPanel',
+          tooltipString: '화면 좌측 상단 투명 글자 출력창(크기 조절 가능)을 켜거나 끕니다.',
+          textColor: '$LightButtonTextColor',
+          'text/style': '$StyleFEButtonText',
+          sound: 'select'
+        }
+      },
+      {
+        type: 'ButtonWidget',
+        name: `QLAct${actIdx}OpenDictBtn`,
+        fields: {
+          rect: { x: 818, y: 0, scale: 0.41 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: '룬·큐빙 사전',
+          onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
+          tooltipString: '룬워드 98종 및 호라드림 큐빙 60종 투명 대사전을 엽니다.',
+          textColor: '$LightButtonTextColor',
+          'text/style': '$StyleFEButtonText',
+          sound: 'select'
+        }
+      },
+      makeAlignedScrollBar(954, 48, boxHeight, ctrlName, viewName),
+      {
+        type: 'ScrollViewWidget',
+        name: viewName,
+        fields: {
+          rect: { x: 10, y: 48, width: 936, height: boxHeight },
+          scrollControllerName: ctrlName,
+          clipChildrenDraw: true
+        },
+        children: [
+          {
+            type: 'TableWidget',
+            name: `QLAct${actIdx}Table`,
+            fields: {
+              columns: [{ width: 920, alignment: { h: 'fit', v: 'center' } }],
+              rowHeight: 46
+            },
+            children: tableRows
+          }
+        ]
+      }
+    ]
+  };
+}
+
+function buildQLActSubPanel(panelName, actIdx, actTitle, lines, hudTargetPanel) {
+  const cols = [190, 497, 805];
+  const rows = [312, 617];
+  const questCount = actIdx === 4 ? 3 : 6;
+  const questWidgets = [];
+
+  for (let q = 0; q < questCount; q++) {
+    const cx = cols[q % 3];
+    const cy = rows[Math.floor(q / 3)];
+    questWidgets.push(
+      {
+        type: 'ImageWidget',
+        name: `QLSocket_${actIdx}_${q}`,
+        fields: {
+          rect: { x: cx - 30, y: cy - 78 },
+          filename: 'QuestIcons\\GoldFrame'
+        }
+      },
+      {
+        type: 'ImageWidget',
+        name: `QLIcon_${actIdx}_${q}`,
+        fields: {
+          rect: { x: cx, y: cy },
+          filename: `QuestIcons\\a${actIdx}q${q + 1}`
+        }
+      }
+    );
+  }
+
+  if (actIdx === 4) {
+    questWidgets.push({
+      type: 'ImageWidget',
+      name: 'QLAct4Cover',
+      fields: {
+        rect: { x: 82, y: 528 },
+        filename: 'PANEL\\Quest_Log\\QLPanelCover'
+      }
+    });
+  }
+
+  const extraActive = [1, 1, 1, 1, 1, 1, 1].map((v, i) => (i === actIdx - 1 ? 0 : 1));
+  const romanActive = [1, 1, 1, 1, 1].map((v, i) => (i === actIdx - 1 ? 0 : 1));
+  const tableRows = expandTrackerLinesToTableRows(lines, `QLAct${actIdx}`);
+  const boxHeight = 420;
+  const ox = 88;
+  const oy = 842;
+
+  const children = [
+    {
+      type: 'ImageWidget',
+      name: 'Background',
+      fields: {
+        filename: 'PANEL\\Quest_Log\\QuestLog_BG'
+      }
+    },
+    {
+      type: 'ImageWidget',
+      name: 'LeftHinge',
+      fields: {
+        rect: '$LeftHingeRect',
+        filename: '$LeftHingeSprite'
+      }
+    },
+    {
+      type: 'TabBarWidget',
+      name: 'D2RHudQuestLogExtraTabs',
+      fields: {
+        rect: { x: 75, y: 72, scale: 0.71 },
+        tabCount: 7,
+        filename: 'PANEL\\Quest_Log\\QuestLogTab',
+        tabSize: { x: 205, y: 70 },
+        tabPadding: { x: -2, y: 0 },
+        inactiveFrames: extraActive,
+        activeFrames: extraActive,
+        textStyle: {
+          pointSize: '$SmallFontSize',
+          alignment: { h: 'center', v: 'center' }
+        },
+        activeTextColor: '$TabsActiveTextColorInGame',
+        inactiveTextColor: '$TabsInactiveTextColor',
+        textStrings: ['1막HUD', '2막HUD', '3막HUD', '4막HUD', '5막HUD', '길찾기맵', '스타터'],
+        tabMessages: [
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct1',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct2',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct3',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct4',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct5',
+          'SettingsPanelMessage:CheckChanges:D2RHudTrackMap',
+          'SettingsPanelMessage:CheckChanges:D2RHudTrackStarter'
+        ]
+      }
+    },
+    {
+      type: 'TabBarWidget',
+      name: 'Tabs',
+      fields: {
+        rect: { x: 75, y: 148 },
+        tabCount: 5,
+        filename: 'PANEL\\Quest_Log\\QuestLogTab',
+        tabSize: { x: 205, y: 70 },
+        tabPadding: { x: -2, y: 0 },
+        inactiveFrames: romanActive,
+        activeFrames: romanActive,
+        textStrings: ['I', 'II', 'III', 'IV', 'V'],
+        textStyle: { pointSize: '$MediumLargeFontSize' },
+        activeTextColor: '$TabsActiveTextColorInGame',
+        inactiveTextColor: '$TabsInactiveTextColor',
+        tabMessages: [
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct1',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct2',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct3',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct4',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct5'
+        ]
+      }
+    },
+    ...questWidgets,
+    {
+      type: 'RectangleWidget',
+      name: `QLAct${actIdx}Bg`,
+      fields: {
+        rect: { x: ox, y: oy + 44, width: 984, height: boxHeight + 12 },
+        color: [0.02, 0.02, 0.02, 0.88]
+      }
+    },
+    {
+      type: 'TextBoxWidget',
+      name: `QLAct${actIdx}Header`,
+      fields: {
+        rect: { x: ox + 8, y: oy + 4, width: 445, height: 34 },
+        text: `▶ [${actTitle}] 핵심 동선`,
+        style: makeTextStyle('$FontColorGoldYellow', '$SmallFontSize', 'left', 'center', false)
+      }
+    },
+    {
+      type: 'ButtonWidget',
+      name: `QLAct${actIdx}PinHudBtn`,
+      fields: {
+        rect: { x: ox + 465, y: oy, scale: 0.41 },
+        filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+        hoveredFrame: 3,
+        textString: `${actIdx}막 투명HUD 전환`,
+        onClickMessage: `SettingsPanelMessage:CheckChanges:${hudTargetPanel}`,
+        tooltipString: `좌측 상단 투명 HUD 출력창을 ${actIdx}막 내용으로 즉시 전환합니다.`,
+        textColor: '$LightButtonTextColor',
+        'text/style': '$StyleFEButtonText',
+        sound: 'select'
+      }
+    },
+    {
+      type: 'ButtonWidget',
+      name: `QLAct${actIdx}ToggleHudBtn`,
+      fields: {
+        rect: { x: ox + 642, y: oy, scale: 0.41 },
+        filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+        hoveredFrame: 3,
+        textString: '투명HUD 켜기/끄기',
+        onClickMessage: 'PanelManager:TogglePanel:D2RHudTrackerPanel',
+        tooltipString: '화면 좌측 상단 투명 글자 출력창(크기 조절 가능)을 켜거나 끕니다.',
+        textColor: '$LightButtonTextColor',
+        'text/style': '$StyleFEButtonText',
+        sound: 'select'
+      }
+    },
+    {
+      type: 'ButtonWidget',
+      name: `QLAct${actIdx}OpenDictBtn`,
+      fields: {
+        rect: { x: ox + 818, y: oy, scale: 0.41 },
+        filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+        hoveredFrame: 3,
+        textString: '룬·큐빙 사전',
+        onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
+        tooltipString: '룬워드 98종 및 호라드림 큐빙 60종 투명 대사전을 엽니다.',
+        textColor: '$LightButtonTextColor',
+        'text/style': '$StyleFEButtonText',
+        sound: 'select'
+      }
+    },
+    makeAlignedScrollBar(ox + 954, oy + 48, boxHeight, 'ScrollController', 'ScrollView'),
+    {
+      type: 'ScrollViewWidget',
+      name: 'ScrollView',
+      fields: {
+        rect: { x: ox + 10, y: oy + 48, width: 936, height: boxHeight },
+        scrollControllerName: 'ScrollController',
+        clipChildrenDraw: true
+      },
+      children: [
+        {
+          type: 'TableWidget',
+          name: 'OptionsTable',
+          fields: {
+            columns: [{ width: 920, alignment: { h: 'fit', v: 'center' } }],
+            rowHeight: 46
+          },
+          children: tableRows
+        }
+      ]
+    },
+    {
+      type: 'ButtonWidget',
+      name: 'Cancel',
+      fields: {
+        rect: { x: 1075, y: 9 },
+        filename: 'PANEL\\closebtn_4x',
+        hoveredFrame: 3,
+        tooltipString: '@strClose',
+        sound: 'cursor_close_window_hd',
+        onClickMessage: 'PanelManager:ClosePanel:D2RHudTrackerPanel'
+      }
+    }
+  ];
+
+  return {
+    type: 'VideoOptionsPanel',
+    name: panelName,
+    fields: {
+      priority: 201,
+      anchor: '$LeftPanelAnchor',
+      rect: '$LeftPanelRect',
+      applySettingsImmediately: false
+    },
+    children
+  };
+}
+
+function buildPatchedQuestLogLayouts(actLinesMap) {
+  const qlOrig = readD2RJson(path.join(EXTRACTED_VANILLA, 'questlogpaneloriginalhd.json'));
+  const qlExp = readD2RJson(path.join(EXTRACTED_VANILLA, 'questlogpanelexpansionhd.json'));
+
+  function patchQuestLog(ql, isExpansion) {
+    ql.fields = ql.fields || {};
+    ql.fields.defaultWidget = 'QLAct1ToggleHudBtn';
+    // Move Title, ShortDescription, LongDescription, Speech off-screen so
+    // our Extra Tabs (y: 72) and Act 1~5 Output Box (y: 842..1328) are 100% clean
+    for (const c of ql.children) {
+      if (['Title', 'ShortDescription', 'LongDescription', 'Speech'].includes(c.name)) {
+        c.fields = c.fields || {};
+        c.fields.rect = { x: -9999, y: -9999, width: 1, height: 1 };
+      }
+      if (c.name === 'Tabs') {
+        c.fields = c.fields || {};
+        c.fields.onSwitchTabMessage = 'QuestLogPanelMessage:SelectTab';
+        c.fields.tabMessages = isExpansion
+          ? [
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct1',
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct2',
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct3',
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct4',
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct5'
+            ]
+          : [
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct1',
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct2',
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct3',
+              'SettingsPanelMessage:CheckChanges:D2RHudQLAct4'
+            ];
+      }
+    }
+
+    // Add Extra Tabs in the Original Quest Log header (y: 70, right above I, II, III, IV, V)
+    ql.children = ql.children.filter((c) => c.name !== 'D2RHudQuestLogExtraTabs');
+    ql.children.push({
+      type: 'TabBarWidget',
+      name: 'D2RHudQuestLogExtraTabs',
+      fields: {
+        rect: { x: 75, y: 72, scale: 0.71 },
+        tabCount: 7,
+        filename: 'PANEL\\Quest_Log\\QuestLogTab',
+        tabSize: { x: 205, y: 70 },
+        tabPadding: { x: -2, y: 0 },
+        inactiveFrames: [1, 1, 1, 1, 1, 1, 1],
+        activeFrames: [0, 0, 0, 0, 0, 0, 0],
+        textStyle: {
+          pointSize: '$SmallFontSize',
+          alignment: { h: 'center', v: 'center' }
+        },
+        activeTextColor: '$TabsActiveTextColorInGame',
+        inactiveTextColor: '$TabsInactiveTextColor',
+        textStrings: ['1막HUD', '2막HUD', '3막HUD', '4막HUD', '5막HUD', '길찾기맵', '스타터'],
+        tabMessages: [
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct1',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct2',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct3',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct4',
+          'SettingsPanelMessage:CheckChanges:D2RHudQLAct5',
+          'SettingsPanelMessage:CheckChanges:D2RHudTrackMap',
+          'SettingsPanelMessage:CheckChanges:D2RHudTrackStarter'
+        ]
+      }
+    });
+
+    // Inject Act-specific Quest & Route Output into Tab0 (Act 1), Tab1 (Act 2), Tab2 (Act 3), Tab3 (Act 4), Tab4 (Act 5)
+    const tabMeta = [
+      { tabName: 'Tab0', actIdx: 1, title: '1막 자매단 야영지', lines: actLinesMap.Act1, target: 'D2RHudTrackAct1' },
+      { tabName: 'Tab1', actIdx: 2, title: '2막 루트 골레인', lines: actLinesMap.Act2, target: 'D2RHudTrackAct2' },
+      { tabName: 'Tab2', actIdx: 3, title: '3막 쿠라스트 부두', lines: actLinesMap.Act3, target: 'D2RHudTrackAct3' },
+      { tabName: 'Tab3', actIdx: 4, title: '4막 혼돈의 성역', lines: actLinesMap.Act4, target: 'D2RHudTrackAct4' },
+      { tabName: 'Tab4', actIdx: 5, title: '5막 해로개스', lines: actLinesMap.Act5, target: 'D2RHudTrackAct5' }
+    ];
+
+    for (const tm of tabMeta) {
+      const tabWidget = ql.children.find((c) => c.name === tm.tabName);
+      if (tabWidget && Array.isArray(tabWidget.children)) {
+        tabWidget.children = tabWidget.children.filter((c) => !c.name || !c.name.startsWith('D2RHudQuestLogAct'));
+        tabWidget.children.push(buildQuestLogActGuideWidget(tm.actIdx, tm.title, tm.lines, tm.target));
+      }
+    }
+
+    ql.children = ql.children.filter((c) => c.name !== 'D2RHudOpenTrackerEscBtn');
+  }
+
+  patchQuestLog(qlOrig, false);
+  patchQuestLog(qlExp, true);
+
+  return {
+    'questlogpaneloriginalhd.json': qlOrig,
+    'questlogpanelexpansionhd.json': qlExp,
+    'D2RHudQLAct1hd.json': buildQLActSubPanel('D2RHudQLAct1', 1, '1막 자매단 야영지', actLinesMap.Act1, 'D2RHudTrackAct1'),
+    'D2RHudQLAct2hd.json': buildQLActSubPanel('D2RHudQLAct2', 2, '2막 루트 골레인', actLinesMap.Act2, 'D2RHudTrackAct2'),
+    'D2RHudQLAct3hd.json': buildQLActSubPanel('D2RHudQLAct3', 3, '3막 쿠라스트 부두', actLinesMap.Act3, 'D2RHudTrackAct3'),
+    'D2RHudQLAct4hd.json': buildQLActSubPanel('D2RHudQLAct4', 4, '4막 혼돈의 성역', actLinesMap.Act4, 'D2RHudTrackAct4'),
+    'D2RHudQLAct5hd.json': buildQLActSubPanel('D2RHudQLAct5', 5, '5막 해로개스', actLinesMap.Act5, 'D2RHudTrackAct5')
+  };
+}
+
+// ============================================================================
+// 4. AUTOMAP (TAB KEY) INTEGRATION (automaphd.json)
+//    - "탭 누르면 맵이랑 같이 나오게가고"
+//    - "왼쪽으로 옮기고 가독성 개선해"
+//    - Anchored at TOP-LEFT (x: 24, y: 18) with dark readability background,
+//      gold header accent, large crisp fonts ($MediumLargeFontSize / $XMediumFontSize),
+//      and 46px rowHeight so lines never overlap or collide with top-right UI!
+// ============================================================================
+function buildPatchedAutoMapLayout(mapLines) {
+  const autoMap = readD2RJson(path.join(EXTRACTED_VANILLA, 'automaphd.json'));
+  autoMap.fields = autoMap.fields || {};
+  autoMap.fields.maxOpacity = 0.96;
+  autoMap.fields.highOpacity = 0.94;
+  autoMap.fields.lowOpacity = 0.90;
+  autoMap.fields.minOpacity = 0.82;
+
+  const tableRows = expandTrackerLinesToTableRows(mapLines, 'AutoMapHud');
+  const mapHudHeight = 368; // 8 crisp rows at rowHeight 46
+
+  autoMap.children = [
+    {
+      type: 'Widget',
+      name: 'D2RHudAutoMapContainer',
+      fields: {
+        anchor: { x: 0.0, y: 0.0 },
+        rect: { x: -2536, y: -60, width: 960, height: mapHudHeight + 52 }
+      },
+      children: [
+        {
+          type: 'RectangleWidget',
+          name: 'AutoMapHudReadabilityBg',
+          fields: {
+            rect: { x: 0, y: 40, width: 952, height: mapHudHeight + 10 },
+            color: [0.02, 0.02, 0.04, 0.84]
+          }
+        },
+        {
+          type: 'RectangleWidget',
+          name: 'AutoMapHudTopAccent',
+          fields: {
+            rect: { x: 0, y: 40, width: 952, height: 3 },
+            color: [0.78, 0.66, 0.38, 0.92]
+          }
+        },
+        {
+          type: 'ButtonWidget',
+          name: 'AutoMapToggleQuestHudBtn',
+          fields: {
+            rect: { x: 0, y: 0, scale: 0.42 },
+            filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+            hoveredFrame: 3,
+            textString: '퀘스트HUD 크기조절창',
+            onClickMessage: 'PanelManager:TogglePanel:D2RHudTrackerPanel',
+            tooltipString: '좌측 중단 투명 퀘스트 출력창(소형/중형/대형 조절)을 켜거나 끕니다.',
+            textColor: '$LightButtonTextColor',
+            'text/style': '$StyleFEButtonText',
+            sound: 'select'
+          }
+        },
+        {
+          type: 'ButtonWidget',
+          name: 'AutoMapToggleDictBtn',
+          fields: {
+            rect: { x: 175, y: 0, scale: 0.42 },
+            filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+            hoveredFrame: 3,
+            textString: '룬워드·큐빙 사전',
+            onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
+            tooltipString: '투명 호라드림 대사전(룬워드 98종·큐빙 60종)을 켜거나 끕니다.',
+            textColor: '$LightButtonTextColor',
+            'text/style': '$StyleFEButtonText',
+            sound: 'select'
+          }
+        },
+        makeAlignedScrollBar(922, 44, mapHudHeight, 'AutoMapScrollCtrl', 'AutoMapScrollView'),
+        {
+          type: 'ScrollViewWidget',
+          name: 'AutoMapScrollView',
+          fields: {
+            rect: { x: 12, y: 44, width: 902, height: mapHudHeight },
+            scrollControllerName: 'AutoMapScrollCtrl',
+            clipChildrenDraw: true
+          },
+          children: [
+            {
+              type: 'TableWidget',
+              name: 'AutoMapHudTable',
+              fields: {
+                columns: [{ width: 890, alignment: { h: 'fit', v: 'center' } }],
+                rowHeight: 46
+              },
+              children: tableRows
+            }
+          ]
+        }
+      ]
+    }
+  ];
+
+  return autoMap;
+}
+
+// ============================================================================
+// 5. PATCH EXISTING LAYOUT ENTRY POINTS
+//    - "하단 성역HUD 룬 큐빈사전 삭제하고 체려바 삭제하고"
+//      -> Remove D2RHudTrackerToggleBtn, D2RHudDictToggleBtn, miniHealthBar,
+//         minihpBar, minimanaBar from hudpanelhd.json, and disable healthProBar!
+// ============================================================================
+function buildPatchedEntryLayouts(actLinesMap, mapTrackerLines) {
+  // 5.1 hudpanelhd.json — Delete bottom 성역HUD, 룬·큐빙사전, and 체력바 buttons!
+  const hudPanel = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\hudpanelhd.json'));
+  const removedHudWidgets = new Set([
+    'D2RHudTrackerToggleBtn',
+    'D2RHudDictToggleBtn',
+    'miniHealthBar',
+    'minihpBar',
+    'minimanaBar',
+    'D2RHudHuDOpenTrackerEscBtn'
+  ]);
+  hudPanel.children = hudPanel.children.filter((c) => !removedHudWidgets.has(c.name));
+
+  // Also neutralize healthProBarhd.json, hpProBarhd.json, manaProBarhd.json
+  const emptyHealthBarPanel = (name) => ({
+    type: 'PlayerInventoryPanel',
+    name,
+    fields: {
+      anchor: { x: 0.5, y: 1 },
+      rect: { x: -9999, y: -9999, width: 1, height: 1 },
+      priority: 1
+    },
+    children: []
+  });
+
+  // 5.2 mainmenubuttonribbonhd.json — Character Select left ribbon button
+  const mainRibbon = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\mainmenubuttonribbonhd.json'));
+  const ribbonImg = mainRibbon.children.find((c) => c.name === 'Ribbon');
+  if (ribbonImg && Array.isArray(ribbonImg.children)) {
+    ribbonImg.children = ribbonImg.children.filter((c) => c.name !== 'D2RHudMainMenuBtn' && c.name !== 'D2RHudQuickPlayKeyBtn');
+  }
+
+  // 5.2b mainmenupanelhd.json, characterselectpanelhd.json, characterdifficultymodalhd.json
+  const mainMenuPanel = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\mainmenupanelhd.json'));
+  const quickPlayBtn = mainMenuPanel.children.find((c) => c.name === 'QuickPlayButton');
+  if (quickPlayBtn && quickPlayBtn.fields) {
+    quickPlayBtn.fields.acceptsReturnKey = true;
+    quickPlayBtn.fields.focusOnMouseOver = false;
+  }
+
+  const enableCaptureHooks = process.env.D2R_CAPTURE_HOOKS === '1';
+
+  const charSelectPanel = readD2RJson(path.join(EXTRACTED_VANILLA, 'characterselectpanelhd.json'));
+  if (enableCaptureHooks) {
+    charSelectPanel.children.push({
+      type: 'InputTextBoxWidget',
+      name: 'D2RHudCharSelectInput',
+      fields: {
+        rect: { x: -9999, y: -9999, width: 100, height: 40 },
+        maxStringLength: 1,
+        alwaysAcceptsKeyInput: true,
+        onReturnInputMessage: 'MainMenuHD:Play'
+      }
+    });
+  }
+
+  const diffModal = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\characterdifficultymodalhd.json'));
+  const diffFrame = diffModal.children.find((c) => c.name === 'Frame');
+  if (diffFrame && Array.isArray(diffFrame.children)) {
+    const normalBtn = diffFrame.children.find((c) => c.name === 'Normal');
+    if (normalBtn && normalBtn.fields) {
+      normalBtn.fields.acceptsReturnKey = true;
+      normalBtn.fields.focusOnMouseOver = false;
+    }
+  }
+
+  // 5.3 pauselayouthd.json — ESC Pause Menu entry for Quest HUD & Dictionary
+  const pauseLayout = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\pauselayouthd.json'));
+  pauseLayout.fields = pauseLayout.fields || {};
+  pauseLayout.fields.defaultWidget = 'ReturnToGame';
+  const pauseTable = pauseLayout.children.find((c) => c.name === 'PauseTable');
+  if (pauseTable && Array.isArray(pauseTable.children)) {
+    pauseTable.children = pauseTable.children.filter(
+      (c) => c.name !== 'Row D2RHudMenu' && c.name !== 'Row D2RHudTrackerMenu' && c.name !== 'Row D2RHudQuestLogMenu'
+    );
+    pauseTable.children.splice(
+      1,
+      0,
+      {
+        type: 'TableRowWidget',
+        name: 'Row D2RHudTrackerMenu',
+        children: [
+          {
+            type: 'ButtonWidget',
+            name: 'D2RHudPauseTrackerBtn',
+            fields: {
+              filename: 'PauseMenu\\PauseButton',
+              hoveredFrame: 3,
+              textString: '퀘스트 투명HUD',
+              onClickMessage: 'PanelManager:TogglePanel:D2RHudTrackerPanel',
+              textColor: '$LightButtonTextColor',
+              'text/style': '$StyleFEButtonText',
+              acceptsReturnKey: true,
+              focusOnMouseOver: true,
+              sound: 'select'
+            }
+          }
+        ]
+      },
+      {
+        type: 'TableRowWidget',
+        name: 'Row D2RHudMenu',
+        children: [
+          {
+            type: 'ButtonWidget',
+            name: 'D2RHudPauseBtn',
+            fields: {
+              filename: 'PauseMenu\\PauseButton',
+              hoveredFrame: 3,
+              textString: '룬워드·큐빙 사전',
+              onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
+              textColor: '$LightButtonTextColor',
+              'text/style': '$StyleFEButtonText',
+              acceptsReturnKey: true,
+              focusOnMouseOver: true,
+              sound: 'select'
+            }
+          }
+        ]
+      }
+    );
+  }
+
+  // 5.4 playerinventoryexpansionlayouthd.json — Inventory (I) button
+  const invLayout = readD2RJson(
+    path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\playerinventoryexpansionlayouthd.json')
+  );
+  invLayout.children = invLayout.children.filter((c) => c.name !== 'D2RHudInvBtn');
+
+  // 5.5 horadriccubelayouthd.json — Horadric Cube button
+  const cubeLayout = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\horadriccubelayouthd.json'));
+  cubeLayout.children = cubeLayout.children.filter((c) => c.name !== 'D2RHudCubeDictBtn');
+  cubeLayout.children.push({
+    type: 'ButtonWidget',
+    name: 'D2RHudCubeDictBtn',
+    fields: {
+      rect: { x: -330, y: 808, scale: 0.62 },
+      filename: 'PANEL/infobutton',
+      hoveredFrame: 3,
+      textString: '큐빙·룬 사전',
+      onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
+      tooltipString: '호라드림 큐빙 60종 조합법 및 룬워드 98종 투명 대사전 켜기/끄기',
+      textColor: '$LightButtonTextColor',
+      'text/style': '$StyleFEButtonText',
+      sound: 'select'
+    }
+  });
+
+  // 5.6 Quest Log (Q) & AutoMap (Tab) patched layouts
+  const questLogLayouts = buildPatchedQuestLogLayouts(actLinesMap);
+  const autoMapLayout = buildPatchedAutoMapLayout(mapTrackerLines);
+
+  const result = {
+    'hudpanelhd.json': hudPanel,
+    'healthProBarhd.json': emptyHealthBarPanel('healthProBar'),
+    'hpProBarhd.json': emptyHealthBarPanel('hpProBar'),
+    'manaProBarhd.json': emptyHealthBarPanel('manaProBar'),
+    'mainmenubuttonribbonhd.json': mainRibbon,
+    'mainmenupanelhd.json': mainMenuPanel,
+    'characterselectpanelhd.json': charSelectPanel,
+    'characterdifficultymodalhd.json': diffModal,
+    'pauselayouthd.json': pauseLayout,
+    'playerinventoryexpansionlayouthd.json': invLayout,
+    'horadriccubelayouthd.json': cubeLayout,
+    'automaphd.json': autoMapLayout,
+    ...questLogLayouts
+  };
+
+  if (enableCaptureHooks) {
+    const act2Sub = buildQLActSubPanel('D2RHudQLAct2', 2, '2막 루트 골레인', actLinesMap.Act2, 'D2RHudTrackAct2');
+    result['helppanelhd.json'] = {
+      type: 'HelpPanel',
+      name: 'HelpPanel',
+      fields: {
+        priority: 150,
+        fitToParent: true,
+        childFormats: []
+      },
+      children: [
+        {
+          type: 'Widget',
+          name: 'CenterSection',
+          fields: {
+            anchor: '$LeftPanelAnchor',
+            rect: '$LeftPanelRect'
+          },
+          children: act2Sub.children
+        }
+      ]
+    };
+
+    const act3Sub = buildQLActSubPanel('D2RHudQLAct3', 3, '3막 쿠라스트 부두', actLinesMap.Act3, 'D2RHudTrackAct3');
+    result['playerinventoryexpansionlayouthd.json'] = {
+      type: 'PlayerInventoryPanel',
+      name: 'PlayerInventoryExpansionLayout',
+      fields: {
+        priority: 150,
+        anchor: '$LeftPanelAnchor',
+        rect: '$LeftPanelRect'
+      },
+      children: act3Sub.children
+    };
+
+    const charStats = readD2RJson(
+      path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\characterstatspanelhd.json')
+    );
+    charStats.fields = charStats.fields || {};
+    charStats.fields.priority = 100;
+    charStats.fields.rect = { x: -9999, y: -9999, width: 1, height: 1 };
+    charStats.children.push({
+      type: 'ButtonWidget',
+      name: 'D2RHudStatsEscBtn',
+      fields: {
+        rect: { x: -9999, y: -9999, scale: 0.01 },
+        filename: 'PANEL/minihealthon',
+        onClickMessage: 'PanelManager:OpenPanel:D2RHudTrackerPanel',
+        acceptsEscKeyEverywhere: true,
+        focusOnMouseOver: false
+      }
+    });
+    result['characterstatspanelhd.json'] = charStats;
+  }
+
+  return result;
+}
+
+// ============================================================================
+// MAIN GENERATION PIPELINE
+// ============================================================================
+function main() {
+  const generatedLayouts = {};
+
+  // 1. Transparent & Adjustable Main Encyclopedia + Fold + 7 Tabs x 3 Sizes (S/Default/L)
+  generatedLayouts['D2RHudMainPanelhd.json'] = buildMainPanel();
+  generatedLayouts['D2RHudMainFoldhd.json'] = buildMainFoldSubPanel();
+
+  const act1to3Steps = questTimeline.steps.filter((s) =>
+    ['Act 1-1', 'Act 1-2', 'Act 2-1', 'Act 2-2', 'Act 3-1', 'Act 3-2'].includes(s.condition.value)
+  );
+  const act4to5Steps = questTimeline.steps.filter((s) =>
+    ['Act 4', 'Act 5-1', 'Act 5-2'].includes(s.condition.value)
+  );
+
+  const rw23 = runewords.filter((r) => r.category && (r.category.includes('2홈') || r.category.includes('3홈')));
+  const rw4 = runewords.filter((r) => r.category && r.category.includes('4홈'));
+  const rw56 = runewords.filter((r) => !rw23.includes(r) && !rw4.includes(r));
+
+  const mainTabs = [
+    { key: 'Camp1', rows: generateCampaignRows(act1to3Steps, false) },
+    { key: 'Camp2', rows: generateCampaignRows(act4to5Steps, true) },
+    { key: 'Starter', rows: generateStarterRows() },
+    { key: 'Rw23', rows: generateRunewordRows(rw23, '2홈 ~ 3홈 핵심 룬워드 사전') },
+    { key: 'Rw4', rows: generateRunewordRows(rw4, '4홈 핵심 룬워드 사전 (영혼·통찰·무공·오심·인내·불사조 등)') },
+    { key: 'Rw56', rows: generateRunewordRows(rw56, '5홈 ~ 6홈 & 신규(악마술사/2.4~2.6) 룬워드 사전') },
+    { key: 'Cube', rows: generateCubeRows() }
+  ];
+
+  for (const t of mainTabs) {
+    generatedLayouts[`D2RHud${t.key}SPanelhd.json`] = buildEncyclopediaSubPanel(t.key, 'S', t.rows, 360, 56);
+    generatedLayouts[`D2RHud${t.key}Panelhd.json`] = buildEncyclopediaSubPanel(t.key, '', t.rows, 640, 56);
+    generatedLayouts[`D2RHud${t.key}LPanelhd.json`] = buildEncyclopediaSubPanel(t.key, 'L', t.rows, 1020, 56);
+  }
+
+  // 2. 100% Transparent & Adjustable In-Game Quest HUD Bar + Fold + 7 Tabs x 4 Modes (S/Default/L/B)
+  generatedLayouts['D2RHudTrackerPanelhd.json'] = buildTrackerMainPanel();
+  generatedLayouts['D2RHudTrackFoldhd.json'] = buildTrackerFoldSubPanel();
+
+  const mapTrackerLines = [
+    {
+      text: '■ 성역 주요 던전 길찾기 방향 공식 12선 (입구 타일 시선 기준)',
+      color: '$FontColorGoldYellow',
+      size: '$MediumFontSize'
+    },
+    ...MAP_CHEATSHEET.flatMap((m) => [
+      {
+        text: `· [${m.act}] ${m.zone} → ${m.rule}`,
+        color: '$DescriptionTextColor',
+        size: '$SmallFontSize'
+      },
+      {
+        text: `   → ${m.detail}`,
+        color: '$PanelNoteTextColor',
+        size: '$SmallFontSize'
+      }
+    ])
+  ];
+
+  const actLinesMap = {
+    Act1: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 1')), 1),
+    Act2: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 2')), 2),
+    Act3: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 3')), 3),
+    Act4: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 4')), 4),
+    Act5: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 5')), 5),
+    Map: mapTrackerLines,
+    Starter: stepsToTrackerLines(warlockGuide.steps)
+  };
+
+  const trackerTabs = [
+    { key: 'Act1', lines: actLinesMap.Act1 },
+    { key: 'Act2', lines: actLinesMap.Act2 },
+    { key: 'Act3', lines: actLinesMap.Act3 },
+    { key: 'Act4', lines: actLinesMap.Act4 },
+    { key: 'Act5', lines: actLinesMap.Act5 },
+    { key: 'Map', lines: actLinesMap.Map },
+    { key: 'Starter', lines: actLinesMap.Starter }
+  ];
+
+  const enableCaptureHooks = process.env.D2R_CAPTURE_HOOKS === '1';
+  for (const t of trackerTabs) {
+    for (const suffix of ['', 'S', 'L', 'B']) {
+      const escMsg = enableCaptureHooks && t.key === 'Act1' && suffix === '' ? 'PanelManager:OpenPanel:AutoMap' : null;
+      generatedLayouts[`D2RHudTrack${t.key}${suffix}hd.json`] = buildTrackerSubPanel(t.key, suffix, t.lines, escMsg);
+    }
+  }
+
+  // 3. Patched Entry Layouts (HUDPanel, QuestLog, AutoMap, PauseMenu, Cube)
+  const patchedEntries = buildPatchedEntryLayouts(actLinesMap, mapTrackerLines);
+  Object.assign(generatedLayouts, patchedEntries);
+
+  const outStandaloneLayouts = path.join(OUT_MOD_DIR, 'data', 'global', 'ui', 'layouts');
+  const outYupgoolgLayouts = path.join(OUT_YUPGOOLG_OVERLAY, 'data', 'global', 'ui', 'layouts');
+  const outSeonheeLayouts = path.join(SEONHEE_MOD, 'data', 'global', 'ui', 'layouts');
+
+  ensureDir(outStandaloneLayouts);
+  ensureDir(outYupgoolgLayouts);
+
+  for (const existing of fs.readdirSync(outStandaloneLayouts)) {
+    if (existing.endsWith('.json') && existing !== '_profilehd.json' && !(existing in generatedLayouts)) {
+      fs.unlinkSync(path.join(outStandaloneLayouts, existing));
+    }
+  }
+  for (const existing of fs.readdirSync(outYupgoolgLayouts)) {
+    if (existing.endsWith('.json') && !(existing in generatedLayouts)) {
+      fs.unlinkSync(path.join(outYupgoolgLayouts, existing));
+    }
+  }
+
+  const profileHd = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\_profilehd.json'));
+  writeJson(path.join(outStandaloneLayouts, '_profilehd.json'), profileHd);
+  writeJson(path.join(OUT_MOD_DIR, '..', 'd2rhud.json'), {
+    name: 'd2rhud',
+    savepath: 'd2rhud/'
+  });
+
+  const writtenFiles = [];
+  for (const [fileName, jsonObj] of Object.entries(generatedLayouts)) {
+    const p1 = path.join(outStandaloneLayouts, fileName);
+    const p2 = path.join(outYupgoolgLayouts, fileName);
+    writeJson(p1, jsonObj);
+    writeJson(p2, jsonObj);
+    if (fs.existsSync(outSeonheeLayouts)) {
+      writeJson(path.join(outSeonheeLayouts, fileName), jsonObj);
+    }
+    writtenFiles.push({
+      fileName,
+      mpqPath: `data\\global\\ui\\layouts\\${fileName}`,
+      bytes: fs.statSync(p1).size
+    });
+  }
+
+  console.log(`Generated ${writtenFiles.length} native D2R Resurrected UI layout JSON files:`);
+  for (const f of writtenFiles) {
+    console.log(`  - ${f.mpqPath} (${f.bytes.toLocaleString()} bytes)`);
+  }
+}
+
+main();
+
+================================================================================
+FILE: scripts/install-mpq.py
+ROLE: StormLib.dll을 이용해 yupgoolg.mpq 내부에 UI 레이아웃 JSON을 직접 패킹·검증하는 설치 스크립트
+RAW_URL: https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/scripts/install-mpq.py
+================================================================================
+import ctypes
+from ctypes import wintypes
+import hashlib
+import json
+import os
+import shutil
+
+STORMLIB_DLL = r"C:\Users\icand\Downloads\D2R-Yupgoolg-20261025\stormlib\x64\StormLib.dll"
+INSTALLED_MPQ = r"D:\Diablo II Resurrected\mods\yupgoolg\yupgoolg.mpq"
+BACKUP_MPQ = r"D:\Diablo II Resurrected\mods\yupgoolg\yupgoolg.before-d2rhud.mpq"
+PATCH_DIR = r"C:\Users\icand\.gemini\antigravity\scratch\D2R-HUD\mod\yupgoolg-patch\data\global\ui\layouts"
+STANDALONE_MPQ = r"C:\Users\icand\.gemini\antigravity\scratch\D2R-HUD\mod\d2rhud\d2rhud.mpq"
+RECEIPT_PATH = r"C:\Users\icand\.gemini\antigravity\scratch\D2R-HUD\mpq-install-receipt.json"
+
+MPQ_FILE_COMPRESS = 0x00000200
+MPQ_FILE_REPLACEEXISTING = 0x80000000
+MPQ_COMPRESSION_ZLIB = 0x02
+
+storm = ctypes.WinDLL(STORMLIB_DLL)
+
+storm.SFileOpenArchive.argtypes = [wintypes.LPCWSTR, wintypes.DWORD, wintypes.DWORD, ctypes.POINTER(wintypes.HANDLE)]
+storm.SFileOpenArchive.restype = wintypes.BOOL
+
+storm.SFileCloseArchive.argtypes = [wintypes.HANDLE]
+storm.SFileCloseArchive.restype = wintypes.BOOL
+
+storm.SFileFlushArchive.argtypes = [wintypes.HANDLE]
+storm.SFileFlushArchive.restype = wintypes.BOOL
+
+storm.SFileAddFileEx.argtypes = [
+    wintypes.HANDLE,
+    wintypes.LPCWSTR,
+    wintypes.LPCSTR,
+    wintypes.DWORD,
+    wintypes.DWORD,
+    wintypes.DWORD,
+]
+storm.SFileAddFileEx.restype = wintypes.BOOL
+
+storm.SFileHasFile.argtypes = [wintypes.HANDLE, wintypes.LPCSTR]
+storm.SFileHasFile.restype = wintypes.BOOL
+
+storm.SFileOpenFileEx.argtypes = [
+    wintypes.HANDLE,
+    wintypes.LPCSTR,
+    wintypes.DWORD,
+    ctypes.POINTER(wintypes.HANDLE),
+]
+storm.SFileOpenFileEx.restype = wintypes.BOOL
+
+storm.SFileGetFileSize.argtypes = [wintypes.HANDLE, ctypes.POINTER(wintypes.DWORD)]
+storm.SFileGetFileSize.restype = wintypes.DWORD
+
+storm.SFileReadFile.argtypes = [
+    wintypes.HANDLE,
+    wintypes.LPVOID,
+    wintypes.DWORD,
+    ctypes.POINTER(wintypes.DWORD),
+    wintypes.LPVOID,
+]
+storm.SFileReadFile.restype = wintypes.BOOL
+
+storm.SFileCloseFile.argtypes = [wintypes.HANDLE]
+storm.SFileCloseFile.restype = wintypes.BOOL
+
+
+def sha256_file(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        while chunk := f.read(1024 * 1024):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def read_mpq_file(hMpq, archived_name):
+    hFile = wintypes.HANDLE()
+    if not storm.SFileOpenFileEx(hMpq, archived_name.encode("utf-8"), 0, ctypes.byref(hFile)):
+        raise RuntimeError(f"Failed to open {archived_name} in MPQ")
+    try:
+        high = wintypes.DWORD(0)
+        size = storm.SFileGetFileSize(hFile, ctypes.byref(high))
+        buf = ctypes.create_string_buffer(size)
+        read_bytes = wintypes.DWORD(0)
+        if not storm.SFileReadFile(hFile, buf, size, ctypes.byref(read_bytes), None):
+            raise RuntimeError(f"Failed to read {archived_name} in MPQ")
+        return buf.raw[: read_bytes.value]
+    finally:
+        storm.SFileCloseFile(hFile)
+
+
+def main():
+    if not os.path.exists(BACKUP_MPQ):
+        shutil.copy2(INSTALLED_MPQ, BACKUP_MPQ)
+        print(f"Created backup MPQ: {BACKUP_MPQ}")
+
+    before_sha = sha256_file(INSTALLED_MPQ)
+
+    hMpq = wintypes.HANDLE()
+    if not storm.SFileOpenArchive(INSTALLED_MPQ, 0, 0, ctypes.byref(hMpq)):
+        raise RuntimeError(f"Failed to open MPQ archive: {INSTALLED_MPQ}")
+
+    injected = []
+    try:
+        for fname in sorted(os.listdir(PATCH_DIR)):
+            if not fname.endswith(".json"):
+                continue
+            disk_path = os.path.join(PATCH_DIR, fname)
+            mpq_path = f"data\\global\\ui\\layouts\\{fname}"
+            flags = MPQ_FILE_COMPRESS | MPQ_FILE_REPLACEEXISTING
+            ok = storm.SFileAddFileEx(
+                hMpq,
+                disk_path,
+                mpq_path.encode("utf-8"),
+                flags,
+                MPQ_COMPRESSION_ZLIB,
+                MPQ_COMPRESSION_ZLIB,
+            )
+            if not ok:
+                err = ctypes.GetLastError()
+                raise RuntimeError(f"SFileAddFileEx failed for {mpq_path} (WinError {err})")
+            injected.append((disk_path, mpq_path))
+
+        for restore_name in ("helppanelhd.json", "characterstatspanelhd.json"):
+            if not os.path.exists(os.path.join(PATCH_DIR, restore_name)):
+                orig_file = os.path.join(
+                    r"C:\Users\icand\Downloads\D2R-Yupgoolg-20261025\arrow\merged\mods\yupgoolg\yupgoolg.mpq\data\global\ui\layouts",
+                    restore_name,
+                )
+                if os.path.exists(orig_file):
+                    storm.SFileAddFileEx(
+                        hMpq,
+                        orig_file,
+                        f"data\\global\\ui\\layouts\\{restore_name}".encode("utf-8"),
+                        MPQ_FILE_COMPRESS | MPQ_FILE_REPLACEEXISTING,
+                        MPQ_COMPRESSION_ZLIB,
+                        MPQ_COMPRESSION_ZLIB,
+                    )
+
+        storm.SFileFlushArchive(hMpq)
+    finally:
+        storm.SFileCloseArchive(hMpq)
+
+    # Re-open in read-only mode (0x100 = MPQ_OPEN_READ_ONLY) and verify every file
+    hVerify = wintypes.HANDLE()
+    if not storm.SFileOpenArchive(INSTALLED_MPQ, 0, 0x00000100, ctypes.byref(hVerify)):
+        raise RuntimeError("Failed to reopen MPQ for verification")
+
+    verified = []
+    try:
+        for disk_path, mpq_path in injected:
+            has = bool(storm.SFileHasFile(hVerify, mpq_path.encode("utf-8")))
+            raw_mpq = read_mpq_file(hVerify, mpq_path)
+            with open(disk_path, "rb") as f:
+                raw_disk = f.read()
+            parsed = json.loads(raw_mpq.decode("utf-8"))
+            match = raw_mpq == raw_disk
+            if not (has and match):
+                raise RuntimeError(f"Verification mismatch for {mpq_path}")
+            verified.append(
+                {
+                    "mpqPath": mpq_path,
+                    "panelType": parsed.get("type"),
+                    "panelName": parsed.get("name"),
+                    "bytes": len(raw_mpq),
+                    "sha256": hashlib.sha256(raw_mpq).hexdigest(),
+                    "verifiedInMpq": True,
+                }
+            )
+    finally:
+        storm.SFileCloseArchive(hVerify)
+
+    after_sha = sha256_file(INSTALLED_MPQ)
+    receipt = {
+        "installedMpqPath": INSTALLED_MPQ,
+        "backupMpqPath": BACKUP_MPQ,
+        "beforeSha256": before_sha,
+        "afterSha256": after_sha,
+        "totalInjectedFiles": len(verified),
+        "allVerifiedByteExact": True,
+        "files": verified,
+    }
+    with open(RECEIPT_PATH, "w", encoding="utf-8") as f:
+        json.dump(receipt, f, ensure_ascii=False, indent=2)
+
+    print(f"Successfully injected and verified {len(verified)} native UI layouts into {INSTALLED_MPQ}")
+    print(f"MPQ SHA256: {before_sha} -> {after_sha}")
+
+
+if __name__ == "__main__":
+    main()
+
+================================================================================
+FILE: scripts/verify-ingame-runtime.py
+ROLE: D2R.exe 프로세스 구동 및 MPQ 마운트·레이아웃 그래프 무결성 검증 스크립트
+RAW_URL: https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/scripts/verify-ingame-runtime.py
+================================================================================
+import ctypes
+from ctypes import wintypes
+import datetime
+import hashlib
+import json
+import os
+import subprocess
+import sys
+import time
+
+sys.path.insert(0, r"C:\Users\icand\Downloads\D2R-Yupgoolg-20261025\process-reader")
+import psutil
+
+D2R_DIR = r"D:\Diablo II Resurrected"
+D2R_EXE = os.path.join(D2R_DIR, "D2R.exe")
+BLZ_LOG = os.path.join(D2R_DIR, "blz-log.txt")
+INSTALLED_MPQ = r"D:\Diablo II Resurrected\mods\yupgoolg\yupgoolg.mpq"
+STORMLIB_DLL = r"C:\Users\icand\Downloads\D2R-Yupgoolg-20261025\stormlib\x64\StormLib.dll"
+RECEIPT_OUT = r"C:\Users\icand\.gemini\antigravity\scratch\D2R-HUD\ingame-verification-receipt.json"
+INSTALL_RECEIPT = r"C:\Users\icand\.gemini\antigravity\scratch\D2R-HUD\mpq-install-receipt.json"
+
+
+def sha256_file(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        while chunk := f.read(1024 * 1024):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def verify_mpq_graph_and_links():
+    storm = ctypes.WinDLL(STORMLIB_DLL)
+    storm.SFileOpenArchive.argtypes = [wintypes.LPCWSTR, wintypes.DWORD, wintypes.DWORD, ctypes.POINTER(wintypes.HANDLE)]
+    storm.SFileOpenArchive.restype = wintypes.BOOL
+    storm.SFileCloseArchive.argtypes = [wintypes.HANDLE]
+    storm.SFileCloseArchive.restype = wintypes.BOOL
+    storm.SFileOpenFileEx.argtypes = [wintypes.HANDLE, wintypes.LPCSTR, wintypes.DWORD, ctypes.POINTER(wintypes.HANDLE)]
+    storm.SFileOpenFileEx.restype = wintypes.BOOL
+    storm.SFileGetFileSize.argtypes = [wintypes.HANDLE, ctypes.POINTER(wintypes.DWORD)]
+    storm.SFileGetFileSize.restype = wintypes.DWORD
+    storm.SFileReadFile.argtypes = [wintypes.HANDLE, wintypes.LPVOID, wintypes.DWORD, ctypes.POINTER(wintypes.DWORD), wintypes.LPVOID]
+    storm.SFileReadFile.restype = wintypes.BOOL
+    storm.SFileCloseFile.argtypes = [wintypes.HANDLE]
+    storm.SFileCloseFile.restype = wintypes.BOOL
+
+    def read_json_in_mpq(hMpq, rel):
+        hFile = wintypes.HANDLE()
+        if not storm.SFileOpenFileEx(hMpq, rel.encode("utf-8"), 0, ctypes.byref(hFile)):
+            raise RuntimeError(f"Missing in MPQ: {rel}")
+        try:
+            high = wintypes.DWORD(0)
+            sz = storm.SFileGetFileSize(hFile, ctypes.byref(high))
+            buf = ctypes.create_string_buffer(sz)
+            rd = wintypes.DWORD(0)
+            storm.SFileReadFile(hFile, buf, sz, ctypes.byref(rd), None)
+            return json.loads(buf.raw[: rd.value].decode("utf-8"))
+        finally:
+            storm.SFileCloseFile(hFile)
+
+    hMpq = wintypes.HANDLE()
+    if not storm.SFileOpenArchive(INSTALLED_MPQ, 0, 0x00000100, ctypes.byref(hMpq)):
+        raise RuntimeError("Cannot open yupgoolg.mpq")
+
+    try:
+        # 1. Verify entry points trigger PanelManager:OpenPanel:D2RHudMainPanel / D2RHudTrackerPanel
+        entry_checks = {}
+        for entry_file in [
+            "hudpanelhd.json",
+            "mainmenubuttonribbonhd.json",
+            "pauselayouthd.json",
+            "playerinventoryexpansionlayouthd.json",
+            "horadriccubelayouthd.json",
+        ]:
+            obj = read_json_in_mpq(hMpq, f"data\\global\\ui\\layouts\\{entry_file}")
+            raw_str = json.dumps(obj, ensure_ascii=False)
+            opens_main = "PanelManager:OpenPanel:D2RHudMainPanel" in raw_str
+            opens_tracker = "PanelManager:OpenPanel:D2RHudTrackerPanel" in raw_str
+            entry_checks[entry_file] = {
+                "opensD2RHudMainPanel": opens_main,
+                "opensD2RHudTrackerPanel": opens_tracker,
+                "valid": opens_main or opens_tracker,
+            }
+
+        # 2. Verify D2RHudMainPanelhd.json and all 7 sub-panels
+        main_panel = read_json_in_mpq(hMpq, "data\\global\\ui\\layouts\\D2RHudMainPanelhd.json")
+        tabs_widget = next(c for c in main_panel["children"] if c["name"] == "OptionsTabs")
+        tab_messages = tabs_widget["fields"]["tabMessages"]
+        main_subpanels = []
+        for msg in tab_messages:
+            sub_name = msg.split(":")[-1]
+            sub_rel = f"data\\global\\ui\\layouts\\{sub_name}hd.json"
+            sub_obj = read_json_in_mpq(hMpq, sub_rel)
+            table_rows = (
+                sub_obj["children"][1]["children"][0]["children"]
+                if len(sub_obj.get("children", [])) > 1
+                else []
+            )
+            main_subpanels.append(
+                {
+                    "subPanelName": sub_name,
+                    "mpqPath": sub_rel,
+                    "type": sub_obj.get("type"),
+                    "tableRowCount": len(table_rows),
+                }
+            )
+
+        # 3. Verify D2RHudTrackerPanelhd.json and all 7 sub-panels
+        tracker_panel = read_json_in_mpq(hMpq, "data\\global\\ui\\layouts\\D2RHudTrackerPanelhd.json")
+        tracker_tabs = next(c for c in tracker_panel["children"] if c["name"] == "OptionsTabs")
+        tracker_subpanels = []
+        for msg in tracker_tabs["fields"]["tabMessages"]:
+            sub_name = msg.split(":")[-1]
+            sub_rel = f"data\\global\\ui\\layouts\\{sub_name}hd.json"
+            sub_obj = read_json_in_mpq(hMpq, sub_rel)
+            table_rows = (
+                sub_obj["children"][1]["children"][0]["children"]
+                if len(sub_obj.get("children", [])) > 1
+                else []
+            )
+            tracker_subpanels.append(
+                {
+                    "subPanelName": sub_name,
+                    "mpqPath": sub_rel,
+                    "type": sub_obj.get("type"),
+                    "tableRowCount": len(table_rows),
+                }
+            )
+
+        return {
+            "entryPointChecks": entry_checks,
+            "mainEncyclopediaSubPanels": main_subpanels,
+            "compactTrackerSubPanels": tracker_subpanels,
+        }
+    finally:
+        storm.SFileCloseArchive(hMpq)
+
+
+def main():
+    graph_verification = verify_mpq_graph_and_links()
+
+    # Launch D2R.exe -mod yupgoolg -txt directly and monitor runtime
+    proc = subprocess.Popen(
+        [D2R_EXE, "-mod", "yupgoolg", "-txt"],
+        cwd=D2R_DIR,
+    )
+    print(f"Launched D2R.exe (PID={proc.pid}) with args: -mod yupgoolg -txt")
+
+    samples = []
+    opened_mod_files = set()
+    max_rss = 0
+
+    for i in range(16):
+        time.sleep(1.0)
+        for p in psutil.process_iter(["pid", "name", "cmdline", "memory_info"]):
+            if (p.info.get("name") or "").lower() == "d2r.exe":
+                rss = p.info["memory_info"].rss if p.info.get("memory_info") else 0
+                if rss > max_rss:
+                    max_rss = rss
+                try:
+                    for of in p.open_files():
+                        if "mods" in of.path.lower() or "yupgoolg" in of.path.lower() or "d2rhud" in of.path.lower():
+                            opened_mod_files.add(of.path)
+                except Exception:
+                    pass
+                samples.append(
+                    {
+                        "second": i + 1,
+                        "pid": p.info["pid"],
+                        "cmdline": p.info.get("cmdline"),
+                        "rssMB": round(rss / (1024 * 1024), 2),
+                    }
+                )
+
+    blz_log_lines = []
+    ui_parse_errors = []
+    if os.path.exists(BLZ_LOG):
+        with open(BLZ_LOG, "r", encoding="utf-8", errors="replace") as f:
+            blz_log_lines = [line.strip() for line in f.readlines() if line.strip()]
+        for line in blz_log_lines:
+            low = line.lower()
+            if ("error" in low or "fail" in low or "invalid" in low) and ("json" in low or "layout" in low or "d2rhud" in low or "panel" in low):
+                ui_parse_errors.append(line)
+
+    with open(INSTALL_RECEIPT, "r", encoding="utf-8") as f:
+        install_data = json.load(f)
+
+    # Cleanly stop the test game instance after collecting runtime evidence
+    for p in psutil.process_iter(["pid", "name"]):
+        if (p.info.get("name") or "").lower() == "d2r.exe":
+            try:
+                p.terminate()
+            except Exception:
+                pass
+
+    receipt = {
+        "verifiedAt": datetime.datetime.now(datetime.timezone.utc).astimezone().isoformat(),
+        "gameExecutable": D2R_EXE,
+        "launchCommand": f'"{D2R_EXE}" -mod yupgoolg -txt',
+        "installedModMpq": INSTALLED_MPQ,
+        "installedModMpqSha256": sha256_file(INSTALLED_MPQ),
+        "standaloneModDir": r"D:\Diablo II Resurrected\mods\d2rhud\d2rhud.mpq",
+        "runtimeVerification": {
+            "launchedPid": proc.pid,
+            "peakWorkingSetMB": round(max_rss / (1024 * 1024), 2),
+            "openedModFilesByD2R": sorted(list(opened_mod_files)),
+            "processSamplesCount": len(samples),
+            "lastSample": samples[-1] if samples else None,
+            "blzLogTail": blz_log_lines[-12:],
+            "uiLayoutParseErrors": ui_parse_errors,
+        },
+        "uiPanelGraphVerification": graph_verification,
+        "injectedMpqFilesSummary": {
+            "totalFiles": install_data["totalInjectedFiles"],
+            "allVerifiedByteExact": install_data["allVerifiedByteExact"],
+        },
+    }
+
+    with open(RECEIPT_OUT, "w", encoding="utf-8") as f:
+        json.dump(receipt, f, ensure_ascii=False, indent=2)
+
+    print(f"Peak D2R.exe RSS: {receipt['runtimeVerification']['peakWorkingSetMB']} MB")
+    print(f"Opened mod files by D2R.exe: {receipt['runtimeVerification']['openedModFilesByD2R']}")
+    print(f"UI layout parse errors: {len(ui_parse_errors)}")
+    print(f"Saved live verification receipt to: {RECEIPT_OUT}")
+
+
+if __name__ == "__main__":
+    main()
+
+================================================================================
+FILE: scripts/github-ai-sync.cjs
+ROLE: GitHub 원클릭 저장/가져오기 및 AI 컨텍스트 번들(llms.txt / llms-full.txt) 생성기
+RAW_URL: https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/scripts/github-ai-sync.cjs
+================================================================================
+#!/usr/bin/env node
+/**
+ * 디아2-인게임-내비게이터 (D2R-HUD) — GitHub & AI Sync Utility
+ *
+ * 1. AI 친화적 컨텍스트 번들 자동 생성:
+ *    - llms.txt          : 프로젝트 아키텍처 요약 + 모든 핵심 파일 Raw URL 매핑 (외부 AI가 URL 1개로 프로젝트 파악)
+ *    - llms-full.txt     : 핵심 소스 코드 전체를 단일 텍스트로 병합한 번들 (ChatGPT/Claude/Gemini 등에 통째로 전달 가능)
+ *    - ai-repo-index.json: 파일별 SHA256, 크기, 역할, GitHub Raw URL을 담은 머신 리더블 매니페스트
+ *
+ * 2. 내 GitHub 저장소 원클릭 저장/가져오기 CLI:
+ *    - node scripts/github-ai-sync.cjs status        : 로컬·원격(GitHub API) 동기화 상태 및 최신 커밋 검증
+ *    - node scripts/github-ai-sync.cjs bundle        : AI 컨텍스트 파일(llms.txt, llms-full.txt, ai-repo-index.json) 최신화
+ *    - node scripts/github-ai-sync.cjs save [메시지] : AI 번들 자동 갱신 + git add/commit/push + 원격 반영 검증까지 원클릭 실행
+ *    - node scripts/github-ai-sync.cjs pull          : 원격 GitHub 저장소 최신 변경사항 가져오기 (git pull --rebase)
+ *    - node scripts/github-ai-sync.cjs repos         : 내 GitHub 계정(icandoit122118-del)의 모든 저장소 목록·URL 조회
+ *    - node scripts/github-ai-sync.cjs fetch [파일]  : Git 없이도 GitHub Raw API에서 핵심 소스 또는 전체 AI 번들을 즉시 다운로드
+ */
+
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+const https = require('https');
+const { execSync, spawnSync } = require('child_process');
+
+const ROOT = path.resolve(__dirname, '..');
+const OWNER = 'icandoit122118-del';
+const REPO = 'D2R-HUD';
+const BRANCH = 'main';
+const RAW_BASE = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}`;
+const REPO_URL = `https://github.com/${OWNER}/${REPO}`;
+
+// 핵심 소스 및 데이터 파일 목록 (AI가 프로젝트를 100% 이해하고 수정하기 위해 필요한 파일들)
+const CORE_FILES = [
+  {
+    relPath: 'README.md',
+    role: '프로젝트 개요, 인게임 캡처, 설치 및 실행 가이드',
+    includeInFullBundle: true
+  },
+  {
+    relPath: 'package.json',
+    role: '패키지 메타데이터 및 NPM 실행 스크립트 정의',
+    includeInFullBundle: true
+  },
+  {
+    relPath: 'scripts/build-ingame-mod.cjs',
+    role: '디아2 레저렉션 네이티브 HD UI 레이아웃 JSON 72종 컴파일러 (핵심 생성기)',
+    includeInFullBundle: true
+  },
+  {
+    relPath: 'scripts/install-mpq.py',
+    role: 'StormLib.dll을 이용해 yupgoolg.mpq 내부에 UI 레이아웃 JSON을 직접 패킹·검증하는 설치 스크립트',
+    includeInFullBundle: true
+  },
+  {
+    relPath: 'scripts/verify-ingame-runtime.py',
+    role: 'D2R.exe 프로세스 구동 및 MPQ 마운트·레이아웃 그래프 무결성 검증 스크립트',
+    includeInFullBundle: true
+  },
+  {
+    relPath: 'scripts/github-ai-sync.cjs',
+    role: 'GitHub 원클릭 저장/가져오기 및 AI 컨텍스트 번들(llms.txt / llms-full.txt) 생성기',
+    includeInFullBundle: true
+  },
+  {
+    relPath: 'web/src/data/quest_timeline.json',
+    role: '1막~5막 필수 퀘스트, 보상, 핵심 동선, 길찾기 팁 데이터',
+    includeInFullBundle: false
+  },
+  {
+    relPath: 'web/src/data/runewords.json',
+    role: '룬워드 98종(2~6홈 및 신규 악마술사 룬워드 포함) 재료·요구레벨·완성 옵션 데이터',
+    includeInFullBundle: false
+  },
+  {
+    relPath: 'web/src/data/cubing.json',
+    role: '호라드림의 함(큐브) 필수 조합법 60종 데이터',
+    includeInFullBundle: false
+  },
+  {
+    relPath: 'web/src/data/warlock_guide.json',
+    role: '초반 맨땅 스타터 육성 가이드 데이터',
+    includeInFullBundle: false
+  }
+];
+
+function sha256File(filePath) {
+  const buf = fs.readFileSync(filePath);
+  return crypto.createHash('sha256').update(buf).digest('hex');
+}
+
+function getGitToken() {
+  try {
+    const res = spawnSync('git', ['credential', 'fill'], {
+      input: 'protocol=https\nhost=github.com\n\n',
+      encoding: 'utf8'
+    });
+    if (res.stdout) {
+      const m = res.stdout.match(/^password=(.+)$/m);
+      if (m) return m[1].trim();
+    }
+  } catch (_) {}
+  return process.env.GH_TOKEN || process.env.GITHUB_TOKEN || null;
+}
+
+function httpsJson(url, method = 'GET', token = null, bodyObj = null) {
+  return new Promise((resolve, reject) => {
+    const parsed = new URL(url);
+    const headers = {
+      'User-Agent': 'D2R-Ingame-Navigator-AI-Sync/1.4',
+      Accept: 'application/vnd.github+json'
+    };
+    if (token) headers.Authorization = `Bearer ${token}`;
+    let payload = null;
+    if (bodyObj) {
+      payload = Buffer.from(JSON.stringify(bodyObj), 'utf8');
+      headers['Content-Type'] = 'application/json; charset=utf-8';
+      headers['Content-Length'] = payload.length;
+    }
+
+    const req = https.request(
+      {
+        hostname: parsed.hostname,
+        path: parsed.pathname + parsed.search,
+        method,
+        headers
+      },
+      (res) => {
+        const chunks = [];
+        res.on('data', (c) => chunks.push(c));
+        res.on('end', () => {
+          const text = Buffer.concat(chunks).toString('utf8');
+          try {
+            resolve({ status: res.statusCode, data: JSON.parse(text) });
+          } catch (_) {
+            resolve({ status: res.statusCode, data: text });
+          }
+        });
+      }
+    );
+    req.on('error', reject);
+    if (payload) req.write(payload);
+    req.end();
+  });
+}
+
+function generateAiBundles() {
+  const generatedLayoutsDir = path.join(ROOT, 'mod', 'yupgoolg-patch', 'data', 'global', 'ui', 'layouts');
+  const layoutFiles = fs.existsSync(generatedLayoutsDir)
+    ? fs.readdirSync(generatedLayoutsDir).filter((f) => f.endsWith('.json')).sort()
+    : [];
+
+  const coreEntries = [];
+  for (const item of CORE_FILES) {
+    const abs = path.join(ROOT, item.relPath);
+    if (!fs.existsSync(abs)) continue;
+    const stat = fs.statSync(abs);
+    coreEntries.push({
+      path: item.relPath,
+      role: item.role,
+      bytes: stat.size,
+      sha256: sha256File(abs),
+      rawUrl: `${RAW_BASE}/${item.relPath}`
+    });
+  }
+
+  // 1. ai-repo-index.json
+  const aiIndex = {
+    project: '디아2-인게임-내비게이터 (D2R-HUD v1.4)',
+    repository: REPO_URL,
+    owner: OWNER,
+    repo: REPO,
+    branch: BRANCH,
+    rawBaseUrl: RAW_BASE,
+    aiEntryPoints: {
+      llmsSummaryUrl: `${RAW_BASE}/llms.txt`,
+      llmsFullSourceUrl: `${RAW_BASE}/llms-full.txt`,
+      aiRepoIndexUrl: `${RAW_BASE}/ai-repo-index.json`
+    },
+    architecture: {
+      generatorScript: 'scripts/build-ingame-mod.cjs',
+      mpqInstallerScript: 'scripts/install-mpq.py',
+      targetMpqPath: 'D:\\Diablo II Resurrected\\mods\\yupgoolg\\yupgoolg.mpq',
+      generatedLayoutCount: layoutFiles.length
+    },
+    coreFiles: coreEntries,
+    generatedLayouts: layoutFiles.map((f) => ({
+      fileName: f,
+      mpqInternalPath: `data\\global\\ui\\layouts\\${f}`,
+      rawUrl: `${RAW_BASE}/mod/yupgoolg-patch/data/global/ui/layouts/${f}`
+    }))
+  };
+
+  fs.writeFileSync(path.join(ROOT, 'ai-repo-index.json'), JSON.stringify(aiIndex, null, 2) + '\n', 'utf8');
+
+  // 2. llms.txt (표준 LLM 진입점 파일)
+  const llmsTxt = [
+    '# 디아2-인게임-내비게이터 (D2R-HUD v1.4)',
+    '',
+    '> 외부 오버레이 없이 디아블로 II: 레저렉션(`D2R.exe`) 자체 UI 엔진(`data/global/ui/layouts/*hd.json`)에서 구동되는 순정 인게임 퀘스트·길찾기 내비게이터 & 호라드림 룬워드·큐빙 대사전 모드입니다.',
+    '',
+    '## AI 에이전트 빠른 접근 URL (Single-URL Fetch)',
+    `- 전체 핵심 소스 통합 번들 (한 번에 읽기): ${RAW_BASE}/llms-full.txt`,
+    `- 머신 리더블 JSON 인덱스 (SHA256·Raw URL 목록): ${RAW_BASE}/ai-repo-index.json`,
+    `- GitHub 저장소 주소: ${REPO_URL}`,
+    '',
+    '## 핵심 소스 및 데이터 파일 (Raw URLs)',
+    ...coreEntries.map((e) => `- [${e.path}](${e.rawUrl}) (${e.bytes.toLocaleString()} bytes): ${e.role}`),
+    '',
+    '## 빌드·MPQ 패킹·GitHub 동기화 명령어',
+    '- UI 레이아웃 72종 빌드: `npm run mod:build` (`node scripts/build-ingame-mod.cjs`)',
+    '- 실게임 MPQ 주입 및 검증: `npm run mod:install` (`python scripts/install-mpq.py`)',
+    '- GitHub 원클릭 저장(번들 갱신 + 커밋 + 푸시): `npm run github:save` (`node scripts/github-ai-sync.cjs save`)',
+    '- GitHub 최신 소스 가져오기: `npm run github:pull` (`node scripts/github-ai-sync.cjs pull`)',
+    '- GitHub 동기화 상태 확인: `npm run github:status` (`node scripts/github-ai-sync.cjs status`)',
+    ''
+  ].join('\n');
+
+  fs.writeFileSync(path.join(ROOT, 'llms.txt'), llmsTxt, 'utf8');
+
+  // 3. llms-full.txt (핵심 코드 전체를 하나로 합친 AI 컨텍스트 번들)
+  const fullChunks = [
+    '# 디아2-인게임-내비게이터 (D2R-HUD v1.4) — Full AI Source Bundle',
+    `Repository: ${REPO_URL}`,
+    `Raw Bundle URL: ${RAW_BASE}/llms-full.txt`,
+    ''
+  ];
+
+  for (const item of CORE_FILES) {
+    if (!item.includeInFullBundle) continue;
+    const abs = path.join(ROOT, item.relPath);
+    if (!fs.existsSync(abs)) continue;
+    const content = fs.readFileSync(abs, 'utf8');
+    fullChunks.push('================================================================================');
+    fullChunks.push(`FILE: ${item.relPath}`);
+    fullChunks.push(`ROLE: ${item.role}`);
+    fullChunks.push(`RAW_URL: ${RAW_BASE}/${item.relPath}`);
+    fullChunks.push('================================================================================');
+    fullChunks.push(content.trimEnd());
+    fullChunks.push('');
+  }
+
+  fs.writeFileSync(path.join(ROOT, 'llms-full.txt'), fullChunks.join('\n'), 'utf8');
+
+  console.log('[AI Bundle] 생성 완료:');
+  console.log(`  - llms.txt          (${fs.statSync(path.join(ROOT, 'llms.txt')).size.toLocaleString()} bytes)`);
+  console.log(`  - llms-full.txt     (${fs.statSync(path.join(ROOT, 'llms-full.txt')).size.toLocaleString()} bytes)`);
+  console.log(`  - ai-repo-index.json (${fs.statSync(path.join(ROOT, 'ai-repo-index.json')).size.toLocaleString()} bytes)`);
+}
+
+async function cmdStatus() {
+  const localSha = execSync('git rev-parse HEAD', { cwd: ROOT, encoding: 'utf8' }).trim();
+  const dirty = execSync('git status -s', { cwd: ROOT, encoding: 'utf8' }).trim();
+  const token = getGitToken();
+
+  const repoResp = await httpsJson(`https://api.github.com/repos/${OWNER}/${REPO}`, 'GET', token);
+  const commitResp = await httpsJson(`https://api.github.com/repos/${OWNER}/${REPO}/commits/${BRANCH}`, 'GET', token);
+
+  const remoteSha = commitResp.data && commitResp.data.sha ? commitResp.data.sha : 'unknown';
+  const isSynced = localSha === remoteSha && dirty.length === 0;
+
+  console.log('=== GitHub 저장소 동기화 상태 ===');
+  console.log(`저장소 URL   : ${REPO_URL}`);
+  console.log(`프로젝트 설명: ${repoResp.data.description || '(없음)'}`);
+  console.log(`로컬 HEAD    : ${localSha}`);
+  console.log(`원격(GitHub) : ${remoteSha}`);
+  console.log(`최근 커밋    : ${commitResp.data?.commit?.message || ''}`);
+  console.log(`미커밋 파일  : ${dirty ? dirty.split('\n').length + '개 변경됨' : '없음 (Clean)'}`);
+  console.log(`동기화 판정  : ${isSynced ? '✅ 완벽 동기화됨 (100% 일치)' : '⚠️ 로컬 변경사항 있음 또는 푸시 필요'}`);
+}
+
+async function cmdSave(customMsg) {
+  generateAiBundles();
+  execSync('git add -A', { cwd: ROOT, stdio: 'inherit' });
+  const status = execSync('git status -s', { cwd: ROOT, encoding: 'utf8' }).trim();
+  if (!status) {
+    console.log('[GitHub Save] 변경된 파일이 없습니다. 이미 최신 상태입니다.');
+    await cmdStatus();
+    return;
+  }
+  const msg = customMsg || `chore(sync): update source & AI context bundle (${new Date().toISOString().slice(0, 19).replace('T', ' ')})`;
+  spawnSync('git', ['commit', '-m', msg], { cwd: ROOT, stdio: 'inherit' });
+  spawnSync('git', ['push', 'origin', BRANCH], { cwd: ROOT, stdio: 'inherit' });
+  await cmdStatus();
+}
+
+async function cmdPull() {
+  console.log('[GitHub Pull] 원격 저장소에서 최신 소스를 가져옵니다...');
+  spawnSync('git', ['pull', '--rebase', 'origin', BRANCH], { cwd: ROOT, stdio: 'inherit' });
+  await cmdStatus();
+}
+
+async function cmdRepos() {
+  const token = getGitToken();
+  const url = token
+    ? 'https://api.github.com/user/repos?sort=updated&per_page=30'
+    : `https://api.github.com/users/${OWNER}/repos?sort=updated&per_page=30`;
+  const resp = await httpsJson(url, 'GET', token);
+  if (!Array.isArray(resp.data)) {
+    console.error('저장소 목록을 가져오지 못했습니다:', resp.data);
+    return;
+  }
+  console.log(`=== 내 GitHub 저장소 목록 (${OWNER}, 총 ${resp.data.length}개) ===`);
+  for (const r of resp.data) {
+    console.log(`- ${r.full_name} (${r.private ? 'Private' : 'Public'})`);
+    console.log(`  설명: ${r.description || '(없음)'}`);
+    console.log(`  URL : ${r.html_url}`);
+    console.log(`  클론: git clone ${r.clone_url}`);
+  }
+}
+
+async function cmdFetchRaw(targetRelPath = 'llms-full.txt') {
+  const url = `${RAW_BASE}/${targetRelPath}`;
+  const resp = await httpsJson(url, 'GET', getGitToken());
+  const outPath = path.join(ROOT, 'fetched-' + path.basename(targetRelPath));
+  const content = typeof resp.data === 'string' ? resp.data : JSON.stringify(resp.data, null, 2);
+  fs.writeFileSync(outPath, content, 'utf8');
+  console.log(`[GitHub Fetch] ${url} -> ${outPath} (${Buffer.byteLength(content, 'utf8').toLocaleString()} bytes) 저장 완료`);
+}
+
+async function main() {
+  const action = (process.argv[2] || 'status').toLowerCase();
+  const arg = process.argv.slice(3).join(' ').trim();
+
+  if (action === 'bundle') {
+    generateAiBundles();
+  } else if (action === 'status') {
+    await cmdStatus();
+  } else if (action === 'save' || action === 'push') {
+    await cmdSave(arg);
+  } else if (action === 'pull') {
+    await cmdPull();
+  } else if (action === 'repos' || action === 'list') {
+    await cmdRepos();
+  } else if (action === 'fetch') {
+    await cmdFetchRaw(arg || 'llms-full.txt');
+  } else {
+    console.log('사용법: node scripts/github-ai-sync.cjs [status|bundle|save|pull|repos|fetch]');
+  }
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

@@ -1,0 +1,23 @@
+# 디아2-인게임-내비게이터 (D2R-HUD v1.4)
+
+> 외부 오버레이 없이 디아블로 II: 레저렉션(`D2R.exe`) 자체 UI 엔진(`data/global/ui/layouts/*hd.json`)에서 구동되는 순정 인게임 퀘스트·길찾기 내비게이터 & 호라드림 룬워드·큐빙 대사전 모드입니다.
+
+## AI 에이전트 빠른 접근 URL (Single-URL Fetch)
+- 전체 핵심 소스 통합 번들 (한 번에 읽기): https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/llms-full.txt
+- 머신 리더블 JSON 인덱스 (SHA256·Raw URL 목록): https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/ai-repo-index.json
+- GitHub 저장소 주소: https://github.com/icandoit122118-del/D2R-HUD
+
+## 핵심 소스 및 데이터 파일 (Raw URLs)
+- [README.md](https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/README.md) (4,409 bytes): 프로젝트 개요, 인게임 캡처, 설치 및 실행 가이드
+- [package.json](https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/package.json) (1,108 bytes): 패키지 메타데이터 및 NPM 실행 스크립트 정의
+- [scripts/build-ingame-mod.cjs](https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/scripts/build-ingame-mod.cjs) (75,636 bytes): 디아2 레저렉션 네이티브 HD UI 레이아웃 JSON 72종 컴파일러 (핵심 생성기)
+- [scripts/install-mpq.py](https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/scripts/install-mpq.py) (6,825 bytes): StormLib.dll을 이용해 yupgoolg.mpq 내부에 UI 레이아웃 JSON을 직접 패킹·검증하는 설치 스크립트
+- [scripts/verify-ingame-runtime.py](https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/scripts/verify-ingame-runtime.py) (9,513 bytes): D2R.exe 프로세스 구동 및 MPQ 마운트·레이아웃 그래프 무결성 검증 스크립트
+- [scripts/github-ai-sync.cjs](https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/scripts/github-ai-sync.cjs) (14,432 bytes): GitHub 원클릭 저장/가져오기 및 AI 컨텍스트 번들(llms.txt / llms-full.txt) 생성기
+
+## 빌드·MPQ 패킹·GitHub 동기화 명령어
+- UI 레이아웃 72종 빌드: `npm run mod:build` (`node scripts/build-ingame-mod.cjs`)
+- 실게임 MPQ 주입 및 검증: `npm run mod:install` (`python scripts/install-mpq.py`)
+- GitHub 원클릭 저장(번들 갱신 + 커밋 + 푸시): `npm run github:save` (`node scripts/github-ai-sync.cjs save`)
+- GitHub 최신 소스 가져오기: `npm run github:pull` (`node scripts/github-ai-sync.cjs pull`)
+- GitHub 동기화 상태 확인: `npm run github:status` (`node scripts/github-ai-sync.cjs status`)

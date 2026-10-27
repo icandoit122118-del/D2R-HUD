@@ -4,6 +4,13 @@
   "description": "디아2-인게임-내비게이터 — 디아블로 II: 레저렉션 인게임 퀘스트·길찾기 HUD & 호라드림 룬워드·큐빙 대사전",
   "main": "index.js",
   "scripts": {
+    "mod:build": "node scripts/build-ingame-mod.cjs",
+    "mod:install": "python scripts/install-mpq.py",
+    "github:status": "node scripts/github-ai-sync.cjs status",
+    "github:save": "node scripts/github-ai-sync.cjs save",
+    "github:pull": "node scripts/github-ai-sync.cjs pull",
+    "github:repos": "node scripts/github-ai-sync.cjs repos",
+    "ai:bundle": "node scripts/github-ai-sync.cjs bundle",
     "extract:assets": "node scripts/extract-d2r-assets.cjs",
     "web:dev": "npm run dev --prefix web",
     "web:build": "npm run build --prefix web",

@@ -34,9 +34,36 @@
 ## 3. 빌드 및 MPQ 설치 방법
 
 ```bash
-node scripts/build-ingame-mod.cjs
-python scripts/install-mpq.py
+npm run mod:build
+npm run mod:install
 ```
 
 - `D:\Diablo II Resurrected\mods\yupgoolg\yupgoolg.mpq` 내부에 72개 네이티브 UI 레이아웃 JSON 파일이 자동 패킹·검증됩니다.
 - 게임 실행 인자: `-mod yupgoolg -txt`
+
+---
+
+## 4. GitHub 원클릭 저장/가져오기 & AI 에이전트 빠른 접근
+
+### A. 내 GitHub 저장소 원클릭 동기화 (`github-sync.bat` 또는 `npm run`)
+- **원클릭 저장 (AI 번들 자동 갱신 + Commit + Push + 원격 검증)**:
+  ```bash
+  github-sync.bat save "수정 내역 메시지"
+  # 또는: npm run github:save
+  ```
+- **최신 소스 가져오기 (Pull)**:
+  ```bash
+  github-sync.bat pull
+  # 또는: npm run github:pull
+  ```
+- **저장소 동기화 상태 확인 및 내 전체 GitHub 저장소 목록 조회**:
+  ```bash
+  github-sync.bat status
+  github-sync.bat repos
+  ```
+
+### B. 외부 AI (ChatGPT / Claude / Gemini / Cursor 등) 단일 URL 소스 접근
+다른 AI나 에이전트에게 아래 URL 하나만 전달하면 저장소를 클론하지 않고도 프로젝트 구조와 전체 핵심 소스를 즉시 읽어 작업할 수 있습니다.
+- **요약 및 Raw URL 맵 (`llms.txt`)**: `https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/llms.txt`
+- **전체 핵심 소스 통합 번들 (`llms-full.txt`)**: `https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/llms-full.txt`
+- **머신 리더블 JSON 매니페스트 (`ai-repo-index.json`)**: `https://raw.githubusercontent.com/icandoit122118-del/D2R-HUD/main/ai-repo-index.json`
