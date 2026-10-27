@@ -4,10 +4,10 @@
   "fields": {
     "priority": 201,
     "rect": {
-      "x": 40,
-      "y": 178,
-      "width": 1280,
-      "height": 342
+      "x": 24,
+      "y": 108,
+      "width": 868,
+      "height": 366
     },
     "anchor": {
       "x": 0,
@@ -17,14 +17,151 @@
   },
   "children": [
     {
+      "type": "TextBoxWidget",
+      "name": "WindowSizeLabel",
+      "fields": {
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 115,
+          "height": 32
+        },
+        "text": "▶ 중형8줄",
+        "style": {
+          "fontColor": "$FontColorLightYellow",
+          "pointSize": "$SmallFontSize",
+          "alignment": {
+            "h": "left",
+            "v": "center"
+          },
+          "options": {
+            "lineWrap": false,
+            "newlineHandling": "standard",
+            "pipeCharacterBehavior": "handle"
+          },
+          "spacing": {
+            "leading": 1.12,
+            "kerning": 0.94
+          },
+          "dropShadow": {
+            "shadowColor": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 255
+            },
+            "offset": {
+              "x": 3,
+              "y": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeFoldBtn",
+      "fields": {
+        "rect": {
+          "x": 135,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "▲ 접기",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackFold",
+        "tooltipString": "글자 출력창 접기",
+        "textColor": "$FontColorLightYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeSmallBtn",
+      "fields": {
+        "rect": {
+          "x": 280,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "소형 4줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackMapS",
+        "tooltipString": "글자 출력창을 소형(4줄, 완전투명)으로 줄입니다.",
+        "textColor": "$FontColorLightTeal",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeMedBtn",
+      "fields": {
+        "rect": {
+          "x": 425,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "중형 8줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackMap",
+        "tooltipString": "글자 출력창을 기본 중형(8줄, 완전투명)으로 조절합니다.",
+        "textColor": "$FontColorGoldYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeLargeBtn",
+      "fields": {
+        "rect": {
+          "x": 570,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "대형 15줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackMapL",
+        "tooltipString": "글자 출력창을 대형(15줄, 완전투명)으로 넓힙니다.",
+        "textColor": "$FontColorWhite",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeTintToggleBtn",
+      "fields": {
+        "rect": {
+          "x": 715,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "반투명막",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackMapB",
+        "tooltipString": "배경 완전투명 / 28% 옅은 반투명막 전환",
+        "textColor": "$FontColorLightGray",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
       "type": "ImageWidget",
       "name": "ScrollBarBackground",
       "fields": {
         "rect": {
-          "x": -16,
-          "y": 0,
-          "width": 24,
-          "height": 332
+          "x": -14,
+          "y": 40,
+          "width": 22,
+          "height": 320
         },
         "anchor": {
           "x": 1
@@ -37,10 +174,10 @@
           "name": "ScrollController",
           "fields": {
             "rect": {
-              "x": -24,
-              "y": 24,
-              "width": 24,
-              "height": 284
+              "x": -22,
+              "y": 20,
+              "width": 22,
+              "height": 280
             },
             "anchor": {
               "x": 1
@@ -59,7 +196,12 @@
       "type": "ScrollViewWidget",
       "name": "ScrollView",
       "fields": {
-        "fitToParent": true,
+        "rect": {
+          "x": 4,
+          "y": 40,
+          "width": 830,
+          "height": 320
+        },
         "scrollControllerName": "ScrollController",
         "clipChildrenDraw": true
       },
@@ -70,14 +212,14 @@
           "fields": {
             "columns": [
               {
-                "width": 1230,
+                "width": 815,
                 "alignment": {
                   "h": "fit",
                   "v": "fit"
                 }
               }
             ],
-            "rowHeight": 46
+            "rowHeight": 38
           },
           "children": [
             {
@@ -103,10 +245,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -121,7 +274,7 @@
                   "name": "TrackText_1",
                   "fields": {
                     "fitToText": true,
-                    "text": "· [1막] 검은 습지 - 잊힌 탑 1~4층 (백작) → 입구 타일 진입 방향 기준",
+                    "text": "· [1막] 검은 습지 - 잊힌 탑 1~4층 (백작) → 입구 타일 진입 방향",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -135,10 +288,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -153,7 +317,7 @@
                   "name": "TrackText_2",
                   "fields": {
                     "fitToText": true,
-                    "text": "     왼쪽(시계방향 90도) 벽면을 따라 진행",
+                    "text": "    기준 왼쪽(시계방향 90도) 벽면을 따라 진행",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -167,10 +331,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -199,10 +374,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -217,7 +403,7 @@
                   "name": "TrackText_4",
                   "fields": {
                     "fitToText": true,
-                    "text": "     빠르게 다음 층 계단이 나옵니다.",
+                    "text": "    빠르게 다음 층 계단이 나옵니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -231,10 +417,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -249,7 +446,7 @@
                   "name": "TrackText_5",
                   "fields": {
                     "fitToText": true,
-                    "text": "· [1막] 지하 통로 1층 / 감옥 1~3층 → 입구 방향 기준 직진 지형에 출구,",
+                    "text": "· [1막] 지하 통로 1층 / 감옥 1~3층 → 입구 방향 기준 직진 지형에",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -263,10 +460,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -281,7 +489,7 @@
                   "name": "TrackText_6",
                   "fields": {
                     "fitToText": true,
-                    "text": "     좌측(시계방향)에 2층/웨이포인트",
+                    "text": "    출구, 좌측(시계방향)에 2층/웨이포인트",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -295,10 +503,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -327,10 +546,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -345,7 +575,7 @@
                   "name": "TrackText_8",
                   "fields": {
                     "fitToText": true,
-                    "text": "     배치됩니다.",
+                    "text": "    배치됩니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -359,10 +589,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -377,7 +618,7 @@
                   "name": "TrackText_9",
                   "fields": {
                     "fitToText": true,
-                    "text": "· [1막] 내부 회랑 - 지하 묘지 2층 → 3층 (안다리엘) → 지하 묘지 2층",
+                    "text": "· [1막] 내부 회랑 - 지하 묘지 2층 → 3층 (안다리엘) → 지하 묘지",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -391,10 +632,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -409,7 +661,7 @@
                   "name": "TrackText_10",
                   "fields": {
                     "fitToText": true,
-                    "text": "     웨이포인트(WP) 방 출구 기준 오른쪽(반시계방향 90도)",
+                    "text": "    2층 웨이포인트(WP) 방 출구 기준 오른쪽(반시계방향 90도)",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -423,10 +675,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -441,7 +704,7 @@
                   "name": "TrackText_11",
                   "fields": {
                     "fitToText": true,
-                    "text": "→ 2층 WP 방에서 빠져나오는 방향을 기준으로 우측(시계 반대방향) 모서리에 3층",
+                    "text": "→ 2층 WP 방에서 빠져나오는 방향을 기준으로 우측(시계 반대방향) 모서리에",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -455,10 +718,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -473,7 +747,7 @@
                   "name": "TrackText_12",
                   "fields": {
                     "fitToText": true,
-                    "text": "     계단이 위치합니다.",
+                    "text": "    3층 계단이 위치합니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -487,10 +761,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -519,10 +804,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -537,7 +833,7 @@
                   "name": "TrackText_14",
                   "fields": {
                     "fitToText": true,
-                    "text": "     오른쪽(반시계방향 90도) 벽면을 따라 이동",
+                    "text": "    오른쪽(반시계방향 90도) 벽면을 따라 이동",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -551,10 +847,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -569,7 +876,7 @@
                   "name": "TrackText_15",
                   "fields": {
                     "fitToText": true,
-                    "text": "→ 좁은 통로 지형이므로 입구에서 우측 벽만 계속 따라가면 2층·3층(왕들의 지팡이)",
+                    "text": "→ 좁은 통로 지형이므로 입구에서 우측 벽만 계속 따라가면 2층·3층(왕들의",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -583,10 +890,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -601,7 +919,7 @@
                   "name": "TrackText_16",
                   "fields": {
                     "fitToText": true,
-                    "text": "     계단이 바로 나옵니다.",
+                    "text": "    지팡이) 계단이 바로 나옵니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -615,10 +933,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -647,10 +976,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -665,7 +1005,7 @@
                   "name": "TrackText_18",
                   "fields": {
                     "fitToText": true,
-                    "text": "     왼쪽(시계방향 90도) 벽면을 따라 이동",
+                    "text": "    왼쪽(시계방향 90도) 벽면을 따라 이동",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -679,10 +1019,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -697,7 +1048,7 @@
                   "name": "TrackText_19",
                   "fields": {
                     "fitToText": true,
-                    "text": "→ 호라드림의 함(죽음의 전당 3층)과 독사의 목걸이(독사 사원 2층) 모두 입구 기준",
+                    "text": "→ 호라드림의 함(죽음의 전당 3층)과 독사의 목걸이(독사 사원 2층) 모두 입구",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -711,10 +1062,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -729,7 +1091,7 @@
                   "name": "TrackText_20",
                   "fields": {
                     "fitToText": true,
-                    "text": "     좌측 벽타기 공식이 적용됩니다.",
+                    "text": "    기준 좌측 벽타기 공식이 적용됩니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -743,10 +1105,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -761,7 +1134,7 @@
                   "name": "TrackText_21",
                   "fields": {
                     "fitToText": true,
-                    "text": "· [2막] 비전 성역 (소환술사 4방향) → 웨이포인트 기준 4갈래 중 막다른 끝 -",
+                    "text": "· [2막] 비전 성역 (소환술사 4방향) → 웨이포인트 기준 4갈래 중 막다른",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -775,10 +1148,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -793,7 +1177,7 @@
                   "name": "TrackText_22",
                   "fields": {
                     "fitToText": true,
-                    "text": "     포탈/계단 유무로 지형 판별",
+                    "text": "    끝 - 포탈/계단 유무로 지형 판별",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -807,10 +1191,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -825,7 +1220,7 @@
                   "name": "TrackText_23",
                   "fields": {
                     "fitToText": true,
-                    "text": "→ 소환술사 처치 후 호라드림 일지를 읽고 퀘스트(Q) 창의 문양과 일치하는 탈 라샤",
+                    "text": "→ 소환술사 처치 후 호라드림 일지를 읽고 퀘스트(Q) 창의 문양과 일치하는 탈",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -839,10 +1234,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -857,7 +1263,7 @@
                   "name": "TrackText_24",
                   "fields": {
                     "fitToText": true,
-                    "text": "     무덤을 확인하세요.",
+                    "text": "    라샤 무덤을 확인하세요.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -871,10 +1277,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -903,10 +1320,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -921,7 +1349,7 @@
                   "name": "TrackText_26",
                   "fields": {
                     "fitToText": true,
-                    "text": "     왼쪽(시계방향 90도) 벽면을 따라가면 지팡이 홈 방 등장",
+                    "text": "    왼쪽(시계방향 90도) 벽면을 따라가면 지팡이 홈 방 등장",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -935,10 +1363,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -953,7 +1392,7 @@
                   "name": "TrackText_27",
                   "fields": {
                     "fitToText": true,
-                    "text": "→ 7개 무덤의 문양 순서(원 → 반달 → 네모 → 별 → 아래세모 → 동그라미세모 →",
+                    "text": "→ 7개 무덤의 문양 순서(원 → 반달 → 네모 → 별 → 아래세모 →",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -967,10 +1406,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -985,7 +1435,7 @@
                   "name": "TrackText_28",
                   "fields": {
                     "fitToText": true,
-                    "text": "     위세모)는 항상 고정입니다.",
+                    "text": "    동그라미세모 → 위세모)는 항상 고정입니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -999,10 +1449,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1017,7 +1478,7 @@
                   "name": "TrackText_29",
                   "fields": {
                     "fitToText": true,
-                    "text": "· [3막] 증오의 억류지 2층 → 3층 (메피스토) → 증오 2층 입구 타일 기준",
+                    "text": "· [3막] 증오의 억류지 2층 → 3층 (메피스토) → 증오 2층 입구 타일",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -1031,10 +1492,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1049,7 +1521,7 @@
                   "name": "TrackText_30",
                   "fields": {
                     "fitToText": true,
-                    "text": "     왼쪽(시계방향 90도) 벽면을 따라 이동",
+                    "text": "    기준 왼쪽(시계방향 90도) 벽면을 따라 이동",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -1063,10 +1535,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1081,7 +1564,7 @@
                   "name": "TrackText_31",
                   "fields": {
                     "fitToText": true,
-                    "text": "→ 2층 웨이포인트(WP) 기준이 아니라 1층에서 2층으로 내려온 입구 타일 기준 좌측",
+                    "text": "→ 2층 웨이포인트(WP) 기준이 아니라 1층에서 2층으로 내려온 입구 타일 기준",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -1095,10 +1578,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1113,7 +1607,7 @@
                   "name": "TrackText_32",
                   "fields": {
                     "fitToText": true,
-                    "text": "     벽면입니다.",
+                    "text": "    좌측 벽면입니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -1127,10 +1621,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1145,7 +1650,7 @@
                   "name": "TrackText_33",
                   "fields": {
                     "fitToText": true,
-                    "text": "· [4막] 절망의 평원(이주얼) / 불길의 강(헬포지) → 외곽 벽면을 따라 이동하며",
+                    "text": "· [4막] 절망의 평원(이주얼) / 불길의 강(헬포지) → 외곽 벽면을 따라",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -1159,10 +1664,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1177,7 +1693,7 @@
                   "name": "TrackText_34",
                   "fields": {
                     "fitToText": true,
-                    "text": "     미니맵 성소/제단 아이콘 확인",
+                    "text": "    이동하며 미니맵 성소/제단 아이콘 확인",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -1191,10 +1707,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1223,10 +1750,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1241,7 +1779,7 @@
                   "name": "TrackText_36",
                   "fields": {
                     "fitToText": true,
-                    "text": "     생성됩니다.",
+                    "text": "    생성됩니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -1255,10 +1793,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1287,10 +1836,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1305,7 +1865,7 @@
                   "name": "TrackText_38",
                   "fields": {
                     "fitToText": true,
-                    "text": "     왼쪽(시계방향 90도)에 다음 지역(아리앗 정상/얼어붙은 강) 출구",
+                    "text": "    왼쪽(시계방향 90도)에 다음 지역(아리앗 정상/얼어붙은 강) 출구",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -1319,10 +1879,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1351,10 +1922,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1369,7 +1951,7 @@
                   "name": "TrackText_40",
                   "fields": {
                     "fitToText": true,
-                    "text": "     배치됩니다.",
+                    "text": "    배치됩니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -1383,10 +1965,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1401,7 +1994,7 @@
                   "name": "TrackText_41",
                   "fields": {
                     "fitToText": true,
-                    "text": "· [5막] 고통의 전당 - 보트의 전당 (니라트하크) → 보트의 전당 WP에서 내린",
+                    "text": "· [5막] 고통의 전당 - 보트의 전당 (니라트하크) → 보트의 전당 WP에서",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -1415,10 +2008,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1433,7 +2037,7 @@
                   "name": "TrackText_42",
                   "fields": {
                     "fitToText": true,
-                    "text": "     후 벽면 눈동자 벽화가 그려진 방향이 진짜 니라트하크 방",
+                    "text": "    내린 후 벽면 눈동자 벽화가 그려진 방향이 진짜 니라트하크 방",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -1447,10 +2051,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1479,10 +2094,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1497,7 +2123,7 @@
                   "name": "TrackText_44",
                   "fields": {
                     "fitToText": true,
-                    "text": "     직진하면 니라트하크가 있습니다.",
+                    "text": "    직진하면 니라트하크가 있습니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -1511,10 +2137,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1529,7 +2166,7 @@
                   "name": "TrackText_45",
                   "fields": {
                     "fitToText": true,
-                    "text": "· [5막] 세계석 성채 2층 → 3층 (바알) → 세계석 성채 2층 웨이포인트(WP)",
+                    "text": "· [5막] 세계석 성채 2층 → 3층 (바알) → 세계석 성채 2층",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -1543,10 +2180,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1561,7 +2209,7 @@
                   "name": "TrackText_46",
                   "fields": {
                     "fitToText": true,
-                    "text": "     방 출구 기준 오른쪽(반시계방향 90도) 벽면",
+                    "text": "    웨이포인트(WP) 방 출구 기준 오른쪽(반시계방향 90도) 벽면",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -1575,10 +2223,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1593,7 +2252,7 @@
                   "name": "TrackText_47",
                   "fields": {
                     "fitToText": true,
-                    "text": "→ 2층 WP 방에서 나오는 방향 기준 우측 벽면을 따라 돌면 3층 계단이 가장 빠르게",
+                    "text": "→ 2층 WP 방에서 나오는 방향 기준 우측 벽면을 따라 돌면 3층 계단이 가장",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -1607,10 +2266,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1625,7 +2295,7 @@
                   "name": "TrackText_48",
                   "fields": {
                     "fitToText": true,
-                    "text": "     나타납니다.",
+                    "text": "    빠르게 나타납니다.",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -1639,10 +2309,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }

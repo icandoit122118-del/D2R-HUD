@@ -394,8 +394,8 @@
           0,
           0
         ],
-        "onClickMessage": "PanelManager:OpenPanel:D2RHudMainPanel",
-        "tooltipString": "D2R-HUD v1.3 성역 퀘스트 동선·길찾기·룬워드 98종·큐빙 60종 사전 열기",
+        "onClickMessage": "PanelManager:TogglePanel:D2RHudMainPanel",
+        "tooltipString": "D2R-HUD v1.3 투명 성역 퀘스트 동선·길찾기·룬워드 98종·큐빙 60종 사전 켜기/끄기",
         "textColor": "$FontColorGoldYellow",
         "text/style": "$StyleFEButtonText",
         "acceptsReturnKey": true,

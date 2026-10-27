@@ -3,124 +3,116 @@
   "name": "D2RHudMainPanel",
   "fields": {
     "priority": 9002,
-    "fitToParent": true
+    "rect": {
+      "x": -860,
+      "y": 24,
+      "width": 1720,
+      "height": 150
+    },
+    "anchor": {
+      "x": 0.5,
+      "y": 0
+    }
   },
   "children": [
     {
-      "type": "RectangleWidget",
-      "name": "Background",
+      "type": "TextBoxWidget",
+      "name": "Title",
       "fields": {
-        "fitToScreen": true,
-        "color": [
-          0,
-          0,
-          0,
-          0.72
-        ]
-      },
-      "children": [
-        {
-          "type": "ClickCatcherWidget",
-          "name": "catcher",
-          "fields": {
-            "fitToParent": true
-          }
+        "rect": {
+          "x": 16,
+          "y": 6,
+          "width": 680,
+          "height": 42
         },
-        {
-          "type": "Widget",
-          "name": "Anchor",
-          "fields": {
-            "anchor": {
-              "x": 0.5,
-              "y": 0.5
-            },
-            "rect": "$SettingsPanelAnchorRect"
+        "text": "★ D2R-HUD v1.3 호라드림 투명 대사전 (룬워드 98종 · 큐빙 60종)",
+        "style": {
+          "fontColor": "$FontColorGoldYellow",
+          "pointSize": "$MediumFontSize",
+          "alignment": {
+            "h": "left",
+            "v": "center"
           },
-          "children": [
-            {
-              "type": "ImageWidget",
-              "name": "Background",
-              "fields": {
-                "filename": "\\PANEL\\Options\\FrontEndOptionsBG"
-              }
+          "options": {
+            "lineWrap": false,
+            "newlineHandling": "standard",
+            "pipeCharacterBehavior": "handle"
+          },
+          "spacing": {
+            "leading": 1.12,
+            "kerning": 0.94
+          },
+          "dropShadow": {
+            "shadowColor": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 255
             },
-            {
-              "type": "TextBoxWidget",
-              "name": "Title",
-              "fields": {
-                "rect": {
-                  "x": 0,
-                  "y": 45,
-                  "width": 1950,
-                  "height": 103
-                },
-                "text": "D2R-HUD v1.3 - 성역 내비게이터 & 호라드림 대사전",
-                "style": "$StyleTitleBlock"
-              }
-            },
-            {
-              "type": "ButtonWidget",
-              "name": "OpenMiniTrackerBtn",
-              "fields": {
-                "rect": {
-                  "x": 84,
-                  "y": 30,
-                  "scale": 0.58
-                },
-                "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
-                "hoveredFrame": 3,
-                "textString": "인게임 미니 HUD",
-                "onClickMessage": "PanelManager:OpenPanel:D2RHudTrackerPanel",
-                "tooltipString": "화면 좌측 상단에 전투를 가리지 않는 미니 퀘스트 내비게이터(D2RHudTrackerPanel)를 띄웁니다.",
-                "textColor": "$FontColorGoldYellow",
-                "text/style": "$StyleFEButtonText",
-                "sound": "select"
-              }
-            },
-            {
-              "type": "ButtonWidget",
-              "name": "CloseButton",
-              "fields": {
-                "rect": {
-                  "x": 1868,
-                  "y": 8
-                },
-                "filename": "PANEL\\closebtn_4x",
-                "hoveredFrame": 3,
-                "onClickMessage": "PanelManager:ClosePanel:D2RHudMainPanel",
-                "tooltipString": "@strClose",
-                "sound": "cursor_close_window_hd",
-                "acceptsEscKeyEverywhere": true,
-                "action": "back"
-              }
+            "offset": {
+              "x": 3,
+              "y": 3
             }
-          ]
+          }
         }
-      ]
+      }
     },
     {
-      "type": "ImageWidget",
-      "name": "SettingsBackground",
+      "type": "ButtonWidget",
+      "name": "OpenMiniTrackerBtn",
       "fields": {
-        "rect": "$SettingsPanelBackgroundRect",
-        "anchor": {
-          "x": 0.5
+        "rect": {
+          "x": 1470,
+          "y": 4,
+          "scale": 0.48
         },
-        "filename": "Controller/Panel/Options/Panel_Options_BG"
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "좌측 미니HUD",
+        "onClickMessage": "PanelManager:TogglePanel:D2RHudTrackerPanel",
+        "tooltipString": "좌측 상단 투명 성역 미니 내비게이터를 켜거나 끕니다.",
+        "textColor": "$FontColorLightGold",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "CloseButton",
+      "fields": {
+        "rect": {
+          "x": 1656,
+          "y": 4,
+          "scale": 0.72
+        },
+        "filename": "PANEL\\closebtn_4x",
+        "hoveredFrame": 3,
+        "onClickMessage": "PanelManager:ClosePanel:D2RHudMainPanel",
+        "tooltipString": "@strClose",
+        "sound": "cursor_close_window_hd",
+        "acceptsEscKeyEverywhere": true,
+        "action": "back"
       }
     },
     {
       "type": "TabBarWidget",
       "name": "OptionsTabs",
       "fields": {
-        "rect": "$SettingsPanelTabsRect",
+        "rect": {
+          "x": 12,
+          "y": 52,
+          "scale": 0.88,
+          "width": 1720,
+          "height": 105
+        },
         "anchor": {
-          "x": 0.5
+          "x": 0,
+          "y": 0
         },
         "tabCount": 7,
         "tabSize": {
           "x": 242,
-          "y": 121
+          "y": 100
         },
         "tabPadding": {
           "x": 2,

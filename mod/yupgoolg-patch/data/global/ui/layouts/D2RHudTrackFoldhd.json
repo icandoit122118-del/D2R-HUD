@@ -1,0 +1,116 @@
+{
+  "type": "VideoOptionsPanel",
+  "name": "D2RHudTrackFold",
+  "fields": {
+    "priority": 201,
+    "rect": {
+      "x": 24,
+      "y": 108,
+      "width": 880,
+      "height": 50
+    },
+    "anchor": {
+      "x": 0,
+      "y": 0
+    },
+    "applySettingsImmediately": false
+  },
+  "children": [
+    {
+      "type": "TextBoxWidget",
+      "name": "FoldStateText",
+      "fields": {
+        "rect": {
+          "x": 4,
+          "y": 6,
+          "width": 220,
+          "height": 32
+        },
+        "text": "▼ 출력창 접힘:",
+        "style": {
+          "fontColor": "$FontColorLightYellow",
+          "pointSize": "$SmallFontSize",
+          "alignment": {
+            "h": "left",
+            "v": "center"
+          },
+          "options": {
+            "lineWrap": false,
+            "newlineHandling": "standard",
+            "pipeCharacterBehavior": "handle"
+          },
+          "spacing": {
+            "leading": 1.12,
+            "kerning": 0.94
+          },
+          "dropShadow": {
+            "shadowColor": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 255
+            },
+            "offset": {
+              "x": 3,
+              "y": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "ExpandSmallBtn",
+      "fields": {
+        "rect": {
+          "x": 205,
+          "y": 2,
+          "scale": 0.42
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "▼ 소형 4줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct1S",
+        "textColor": "$FontColorLightTeal",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "ExpandMedBtn",
+      "fields": {
+        "rect": {
+          "x": 355,
+          "y": 2,
+          "scale": 0.42
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "▼ 중형 8줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct1",
+        "textColor": "$FontColorGreen",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "ExpandLargeBtn",
+      "fields": {
+        "rect": {
+          "x": 505,
+          "y": 2,
+          "scale": 0.42
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "▼ 대형 15줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct1L",
+        "textColor": "$FontColorGoldYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    }
+  ]
+}

@@ -4,10 +4,10 @@
   "fields": {
     "priority": 200,
     "rect": {
-      "x": 24,
-      "y": 24,
-      "width": 1320,
-      "height": 565
+      "x": 18,
+      "y": 14,
+      "width": 920,
+      "height": 120
     },
     "anchor": {
       "x": 0,
@@ -16,36 +16,16 @@
   },
   "children": [
     {
-      "type": "NineTileImageWidget",
-      "name": "HudFrameBG",
-      "fields": {
-        "rect": {
-          "x": 0,
-          "y": 0,
-          "width": 1320,
-          "height": 565
-        },
-        "filename": "PANEL/TooltipBorder/TooltipBorder",
-        "backgroundColor": [
-          0.02,
-          0.02,
-          0.03,
-          0.88
-        ],
-        "tileScale": 1
-      }
-    },
-    {
       "type": "TextBoxWidget",
       "name": "HudTitle",
       "fields": {
         "rect": {
-          "x": 28,
-          "y": 18,
-          "width": 820,
-          "height": 44
+          "x": 8,
+          "y": 6,
+          "width": 390,
+          "height": 36
         },
-        "text": "★ D2R-HUD v1.3 인게임 성역 퀘스트·길찾기 내비게이터",
+        "text": "★ D2R-HUD v1.3 성역 HUD",
         "style": {
           "fontColor": "$FontColorGoldYellow",
           "pointSize": "$MediumFontSize",
@@ -59,11 +39,41 @@
             "pipeCharacterBehavior": "handle"
           },
           "spacing": {
-            "leading": 1.15,
+            "leading": 1.12,
             "kerning": 0.94
           },
-          "dropShadow": "$DefaultDropShadow"
+          "dropShadow": {
+            "shadowColor": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 255
+            },
+            "offset": {
+              "x": 3,
+              "y": 3
+            }
+          }
         }
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "FoldTrackerBtn",
+      "fields": {
+        "rect": {
+          "x": 430,
+          "y": 2,
+          "scale": 0.45
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "▲ 글자창 접기",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackFold",
+        "tooltipString": "글자 출력창을 접어 상단 탭바만 남깁니다.",
+        "textColor": "$FontColorLightYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
       }
     },
     {
@@ -71,15 +81,15 @@
       "name": "OpenFullDictBtn",
       "fields": {
         "rect": {
-          "x": 920,
-          "y": 10,
-          "scale": 0.56
+          "x": 630,
+          "y": 2,
+          "scale": 0.45
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
-        "textString": "호라드림 대사전",
-        "onClickMessage": "PanelManager:OpenPanel:D2RHudMainPanel",
-        "tooltipString": "룬워드 98종, 큐빙 60종, 전체 액트 상세 공략이 수록된 호라드림 대사전(D2RHudMainPanel)을 엽니다.",
+        "textString": "호라드림 사전",
+        "onClickMessage": "PanelManager:TogglePanel:D2RHudMainPanel",
+        "tooltipString": "룬워드 98종, 큐빙 60종 투명 대사전(D2RHudMainPanel)을 켜거나 끕니다.",
         "textColor": "$FontColorGoldYellow",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
@@ -90,14 +100,14 @@
       "name": "CloseTrackerBtn",
       "fields": {
         "rect": {
-          "x": 1246,
-          "y": 12,
-          "scale": 0.78
+          "x": 855,
+          "y": 4,
+          "scale": 0.68
         },
         "filename": "PANEL\\closebtn_4x",
         "hoveredFrame": 3,
         "onClickMessage": "PanelManager:ClosePanel:D2RHudTrackerPanel",
-        "tooltipString": "미니 성역 HUD 닫기",
+        "tooltipString": "성역 HUD 닫기 (하단 성역 HUD 버튼으로 언제든 다시 열기 가능)",
         "sound": "cursor_close_window_hd"
       }
     },
@@ -106,11 +116,11 @@
       "name": "OptionsTabs",
       "fields": {
         "rect": {
-          "x": 18,
-          "y": 66,
-          "scale": 0.72,
-          "width": 1780,
-          "height": 110
+          "x": 6,
+          "y": 46,
+          "scale": 0.56,
+          "width": 1600,
+          "height": 96
         },
         "anchor": {
           "x": 0,
@@ -118,8 +128,8 @@
         },
         "tabCount": 7,
         "tabSize": {
-          "x": 248,
-          "y": 110
+          "x": 224,
+          "y": 96
         },
         "tabPadding": {
           "x": 2,

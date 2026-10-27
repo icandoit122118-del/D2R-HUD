@@ -1,0 +1,1452 @@
+{
+  "type": "VideoOptionsPanel",
+  "name": "D2RHudTrackAct3B",
+  "fields": {
+    "priority": 201,
+    "rect": {
+      "x": 24,
+      "y": 108,
+      "width": 868,
+      "height": 366
+    },
+    "anchor": {
+      "x": 0,
+      "y": 0
+    },
+    "applySettingsImmediately": false
+  },
+  "children": [
+    {
+      "type": "RectangleWidget",
+      "name": "SubtleTintBG",
+      "fields": {
+        "rect": {
+          "x": 0,
+          "y": 40,
+          "width": 860,
+          "height": 320
+        },
+        "color": [
+          0,
+          0,
+          0,
+          0.28
+        ]
+      }
+    },
+    {
+      "type": "TextBoxWidget",
+      "name": "WindowSizeLabel",
+      "fields": {
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 115,
+          "height": 32
+        },
+        "text": "▶ 반투명8줄",
+        "style": {
+          "fontColor": "$FontColorLightYellow",
+          "pointSize": "$SmallFontSize",
+          "alignment": {
+            "h": "left",
+            "v": "center"
+          },
+          "options": {
+            "lineWrap": false,
+            "newlineHandling": "standard",
+            "pipeCharacterBehavior": "handle"
+          },
+          "spacing": {
+            "leading": 1.12,
+            "kerning": 0.94
+          },
+          "dropShadow": {
+            "shadowColor": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 255
+            },
+            "offset": {
+              "x": 3,
+              "y": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeFoldBtn",
+      "fields": {
+        "rect": {
+          "x": 135,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "▲ 접기",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackFold",
+        "tooltipString": "글자 출력창 접기",
+        "textColor": "$FontColorLightYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeSmallBtn",
+      "fields": {
+        "rect": {
+          "x": 280,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "소형 4줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct3S",
+        "tooltipString": "글자 출력창을 소형(4줄, 완전투명)으로 줄입니다.",
+        "textColor": "$FontColorLightTeal",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeMedBtn",
+      "fields": {
+        "rect": {
+          "x": 425,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "중형 8줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct3",
+        "tooltipString": "글자 출력창을 기본 중형(8줄, 완전투명)으로 조절합니다.",
+        "textColor": "$FontColorGreen",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeLargeBtn",
+      "fields": {
+        "rect": {
+          "x": 570,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "대형 15줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct3L",
+        "tooltipString": "글자 출력창을 대형(15줄, 완전투명)으로 넓힙니다.",
+        "textColor": "$FontColorWhite",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeTintToggleBtn",
+      "fields": {
+        "rect": {
+          "x": 715,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "완전투명",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct3",
+        "tooltipString": "배경 완전투명 / 28% 옅은 반투명막 전환",
+        "textColor": "$FontColorGoldYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "ScrollBarBackground",
+      "fields": {
+        "rect": {
+          "x": -14,
+          "y": 40,
+          "width": 22,
+          "height": 320
+        },
+        "anchor": {
+          "x": 1
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ScrollbarSmall"
+      },
+      "children": [
+        {
+          "type": "ScrollControllerWidget",
+          "name": "ScrollController",
+          "fields": {
+            "rect": {
+              "x": -22,
+              "y": 20,
+              "width": 22,
+              "height": 280
+            },
+            "anchor": {
+              "x": 1
+            },
+            "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+            "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+            "barFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollIndicator",
+            "viewName": "ScrollView",
+            "wheelScrollSound": "cursor_scroll_hd",
+            "buttonScrollSound": "cursor_scroll_hd"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ScrollViewWidget",
+      "name": "ScrollView",
+      "fields": {
+        "rect": {
+          "x": 4,
+          "y": 40,
+          "width": 830,
+          "height": 320
+        },
+        "scrollControllerName": "ScrollController",
+        "clipChildrenDraw": true
+      },
+      "children": [
+        {
+          "type": "TableWidget",
+          "name": "OptionsTable",
+          "fields": {
+            "columns": [
+              {
+                "width": 815,
+                "alignment": {
+                  "h": "fit",
+                  "v": "fit"
+                }
+              }
+            ],
+            "rowHeight": 38
+          },
+          "children": [
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_0",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_0",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "■ [Act 3-1] 3막 - 비취 조각상/기드빈 & 칼림의 유물 3종",
+                    "style": {
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_1",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_1",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "▶ 동선: 거미 숲 → 거미 동굴(칼림의 눈) → 거대한 습지 → 약탈자",
+                    "style": {
+                      "fontColor": "$FontColorLightTeal",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_2",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_2",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    밀림(기드빈) → 약탈자 던전 3층(칼림의 뇌) → 쿠라스트 하류~상류 →",
+                    "style": {
+                      "fontColor": "$FontColorLightTeal",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_3",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_3",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    하수구 2층(칼림의 심장)",
+                    "style": {
+                      "fontColor": "$FontColorLightTeal",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_4",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_4",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[1] [필수/보상] 첫 정예 괴물 드랍 비취 조각상 → 메쉬프 → 알코어 대화로",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_5",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_5",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    영구 생명력 +20 물약 획득",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_6",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_6",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  [2] 거미 숲의 거미 동굴(아라크니드 동굴 아님!)에서 칼림의 눈 획득",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_7",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_7",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  [3] 약탈자 밀림의 약탈자 던전 3층에서 칼림의 뇌 획득",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_8",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_8",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  [4] 쿠라스트 시장/상류 지하 하수구 2층 레버 작동 후 칼림의 심장 획득",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_9",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_9",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[5] [필수/보상] 쿠라스트 시장 폐허의 사원에서 람 에센의 고서 회수 →",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_10",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_10",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    알코어에게 스탯 +5 획득",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_11",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_11",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 길찾기: 3막 오르무스 상점에서 텔포봉(순간이동 충전 지팡이, 요구 레벨",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_12",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_12",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    24)을 미리 구매해 두면 3~5막 벽 넘기에 필수입니다.",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_13",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_13",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 공략팁: 자폭 인형(언데드 스티지언 돌)은 처치 순간 큰 물리 폭발 피해를",
+                    "style": {
+                      "fontColor": "$FontColorGreen",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_14",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_14",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    주므로 용병 뒤에서 처치하거나 텔포로 지나가세요.",
+                    "style": {
+                      "fontColor": "$FontColorGreen",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_15",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_15",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "■ [Act 3-2] 3막 - 트라빈칼 의회 ~ 증오의 억류지(메피스토)",
+                    "style": {
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_16",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_16",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "▶ 동선: 트라빈칼(WP) → 대의회 처치(칼림의 도리깨) → 칼림의 의지 조합",
+                    "style": {
+                      "fontColor": "$FontColorLightTeal",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_17",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_17",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    후 생체구슬 파괴 → 증오의 억류지 2층(WP) → 3층 메피스토",
+                    "style": {
+                      "fontColor": "$FontColorLightTeal",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_18",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_18",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  [1] 트라빈칼 웨이포인트 활성화 후 대의회 처치 → 칼림의 도리깨 획득",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_19",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_19",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[2] 큐브에 눈 + 뇌 + 심장 + 도리깨를 조합해 칼림의 의지 제작 후",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_20",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_20",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    장착·타격으로 생체구슬 파괴",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_21",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_21",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[3] 증오의 억류지 2층 웨이포인트 확보 후 입구 기준 왼쪽(시계방향) 벽을",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_22",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_22",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    따라 3층 진입",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_23",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_23",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  [4] 메피스토 처치 후 붉은 포탈을 타고 4막 혼돈의 요새 진입",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_24",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_24",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 길찾기: 증오의 억류지 2층에서 3층으로 내려가는 계단은 입구 캐릭터 시선",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_25",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_25",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    기준 왼쪽 벽면을 따라 돌면 빠르게 나옵니다.",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_26",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_26",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 공략팁: 메피스토는 강 건너편 지형에 걸치기(강가 파이어볼/블리자드 딜링)가",
+                    "style": {
+                      "fontColor": "$FontColorGreen",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_27",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_27",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    가능해 원거리 캐릭터의 핵심 파밍처입니다.",
+                    "style": {
+                      "fontColor": "$FontColorGreen",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

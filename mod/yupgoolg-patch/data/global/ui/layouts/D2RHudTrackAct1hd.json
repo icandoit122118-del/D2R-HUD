@@ -4,10 +4,10 @@
   "fields": {
     "priority": 201,
     "rect": {
-      "x": 40,
-      "y": 178,
-      "width": 1280,
-      "height": 342
+      "x": 24,
+      "y": 108,
+      "width": 868,
+      "height": 366
     },
     "anchor": {
       "x": 0,
@@ -17,14 +17,151 @@
   },
   "children": [
     {
+      "type": "TextBoxWidget",
+      "name": "WindowSizeLabel",
+      "fields": {
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 115,
+          "height": 32
+        },
+        "text": "▶ 중형8줄",
+        "style": {
+          "fontColor": "$FontColorLightYellow",
+          "pointSize": "$SmallFontSize",
+          "alignment": {
+            "h": "left",
+            "v": "center"
+          },
+          "options": {
+            "lineWrap": false,
+            "newlineHandling": "standard",
+            "pipeCharacterBehavior": "handle"
+          },
+          "spacing": {
+            "leading": 1.12,
+            "kerning": 0.94
+          },
+          "dropShadow": {
+            "shadowColor": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 255
+            },
+            "offset": {
+              "x": 3,
+              "y": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeFoldBtn",
+      "fields": {
+        "rect": {
+          "x": 135,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "▲ 접기",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackFold",
+        "tooltipString": "글자 출력창 접기",
+        "textColor": "$FontColorLightYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeSmallBtn",
+      "fields": {
+        "rect": {
+          "x": 280,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "소형 4줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct1S",
+        "tooltipString": "글자 출력창을 소형(4줄, 완전투명)으로 줄입니다.",
+        "textColor": "$FontColorLightTeal",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeMedBtn",
+      "fields": {
+        "rect": {
+          "x": 425,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "중형 8줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct1",
+        "tooltipString": "글자 출력창을 기본 중형(8줄, 완전투명)으로 조절합니다.",
+        "textColor": "$FontColorGoldYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeLargeBtn",
+      "fields": {
+        "rect": {
+          "x": 570,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "대형 15줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct1L",
+        "tooltipString": "글자 출력창을 대형(15줄, 완전투명)으로 넓힙니다.",
+        "textColor": "$FontColorWhite",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeTintToggleBtn",
+      "fields": {
+        "rect": {
+          "x": 715,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "반투명막",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct1B",
+        "tooltipString": "배경 완전투명 / 28% 옅은 반투명막 전환",
+        "textColor": "$FontColorLightGray",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
       "type": "ImageWidget",
       "name": "ScrollBarBackground",
       "fields": {
         "rect": {
-          "x": -16,
-          "y": 0,
-          "width": 24,
-          "height": 332
+          "x": -14,
+          "y": 40,
+          "width": 22,
+          "height": 320
         },
         "anchor": {
           "x": 1
@@ -37,10 +174,10 @@
           "name": "ScrollController",
           "fields": {
             "rect": {
-              "x": -24,
-              "y": 24,
-              "width": 24,
-              "height": 284
+              "x": -22,
+              "y": 20,
+              "width": 22,
+              "height": 280
             },
             "anchor": {
               "x": 1
@@ -59,7 +196,12 @@
       "type": "ScrollViewWidget",
       "name": "ScrollView",
       "fields": {
-        "fitToParent": true,
+        "rect": {
+          "x": 4,
+          "y": 40,
+          "width": 830,
+          "height": 320
+        },
         "scrollControllerName": "ScrollController",
         "clipChildrenDraw": true
       },
@@ -70,14 +212,14 @@
           "fields": {
             "columns": [
               {
-                "width": 1230,
+                "width": 815,
                 "alignment": {
                   "h": "fit",
                   "v": "fit"
                 }
               }
             ],
-            "rowHeight": 46
+            "rowHeight": 38
           },
           "children": [
             {
@@ -103,10 +245,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -135,10 +288,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -153,7 +317,7 @@
                   "name": "TrackText_2",
                   "fields": {
                     "fitToText": true,
-                    "text": "     벌판(케인 돌기둥) → 어둠숲(이주얼 나무) → 트리스트럼",
+                    "text": "    벌판(케인 돌기둥) → 어둠숲(이주얼 나무) → 트리스트럼",
                     "style": {
                       "fontColor": "$FontColorLightTeal",
                       "pointSize": "$SmallFontSize",
@@ -167,10 +331,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -185,7 +360,7 @@
                   "name": "TrackText_3",
                   "fields": {
                     "fitToText": true,
-                    "text": "[1] [필수/보상] 악의 소굴 모든 괴물 처치 → 아카라 보상으로 스킬 포인트 +1",
+                    "text": "[1] [필수/보상] 악의 소굴 모든 괴물 처치 → 아카라 보상으로 스킬 포인트",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -199,10 +374,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -217,7 +403,7 @@
                   "name": "TrackText_4",
                   "fields": {
                     "fitToText": true,
-                    "text": "     획득",
+                    "text": "    +1 획득",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -231,10 +417,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -249,7 +446,7 @@
                   "name": "TrackText_5",
                   "fields": {
                     "fitToText": true,
-                    "text": "  [2] 차가운 평야 웨이포인트(WP) 활성화 (매장지의 핏빛 큰까마귀는 선택 사항)",
+                    "text": "[2] 차가운 평야 웨이포인트(WP) 활성화 (매장지의 핏빛 큰까마귀는 선택",
                     "style": {
                       "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
@@ -263,10 +460,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -279,6 +487,49 @@
                 {
                   "type": "TextBoxWidget",
                   "name": "TrackText_6",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    사항)",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_7",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_7",
                   "fields": {
                     "fitToText": true,
                     "text": "  [3] 어둠숲에서 이니푸스 나무 클릭 후 아카라에게 스크롤 해독 의뢰",
@@ -295,42 +546,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "type": "TableRowWidget",
-              "name": "TrackRow_7",
-              "children": [
-                {
-                  "type": "TextBoxWidget",
-                  "name": "TrackText_7",
-                  "fields": {
-                    "fitToText": true,
-                    "text": "[4] 바위 벌판 케인 돌기둥 작동 → 트리스트럼 진입 후 데커드 케인 구출 & 워트의",
-                    "style": {
-                      "fontColor": "$FontColorWhite",
-                      "pointSize": "$SmallFontSize",
-                      "alignment": {
-                        "h": "left",
-                        "v": "center"
-                      },
-                      "options": {
-                        "lineWrap": false,
-                        "newlineHandling": "standard",
-                        "pipeCharacterBehavior": "handle"
-                      },
-                      "spacing": {
-                        "leading": 1.15,
-                        "kerning": 0.94
-                      },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -345,7 +575,7 @@
                   "name": "TrackText_8",
                   "fields": {
                     "fitToText": true,
-                    "text": "     의족 확보",
+                    "text": "[4] 바위 벌판 케인 돌기둥 작동 → 트리스트럼 진입 후 데커드 케인 구출 &",
                     "style": {
                       "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
@@ -359,10 +589,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -377,7 +618,7 @@
                   "name": "TrackText_9",
                   "fields": {
                     "fitToText": true,
-                    "text": "[5] 아카라 상점에서 2홈 지팡이(꽃봉오리 재료) 및 2홈 갑옷(잠행 재료) 상점작",
+                    "text": "    워트의 의족 확보",
                     "style": {
                       "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
@@ -391,10 +632,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -409,7 +661,7 @@
                   "name": "TrackText_10",
                   "fields": {
                     "fitToText": true,
-                    "text": "     체크",
+                    "text": "[5] 아카라 상점에서 2홈 지팡이(꽃봉오리 재료) 및 2홈 갑옷(잠행 재료)",
                     "style": {
                       "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
@@ -423,10 +675,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -441,9 +704,9 @@
                   "name": "TrackText_11",
                   "fields": {
                     "fitToText": true,
-                    "text": "★ 길찾기: 지하 통로 1층 출구는 입구 방향 기준 직진(좌/우 갈림길 무시) 지형에",
+                    "text": "    상점작 체크",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
+                      "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -455,10 +718,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -473,7 +747,7 @@
                   "name": "TrackText_12",
                   "fields": {
                     "fitToText": true,
-                    "text": "     주로 생성됩니다.",
+                    "text": "★ 길찾기: 지하 통로 1층 출구는 입구 방향 기준 직진(좌/우 갈림길 무시)",
                     "style": {
                       "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
@@ -487,10 +761,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -505,9 +790,9 @@
                   "name": "TrackText_13",
                   "fields": {
                     "fitToText": true,
-                    "text": "★ 공략팁: 레벨 6~12 구간: 검은 습지 잊힌 탑의 백작(카운테스)을 반복 처치해",
+                    "text": "    지형에 주로 생성됩니다.",
                     "style": {
-                      "fontColor": "$FontColorGreen",
+                      "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -519,10 +804,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -537,7 +833,7 @@
                   "name": "TrackText_14",
                   "fields": {
                     "fitToText": true,
-                    "text": "     탈+에드(잠행, 17레벨), 티르+랄(꽃봉오리, 19레벨),",
+                    "text": "★ 공략팁: 레벨 6~12 구간: 검은 습지 잊힌 탑의 백작(카운테스)을 반복",
                     "style": {
                       "fontColor": "$FontColorGreen",
                       "pointSize": "$SmallFontSize",
@@ -551,10 +847,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -569,7 +876,7 @@
                   "name": "TrackText_15",
                   "fields": {
                     "fitToText": true,
-                    "text": "     네프+티르(구렁텅이) 룬을 확보하세요.",
+                    "text": "    처치해 탈+에드(잠행, 17레벨), 티르+랄(꽃봉오리, 19레벨),",
                     "style": {
                       "fontColor": "$FontColorGreen",
                       "pointSize": "$SmallFontSize",
@@ -583,10 +890,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -599,6 +917,49 @@
                 {
                   "type": "TextBoxWidget",
                   "name": "TrackText_16",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    네프+티르(구렁텅이) 룬을 확보하세요.",
+                    "style": {
+                      "fontColor": "$FontColorGreen",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_17",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_17",
                   "fields": {
                     "fitToText": true,
                     "text": "■ [Act 1-2] 1막 - 잊힌 탑(백작) ~ 안다리엘 처치",
@@ -615,10 +976,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -626,11 +998,11 @@
             },
             {
               "type": "TableRowWidget",
-              "name": "TrackRow_17",
+              "name": "TrackRow_18",
               "children": [
                 {
                   "type": "TextBoxWidget",
-                  "name": "TrackText_17",
+                  "name": "TrackText_18",
                   "fields": {
                     "fitToText": true,
                     "text": "▶ 동선: 검은 습지(WP) → 잊힌 탑 5층(룬 파밍) → 외부 회랑 →",
@@ -647,42 +1019,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "type": "TableRowWidget",
-              "name": "TrackRow_18",
-              "children": [
-                {
-                  "type": "TextBoxWidget",
-                  "name": "TrackText_18",
-                  "fields": {
-                    "fitToText": true,
-                    "text": "     병영(호라드림 망치) → 감옥 → 내부 회랑(WP) → 지하 묘지 4층",
-                    "style": {
-                      "fontColor": "$FontColorLightTeal",
-                      "pointSize": "$SmallFontSize",
-                      "alignment": {
-                        "h": "left",
-                        "v": "center"
-                      },
-                      "options": {
-                        "lineWrap": false,
-                        "newlineHandling": "standard",
-                        "pipeCharacterBehavior": "handle"
-                      },
-                      "spacing": {
-                        "leading": 1.15,
-                        "kerning": 0.94
-                      },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -697,9 +1048,9 @@
                   "name": "TrackText_19",
                   "fields": {
                     "fitToText": true,
-                    "text": "[1] 검은 습지 잊힌 탑 5층 백작 처치 - 잠행(탈+에드) / 강철(티르+엘) 룬",
+                    "text": "    병영(호라드림 망치) → 감옥 → 내부 회랑(WP) → 지하 묘지 4층",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightTeal",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -711,10 +1062,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -729,7 +1091,7 @@
                   "name": "TrackText_20",
                   "fields": {
                     "fitToText": true,
-                    "text": "     확보",
+                    "text": "[1] 검은 습지 잊힌 탑 5층 백작 처치 - 잠행(탈+에드) / 강철(티르+엘)",
                     "style": {
                       "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
@@ -743,10 +1105,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -759,6 +1132,49 @@
                 {
                   "type": "TextBoxWidget",
                   "name": "TrackText_21",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    룬 확보",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_22",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_22",
                   "fields": {
                     "fitToText": true,
                     "text": "  [2] 병영 대장장이 처치 후 호라드림 망치 회수 (찰시 마법부여 보상 오픈)",
@@ -775,42 +1191,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "type": "TableRowWidget",
-              "name": "TrackRow_22",
-              "children": [
-                {
-                  "type": "TextBoxWidget",
-                  "name": "TrackText_22",
-                  "fields": {
-                    "fitToText": true,
-                    "text": "[3] 지하 묘지 2층 웨이포인트 활성화 (3층 계단은 2층 WP 방 기준 시계방향",
-                    "style": {
-                      "fontColor": "$FontColorWhite",
-                      "pointSize": "$SmallFontSize",
-                      "alignment": {
-                        "h": "left",
-                        "v": "center"
-                      },
-                      "options": {
-                        "lineWrap": false,
-                        "newlineHandling": "standard",
-                        "pipeCharacterBehavior": "handle"
-                      },
-                      "spacing": {
-                        "leading": 1.15,
-                        "kerning": 0.94
-                      },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -825,7 +1220,7 @@
                   "name": "TrackText_23",
                   "fields": {
                     "fitToText": true,
-                    "text": "     90도 벽면)",
+                    "text": "[3] 지하 묘지 2층 웨이포인트 활성화 (3층 계단은 2층 WP 방 기준",
                     "style": {
                       "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
@@ -839,10 +1234,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -857,7 +1263,7 @@
                   "name": "TrackText_24",
                   "fields": {
                     "fitToText": true,
-                    "text": "  [4] 마을에서 해독 물약 3~4개 음용 후(독 저항 +50% 중첩) 안다리엘 처치",
+                    "text": "    시계방향 90도 벽면)",
                     "style": {
                       "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
@@ -871,10 +1277,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -887,6 +1304,92 @@
                 {
                   "type": "TextBoxWidget",
                   "name": "TrackText_25",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[4] 마을에서 해독 물약 3~4개 음용 후(독 저항 +50% 중첩) 안다리엘",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_26",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_26",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    처치",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_27",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_27",
                   "fields": {
                     "fitToText": true,
                     "text": "  [5] 와리브와 대화해 2막 루트 골레인 이동",
@@ -903,74 +1406,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "type": "TableRowWidget",
-              "name": "TrackRow_26",
-              "children": [
-                {
-                  "type": "TextBoxWidget",
-                  "name": "TrackText_26",
-                  "fields": {
-                    "fitToText": true,
-                    "text": "★ 길찾기: 해독 물약과 해동 물약은 마실 때마다 지속시간이 30초씩 누적되며 최대",
-                    "style": {
-                      "fontColor": "$FontColorLightBlue",
-                      "pointSize": "$SmallFontSize",
-                      "alignment": {
-                        "h": "left",
-                        "v": "center"
-                      },
-                      "options": {
-                        "lineWrap": false,
-                        "newlineHandling": "standard",
-                        "pipeCharacterBehavior": "handle"
-                      },
-                      "spacing": {
-                        "leading": 1.15,
-                        "kerning": 0.94
-                      },
-                      "dropShadow": "$DefaultDropShadow"
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "type": "TableRowWidget",
-              "name": "TrackRow_27",
-              "children": [
-                {
-                  "type": "TextBoxWidget",
-                  "name": "TrackText_27",
-                  "fields": {
-                    "fitToText": true,
-                    "text": "     저항도 +10% 증가합니다.",
-                    "style": {
-                      "fontColor": "$FontColorLightBlue",
-                      "pointSize": "$SmallFontSize",
-                      "alignment": {
-                        "h": "left",
-                        "v": "center"
-                      },
-                      "options": {
-                        "lineWrap": false,
-                        "newlineHandling": "standard",
-                        "pipeCharacterBehavior": "handle"
-                      },
-                      "spacing": {
-                        "leading": 1.15,
-                        "kerning": 0.94
-                      },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -983,6 +1433,92 @@
                 {
                   "type": "TextBoxWidget",
                   "name": "TrackText_28",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 길찾기: 해독 물약과 해동 물약은 마실 때마다 지속시간이 30초씩 누적되며",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_29",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_29",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    최대 저항도 +10% 증가합니다.",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_30",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_30",
                   "fields": {
                     "fitToText": true,
                     "text": "★ 공략팁: 안다리엘은 화염 저항이 -50%이므로 화염 스킬이나 화염 보석/랄 룬",
@@ -999,10 +1535,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }
@@ -1010,14 +1557,14 @@
             },
             {
               "type": "TableRowWidget",
-              "name": "TrackRow_29",
+              "name": "TrackRow_31",
               "children": [
                 {
                   "type": "TextBoxWidget",
-                  "name": "TrackText_29",
+                  "name": "TrackText_31",
                   "fields": {
                     "fitToText": true,
-                    "text": "     무기에 매우 취약합니다.",
+                    "text": "    무기에 매우 취약합니다.",
                     "style": {
                       "fontColor": "$FontColorGreen",
                       "pointSize": "$SmallFontSize",
@@ -1031,10 +1578,21 @@
                         "pipeCharacterBehavior": "handle"
                       },
                       "spacing": {
-                        "leading": 1.15,
+                        "leading": 1.12,
                         "kerning": 0.94
                       },
-                      "dropShadow": "$DefaultDropShadow"
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
                     }
                   }
                 }

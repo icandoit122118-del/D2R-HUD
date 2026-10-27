@@ -3,18 +3,143 @@
   "name": "D2RHudRw56Panel",
   "fields": {
     "priority": 9003,
-    "rect": "$OptionsPanelRect",
+    "rect": {
+      "x": -840,
+      "y": 156,
+      "width": 1680,
+      "height": 698
+    },
     "anchor": {
-      "x": 0.5
+      "x": 0.5,
+      "y": 0
     },
     "applySettingsImmediately": false
   },
   "children": [
     {
+      "type": "TextBoxWidget",
+      "name": "SizeStatusText",
+      "fields": {
+        "rect": {
+          "x": 16,
+          "y": 4,
+          "width": 220,
+          "height": 38
+        },
+        "text": "▶ [중형11줄]",
+        "style": {
+          "fontColor": "$FontColorLightYellow",
+          "pointSize": "$SmallFontSize",
+          "alignment": {
+            "h": "left",
+            "v": "center"
+          },
+          "options": {
+            "lineWrap": false,
+            "newlineHandling": "standard",
+            "pipeCharacterBehavior": "handle"
+          },
+          "spacing": {
+            "leading": 1.12,
+            "kerning": 0.94
+          },
+          "dropShadow": {
+            "shadowColor": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 255
+            },
+            "offset": {
+              "x": 3,
+              "y": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SubFoldBtn",
+      "fields": {
+        "rect": {
+          "x": 240,
+          "y": 0,
+          "scale": 0.46
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "▲ 창 접기",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudMainFold",
+        "textColor": "$FontColorLightYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SubSmallBtn",
+      "fields": {
+        "rect": {
+          "x": 430,
+          "y": 0,
+          "scale": 0.46
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "소형 6줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudRw56SPanel",
+        "textColor": "$FontColorLightTeal",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SubMedBtn",
+      "fields": {
+        "rect": {
+          "x": 620,
+          "y": 0,
+          "scale": 0.46
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "중형 11줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudRw56Panel",
+        "textColor": "$FontColorGoldYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SubLargeBtn",
+      "fields": {
+        "rect": {
+          "x": 810,
+          "y": 0,
+          "scale": 0.46
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "대형 18줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudRw56LPanel",
+        "textColor": "$FontColorWhite",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
       "type": "ImageWidget",
       "name": "ScrollBarBackground",
       "fields": {
-        "rect": "$OptionsScrollBarBackgroundRect",
+        "rect": {
+          "x": -12,
+          "y": 50,
+          "width": 24,
+          "height": 640
+        },
         "anchor": {
           "x": 1
         },
@@ -25,7 +150,12 @@
           "type": "ScrollControllerWidget",
           "name": "ScrollController",
           "fields": {
-            "rect": "$OptionsScrollBarRect",
+            "rect": {
+              "x": -22,
+              "y": 24,
+              "width": 24,
+              "height": 592
+            },
             "anchor": {
               "x": 1
             },
@@ -43,7 +173,12 @@
       "type": "ScrollViewWidget",
       "name": "ScrollView",
       "fields": {
-        "fitToParent": true,
+        "rect": {
+          "x": 16,
+          "y": 50,
+          "width": 1620,
+          "height": 640
+        },
         "scrollControllerName": "ScrollController",
         "clipChildrenDraw": true
       },
@@ -54,21 +189,21 @@
           "fields": {
             "columns": [
               {
-                "width": 1220,
+                "width": 1180,
                 "alignment": {
                   "h": "fit",
                   "v": "fit"
                 }
               },
               {
-                "width": 470,
+                "width": 420,
                 "alignment": {
                   "h": "center",
                   "v": "center"
                 }
               }
             ],
-            "rowHeight": 62
+            "rowHeight": 56
           },
           "children": [
             {
@@ -79,8 +214,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -102,10 +237,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -115,8 +261,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -138,10 +284,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -157,8 +314,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -180,10 +337,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -200,10 +368,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -218,8 +386,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -241,10 +409,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -254,8 +433,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -263,7 +442,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -287,8 +466,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -310,10 +489,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -329,8 +519,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -352,10 +542,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -365,8 +566,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -388,10 +589,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -408,10 +620,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -426,8 +638,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -449,10 +661,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -462,8 +685,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -471,7 +694,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -495,8 +718,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -518,10 +741,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -537,8 +771,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -560,10 +794,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -573,8 +818,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -596,10 +841,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -615,8 +871,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -638,10 +894,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -658,10 +925,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -676,8 +943,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -699,10 +966,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -712,8 +990,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -721,7 +999,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -745,8 +1023,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -768,10 +1046,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -787,8 +1076,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -810,10 +1099,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -823,8 +1123,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -846,10 +1146,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -865,8 +1176,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -888,10 +1199,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -908,10 +1230,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -926,8 +1248,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -949,10 +1271,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -962,8 +1295,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -971,7 +1304,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -995,8 +1328,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1018,10 +1351,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1037,8 +1381,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1060,10 +1404,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1073,8 +1428,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1096,10 +1451,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1116,10 +1482,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -1134,8 +1500,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1157,10 +1523,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1170,8 +1547,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1179,7 +1556,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -1203,8 +1580,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1226,10 +1603,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1245,8 +1633,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1268,10 +1656,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1281,8 +1680,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1304,10 +1703,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1323,8 +1733,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1346,10 +1756,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1366,10 +1787,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -1384,8 +1805,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1407,10 +1828,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1420,8 +1852,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1429,7 +1861,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -1453,8 +1885,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1476,10 +1908,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1495,8 +1938,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1518,10 +1961,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1531,8 +1985,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1554,10 +2008,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1574,10 +2039,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -1592,8 +2057,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1615,10 +2080,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1628,8 +2104,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1637,7 +2113,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -1661,8 +2137,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1684,10 +2160,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1703,8 +2190,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1726,10 +2213,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1739,8 +2237,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1762,10 +2260,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1782,10 +2291,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -1800,8 +2309,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1823,10 +2332,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1836,8 +2356,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1845,7 +2365,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -1869,8 +2389,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1892,10 +2412,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1911,8 +2442,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1934,10 +2465,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1947,8 +2489,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -1970,10 +2512,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -1989,8 +2542,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2012,10 +2565,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2032,10 +2596,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -2050,8 +2614,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2073,10 +2637,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2086,8 +2661,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2095,7 +2670,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -2119,8 +2694,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2142,10 +2717,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2161,8 +2747,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2184,10 +2770,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2197,8 +2794,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2220,10 +2817,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2239,8 +2847,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2262,10 +2870,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2282,10 +2901,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -2300,8 +2919,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2323,10 +2942,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2336,8 +2966,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2345,7 +2975,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -2369,8 +2999,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2392,10 +3022,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2411,8 +3052,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2434,10 +3075,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2447,8 +3099,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2470,10 +3122,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2489,8 +3152,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2512,10 +3175,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2532,10 +3206,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -2550,8 +3224,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2573,10 +3247,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2586,8 +3271,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2595,7 +3280,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -2619,8 +3304,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2642,10 +3327,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2661,8 +3357,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2684,10 +3380,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2697,8 +3404,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2720,10 +3427,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2739,8 +3457,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2762,10 +3480,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2782,10 +3511,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -2800,8 +3529,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2823,10 +3552,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2836,8 +3576,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2845,7 +3585,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -2869,8 +3609,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2892,10 +3632,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2911,8 +3662,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2934,10 +3685,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2947,8 +3709,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -2970,10 +3732,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -2990,10 +3763,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -3008,8 +3781,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3031,10 +3804,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -3044,8 +3828,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3053,7 +3837,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -3077,8 +3861,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3100,10 +3884,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -3119,8 +3914,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3142,10 +3937,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -3155,8 +3961,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3178,10 +3984,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -3197,8 +4014,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3220,10 +4037,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -3240,10 +4068,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -3258,8 +4086,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3281,10 +4109,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -3294,8 +4133,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3303,7 +4142,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -3327,8 +4166,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3350,10 +4189,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -3369,8 +4219,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3392,10 +4242,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -3405,8 +4266,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3428,10 +4289,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -3448,10 +4320,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }
@@ -3466,8 +4338,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3489,10 +4361,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -3502,8 +4385,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3511,7 +4394,7 @@
                       "name": "Col2TooltipBtn",
                       "fields": {
                         "rect": {
-                          "scale": 0.56
+                          "scale": 0.54
                         },
                         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
                         "hoveredFrame": 3,
@@ -3535,8 +4418,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3558,10 +4441,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -3577,8 +4471,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3600,10 +4494,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -3619,8 +4524,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col1Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3642,10 +4547,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -3655,8 +4571,8 @@
                   "type": "LayoutItemWidget",
                   "name": "Col2Wrap",
                   "fields": {
-                    "marginTop": 4,
-                    "marginBottom": 4
+                    "marginTop": 3,
+                    "marginBottom": 3
                   },
                   "children": [
                     {
@@ -3678,10 +4594,21 @@
                             "pipeCharacterBehavior": "handle"
                           },
                           "spacing": {
-                            "leading": 1.15,
+                            "leading": 1.12,
                             "kerning": 0.94
                           },
-                          "dropShadow": "$DefaultDropShadow"
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
                         }
                       }
                     }
@@ -3698,10 +4625,10 @@
                   "name": "Divider",
                   "fields": {
                     "rect": {
-                      "x": 10,
-                      "y": 28,
-                      "width": 1620,
-                      "height": 6
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
                     },
                     "filename": "PauseMenu\\Divider"
                   }

@@ -168,7 +168,7 @@
                 "filename": "PauseMenu\\PauseButton",
                 "hoveredFrame": 3,
                 "textString": "성역 HUD 사전",
-                "onClickMessage": "PanelManager:OpenPanel:D2RHudMainPanel",
+                "onClickMessage": "PanelManager:TogglePanel:D2RHudMainPanel",
                 "textColor": "$FontColorGoldYellow",
                 "text/style": "$StyleFEButtonText",
                 "acceptsReturnKey": true,

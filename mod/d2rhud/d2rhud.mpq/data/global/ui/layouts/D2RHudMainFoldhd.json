@@ -1,0 +1,116 @@
+{
+  "type": "VideoOptionsPanel",
+  "name": "D2RHudMainFold",
+  "fields": {
+    "priority": 9003,
+    "rect": {
+      "x": -840,
+      "y": 156,
+      "width": 1680,
+      "height": 64
+    },
+    "anchor": {
+      "x": 0.5,
+      "y": 0
+    },
+    "applySettingsImmediately": false
+  },
+  "children": [
+    {
+      "type": "TextBoxWidget",
+      "name": "FoldNotice",
+      "fields": {
+        "rect": {
+          "x": 16,
+          "y": 8,
+          "width": 580,
+          "height": 40
+        },
+        "text": "▼ 호라드림 대사전 출력창 접힘 (펴기 선택):",
+        "style": {
+          "fontColor": "$FontColorLightYellow",
+          "pointSize": "$SmallFontSize",
+          "alignment": {
+            "h": "left",
+            "v": "center"
+          },
+          "options": {
+            "lineWrap": false,
+            "newlineHandling": "standard",
+            "pipeCharacterBehavior": "handle"
+          },
+          "spacing": {
+            "leading": 1.12,
+            "kerning": 0.94
+          },
+          "dropShadow": {
+            "shadowColor": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 255
+            },
+            "offset": {
+              "x": 3,
+              "y": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "UnfoldSmallBtn",
+      "fields": {
+        "rect": {
+          "x": 560,
+          "y": 4,
+          "scale": 0.48
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "▼ 소형 6줄 펴기",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudRw23SPanel",
+        "textColor": "$FontColorLightTeal",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "UnfoldMedBtn",
+      "fields": {
+        "rect": {
+          "x": 750,
+          "y": 4,
+          "scale": 0.48
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "▼ 중형 11줄 펴기",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudRw23Panel",
+        "textColor": "$FontColorGreen",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "UnfoldLargeBtn",
+      "fields": {
+        "rect": {
+          "x": 940,
+          "y": 4,
+          "scale": 0.48
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "▼ 대형 18줄 펴기",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudRw23LPanel",
+        "textColor": "$FontColorGoldYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    }
+  ]
+}

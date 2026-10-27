@@ -1,0 +1,4643 @@
+{
+  "type": "VideoOptionsPanel",
+  "name": "D2RHudRw56LPanel",
+  "fields": {
+    "priority": 9003,
+    "rect": {
+      "x": -840,
+      "y": 156,
+      "width": 1680,
+      "height": 1078
+    },
+    "anchor": {
+      "x": 0.5,
+      "y": 0
+    },
+    "applySettingsImmediately": false
+  },
+  "children": [
+    {
+      "type": "TextBoxWidget",
+      "name": "SizeStatusText",
+      "fields": {
+        "rect": {
+          "x": 16,
+          "y": 4,
+          "width": 220,
+          "height": 38
+        },
+        "text": "▶ [대형18줄]",
+        "style": {
+          "fontColor": "$FontColorLightYellow",
+          "pointSize": "$SmallFontSize",
+          "alignment": {
+            "h": "left",
+            "v": "center"
+          },
+          "options": {
+            "lineWrap": false,
+            "newlineHandling": "standard",
+            "pipeCharacterBehavior": "handle"
+          },
+          "spacing": {
+            "leading": 1.12,
+            "kerning": 0.94
+          },
+          "dropShadow": {
+            "shadowColor": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 255
+            },
+            "offset": {
+              "x": 3,
+              "y": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SubFoldBtn",
+      "fields": {
+        "rect": {
+          "x": 240,
+          "y": 0,
+          "scale": 0.46
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "▲ 창 접기",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudMainFold",
+        "textColor": "$FontColorLightYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SubSmallBtn",
+      "fields": {
+        "rect": {
+          "x": 430,
+          "y": 0,
+          "scale": 0.46
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "소형 6줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudRw56SPanel",
+        "textColor": "$FontColorLightTeal",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SubMedBtn",
+      "fields": {
+        "rect": {
+          "x": 620,
+          "y": 0,
+          "scale": 0.46
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "중형 11줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudRw56Panel",
+        "textColor": "$FontColorGreen",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SubLargeBtn",
+      "fields": {
+        "rect": {
+          "x": 810,
+          "y": 0,
+          "scale": 0.46
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "대형 18줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudRw56LPanel",
+        "textColor": "$FontColorGoldYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "ScrollBarBackground",
+      "fields": {
+        "rect": {
+          "x": -12,
+          "y": 50,
+          "width": 24,
+          "height": 1020
+        },
+        "anchor": {
+          "x": 1
+        },
+        "filename": "PauseMenu\\VerticalScroll"
+      },
+      "children": [
+        {
+          "type": "ScrollControllerWidget",
+          "name": "ScrollController",
+          "fields": {
+            "rect": {
+              "x": -22,
+              "y": 24,
+              "width": 24,
+              "height": 972
+            },
+            "anchor": {
+              "x": 1
+            },
+            "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+            "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+            "barFilepath": "PauseMenu\\VerticalIndicator",
+            "viewName": "ScrollView",
+            "wheelScrollSound": "cursor_scroll_hd",
+            "buttonScrollSound": "cursor_scroll_hd"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ScrollViewWidget",
+      "name": "ScrollView",
+      "fields": {
+        "rect": {
+          "x": 16,
+          "y": 50,
+          "width": 1620,
+          "height": 1020
+        },
+        "scrollControllerName": "ScrollController",
+        "clipChildrenDraw": true
+      },
+      "children": [
+        {
+          "type": "TableWidget",
+          "name": "OptionsTable",
+          "fields": {
+            "columns": [
+              {
+                "width": 1180,
+                "alignment": {
+                  "h": "fit",
+                  "v": "fit"
+                }
+              },
+              {
+                "width": 420,
+                "alignment": {
+                  "h": "center",
+                  "v": "center"
+                }
+              }
+            ],
+            "rowHeight": 56
+          },
+          "children": [
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "★ 5홈 ~ 6홈 & 신규(악마술사/2.4~2.6) 룬워드 사전 (총 15종",
+                        "style": {
+                          "fontColor": "$FontColorGreen",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "총 15종 수록",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   - 우측 버튼 마우스 오버 시 전체 세부 옵션 표시)",
+                        "style": {
+                          "fontColor": "$FontColorGreen",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 명예 [Honor] - 룬: 앰 + 엘 + 아이드 + 티르 + 솔 (5홈",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4명예 (Honor)ÿc0\nÿc8룬 조합: 앰 + 엘 + 아이드 + 티르 + 솔ÿc0\nÿc2재료: 5홈 근접 무기 (요구 레벨 27)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 모든 기술 +1\n· 피해 +160% 증가\n· 최소 피해 +9\n· 최대 피해 +9\n· 치명적 공격 25%\n· 명중률 +250\n· 적중당 생명력 7% 훔침\n· 힘 +10\n· 생명력 회복 +10\n· 적 처치 시 마나 +2\n· 시야 +1\n\nÿc55홈 근접 무기 (요구 레벨 27)ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   근접 무기, Lv.27)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  ▶ 핵심 옵션: 모든 기술 +1 / 피해 +160% 증가",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "5홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 순종 [Obedience] - 룬: 헬 + 코 + 주울 + 에드 + 팔",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4순종 (Obedience)ÿc0\nÿc8룬 조합: 헬 + 코 + 주울 + 에드 + 팔ÿc0\nÿc2재료: 5홈 미늘창/창 (요구 레벨 41)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 적 처치 시 30% 확률로 21 레벨 마법부여 시전\n· 타격 회복 속도 +40%\n· 피해 +370% 증가\n· 대상의 방어력 -25%\n· 냉기 피해 3 - 14 추가\n· 적의 화염 저항 -25%\n· 강타 확률 +40%\n· 방어력 +200~300 (변함)\n· 힘 +10\n· 민첩 +10\n· 모든 저항 +20~30 (변함)\n· 착용 조건 -20%\n\nÿc55홈 미늘창/창 (요구 레벨 41)ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   (5홈 미늘창/창, Lv.41)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "▶ 핵심 옵션: 적 처치 시 30% 확률로 21 레벨 마법부여 시전 / 타격 회복 속도",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "5홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   +40%",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 죽음 [Death] - 룬: 헬 + 엘 + 벡스 + 오르트 + 굴 (5홈",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4죽음 (Death)ÿc0\nÿc8룬 조합: 헬 + 엘 + 벡스 + 오르트 + 굴ÿc0\nÿc2재료: 5홈 도검/도끼 (요구 레벨 55)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 사망 시 100% 확률로 44 레벨 연쇄 번개 시전\n· 공격 시 25% 확률로 18 레벨 빙하 가시 시전\n· 파괴 불가\n· 피해 +300~385% 증가 (변함)\n· 명중률 보너스 20%\n· 명중률 +50\n· 번개 피해 1 - 50 추가\n· 적중당 마나 7% 훔침\n· 강타 확률 +50%\n· 치명적 공격 0~49% (캐릭터 레벨에 비례)\n· 시야 +1\n· 22 레벨 피 골렘 (충전 15회)\n· 착용 조건 -20%\n\nÿc55홈 도검/도끼 (요구 레벨 55)ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   도검/도끼, Lv.55)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "▶ 핵심 옵션: 사망 시 100% 확률로 44 레벨 연쇄 번개 시전 / 공격 시 25%",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "5홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   확률로 18 레벨 빙하 가시 시전",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 소집 (콜 투 암스) [Call To Arms] - 룬: 앰 + 랄 +",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4소집 (콜 투 암스) (Call To Arms)ÿc0\nÿc8룬 조합: 앰 + 랄 + 말 + 이스트 + 오움ÿc0\nÿc2재료: 5홈 무기 (요구 레벨 57)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 모든 기술 +1\n· 공격 속도 +40%\n· 피해 +250~290% 증가 (변함)\n· 화염 피해 5 - 30 추가\n· 적중당 생명력 7% 훔침\n· +2~6 전투 명령 (변함)\n· +1~6 전투 지시 (변함)\n· +1~4 전투의 함성 (변함)\n· 괴물 회복 저지\n· 생명력 회복 +12\n· 마법 아이템 발견 확률 30% 증가\n\nÿc55홈 무기 (요구 레벨 57)ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   말 + 이스트 + 오움 (5홈 무기, Lv.57)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  ▶ 핵심 옵션: 모든 기술 +1 / 공격 속도 +40%",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "5홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 슬픔 (깊은 고뇌) [Grief] - 룬: 에드 + 티르 + 로 + 말",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4슬픔 (깊은 고뇌) (Grief)ÿc0\nÿc8룬 조합: 에드 + 티르 + 로 + 말 + 랄ÿc0\nÿc2재료: 5홈 도검/도끼 (요구 레벨 59)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 타격 시 35% 확률로 15 레벨 맹독 시전\n· 공격 속도 +30~40% (변함)\n· 피해 +340~400 (변함)\n· 대상의 방어력 무시\n· 대상의 방어력 -25%\n· 악마에게 주는 피해 +1~185% (캐릭터 레벨에 비례)\n· 화염 피해 5 - 30 추가\n· 적의 독 저항 -(20~25)% (변함)\n· 치명적 공격 +20%\n· 괴물 회복 저지\n· 적 처치 시 마나 +2\n· 적 처치 시 생명력 +10~15 (변함)\n\nÿc55홈 도검/도끼 (요구 레벨 59)ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   + 랄 (5홈 도검/도끼, Lv.59)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "▶ 핵심 옵션: 타격 시 35% 확률로 15 레벨 맹독 시전 / 공격 속도",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "5홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   +30~40% (변함)",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 야수 [Beast] - 룬: 베르 + 티르 + 우움 + 말 + 룸 (5홈",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4야수 (Beast)ÿc0\nÿc8룬 조합: 베르 + 티르 + 우움 + 말 + 룸ÿc0\nÿc2재료: 5홈 도끼/망치/홀 (요구 레벨 63)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 장착 시 9 레벨 광신 오라 효과 적용\n· 공격 속도 +40%\n· 피해 +240~270% 증가 (변함)\n· 강타 확률 +20%\n· 상처 악화 확률 +25%\n· +3 곰인간\n· +3 변신술\n· 괴물 회복 저지\n· 힘 +25~40 (변함)\n· 마력 +10\n· 적 처치 시 마나 +2\n· 13 레벨 회색곰 소환 (충전 5회)\n\nÿc55홈 도끼/망치/홀 (요구 레벨 63)ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   도끼/망치/홀, Lv.63)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  ▶ 핵심 옵션: 장착 시 9 레벨 광신 오라 효과 적용 / 공격 속도 +40%",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "5홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 영원 (불멸) [Eternity] - 룬: 앰 + 베르 + 이스트 + 솔",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4영원 (불멸) (Eternity)ÿc0\nÿc8룬 조합: 앰 + 베르 + 이스트 + 솔 + 수르ÿc0\nÿc2재료: 5홈 근접 무기 (요구 레벨 63)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 파괴 불가\n· 피해 +260~310% 증가 (변함)\n· 최소 피해 +9\n· 적중당 생명력 7% 훔침\n· 강타 확률 +20%\n· 적중 시 대상 실명\n· 대상 감속 33%\n· 마나 재생 16%\n· 생명력 회복 +16\n· 빙결되지 않음\n· 마법 아이템 발견 확률 30% 증가\n· 8 레벨 부활 (충전 88회)\n\nÿc55홈 근접 무기 (요구 레벨 63)ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   + 수르 (5홈 근접 무기, Lv.63)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  ▶ 핵심 옵션: 파괴 불가 / 피해 +260~310% 증가 (변함)",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "5홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 파괴 [Destruction] - 룬: 벡스 + 로 + 베르 + 자 +",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4파괴 (Destruction)ÿc0\nÿc8룬 조합: 벡스 + 로 + 베르 + 자 + 코ÿc0\nÿc2재료: 5홈 도검/미늘창 (요구 레벨 65)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 타격 시 23% 확률로 12 레벨 화산 시전\n· 타격 시 5% 확률로 23 레벨 타오르는 바위 시전\n· 사망 시 100% 확률로 45 레벨 운석 낙하 시전\n· 공격 시 15% 확률로 22 레벨 번개 파장 시전\n· 피해 +350% 증가\n· 대상의 방어력 무시\n· 마법 피해 100 - 180 추가\n· 적중당 마나 7% 훔침\n· 강타 확률 +20%\n· 치명적 공격 +20%\n· 괴물 회복 저지\n· 민첩 +10\n\nÿc55홈 도검/미늘창 (요구 레벨 65)ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   코 (5홈 도검/미늘창, Lv.65)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "▶ 핵심 옵션: 타격 시 23% 확률로 12 레벨 화산 시전 / 타격 시 5% 확률로",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "5홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   23 레벨 타오르는 바위 시전",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 파멸 [Doom] - 룬: 헬 + 오움 + 우움 + 로 + 참 (5홈",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4파멸 (Doom)ÿc0\nÿc8룬 조합: 헬 + 오움 + 우움 + 로 + 참ÿc0\nÿc2재료: 5홈 도끼/망치/미늘창 (요구 레벨 67)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 타격 시 5% 확률로 18 레벨 화산 시전\n· 장착 시 12 레벨 신성한 빙결 오라 효과 적용\n· 모든 기술 +2\n· 공격 속도 +45%\n· 피해 +330~370% 증가 (변함)\n· 적의 냉기 저항 -(40~60)% (변함)\n· 치명적 공격 +20%\n· 상처 악화 확률 +25%\n· 괴물 회복 저지\n· 대상 빙결 +3\n· 착용 조건 -20%\n\nÿc55홈 도끼/망치/미늘창 (요구 레벨 67)ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   도끼/망치/미늘창, Lv.67)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "▶ 핵심 옵션: 타격 시 5% 확률로 18 레벨 화산 시전 / 장착 시 12 레벨",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "5홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   신성한 빙결 오라 효과 적용",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 안개 [Mist] - 룬: 참 + 샤엘 + 굴 + 주울 + 아이드 (5홈",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4안개 (Mist)ÿc0\nÿc8룬 조합: 참 + 샤엘 + 굴 + 주울 + 아이드ÿc0\nÿc2재료: 5홈 활/쇠뇌 (요구 레벨 67)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 장착 시 8~12 레벨 집중 오라 효과 적용 (변함)\n· 모든 기술 +3\n· 공격 속도 +20%\n· 관통 공격 +100%\n· 피해 325~375% 증가 (변함)\n· 최대 피해 +9\n· 명중률 보너스 +20%\n· 냉기 피해 3 - 14 추가\n· 대상 빙결 +3\n· 활력 +24\n· 모든 저항 +40\n\nÿc55홈 활/쇠뇌 (요구 레벨 67 · 래더/싱글)ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   활/쇠뇌, Lv.67)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "▶ 핵심 옵션: 장착 시 8~12 레벨 집중 오라 효과 적용 (변함) / 모든 기술",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "5홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   +3",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 불굴의 의지 [Unbending Will] - 룬: 팔 + 이오 +",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4불굴의 의지 (Unbending Will)ÿc0\nÿc8룬 조합: 팔 + 이오 + 아이드 + 엘드 + 엘 + 헬ÿc0\nÿc2재료: 6홈 도검 (요구 레벨 41)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 타격 시 18% 확률로 18 레벨 도발 시전\n· 전투 기술 +3 (야만용사 전용)\n· 공격 속도 +20~30% (변함)\n· 피해 +300~350% 증가 (변함)\n· 최대 피해 +9\n· 명중률 +50\n· 언데드에게 주는 피해 +75%\n· 언데드에 대한 명중률 +50\n· 적중당 생명력 8~10% 훔침 (변함)\n· 괴물 회복 저지\n· 힘 +10\n· 활력 +10\n· 피해 8 감소\n· 시야 +1\n· 착용 조건 -20%\n\nÿc56홈 도검 (요구 레벨 41 · 래더/싱글)ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   아이드 + 엘드 + 엘 + 헬 (6홈 도검, Lv.41)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "▶ 핵심 옵션: 타격 시 18% 확률로 18 레벨 도발 시전 / 전투 기술 +3",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "6홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   (야만용사 전용)",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 침묵 [Silence] - 룬: 돌 + 엘드 + 헬 + 이스트 + 티르",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4침묵 (Silence)ÿc0\nÿc8룬 조합: 돌 + 엘드 + 헬 + 이스트 + 티르 + 벡스ÿc0\nÿc2재료: 6홈 무기 (요구 레벨 55)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 모든 기술 +2\n· 공격 속도 +20%\n· 타격 회복 속도 +20%\n· 피해 +200% 증가\n· 언데드에게 주는 피해 +75%\n· 언데드에 대한 명중률 +50\n· 적중당 마나 11% 훔침\n· 적중 시 대상 실명 +33\n· 적중 시 괴물 도주 +25%\n· 모든 저항 +75\n· 적 처치 시 마나 +2\n· 마법 아이템 발견 확률 30% 증가\n· 착용 조건 -20%\n\nÿc56홈 무기 (요구 레벨 55)ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   + 벡스 (6홈 무기, Lv.55)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  ▶ 핵심 옵션: 모든 기술 +2 / 공격 속도 +20%",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "6홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 마지막 소원 [Last Wish] - 룬: 자 + 말 + 자 + 수르 +",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4마지막 소원 (Last Wish)ÿc0\nÿc8룬 조합: 자 + 말 + 자 + 수르 + 자 + 베르ÿc0\nÿc2재료: 6홈 도검/도끼/망치 (요구 레벨 65)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 피격 시 6% 확률로 11 레벨 흐리기 시전\n· 타격 시 10% 확률로 18레벨 생명력 추출 시전\n· 타격 시 20% 확률로 20레벨 번개 줄기 시전\n· 장착 시 17 레벨 위세 오라 효과 적용\n· 피해 +330~375% 증가 (변함)\n· 대상의 방어력 무시\n· 강타 확률 +60~70% (변함)\n· 괴물 회복 저지\n· 적중 시 대상 실명\n· 마법 아이템 발견 확률 0~49% 증가 (캐릭터 레벨에 비례)\n\nÿc56홈 도검/도끼/망치 (요구 레벨 65)ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   자 + 베르 (6홈 도검/도끼/망치, Lv.65)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "▶ 핵심 옵션: 피격 시 6% 확률로 11 레벨 흐리기 시전 / 타격 시 10% 확률로",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "6홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   18레벨 생명력 추출 시전",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 집착 [Obsession] - 룬: 조드 + 이스트 + 렘 + 룸 +",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4집착 (Obsession)ÿc0\nÿc8룬 조합: 조드 + 이스트 + 렘 + 룸 + 이오 + 네프ÿc0\nÿc2재료: 6홈 지팡이 (요구 레벨 69)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 파괴 불가\n· 피격 시 24% 확률로 10 레벨 약화 시전\n· 모든 기술 +4\n· 시전 속도 +65%\n· 타격 회복 속도 +60%\n· 밀쳐내기\n· 활력 +10\n· 마력 +10\n· 최대 생명력 +15~25% (변함)\n· 마나 재생 15~30% (변함)\n· 모든 저항 +60~70 (변함)\n· 괴물에게서 얻는 금화 75% 증가\n· 마법 아이템 발견 확률 30% 증가\n\nÿc56홈 지팡이 (요구 레벨 69 · 래더/싱글)ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   이오 + 네프 (6홈 지팡이, Lv.69)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  ▶ 핵심 옵션: 파괴 불가 / 피격 시 24% 확률로 10 레벨 약화 시전",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "6홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "■ 죽어가는 자의 숨결 (죽음의 숨결) [Breath of the",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "ButtonWidget",
+                      "name": "Col2TooltipBtn",
+                      "fields": {
+                        "rect": {
+                          "scale": 0.54
+                        },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+                        "hoveredFrame": 3,
+                        "textString": "전체 옵션 툴팁",
+                        "textColor": "$FontColorLightGold",
+                        "text/style": "$StyleFEButtonText",
+                        "tooltipString": "ÿc4죽어가는 자의 숨결 (죽음의 숨결) (Breath of the Dying)ÿc0\nÿc8룬 조합: 벡스 + 헬 + 엘 + 엘드 + 조드 + 에드ÿc0\nÿc2재료: 6홈 무기 (요구 레벨 69)ÿc0\n\nÿc3[완성 옵션]ÿc0\n· 적 처치 시 50% 확률로 20 레벨 맹독 확산 시전\n· 파괴 불가\n· 공격 속도 +60%\n· 피해 +350~400% 증가 (변함)\n· 대상의 방어력 -25%\n· 명중률 +50\n· 언데드에게 주는 피해 +200%\n· 언데드에 대한 명중률 +50\n· 적중당 마나 7% 훔침\n· 적중당 생명력 12~15% 훔침 (변함)\n· 괴물 회복 저지\n· 모든 능력치 +30\n· 시야 +1\n· 착용 조건 -20%\n\nÿc5추천 장비 : 무형 콜로서스 블레이드ÿc0",
+                        "pressedFrame": 0,
+                        "sound": "cursor_select"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   Dying] - 룬: 벡스 + 헬 + 엘 + 엘드 + 조드 + 에드",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "   (6홈 무기, Lv.69)",
+                        "style": {
+                          "fontColor": "$FontColorGoldYellow",
+                          "pointSize": "$MediumFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "DataRow",
+              "children": [
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col1Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col1Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "  ▶ 핵심 옵션: 적 처치 시 50% 확률로 20 레벨 맹독 확산 시전 / 파괴 불가",
+                        "style": {
+                          "fontColor": "$FontColorLightBlue",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "left",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "LayoutItemWidget",
+                  "name": "Col2Wrap",
+                  "fields": {
+                    "marginTop": 3,
+                    "marginBottom": 3
+                  },
+                  "children": [
+                    {
+                      "type": "TextBoxWidget",
+                      "name": "Col2Text",
+                      "fields": {
+                        "fitToText": true,
+                        "text": "6홈 룬어",
+                        "style": {
+                          "fontColor": "$FontColorLightGray",
+                          "pointSize": "$SmallFontSize",
+                          "alignment": {
+                            "h": "center",
+                            "v": "center"
+                          },
+                          "options": {
+                            "lineWrap": false,
+                            "newlineHandling": "standard",
+                            "pipeCharacterBehavior": "handle"
+                          },
+                          "spacing": {
+                            "leading": 1.12,
+                            "kerning": 0.94
+                          },
+                          "dropShadow": {
+                            "shadowColor": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 255
+                            },
+                            "offset": {
+                              "x": 3,
+                              "y": 3
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "RowDivider",
+              "children": [
+                {
+                  "type": "ImageWidget",
+                  "name": "Divider",
+                  "fields": {
+                    "rect": {
+                      "x": 4,
+                      "y": 24,
+                      "width": 1480,
+                      "height": 4
+                    },
+                    "filename": "PauseMenu\\Divider"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

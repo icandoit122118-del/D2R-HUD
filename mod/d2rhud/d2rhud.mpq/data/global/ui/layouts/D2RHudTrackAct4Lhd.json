@@ -1,0 +1,961 @@
+{
+  "type": "VideoOptionsPanel",
+  "name": "D2RHudTrackAct4L",
+  "fields": {
+    "priority": 201,
+    "rect": {
+      "x": 24,
+      "y": 108,
+      "width": 868,
+      "height": 626
+    },
+    "anchor": {
+      "x": 0,
+      "y": 0
+    },
+    "applySettingsImmediately": false
+  },
+  "children": [
+    {
+      "type": "TextBoxWidget",
+      "name": "WindowSizeLabel",
+      "fields": {
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 115,
+          "height": 32
+        },
+        "text": "▶ 대형15줄",
+        "style": {
+          "fontColor": "$FontColorLightYellow",
+          "pointSize": "$SmallFontSize",
+          "alignment": {
+            "h": "left",
+            "v": "center"
+          },
+          "options": {
+            "lineWrap": false,
+            "newlineHandling": "standard",
+            "pipeCharacterBehavior": "handle"
+          },
+          "spacing": {
+            "leading": 1.12,
+            "kerning": 0.94
+          },
+          "dropShadow": {
+            "shadowColor": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 255
+            },
+            "offset": {
+              "x": 3,
+              "y": 3
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeFoldBtn",
+      "fields": {
+        "rect": {
+          "x": 135,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "▲ 접기",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackFold",
+        "tooltipString": "글자 출력창 접기",
+        "textColor": "$FontColorLightYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeSmallBtn",
+      "fields": {
+        "rect": {
+          "x": 280,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "소형 4줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct4S",
+        "tooltipString": "글자 출력창을 소형(4줄, 완전투명)으로 줄입니다.",
+        "textColor": "$FontColorLightTeal",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeMedBtn",
+      "fields": {
+        "rect": {
+          "x": 425,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "중형 8줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct4",
+        "tooltipString": "글자 출력창을 기본 중형(8줄, 완전투명)으로 조절합니다.",
+        "textColor": "$FontColorGreen",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeLargeBtn",
+      "fields": {
+        "rect": {
+          "x": 570,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "대형 15줄",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct4L",
+        "tooltipString": "글자 출력창을 대형(15줄, 완전투명)으로 넓힙니다.",
+        "textColor": "$FontColorGoldYellow",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "SizeTintToggleBtn",
+      "fields": {
+        "rect": {
+          "x": 715,
+          "y": 0,
+          "scale": 0.39
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
+        "hoveredFrame": 3,
+        "textString": "반투명막",
+        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackAct4B",
+        "tooltipString": "배경 완전투명 / 28% 옅은 반투명막 전환",
+        "textColor": "$FontColorLightGray",
+        "text/style": "$StyleFEButtonText",
+        "sound": "select"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "ScrollBarBackground",
+      "fields": {
+        "rect": {
+          "x": -14,
+          "y": 40,
+          "width": 22,
+          "height": 580
+        },
+        "anchor": {
+          "x": 1
+        },
+        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ScrollbarSmall"
+      },
+      "children": [
+        {
+          "type": "ScrollControllerWidget",
+          "name": "ScrollController",
+          "fields": {
+            "rect": {
+              "x": -22,
+              "y": 20,
+              "width": 22,
+              "height": 540
+            },
+            "anchor": {
+              "x": 1
+            },
+            "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+            "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+            "barFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollIndicator",
+            "viewName": "ScrollView",
+            "wheelScrollSound": "cursor_scroll_hd",
+            "buttonScrollSound": "cursor_scroll_hd"
+          }
+        }
+      ]
+    },
+    {
+      "type": "ScrollViewWidget",
+      "name": "ScrollView",
+      "fields": {
+        "rect": {
+          "x": 4,
+          "y": 40,
+          "width": 830,
+          "height": 580
+        },
+        "scrollControllerName": "ScrollController",
+        "clipChildrenDraw": true
+      },
+      "children": [
+        {
+          "type": "TableWidget",
+          "name": "OptionsTable",
+          "fields": {
+            "columns": [
+              {
+                "width": 815,
+                "alignment": {
+                  "h": "fit",
+                  "v": "fit"
+                }
+              }
+            ],
+            "rowHeight": 38
+          },
+          "children": [
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_0",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_0",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "■ [Act 4] 4막 - 타락한 천사(이주얼) ~ 혼돈의",
+                    "style": {
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_1",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_1",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    성역(디아블로)",
+                    "style": {
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_2",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_2",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "▶ 동선: 외부 평원 → 절망의 평원(이주얼, 스킬+2) → 저주받은 자들의",
+                    "style": {
+                      "fontColor": "$FontColorLightTeal",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_3",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_3",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    도시(WP) → 불길의 강(WP/지옥불 제단) → 혼돈의 성역 봉인 5개",
+                    "style": {
+                      "fontColor": "$FontColorLightTeal",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_4",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_4",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    → 디아블로",
+                    "style": {
+                      "fontColor": "$FontColorLightTeal",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_5",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_5",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[1] [필수/보상] 절망의 평원에서 이주얼 처치 후 영혼 대화 → 티리엘에게",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_6",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_6",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    스킬 포인트 +2 획득",
+                    "style": {
+                      "fontColor": "$FontColorLightYellow",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_7",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_7",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[2] 불길의 강 지옥불 제단에서 대장장이 헤파스토 처치 후 메피스토 영혼석",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_8",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_8",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    파괴(룬/보석 보상)",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_9",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_9",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  [3] 불길의 강 웨이포인트 활성화 후 혼돈의 성역 진입",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_10",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_10",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[4] 혼돈의 성역 5개 봉인 해제 및 군주 드 사이스 / 영혼의 감염자 /",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_11",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_11",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    혼돈의 대장군 3보스 처치",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_12",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_12",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "  [5] 디아블로 처치 후 티리엘의 포탈을 통해 5막 해로개스 이동",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_13",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_13",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 길찾기: 악몽 난이도 헬포지에서는 최대 우움(#22), 지옥 난이도",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_14",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_14",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    헬포지에서는 최대 굴(#25) 룬이 드랍됩니다.",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_15",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_15",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 공략팁: 보통 난이도 디아블로의 번개 숨결(레드 라이트닝)은 캐릭터와 완전히",
+                    "style": {
+                      "fontColor": "$FontColorGreen",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_16",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_16",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    밀착하면 판정이 닿지 않거나 대각선 이동으로 피할 수 있습니다.",
+                    "style": {
+                      "fontColor": "$FontColorGreen",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
