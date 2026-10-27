@@ -7,6 +7,7 @@ const YUPGOOLG_MERGED = 'C:\\Users\\icand\\Downloads\\D2R-Yupgoolg-20261025\\arr
 const SEONHEE_MOD = 'D:\\Diablo II Resurrected\\mods\\seonheeCustom\\seonheeCustom.mpq';
 const OUT_MOD_DIR = path.join(ROOT, 'mod', 'd2rhud', 'd2rhud.mpq');
 const OUT_YUPGOOLG_OVERLAY = path.join(ROOT, 'mod', 'yupgoolg-patch');
+const EXTRACTED_VANILLA = 'C:\\Users\\icand\\.gemini\\antigravity\\brain\\d7a463cd-765d-4320-aa8a-76e378ac9945\\scratch\\extracted_layouts';
 
 function stripJsonComments(str) {
   let out = '';
@@ -188,6 +189,59 @@ function makeTextStyle(colorVar, sizeVar, alignH = 'left', alignV = 'center', li
   };
 }
 
+/**
+ * Builds a 100% aligned, dynamic-height ScrollBar widget that NEVER overflows
+ * regardless of whether the window height is 156px (4 lines), 296px (8 lines),
+ * 450px (QuestLog), or 540px (15 lines).
+ * - Uses a Widget container at { x, y, width: 24, height: heightPx }
+ * - Draws a centered 4px gold track bar between the up and down arrow buttons
+ * - Places ScrollControllerWidget at { x: 0, y: 0, width: 24, height: heightPx }
+ *   with NO anchor offset so the up arrow, thumb indicator, and down arrow sit
+ *   coaxially at x: 0..24.
+ */
+function makeAlignedScrollBar(xPos, yPos, heightPx, controllerName = 'ScrollController', viewName = 'ScrollView') {
+  const trackHeight = Math.max(40, heightPx - 44);
+  return {
+    type: 'Widget',
+    name: `ScrollBarWrap_${controllerName}`,
+    fields: {
+      rect: { x: xPos, y: yPos, width: 24, height: heightPx }
+    },
+    children: [
+      {
+        type: 'RectangleWidget',
+        name: `ScrollTrackBg_${controllerName}`,
+        fields: {
+          rect: { x: 8, y: 22, width: 8, height: trackHeight },
+          color: [0.08, 0.07, 0.05, 0.72]
+        }
+      },
+      {
+        type: 'RectangleWidget',
+        name: `ScrollTrackLine_${controllerName}`,
+        fields: {
+          rect: { x: 10, y: 22, width: 4, height: trackHeight },
+          color: [0.55, 0.44, 0.22, 0.85]
+        }
+      },
+      {
+        type: 'ScrollControllerWidget',
+        name: controllerName,
+        fields: {
+          rect: { x: 0, y: 0, width: 24, height: heightPx },
+          upArrowFilepath: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn',
+          downArrowFilepath: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn',
+          barFilepath: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollIndicator',
+          viewName,
+          buttonScrollAmount: 76,
+          wheelScrollSound: 'cursor_scroll_hd',
+          buttonScrollSound: 'cursor_scroll_hd'
+        }
+      }
+    ]
+  };
+}
+
 function makeDividerRow(width = 1480) {
   return {
     type: 'TableRowWidget',
@@ -281,9 +335,8 @@ function pushWrappedRows(rows, col1Text, col1Color, col1Size, col2Text = '', col
 
 // ============================================================================
 // 1. TRANSPARENT & ADJUSTABLE ENCYCLOPEDIA (D2RHudMainPanel + Sub-Panels)
-//    - Background stone slab (FrontEndOptionsBG / Panel_Options_BG / full-screen
-//      blackout) completely removed so live gameplay stays visible!
-//    - Includes window size controls: [▲ 창 접기] [소형창] [기본창] [대형창]
+//    - App title removed per user instruction ("앱명도 삭제하고")
+//    - ScrollBar UI 1:1 aligned via makeAlignedScrollBar()
 // ============================================================================
 function buildMainPanel() {
   return {
@@ -291,39 +344,15 @@ function buildMainPanel() {
     name: 'D2RHudMainPanel',
     fields: {
       priority: 9002,
-      rect: { x: -860, y: 24, width: 1720, height: 150 },
+      rect: { x: -860, y: 18, width: 1720, height: 110 },
       anchor: { x: 0.5, y: 0.0 }
     },
     children: [
       {
-        type: 'TextBoxWidget',
-        name: 'Title',
-        fields: {
-          rect: { x: 16, y: 6, width: 680, height: 42 },
-          text: '★ D2R-HUD v1.3 호라드림 투명 대사전 (룬워드 98종 · 큐빙 60종)',
-          style: makeTextStyle('$FontColorGoldYellow', '$MediumFontSize', 'left', 'center', false)
-        }
-      },
-      {
-        type: 'ButtonWidget',
-        name: 'OpenMiniTrackerBtn',
-        fields: {
-          rect: { x: 1470, y: 4, scale: 0.48 },
-          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
-          hoveredFrame: 3,
-          textString: '좌측 미니HUD',
-          onClickMessage: 'PanelManager:TogglePanel:D2RHudTrackerPanel',
-          tooltipString: '좌측 상단 투명 성역 미니 내비게이터를 켜거나 끕니다.',
-          textColor: '$FontColorLightGold',
-          'text/style': '$StyleFEButtonText',
-          sound: 'select'
-        }
-      },
-      {
         type: 'ButtonWidget',
         name: 'CloseButton',
         fields: {
-          rect: { x: 1656, y: 4, scale: 0.72 },
+          rect: { x: 1662, y: 8, scale: 0.72 },
           filename: 'PANEL\\closebtn_4x',
           hoveredFrame: 3,
           onClickMessage: 'PanelManager:ClosePanel:D2RHudMainPanel',
@@ -337,10 +366,10 @@ function buildMainPanel() {
         type: 'TabBarWidget',
         name: 'OptionsTabs',
         fields: {
-          rect: { x: 12, y: 52, scale: 0.88, width: 1720, height: 105 },
+          rect: { x: 12, y: 6, scale: 0.86, width: 1640, height: 100 },
           anchor: { x: 0.0, y: 0.0 },
           tabCount: 7,
-          tabSize: { x: 242, y: 100 },
+          tabSize: { x: 232, y: 96 },
           tabPadding: { x: 2, y: 0 },
           unavailableTabsLeaveGaps: false,
           tabSizingMethod: 'fixedCenter',
@@ -387,25 +416,16 @@ function buildMainFoldSubPanel() {
     name: 'D2RHudMainFold',
     fields: {
       priority: 9003,
-      rect: { x: -840, y: 156, width: 1680, height: 64 },
+      rect: { x: -840, y: 112, width: 1680, height: 54 },
       anchor: { x: 0.5, y: 0.0 },
       applySettingsImmediately: false
     },
     children: [
       {
-        type: 'TextBoxWidget',
-        name: 'FoldNotice',
-        fields: {
-          rect: { x: 16, y: 8, width: 580, height: 40 },
-          text: '▼ 호라드림 대사전 출력창 접힘 (펴기 선택):',
-          style: makeTextStyle('$FontColorLightYellow', '$SmallFontSize', 'left', 'center', false)
-        }
-      },
-      {
         type: 'ButtonWidget',
         name: 'UnfoldSmallBtn',
         fields: {
-          rect: { x: 560, y: 4, scale: 0.48 },
+          rect: { x: 16, y: 2, scale: 0.46 },
           filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
           hoveredFrame: 3,
           textString: '▼ 소형 6줄 펴기',
@@ -419,7 +439,7 @@ function buildMainFoldSubPanel() {
         type: 'ButtonWidget',
         name: 'UnfoldMedBtn',
         fields: {
-          rect: { x: 750, y: 4, scale: 0.48 },
+          rect: { x: 210, y: 2, scale: 0.46 },
           filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
           hoveredFrame: 3,
           textString: '▼ 중형 11줄 펴기',
@@ -433,7 +453,7 @@ function buildMainFoldSubPanel() {
         type: 'ButtonWidget',
         name: 'UnfoldLargeBtn',
         fields: {
-          rect: { x: 940, y: 4, scale: 0.48 },
+          rect: { x: 404, y: 2, scale: 0.46 },
           filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
           hoveredFrame: 3,
           textString: '▼ 대형 18줄 펴기',
@@ -449,33 +469,22 @@ function buildMainFoldSubPanel() {
 
 function buildEncyclopediaSubPanel(baseKey, suffix, rows, heightPx = 640, rowHeight = 56) {
   const panelName = `D2RHud${baseKey}${suffix}Panel`;
-  const modeLabel = suffix === 'S' ? '소형6줄' : suffix === 'L' ? '대형18줄' : '중형11줄';
 
   return {
     type: 'VideoOptionsPanel',
     name: panelName,
     fields: {
       priority: 9003,
-      rect: { x: -840, y: 156, width: 1680, height: heightPx + 58 },
+      rect: { x: -840, y: 112, width: 1680, height: heightPx + 54 },
       anchor: { x: 0.5, y: 0.0 },
       applySettingsImmediately: false
     },
     children: [
-      // Per-tab adjustable window size toolbar
-      {
-        type: 'TextBoxWidget',
-        name: 'SizeStatusText',
-        fields: {
-          rect: { x: 16, y: 4, width: 220, height: 38 },
-          text: `▶ [${modeLabel}]`,
-          style: makeTextStyle('$FontColorLightYellow', '$SmallFontSize', 'left', 'center', false)
-        }
-      },
       {
         type: 'ButtonWidget',
         name: 'SubFoldBtn',
         fields: {
-          rect: { x: 240, y: 0, scale: 0.46 },
+          rect: { x: 16, y: 0, scale: 0.44 },
           filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
           hoveredFrame: 3,
           textString: '▲ 창 접기',
@@ -489,7 +498,7 @@ function buildEncyclopediaSubPanel(baseKey, suffix, rows, heightPx = 640, rowHei
         type: 'ButtonWidget',
         name: 'SubSmallBtn',
         fields: {
-          rect: { x: 430, y: 0, scale: 0.46 },
+          rect: { x: 196, y: 0, scale: 0.44 },
           filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
           hoveredFrame: 3,
           textString: '소형 6줄',
@@ -503,7 +512,7 @@ function buildEncyclopediaSubPanel(baseKey, suffix, rows, heightPx = 640, rowHei
         type: 'ButtonWidget',
         name: 'SubMedBtn',
         fields: {
-          rect: { x: 620, y: 0, scale: 0.46 },
+          rect: { x: 376, y: 0, scale: 0.44 },
           filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
           hoveredFrame: 3,
           textString: '중형 11줄',
@@ -517,7 +526,7 @@ function buildEncyclopediaSubPanel(baseKey, suffix, rows, heightPx = 640, rowHei
         type: 'ButtonWidget',
         name: 'SubLargeBtn',
         fields: {
-          rect: { x: 810, y: 0, scale: 0.46 },
+          rect: { x: 556, y: 0, scale: 0.44 },
           filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
           hoveredFrame: 3,
           textString: '대형 18줄',
@@ -527,36 +536,12 @@ function buildEncyclopediaSubPanel(baseKey, suffix, rows, heightPx = 640, rowHei
           sound: 'select'
         }
       },
-      {
-        type: 'ImageWidget',
-        name: 'ScrollBarBackground',
-        fields: {
-          rect: { x: -12, y: 50, width: 24, height: heightPx },
-          anchor: { x: 1.0 },
-          filename: 'PauseMenu\\VerticalScroll'
-        },
-        children: [
-          {
-            type: 'ScrollControllerWidget',
-            name: 'ScrollController',
-            fields: {
-              rect: { x: -22, y: 24, width: 24, height: heightPx - 48 },
-              anchor: { x: 1.0 },
-              upArrowFilepath: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn',
-              downArrowFilepath: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn',
-              barFilepath: 'PauseMenu\\VerticalIndicator',
-              viewName: 'ScrollView',
-              wheelScrollSound: 'cursor_scroll_hd',
-              buttonScrollSound: 'cursor_scroll_hd'
-            }
-          }
-        ]
-      },
+      makeAlignedScrollBar(1644, 46, heightPx, 'ScrollController', 'ScrollView'),
       {
         type: 'ScrollViewWidget',
         name: 'ScrollView',
         fields: {
-          rect: { x: 16, y: 50, width: 1620, height: heightPx },
+          rect: { x: 16, y: 46, width: 1618, height: heightPx },
           scrollControllerName: 'ScrollController',
           clipChildrenDraw: true
         },
@@ -581,16 +566,6 @@ function buildEncyclopediaSubPanel(baseKey, suffix, rows, heightPx = 640, rowHei
 
 function generateCampaignRows(stepsSubset, includeMapRules = false) {
   const rows = [];
-  pushWrappedRows(
-    rows,
-    '★ D2R-HUD v1.3 성역 원정대 필수 퀘스트 & 동선 가이드',
-    '$FontColorGreen',
-    '$MediumFontSize',
-    '마우스 오버 팁',
-    '$FontColorGoldYellow'
-  );
-  rows.push(makeDividerRow());
-
   for (const step of stepsSubset) {
     const tooltip = [
       `ÿc8[${step.condition.value}] ${step.location}`,
@@ -681,16 +656,6 @@ function generateCampaignRows(stepsSubset, includeMapRules = false) {
 
 function generateStarterRows() {
   const rows = [];
-  pushWrappedRows(
-    rows,
-    '★ 맨땅 스타터 & 악마술사/원소술사/성기사 레벨업 고속 빌드업 가이드',
-    '$FontColorGreen',
-    '$MediumFontSize',
-    '레벨별 로드맵',
-    '$FontColorGoldYellow'
-  );
-  rows.push(makeDividerRow());
-
   for (const step of warlockGuide.steps) {
     const tip = [
       `ÿc8[${step.condition.value}] ${step.location}`,
@@ -775,7 +740,7 @@ function generateRunewordRows(rwList, headerTitle) {
   const rows = [];
   pushWrappedRows(
     rows,
-    `★ ${headerTitle} (총 ${rwList.length}종 - 우측 버튼 마우스 오버 시 전체 세부 옵션 표시)`,
+    `■ ${headerTitle} (총 ${rwList.length}종 - 우측 버튼 마우스 오버 시 전체 세부 옵션 표시)`,
     '$FontColorGreen',
     '$MediumFontSize',
     `총 ${rwList.length}종 수록`,
@@ -826,7 +791,7 @@ function generateCubeRows() {
   const rows = [];
   pushWrappedRows(
     rows,
-    `★ 호라드림의 함(큐브) 필수 조합법 ${cubing.length}종 총정리 (홈 뚫기·업그레이드·룬 합성·크래프트·면죄)`,
+    `■ 호라드림의 함(큐브) 필수 조합법 ${cubing.length}종 (홈 뚫기·업그레이드·룬 합성·크래프트·면죄)`,
     '$FontColorGreen',
     '$MediumFontSize',
     `총 ${cubing.length}종 레시피`,
@@ -874,10 +839,10 @@ function generateCubeRows() {
 
 // ============================================================================
 // 2. 100% TRANSPARENT & ADJUSTABLE IN-GAME QUEST HUD (D2RHudTrackerPanel)
-//    - NO HudFrameBG opaque black box! Text floats directly on the game screen
-//      with crisp drop shadow so the player's character and map are never blocked.
-//    - Includes adjustable text output window controls:
-//      [▲ 창 접기] [소형 4줄] [중형 8줄] [대형 15줄] [반투명막]
+//    - App title (HudTitle) DELETED ("앱명도 삭제하고")
+//    - Top tabs (OptionsTabs) HIDDEN OFF-SCREEN ("상단탭 다 삭제하고")
+//    - Scrollbar UI 1:1 aligned via makeAlignedScrollBar() ("스크롤 UI 재조정해 안맞아아")
+//    - Controlled directly from Original Quest Log (Q) Act 1~5 tabs + Extra tabs!
 // ============================================================================
 function buildTrackerMainPanel() {
   return {
@@ -885,94 +850,26 @@ function buildTrackerMainPanel() {
     name: 'D2RHudTrackerPanel',
     fields: {
       priority: 200,
-      rect: { x: 18, y: 14, width: 920, height: 120 },
+      rect: { x: 24, y: 12, width: 868, height: 36 },
       anchor: { x: 0.0, y: 0.0 }
     },
     children: [
-      {
-        type: 'TextBoxWidget',
-        name: 'HudTitle',
-        fields: {
-          rect: { x: 8, y: 6, width: 390, height: 36 },
-          text: '★ D2R-HUD v1.3 성역 HUD',
-          style: makeTextStyle('$FontColorGoldYellow', '$MediumFontSize', 'left', 'center', false)
-        }
-      },
-      {
-        type: 'ButtonWidget',
-        name: 'FoldTrackerBtn',
-        fields: {
-          rect: { x: 430, y: 2, scale: 0.45 },
-          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
-          hoveredFrame: 3,
-          textString: '▲ 글자창 접기',
-          onClickMessage: 'SettingsPanelMessage:CheckChanges:D2RHudTrackFold',
-          tooltipString: '글자 출력창을 접어 상단 탭바만 남깁니다.',
-          textColor: '$FontColorLightYellow',
-          'text/style': '$StyleFEButtonText',
-          sound: 'select'
-        }
-      },
-      {
-        type: 'ButtonWidget',
-        name: 'OpenFullDictBtn',
-        fields: {
-          rect: { x: 630, y: 2, scale: 0.45 },
-          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
-          hoveredFrame: 3,
-          textString: '호라드림 사전',
-          onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
-          tooltipString: '룬워드 98종, 큐빙 60종 투명 대사전(D2RHudMainPanel)을 켜거나 끕니다.',
-          textColor: '$FontColorGoldYellow',
-          'text/style': '$StyleFEButtonText',
-          sound: 'select'
-        }
-      },
-      {
-        type: 'ButtonWidget',
-        name: 'CloseTrackerBtn',
-        fields: {
-          rect: { x: 855, y: 4, scale: 0.68 },
-          filename: 'PANEL\\closebtn_4x',
-          hoveredFrame: 3,
-          onClickMessage: 'PanelManager:ClosePanel:D2RHudTrackerPanel',
-          tooltipString: '성역 HUD 닫기 (하단 성역 HUD 버튼으로 언제든 다시 열기 가능)',
-          sound: 'cursor_close_window_hd'
-        }
-      },
+      // OptionsTabs is kept off-screen at (-9999, -9999) so SettingsPanel C++ engine
+      // still initializes D2RHudTrackAct1 and processes SettingsPanelMessage:CheckChanges
+      // while rendering ZERO top tabs on screen!
       {
         type: 'TabBarWidget',
         name: 'OptionsTabs',
         fields: {
-          rect: { x: 6, y: 46, scale: 0.56, width: 1600, height: 96 },
+          rect: { x: -9999, y: -9999, scale: 0.001, width: 1, height: 1 },
           anchor: { x: 0.0, y: 0.0 },
           tabCount: 7,
-          tabSize: { x: 224, y: 96 },
-          tabPadding: { x: 2, y: 0 },
-          unavailableTabsLeaveGaps: false,
-          tabSizingMethod: 'fixedCenter',
+          tabSize: { x: 1, y: 1 },
+          tabPadding: { x: 0, y: 0 },
           filename: 'Controller/Panel/Stash/V2/StashTabs',
           inactiveFrames: [1, 1, 1, 1, 1, 1, 1],
           activeFrames: [0, 0, 0, 0, 0, 0, 0],
-          activeTextColor: '$TabsActiveTextColor',
-          inactiveTextColor: '$TabsInactiveTextColor',
-          tabTextOffset: { x: 0, y: -4 },
-          textStyle: {
-            options: { lineWrap: true },
-            pointSize: '$SmallFontSize',
-            alignment: { h: 'center', v: 'center' },
-            fontColor: '$FontColorWhite',
-            spacing: { leading: 0.9, kerning: 0.95 }
-          },
-          textStrings: [
-            '1막 자매단',
-            '2막 루트골레인',
-            '3막 쿠라스트',
-            '4막 혼돈성역',
-            '5막 해로개스',
-            '길찾기 공식',
-            '초반 스타터'
-          ],
+          textStrings: ['1', '2', '3', '4', '5', 'M', 'S'],
           tabMessages: [
             'SettingsPanelMessage:CheckChanges:D2RHudTrackAct1',
             'SettingsPanelMessage:CheckChanges:D2RHudTrackAct2',
@@ -994,25 +891,16 @@ function buildTrackerFoldSubPanel() {
     name: 'D2RHudTrackFold',
     fields: {
       priority: 201,
-      rect: { x: 24, y: 108, width: 880, height: 50 },
+      rect: { x: 24, y: 12, width: 680, height: 42 },
       anchor: { x: 0.0, y: 0.0 },
       applySettingsImmediately: false
     },
     children: [
       {
-        type: 'TextBoxWidget',
-        name: 'FoldStateText',
-        fields: {
-          rect: { x: 4, y: 6, width: 220, height: 32 },
-          text: '▼ 출력창 접힘:',
-          style: makeTextStyle('$FontColorLightYellow', '$SmallFontSize', 'left', 'center', false)
-        }
-      },
-      {
         type: 'ButtonWidget',
         name: 'ExpandSmallBtn',
         fields: {
-          rect: { x: 205, y: 2, scale: 0.42 },
+          rect: { x: 0, y: 0, scale: 0.39 },
           filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
           hoveredFrame: 3,
           textString: '▼ 소형 4줄',
@@ -1026,7 +914,7 @@ function buildTrackerFoldSubPanel() {
         type: 'ButtonWidget',
         name: 'ExpandMedBtn',
         fields: {
-          rect: { x: 355, y: 2, scale: 0.42 },
+          rect: { x: 142, y: 0, scale: 0.39 },
           filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
           hoveredFrame: 3,
           textString: '▼ 중형 8줄',
@@ -1040,7 +928,7 @@ function buildTrackerFoldSubPanel() {
         type: 'ButtonWidget',
         name: 'ExpandLargeBtn',
         fields: {
-          rect: { x: 505, y: 2, scale: 0.42 },
+          rect: { x: 284, y: 0, scale: 0.39 },
           filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
           hoveredFrame: 3,
           textString: '▼ 대형 15줄',
@@ -1049,31 +937,24 @@ function buildTrackerFoldSubPanel() {
           'text/style': '$StyleFEButtonText',
           sound: 'select'
         }
+      },
+      {
+        type: 'ButtonWidget',
+        name: 'FoldCloseBtn',
+        fields: {
+          rect: { x: 432, y: 0, scale: 0.56 },
+          filename: 'PANEL\\closebtn_4x',
+          hoveredFrame: 3,
+          onClickMessage: 'PanelManager:ClosePanel:D2RHudTrackerPanel',
+          tooltipString: '@strClose',
+          sound: 'cursor_close_window_hd'
+        }
       }
     ]
   };
 }
 
-/**
- * Generates an adjustable transparent text output window sub-panel for a given tracker tab:
- *   suffix === 'S' : Small 4-line window (height 168px, 100% transparent)
- *   suffix === ''  : Medium 8-line window (height 320px, 100% transparent)
- *   suffix === 'L' : Large 15-line window (height 580px, 100% transparent)
- *   suffix === 'B' : Subtle 28% dim tint 8-line window (height 320px, optional tint)
- */
-function buildTrackerSubPanel(tabKey, suffix, lines) {
-  const panelName = `D2RHudTrack${tabKey}${suffix}`;
-  const heightPx = suffix === 'S' ? 168 : suffix === 'L' ? 580 : 320;
-  const showSubtleTint = suffix === 'B';
-  const modeDesc =
-    suffix === 'S'
-      ? '소형4줄'
-      : suffix === 'L'
-      ? '대형15줄'
-      : suffix === 'B'
-      ? '반투명8줄'
-      : '중형8줄';
-
+function expandTrackerLinesToTableRows(lines, prefix = 'Track') {
   const expandedRows = [];
   for (const item of lines) {
     const maxLen = item.size === '$MediumFontSize' ? 40 : 45;
@@ -1087,13 +968,13 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
     }
   }
 
-  const tableRows = expandedRows.map((item, idx) => ({
+  return expandedRows.map((item, idx) => ({
     type: 'TableRowWidget',
-    name: `TrackRow_${idx}`,
+    name: `${prefix}Row_${idx}`,
     children: [
       {
         type: 'TextBoxWidget',
-        name: `TrackText_${idx}`,
+        name: `${prefix}Text_${idx}`,
         fields: {
           fitToText: true,
           text: item.text,
@@ -1102,7 +983,21 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
       }
     ]
   }));
+}
 
+/**
+ * Generates an adjustable transparent text output window sub-panel:
+ *   suffix === 'S' : Small 4-line window (height 156px, 100% transparent)
+ *   suffix === ''  : Medium 8-line window (height 296px, 100% transparent)
+ *   suffix === 'L' : Large 15-line window (height 540px, 100% transparent)
+ *   suffix === 'B' : Subtle 28% dim tint 8-line window (height 296px, optional tint)
+ */
+function buildTrackerSubPanel(tabKey, suffix, lines) {
+  const panelName = `D2RHudTrack${tabKey}${suffix}`;
+  const heightPx = suffix === 'S' ? 156 : suffix === 'L' ? 540 : 296;
+  const showSubtleTint = suffix === 'B';
+
+  const tableRows = expandTrackerLinesToTableRows(lines, 'Track');
   const children = [];
 
   if (showSubtleTint) {
@@ -1110,28 +1005,19 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
       type: 'RectangleWidget',
       name: 'SubtleTintBG',
       fields: {
-        rect: { x: 0, y: 40, width: 860, height: heightPx },
+        rect: { x: 0, y: 36, width: 868, height: heightPx },
         color: [0.0, 0.0, 0.0, 0.28]
       }
     });
   }
 
-  // Interactive Text Output Window Adjustment Bar
+  // Clean Window Size Adjustment Bar (NO app name, NO top tabs!)
   children.push(
-    {
-      type: 'TextBoxWidget',
-      name: 'WindowSizeLabel',
-      fields: {
-        rect: { x: 4, y: 4, width: 115, height: 32 },
-        text: `▶ ${modeDesc}`,
-        style: makeTextStyle('$FontColorLightYellow', '$SmallFontSize', 'left', 'center', false)
-      }
-    },
     {
       type: 'ButtonWidget',
       name: 'SizeFoldBtn',
       fields: {
-        rect: { x: 135, y: 0, scale: 0.39 },
+        rect: { x: 0, y: 0, scale: 0.38 },
         filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
         hoveredFrame: 3,
         textString: '▲ 접기',
@@ -1146,7 +1032,7 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
       type: 'ButtonWidget',
       name: 'SizeSmallBtn',
       fields: {
-        rect: { x: 280, y: 0, scale: 0.39 },
+        rect: { x: 138, y: 0, scale: 0.38 },
         filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
         hoveredFrame: 3,
         textString: '소형 4줄',
@@ -1161,7 +1047,7 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
       type: 'ButtonWidget',
       name: 'SizeMedBtn',
       fields: {
-        rect: { x: 425, y: 0, scale: 0.39 },
+        rect: { x: 276, y: 0, scale: 0.38 },
         filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
         hoveredFrame: 3,
         textString: '중형 8줄',
@@ -1176,7 +1062,7 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
       type: 'ButtonWidget',
       name: 'SizeLargeBtn',
       fields: {
-        rect: { x: 570, y: 0, scale: 0.39 },
+        rect: { x: 414, y: 0, scale: 0.38 },
         filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
         hoveredFrame: 3,
         textString: '대형 15줄',
@@ -1191,7 +1077,7 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
       type: 'ButtonWidget',
       name: 'SizeTintToggleBtn',
       fields: {
-        rect: { x: 715, y: 0, scale: 0.39 },
+        rect: { x: 552, y: 0, scale: 0.38 },
         filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
         hoveredFrame: 3,
         textString: showSubtleTint ? '완전투명' : '반투명막',
@@ -1205,35 +1091,24 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
       }
     },
     {
-      type: 'ImageWidget',
-      name: 'ScrollBarBackground',
+      type: 'ButtonWidget',
+      name: 'CloseTrackerSubBtn',
       fields: {
-        rect: { x: -14, y: 40, width: 22, height: heightPx },
-        anchor: { x: 1.0 },
-        filename: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollbarSmall'
-      },
-      children: [
-        {
-          type: 'ScrollControllerWidget',
-          name: 'ScrollController',
-          fields: {
-            rect: { x: -22, y: 20, width: 22, height: heightPx - 40 },
-            anchor: { x: 1.0 },
-            upArrowFilepath: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn',
-            downArrowFilepath: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn',
-            barFilepath: 'FrontEnd\\HD\\Final\\FrontEnd_ScrollIndicator',
-            viewName: 'ScrollView',
-            wheelScrollSound: 'cursor_scroll_hd',
-            buttonScrollSound: 'cursor_scroll_hd'
-          }
-        }
-      ]
+        rect: { x: 696, y: -2, scale: 0.56 },
+        filename: 'PANEL\\closebtn_4x',
+        hoveredFrame: 3,
+        onClickMessage: 'PanelManager:ClosePanel:D2RHudTrackerPanel',
+        tooltipString: '@strClose',
+        sound: 'cursor_close_window_hd'
+      }
     },
+    // 100% 1:1 aligned ScrollBar UI matching heightPx!
+    makeAlignedScrollBar(840, 36, heightPx, 'ScrollController', 'ScrollView'),
     {
       type: 'ScrollViewWidget',
       name: 'ScrollView',
       fields: {
-        rect: { x: 4, y: 40, width: 830, height: heightPx },
+        rect: { x: 4, y: 36, width: 828, height: heightPx },
         scrollControllerName: 'ScrollController',
         clipChildrenDraw: true
       },
@@ -1242,8 +1117,8 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
           type: 'TableWidget',
           name: 'OptionsTable',
           fields: {
-            columns: [{ width: 815, alignment: { h: 'fit', v: 'fit' } }],
-            rowHeight: 38
+            columns: [{ width: 816, alignment: { h: 'fit', v: 'fit' } }],
+            rowHeight: 37
           },
           children: tableRows
         }
@@ -1256,7 +1131,7 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
     name: panelName,
     fields: {
       priority: 201,
-      rect: { x: 24, y: 108, width: 868, height: heightPx + 46 },
+      rect: { x: 24, y: 12, width: 868, height: heightPx + 42 },
       anchor: { x: 0.0, y: 0.0 },
       applySettingsImmediately: false
     },
@@ -1264,8 +1139,25 @@ function buildTrackerSubPanel(tabKey, suffix, lines) {
   };
 }
 
-function stepsToTrackerLines(stepsSubset) {
+function stepsToTrackerLines(stepsSubset, actNumber = null) {
   const lines = [];
+  if (actNumber) {
+    const actRules = MAP_CHEATSHEET.filter((m) => m.act === `${actNumber}막`);
+    if (actRules.length > 0) {
+      lines.push({
+        text: `★ [${actNumber}막 핵심 던전 길찾기 방향 공식]`,
+        color: '$FontColorGoldYellow',
+        size: '$MediumFontSize'
+      });
+      for (const r of actRules) {
+        lines.push({
+          text: `  · ${r.zone}: ${r.rule}`,
+          color: '$FontColorLightYellow',
+          size: '$SmallFontSize'
+        });
+      }
+    }
+  }
   for (const s of stepsSubset) {
     lines.push({
       text: `■ [${s.condition.value}] ${sanitizeD2RText(s.location)}`,
@@ -1301,76 +1193,320 @@ function stepsToTrackerLines(stepsSubset) {
 }
 
 // ============================================================================
-// 3. PATCH EXISTING LAYOUT ENTRY POINTS (Preserving all Yupgoolg widgets)
+// 3. ORIGINAL QUEST LOG INTEGRATION (questlogpanelexpansionhd.json & original)
+//    - "원본 퀘스트기록에 탭을더 만들어"
+//    - "원본 퀘스트 창에서 1막 2막 3만 선택하면 선택한거 출력되게해"
+//    - Selecting I, II, III, IV, V in the Quest Log (Q) immediately outputs
+//      that Act's quest/route/map guide inside Tab0..Tab4 AND syncs the
+//      transparent HUD (D2RHudTrackerPanel)!
 // ============================================================================
-function buildPatchedEntryLayouts() {
-  // 3.1 hudpanelhd.json — Add [성역 HUD] & [룬·큐빙 사전] Toggle buttons next to miniHealthBar
-  const hudPanel = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\hudpanelhd.json'));
-  hudPanel.children = hudPanel.children.filter(
-    (c) => c.name !== 'D2RHudTrackerToggleBtn' && c.name !== 'D2RHudDictToggleBtn'
-  );
-  hudPanel.children.push(
-    {
-      type: 'ButtonWidget',
-      name: 'D2RHudTrackerToggleBtn',
-      fields: {
-        rect: { x: 85, y: -55, scale: 0.67 },
-        filename: 'PANEL/infobutton',
-        hoveredFrame: 3,
-        textString: '성역 HUD',
-        pressLabelOffset: [0, 0],
-        onClickMessage: 'PanelManager:TogglePanel:D2RHudTrackerPanel',
-        tooltipString: 'D2R-HUD v1.3 투명 성역 퀘스트·길찾기 내비게이터 켜기/끄기 (출력창 크기 조절 지원)',
-        textColor: '$FontColorGoldYellow',
-        'text/style': '$StyleFEButtonText',
-        acceptsReturnKey: true,
-        focusOnMouseOver: false,
-        sound: 'select'
-      }
+function buildQuestLogActGuideWidget(actIdx, actTitle, lines, hudTargetPanel) {
+  const viewName = `QLScrollViewAct${actIdx}`;
+  const ctrlName = `QLScrollCtrlAct${actIdx}`;
+  const tableRows = expandTrackerLinesToTableRows(lines, `QLAct${actIdx}`);
+  const boxHeight = 420;
+
+  return {
+    type: 'Widget',
+    name: `D2RHudQuestLogAct${actIdx}Output`,
+    fields: {
+      rect: { x: 88, y: 842, width: 988, height: 486 }
     },
-    {
-      type: 'ButtonWidget',
-      name: 'D2RHudDictToggleBtn',
-      fields: {
-        rect: { x: 85, y: -128, scale: 0.67 },
-        filename: 'PANEL/infobutton',
-        hoveredFrame: 3,
-        textString: '룬·큐빙 사전',
-        pressLabelOffset: [0, 0],
-        onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
-        tooltipString: 'D2R-HUD v1.3 투명 호라드림 대사전 (룬워드 98종·큐빙 60종) 켜기/끄기',
-        textColor: '$FontColorLightGold',
-        'text/style': '$StyleFEButtonText',
-        acceptsReturnKey: true,
-        focusOnMouseOver: false,
-        sound: 'select'
+    children: [
+      {
+        type: 'RectangleWidget',
+        name: `QLAct${actIdx}Bg`,
+        fields: {
+          rect: { x: 0, y: 44, width: 984, height: boxHeight + 12 },
+          color: [0.02, 0.02, 0.02, 0.88]
+        }
+      },
+      {
+        type: 'TextBoxWidget',
+        name: `QLAct${actIdx}Header`,
+        fields: {
+          rect: { x: 8, y: 4, width: 450, height: 34 },
+          text: `▶ [${actTitle} 선택됨] 핵심 동선 & 길찾기 출력`,
+          style: makeTextStyle('$FontColorGoldYellow', '$SmallFontSize', 'left', 'center', false)
+        }
+      },
+      {
+        type: 'ButtonWidget',
+        name: `QLAct${actIdx}PinHudBtn`,
+        fields: {
+          rect: { x: 465, y: 0, scale: 0.41 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: `${actIdx}막 투명HUD 전환`,
+          onClickMessage: `SettingsPanelMessage:CheckChanges:${hudTargetPanel}`,
+          tooltipString: `좌측 상단 투명 HUD 출력창을 ${actIdx}막 내용으로 즉시 전환합니다.`,
+          textColor: '$FontColorGreen',
+          'text/style': '$StyleFEButtonText',
+          sound: 'select'
+        }
+      },
+      {
+        type: 'ButtonWidget',
+        name: `QLAct${actIdx}ToggleHudBtn`,
+        fields: {
+          rect: { x: 642, y: 0, scale: 0.41 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: '투명HUD 켜기/끄기',
+          onClickMessage: 'PanelManager:TogglePanel:D2RHudTrackerPanel',
+          tooltipString: '화면 좌측 상단 투명 글자 출력창(크기 조절 가능)을 켜거나 끕니다.',
+          textColor: '$FontColorLightTeal',
+          'text/style': '$StyleFEButtonText',
+          sound: 'select'
+        }
+      },
+      {
+        type: 'ButtonWidget',
+        name: `QLAct${actIdx}OpenDictBtn`,
+        fields: {
+          rect: { x: 818, y: 0, scale: 0.41 },
+          filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+          hoveredFrame: 3,
+          textString: '룬·큐빙 사전',
+          onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
+          tooltipString: '룬워드 98종 및 호라드림 큐빙 60종 투명 대사전을 엽니다.',
+          textColor: '$FontColorLightYellow',
+          'text/style': '$StyleFEButtonText',
+          sound: 'select'
+        }
+      },
+      makeAlignedScrollBar(954, 48, boxHeight, ctrlName, viewName),
+      {
+        type: 'ScrollViewWidget',
+        name: viewName,
+        fields: {
+          rect: { x: 10, y: 48, width: 936, height: boxHeight },
+          scrollControllerName: ctrlName,
+          clipChildrenDraw: true
+        },
+        children: [
+          {
+            type: 'TableWidget',
+            name: `QLAct${actIdx}Table`,
+            fields: {
+              columns: [{ width: 920, alignment: { h: 'fit', v: 'fit' } }],
+              rowHeight: 37
+            },
+            children: tableRows
+          }
+        ]
+      }
+    ]
+  };
+}
+
+function buildPatchedQuestLogLayouts(actLinesMap) {
+  const qlOrig = readD2RJson(path.join(EXTRACTED_VANILLA, 'questlogpaneloriginalhd.json'));
+  const qlExp = readD2RJson(path.join(EXTRACTED_VANILLA, 'questlogpanelexpansionhd.json'));
+
+  function patchQuestLog(ql, isExpansion) {
+    // Move Title, ShortDescription, LongDescription, Speech off-screen so
+    // our Extra Tabs (y: 72) and Act 1~5 Output Box (y: 842..1328) are 100% clean
+    for (const c of ql.children) {
+      if (['Title', 'ShortDescription', 'LongDescription', 'Speech'].includes(c.name)) {
+        c.fields = c.fields || {};
+        c.fields.rect = { x: -9999, y: -9999, width: 1, height: 1 };
+      }
+      if (c.name === 'Tabs') {
+        c.fields = c.fields || {};
+        c.fields.onSwitchTabMessage = 'QuestLogPanelMessage:SelectTab';
+        c.fields.tabMessages = isExpansion
+          ? [
+              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct1',
+              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct2',
+              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct3',
+              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct4',
+              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct5'
+            ]
+          : [
+              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct1',
+              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct2',
+              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct3',
+              'SettingsPanelMessage:CheckChanges:D2RHudTrackAct4'
+            ];
       }
     }
-  );
 
-  // 3.2 mainmenubuttonribbonhd.json — Add [성역 HUD v1.3] button on Character Select left ribbon
+    // Add Extra Tabs in the Original Quest Log header (y: 70, right above I, II, III, IV, V)
+    ql.children = ql.children.filter((c) => c.name !== 'D2RHudQuestLogExtraTabs');
+    ql.children.push({
+      type: 'TabBarWidget',
+      name: 'D2RHudQuestLogExtraTabs',
+      fields: {
+        rect: { x: 75, y: 72, scale: 0.71 },
+        tabCount: 7,
+        filename: 'PANEL\\Quest_Log\\QuestLogTab',
+        tabSize: { x: 205, y: 70 },
+        tabPadding: { x: -2, y: 0 },
+        inactiveFrames: [1, 1, 1, 1, 1, 1, 1],
+        activeFrames: [0, 0, 0, 0, 0, 0, 0],
+        textStyle: {
+          pointSize: '$SmallFontSize',
+          alignment: { h: 'center', v: 'center' }
+        },
+        activeTextColor: '$FontColorGoldYellow',
+        inactiveTextColor: '$FontColorLightGold',
+        textStrings: ['1막HUD', '2막HUD', '3막HUD', '4막HUD', '5막HUD', '길찾기맵', '스타터'],
+        tabMessages: [
+          'SettingsPanelMessage:CheckChanges:D2RHudTrackAct1',
+          'SettingsPanelMessage:CheckChanges:D2RHudTrackAct2',
+          'SettingsPanelMessage:CheckChanges:D2RHudTrackAct3',
+          'SettingsPanelMessage:CheckChanges:D2RHudTrackAct4',
+          'SettingsPanelMessage:CheckChanges:D2RHudTrackAct5',
+          'SettingsPanelMessage:CheckChanges:D2RHudTrackMap',
+          'SettingsPanelMessage:CheckChanges:D2RHudTrackStarter'
+        ]
+      }
+    });
+
+    // Inject Act-specific Quest & Route Output into Tab0 (Act 1), Tab1 (Act 2), Tab2 (Act 3), Tab3 (Act 4), Tab4 (Act 5)
+    const tabMeta = [
+      { tabName: 'Tab0', actIdx: 1, title: '1막 자매단 야영지', lines: actLinesMap.Act1, target: 'D2RHudTrackAct1' },
+      { tabName: 'Tab1', actIdx: 2, title: '2막 루트 골레인', lines: actLinesMap.Act2, target: 'D2RHudTrackAct2' },
+      { tabName: 'Tab2', actIdx: 3, title: '3막 쿠라스트 부두', lines: actLinesMap.Act3, target: 'D2RHudTrackAct3' },
+      { tabName: 'Tab3', actIdx: 4, title: '4막 혼돈의 성역', lines: actLinesMap.Act4, target: 'D2RHudTrackAct4' },
+      { tabName: 'Tab4', actIdx: 5, title: '5막 해로개스', lines: actLinesMap.Act5, target: 'D2RHudTrackAct5' }
+    ];
+
+    for (const tm of tabMeta) {
+      const tabWidget = ql.children.find((c) => c.name === tm.tabName);
+      if (tabWidget && Array.isArray(tabWidget.children)) {
+        tabWidget.children = tabWidget.children.filter((c) => !c.name || !c.name.startsWith('D2RHudQuestLogAct'));
+        tabWidget.children.push(buildQuestLogActGuideWidget(tm.actIdx, tm.title, tm.lines, tm.target));
+      }
+    }
+  }
+
+  patchQuestLog(qlOrig, false);
+  patchQuestLog(qlExp, true);
+
+  return {
+    'questlogpaneloriginalhd.json': qlOrig,
+    'questlogpanelexpansionhd.json': qlExp
+  };
+}
+
+// ============================================================================
+// 4. AUTOMAP (TAB KEY) INTEGRATION (automaphd.json)
+//    - "탭 누르면 맵이랑 같이 나오게가고"
+//    - Whenever the player presses Tab to toggle the AutoMap on/off, this
+//      transparent Map & Route Guide renders together with the map!
+// ============================================================================
+function buildPatchedAutoMapLayout(mapLines) {
+  const autoMap = readD2RJson(path.join(EXTRACTED_VANILLA, 'automaphd.json'));
+  const tableRows = expandTrackerLinesToTableRows(mapLines, 'AutoMapHud');
+  const mapHudHeight = 296;
+
+  autoMap.children = [
+    {
+      type: 'Widget',
+      name: 'D2RHudAutoMapContainer',
+      fields: {
+        anchor: { x: 1.0, y: 0.0 },
+        rect: { x: -860, y: 92, width: 836, height: mapHudHeight + 44 }
+      },
+      children: [
+        {
+          type: 'ButtonWidget',
+          name: 'AutoMapToggleQuestHudBtn',
+          fields: {
+            rect: { x: 0, y: 0, scale: 0.40 },
+            filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+            hoveredFrame: 3,
+            textString: '퀘스트HUD 크기조절창',
+            onClickMessage: 'PanelManager:TogglePanel:D2RHudTrackerPanel',
+            tooltipString: '좌측 상단 투명 퀘스트 출력창(소형/중형/대형 조절)을 켜거나 끕니다.',
+            textColor: '$FontColorGoldYellow',
+            'text/style': '$StyleFEButtonText',
+            sound: 'select'
+          }
+        },
+        {
+          type: 'ButtonWidget',
+          name: 'AutoMapToggleDictBtn',
+          fields: {
+            rect: { x: 165, y: 0, scale: 0.40 },
+            filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
+            hoveredFrame: 3,
+            textString: '룬워드·큐빙 사전',
+            onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
+            tooltipString: '투명 호라드림 대사전(룬워드 98종·큐빙 60종)을 켜거나 끕니다.',
+            textColor: '$FontColorLightTeal',
+            'text/style': '$StyleFEButtonText',
+            sound: 'select'
+          }
+        },
+        makeAlignedScrollBar(806, 38, mapHudHeight, 'AutoMapScrollCtrl', 'AutoMapScrollView'),
+        {
+          type: 'ScrollViewWidget',
+          name: 'AutoMapScrollView',
+          fields: {
+            rect: { x: 0, y: 38, width: 798, height: mapHudHeight },
+            scrollControllerName: 'AutoMapScrollCtrl',
+            clipChildrenDraw: true
+          },
+          children: [
+            {
+              type: 'TableWidget',
+              name: 'AutoMapHudTable',
+              fields: {
+                columns: [{ width: 786, alignment: { h: 'fit', v: 'fit' } }],
+                rowHeight: 37
+              },
+              children: tableRows
+            }
+          ]
+        }
+      ]
+    }
+  ];
+
+  return autoMap;
+}
+
+// ============================================================================
+// 5. PATCH EXISTING LAYOUT ENTRY POINTS
+//    - "하단 성역HUD 룬 큐빈사전 삭제하고 체려바 삭제하고"
+//      -> Remove D2RHudTrackerToggleBtn, D2RHudDictToggleBtn, miniHealthBar,
+//         minihpBar, minimanaBar from hudpanelhd.json, and disable healthProBar!
+// ============================================================================
+function buildPatchedEntryLayouts(actLinesMap, mapTrackerLines) {
+  // 5.1 hudpanelhd.json — Delete bottom 성역HUD, 룬·큐빙사전, and 체력바 buttons!
+  const hudPanel = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\hudpanelhd.json'));
+  const removedHudWidgets = new Set([
+    'D2RHudTrackerToggleBtn',
+    'D2RHudDictToggleBtn',
+    'miniHealthBar',
+    'minihpBar',
+    'minimanaBar'
+  ]);
+  hudPanel.children = hudPanel.children.filter((c) => !removedHudWidgets.has(c.name));
+
+  // Also neutralize healthProBarhd.json, hpProBarhd.json, manaProBarhd.json
+  const emptyHealthBarPanel = (name) => ({
+    type: 'PlayerInventoryPanel',
+    name,
+    fields: {
+      anchor: { x: 0.5, y: 1 },
+      rect: { x: -9999, y: -9999, width: 1, height: 1 },
+      priority: 1
+    },
+    children: []
+  });
+
+  // 5.2 mainmenubuttonribbonhd.json — Character Select left ribbon button
   const mainRibbon = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\mainmenubuttonribbonhd.json'));
   const ribbonImg = mainRibbon.children.find((c) => c.name === 'Ribbon');
   if (ribbonImg && Array.isArray(ribbonImg.children)) {
     ribbonImg.children = ribbonImg.children.filter((c) => c.name !== 'D2RHudMainMenuBtn');
-    ribbonImg.children.push({
-      type: 'ButtonWidget',
-      name: 'D2RHudMainMenuBtn',
-      fields: {
-        rect: { x: 165, y: 680 },
-        filename: 'FrontEnd\\HD\\Final\\FrontEnd_ButtonMed',
-        textString: '성역 HUD v1.3',
-        onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
-        tooltipString: 'D2R-HUD v1.3 투명 성역 내비게이터 & 호라드림 사전 열기',
-        textColor: '$FontColorGoldYellow',
-        'text/style': '$StyleFEButtonText',
-        hoveredFrame: 3,
-        disabledFrame: 2
-      }
-    });
   }
 
-  // 3.3 pauselayouthd.json — Add [성역 HUD · 호라드림 사전] row to ESC Pause Menu
+  // 5.3 pauselayouthd.json — ESC Pause Menu entry for Dictionary
   const pauseLayout = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\pauselayouthd.json'));
   const pauseTable = pauseLayout.children.find((c) => c.name === 'PauseTable');
   if (pauseTable && Array.isArray(pauseTable.children)) {
@@ -1385,7 +1521,7 @@ function buildPatchedEntryLayouts() {
           fields: {
             filename: 'PauseMenu\\PauseButton',
             hoveredFrame: 3,
-            textString: '성역 HUD 사전',
+            textString: '룬워드·큐빙 사전',
             onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
             textColor: '$FontColorGoldYellow',
             'text/style': '$StyleFEButtonText',
@@ -1398,31 +1534,13 @@ function buildPatchedEntryLayouts() {
     });
   }
 
-  // 3.4 playerinventoryexpansionlayouthd.json — Add [성역 HUD] button at top center of Inventory (I)
+  // 5.4 playerinventoryexpansionlayouthd.json — Inventory (I) button
   const invLayout = readD2RJson(
     path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\playerinventoryexpansionlayouthd.json')
   );
   invLayout.children = invLayout.children.filter((c) => c.name !== 'D2RHudInvBtn');
-  invLayout.children.push({
-    type: 'ButtonWidget',
-    name: 'D2RHudInvBtn',
-    fields: {
-      rect: { x: 472, y: 52, scale: 0.67 },
-      filename: 'PANEL/infobutton',
-      hoveredFrame: 3,
-      textString: '성역 HUD v1.3',
-      pressLabelOffset: [0, 0],
-      onClickMessage: 'PanelManager:TogglePanel:D2RHudMainPanel',
-      tooltipString: 'D2R-HUD v1.3 투명 성역 퀘스트 동선·길찾기·룬워드 98종·큐빙 60종 사전 켜기/끄기',
-      textColor: '$FontColorGoldYellow',
-      'text/style': '$StyleFEButtonText',
-      acceptsReturnKey: true,
-      focusOnMouseOver: false,
-      sound: 'select'
-    }
-  });
 
-  // 3.5 horadriccubelayouthd.json — Add [큐빙 사전] button on Horadric Cube panel
+  // 5.5 horadriccubelayouthd.json — Horadric Cube button
   const cubeLayout = readD2RJson(path.join(YUPGOOLG_MERGED, 'data\\global\\ui\\layouts\\horadriccubelayouthd.json'));
   cubeLayout.children = cubeLayout.children.filter((c) => c.name !== 'D2RHudCubeDictBtn');
   cubeLayout.children.push({
@@ -1441,12 +1559,21 @@ function buildPatchedEntryLayouts() {
     }
   });
 
+  // 5.6 Quest Log (Q) & AutoMap (Tab) patched layouts
+  const questLogLayouts = buildPatchedQuestLogLayouts(actLinesMap);
+  const autoMapLayout = buildPatchedAutoMapLayout(mapTrackerLines);
+
   return {
     'hudpanelhd.json': hudPanel,
+    'healthProBarhd.json': emptyHealthBarPanel('healthProBar'),
+    'hpProBarhd.json': emptyHealthBarPanel('hpProBar'),
+    'manaProBarhd.json': emptyHealthBarPanel('manaProBar'),
     'mainmenubuttonribbonhd.json': mainRibbon,
     'pauselayouthd.json': pauseLayout,
     'playerinventoryexpansionlayouthd.json': invLayout,
-    'horadriccubelayouthd.json': cubeLayout
+    'horadriccubelayouthd.json': cubeLayout,
+    'automaphd.json': autoMapLayout,
+    ...questLogLayouts
   };
 }
 
@@ -1511,14 +1638,24 @@ function main() {
     ])
   ];
 
+  const actLinesMap = {
+    Act1: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 1')), 1),
+    Act2: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 2')), 2),
+    Act3: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 3')), 3),
+    Act4: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 4')), 4),
+    Act5: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 5')), 5),
+    Map: mapTrackerLines,
+    Starter: stepsToTrackerLines(warlockGuide.steps)
+  };
+
   const trackerTabs = [
-    { key: 'Act1', lines: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 1'))) },
-    { key: 'Act2', lines: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 2'))) },
-    { key: 'Act3', lines: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 3'))) },
-    { key: 'Act4', lines: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 4'))) },
-    { key: 'Act5', lines: stepsToTrackerLines(questTimeline.steps.filter((s) => s.condition.value.startsWith('Act 5'))) },
-    { key: 'Map', lines: mapTrackerLines },
-    { key: 'Starter', lines: stepsToTrackerLines(warlockGuide.steps) }
+    { key: 'Act1', lines: actLinesMap.Act1 },
+    { key: 'Act2', lines: actLinesMap.Act2 },
+    { key: 'Act3', lines: actLinesMap.Act3 },
+    { key: 'Act4', lines: actLinesMap.Act4 },
+    { key: 'Act5', lines: actLinesMap.Act5 },
+    { key: 'Map', lines: actLinesMap.Map },
+    { key: 'Starter', lines: actLinesMap.Starter }
   ];
 
   for (const t of trackerTabs) {
@@ -1527,8 +1664,8 @@ function main() {
     }
   }
 
-  // 3. Patched Entry Layouts
-  const patchedEntries = buildPatchedEntryLayouts();
+  // 3. Patched Entry Layouts (HUDPanel, QuestLog, AutoMap, PauseMenu, Cube)
+  const patchedEntries = buildPatchedEntryLayouts(actLinesMap, mapTrackerLines);
   Object.assign(generatedLayouts, patchedEntries);
 
   const outStandaloneLayouts = path.join(OUT_MOD_DIR, 'data', 'global', 'ui', 'layouts');

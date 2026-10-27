@@ -167,7 +167,7 @@
               "fields": {
                 "filename": "PauseMenu\\PauseButton",
                 "hoveredFrame": 3,
-                "textString": "성역 HUD 사전",
+                "textString": "룬워드·큐빙 사전",
                 "onClickMessage": "PanelManager:TogglePanel:D2RHudMainPanel",
                 "textColor": "$FontColorGoldYellow",
                 "text/style": "$StyleFEButtonText",

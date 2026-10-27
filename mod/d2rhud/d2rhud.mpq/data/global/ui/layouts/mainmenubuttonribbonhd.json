@@ -181,24 +181,6 @@
             "hoveredFrame": 3,
             "disabledFrame": 2
           }
-        },
-        {
-          "type": "ButtonWidget",
-          "name": "D2RHudMainMenuBtn",
-          "fields": {
-            "rect": {
-              "x": 165,
-              "y": 680
-            },
-            "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
-            "textString": "성역 HUD v1.3",
-            "onClickMessage": "PanelManager:TogglePanel:D2RHudMainPanel",
-            "tooltipString": "D2R-HUD v1.3 투명 성역 내비게이터 & 호라드림 사전 열기",
-            "textColor": "$FontColorGoldYellow",
-            "text/style": "$StyleFEButtonText",
-            "hoveredFrame": 3,
-            "disabledFrame": 2
-          }
         }
       ]
     },

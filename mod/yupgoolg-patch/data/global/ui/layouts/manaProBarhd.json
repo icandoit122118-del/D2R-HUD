@@ -1,0 +1,18 @@
+{
+  "type": "PlayerInventoryPanel",
+  "name": "manaProBar",
+  "fields": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "rect": {
+      "x": -9999,
+      "y": -9999,
+      "width": 1,
+      "height": 1
+    },
+    "priority": 1
+  },
+  "children": []
+}

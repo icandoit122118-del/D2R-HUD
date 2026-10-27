@@ -5,9 +5,9 @@
     "priority": 9003,
     "rect": {
       "x": -840,
-      "y": 156,
+      "y": 112,
       "width": 1680,
-      "height": 64
+      "height": 54
     },
     "anchor": {
       "x": 0.5,
@@ -17,55 +17,13 @@
   },
   "children": [
     {
-      "type": "TextBoxWidget",
-      "name": "FoldNotice",
-      "fields": {
-        "rect": {
-          "x": 16,
-          "y": 8,
-          "width": 580,
-          "height": 40
-        },
-        "text": "▼ 호라드림 대사전 출력창 접힘 (펴기 선택):",
-        "style": {
-          "fontColor": "$FontColorLightYellow",
-          "pointSize": "$SmallFontSize",
-          "alignment": {
-            "h": "left",
-            "v": "center"
-          },
-          "options": {
-            "lineWrap": false,
-            "newlineHandling": "standard",
-            "pipeCharacterBehavior": "handle"
-          },
-          "spacing": {
-            "leading": 1.12,
-            "kerning": 0.94
-          },
-          "dropShadow": {
-            "shadowColor": {
-              "r": 0,
-              "g": 0,
-              "b": 0,
-              "a": 255
-            },
-            "offset": {
-              "x": 3,
-              "y": 3
-            }
-          }
-        }
-      }
-    },
-    {
       "type": "ButtonWidget",
       "name": "UnfoldSmallBtn",
       "fields": {
         "rect": {
-          "x": 560,
-          "y": 4,
-          "scale": 0.48
+          "x": 16,
+          "y": 2,
+          "scale": 0.46
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -81,9 +39,9 @@
       "name": "UnfoldMedBtn",
       "fields": {
         "rect": {
-          "x": 750,
-          "y": 4,
-          "scale": 0.48
+          "x": 210,
+          "y": 2,
+          "scale": 0.46
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -99,9 +57,9 @@
       "name": "UnfoldLargeBtn",
       "fields": {
         "rect": {
-          "x": 940,
-          "y": 4,
-          "scale": 0.48
+          "x": 404,
+          "y": 2,
+          "scale": 0.46
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,

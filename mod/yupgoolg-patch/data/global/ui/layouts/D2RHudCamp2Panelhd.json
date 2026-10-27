@@ -5,9 +5,9 @@
     "priority": 9003,
     "rect": {
       "x": -840,
-      "y": 156,
+      "y": 112,
       "width": 1680,
-      "height": 698
+      "height": 694
     },
     "anchor": {
       "x": 0.5,
@@ -17,55 +17,13 @@
   },
   "children": [
     {
-      "type": "TextBoxWidget",
-      "name": "SizeStatusText",
-      "fields": {
-        "rect": {
-          "x": 16,
-          "y": 4,
-          "width": 220,
-          "height": 38
-        },
-        "text": "▶ [중형11줄]",
-        "style": {
-          "fontColor": "$FontColorLightYellow",
-          "pointSize": "$SmallFontSize",
-          "alignment": {
-            "h": "left",
-            "v": "center"
-          },
-          "options": {
-            "lineWrap": false,
-            "newlineHandling": "standard",
-            "pipeCharacterBehavior": "handle"
-          },
-          "spacing": {
-            "leading": 1.12,
-            "kerning": 0.94
-          },
-          "dropShadow": {
-            "shadowColor": {
-              "r": 0,
-              "g": 0,
-              "b": 0,
-              "a": 255
-            },
-            "offset": {
-              "x": 3,
-              "y": 3
-            }
-          }
-        }
-      }
-    },
-    {
       "type": "ButtonWidget",
       "name": "SubFoldBtn",
       "fields": {
         "rect": {
-          "x": 240,
+          "x": 16,
           "y": 0,
-          "scale": 0.46
+          "scale": 0.44
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -81,9 +39,9 @@
       "name": "SubSmallBtn",
       "fields": {
         "rect": {
-          "x": 430,
+          "x": 196,
           "y": 0,
-          "scale": 0.46
+          "scale": 0.44
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -99,9 +57,9 @@
       "name": "SubMedBtn",
       "fields": {
         "rect": {
-          "x": 620,
+          "x": 376,
           "y": 0,
-          "scale": 0.46
+          "scale": 0.44
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -117,9 +75,9 @@
       "name": "SubLargeBtn",
       "fields": {
         "rect": {
-          "x": 810,
+          "x": 556,
           "y": 0,
-          "scale": 0.46
+          "scale": 0.44
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -131,38 +89,68 @@
       }
     },
     {
-      "type": "ImageWidget",
-      "name": "ScrollBarBackground",
+      "type": "Widget",
+      "name": "ScrollBarWrap_ScrollController",
       "fields": {
         "rect": {
-          "x": -12,
-          "y": 50,
+          "x": 1644,
+          "y": 46,
           "width": 24,
           "height": 640
-        },
-        "anchor": {
-          "x": 1
-        },
-        "filename": "PauseMenu\\VerticalScroll"
+        }
       },
       "children": [
+        {
+          "type": "RectangleWidget",
+          "name": "ScrollTrackBg_ScrollController",
+          "fields": {
+            "rect": {
+              "x": 8,
+              "y": 22,
+              "width": 8,
+              "height": 596
+            },
+            "color": [
+              0.08,
+              0.07,
+              0.05,
+              0.72
+            ]
+          }
+        },
+        {
+          "type": "RectangleWidget",
+          "name": "ScrollTrackLine_ScrollController",
+          "fields": {
+            "rect": {
+              "x": 10,
+              "y": 22,
+              "width": 4,
+              "height": 596
+            },
+            "color": [
+              0.55,
+              0.44,
+              0.22,
+              0.85
+            ]
+          }
+        },
         {
           "type": "ScrollControllerWidget",
           "name": "ScrollController",
           "fields": {
             "rect": {
-              "x": -22,
-              "y": 24,
+              "x": 0,
+              "y": 0,
               "width": 24,
-              "height": 592
-            },
-            "anchor": {
-              "x": 1
+              "height": 640
             },
             "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
             "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
-            "barFilepath": "PauseMenu\\VerticalIndicator",
+            "barFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollIndicator",
             "viewName": "ScrollView",
+            "buttonScrollAmount": 76,
             "wheelScrollSound": "cursor_scroll_hd",
             "buttonScrollSound": "cursor_scroll_hd"
           }
@@ -175,8 +163,8 @@
       "fields": {
         "rect": {
           "x": 16,
-          "y": 50,
-          "width": 1620,
+          "y": 46,
+          "width": 1618,
           "height": 640
         },
         "scrollControllerName": "ScrollController",
@@ -206,125 +194,6 @@
             "rowHeight": 56
           },
           "children": [
-            {
-              "type": "TableRowWidget",
-              "name": "DataRow",
-              "children": [
-                {
-                  "type": "LayoutItemWidget",
-                  "name": "Col1Wrap",
-                  "fields": {
-                    "marginTop": 3,
-                    "marginBottom": 3
-                  },
-                  "children": [
-                    {
-                      "type": "TextBoxWidget",
-                      "name": "Col1Text",
-                      "fields": {
-                        "fitToText": true,
-                        "text": "★ D2R-HUD v1.3 성역 원정대 필수 퀘스트 & 동선 가이드",
-                        "style": {
-                          "fontColor": "$FontColorGreen",
-                          "pointSize": "$MediumFontSize",
-                          "alignment": {
-                            "h": "left",
-                            "v": "center"
-                          },
-                          "options": {
-                            "lineWrap": false,
-                            "newlineHandling": "standard",
-                            "pipeCharacterBehavior": "handle"
-                          },
-                          "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
-                          },
-                          "dropShadow": {
-                            "shadowColor": {
-                              "r": 0,
-                              "g": 0,
-                              "b": 0,
-                              "a": 255
-                            },
-                            "offset": {
-                              "x": 3,
-                              "y": 3
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "LayoutItemWidget",
-                  "name": "Col2Wrap",
-                  "fields": {
-                    "marginTop": 3,
-                    "marginBottom": 3
-                  },
-                  "children": [
-                    {
-                      "type": "TextBoxWidget",
-                      "name": "Col2Text",
-                      "fields": {
-                        "fitToText": true,
-                        "text": "마우스 오버 팁",
-                        "style": {
-                          "fontColor": "$FontColorGoldYellow",
-                          "pointSize": "$SmallFontSize",
-                          "alignment": {
-                            "h": "center",
-                            "v": "center"
-                          },
-                          "options": {
-                            "lineWrap": false,
-                            "newlineHandling": "standard",
-                            "pipeCharacterBehavior": "handle"
-                          },
-                          "spacing": {
-                            "leading": 1.12,
-                            "kerning": 0.94
-                          },
-                          "dropShadow": {
-                            "shadowColor": {
-                              "r": 0,
-                              "g": 0,
-                              "b": 0,
-                              "a": 255
-                            },
-                            "offset": {
-                              "x": 3,
-                              "y": 3
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "TableRowWidget",
-              "name": "RowDivider",
-              "children": [
-                {
-                  "type": "ImageWidget",
-                  "name": "Divider",
-                  "fields": {
-                    "rect": {
-                      "x": 4,
-                      "y": 24,
-                      "width": 1480,
-                      "height": 4
-                    },
-                    "filename": "PauseMenu\\Divider"
-                  }
-                }
-              ]
-            },
             {
               "type": "TableRowWidget",
               "name": "DataRow",

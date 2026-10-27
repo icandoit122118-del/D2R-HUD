@@ -4,10 +4,10 @@
   "fields": {
     "priority": 200,
     "rect": {
-      "x": 18,
-      "y": 14,
-      "width": 920,
-      "height": 120
+      "x": 24,
+      "y": 12,
+      "width": 868,
+      "height": 36
     },
     "anchor": {
       "x": 0,
@@ -16,111 +16,15 @@
   },
   "children": [
     {
-      "type": "TextBoxWidget",
-      "name": "HudTitle",
-      "fields": {
-        "rect": {
-          "x": 8,
-          "y": 6,
-          "width": 390,
-          "height": 36
-        },
-        "text": "★ D2R-HUD v1.3 성역 HUD",
-        "style": {
-          "fontColor": "$FontColorGoldYellow",
-          "pointSize": "$MediumFontSize",
-          "alignment": {
-            "h": "left",
-            "v": "center"
-          },
-          "options": {
-            "lineWrap": false,
-            "newlineHandling": "standard",
-            "pipeCharacterBehavior": "handle"
-          },
-          "spacing": {
-            "leading": 1.12,
-            "kerning": 0.94
-          },
-          "dropShadow": {
-            "shadowColor": {
-              "r": 0,
-              "g": 0,
-              "b": 0,
-              "a": 255
-            },
-            "offset": {
-              "x": 3,
-              "y": 3
-            }
-          }
-        }
-      }
-    },
-    {
-      "type": "ButtonWidget",
-      "name": "FoldTrackerBtn",
-      "fields": {
-        "rect": {
-          "x": 430,
-          "y": 2,
-          "scale": 0.45
-        },
-        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
-        "hoveredFrame": 3,
-        "textString": "▲ 글자창 접기",
-        "onClickMessage": "SettingsPanelMessage:CheckChanges:D2RHudTrackFold",
-        "tooltipString": "글자 출력창을 접어 상단 탭바만 남깁니다.",
-        "textColor": "$FontColorLightYellow",
-        "text/style": "$StyleFEButtonText",
-        "sound": "select"
-      }
-    },
-    {
-      "type": "ButtonWidget",
-      "name": "OpenFullDictBtn",
-      "fields": {
-        "rect": {
-          "x": 630,
-          "y": 2,
-          "scale": 0.45
-        },
-        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
-        "hoveredFrame": 3,
-        "textString": "호라드림 사전",
-        "onClickMessage": "PanelManager:TogglePanel:D2RHudMainPanel",
-        "tooltipString": "룬워드 98종, 큐빙 60종 투명 대사전(D2RHudMainPanel)을 켜거나 끕니다.",
-        "textColor": "$FontColorGoldYellow",
-        "text/style": "$StyleFEButtonText",
-        "sound": "select"
-      }
-    },
-    {
-      "type": "ButtonWidget",
-      "name": "CloseTrackerBtn",
-      "fields": {
-        "rect": {
-          "x": 855,
-          "y": 4,
-          "scale": 0.68
-        },
-        "filename": "PANEL\\closebtn_4x",
-        "hoveredFrame": 3,
-        "onClickMessage": "PanelManager:ClosePanel:D2RHudTrackerPanel",
-        "tooltipString": "성역 HUD 닫기 (하단 성역 HUD 버튼으로 언제든 다시 열기 가능)",
-        "sound": "cursor_close_window_hd"
-      }
-    },
-    {
       "type": "TabBarWidget",
       "name": "OptionsTabs",
       "fields": {
         "rect": {
-          "x": 6,
-          "y": 46,
-          "scale": 0.56,
-          "width": 1600,
-          "height": 96
+          "x": -9999,
+          "y": -9999,
+          "scale": 0.001,
+          "width": 1,
+          "height": 1
         },
         "anchor": {
           "x": 0,
@@ -128,15 +32,13 @@
         },
         "tabCount": 7,
         "tabSize": {
-          "x": 224,
-          "y": 96
+          "x": 1,
+          "y": 1
         },
         "tabPadding": {
-          "x": 2,
+          "x": 0,
           "y": 0
         },
-        "unavailableTabsLeaveGaps": false,
-        "tabSizingMethod": "fixedCenter",
         "filename": "Controller/Panel/Stash/V2/StashTabs",
         "inactiveFrames": [
           1,
@@ -156,35 +58,14 @@
           0,
           0
         ],
-        "activeTextColor": "$TabsActiveTextColor",
-        "inactiveTextColor": "$TabsInactiveTextColor",
-        "tabTextOffset": {
-          "x": 0,
-          "y": -4
-        },
-        "textStyle": {
-          "options": {
-            "lineWrap": true
-          },
-          "pointSize": "$SmallFontSize",
-          "alignment": {
-            "h": "center",
-            "v": "center"
-          },
-          "fontColor": "$FontColorWhite",
-          "spacing": {
-            "leading": 0.9,
-            "kerning": 0.95
-          }
-        },
         "textStrings": [
-          "1막 자매단",
-          "2막 루트골레인",
-          "3막 쿠라스트",
-          "4막 혼돈성역",
-          "5막 해로개스",
-          "길찾기 공식",
-          "초반 스타터"
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "M",
+          "S"
         ],
         "tabMessages": [
           "SettingsPanelMessage:CheckChanges:D2RHudTrackAct1",

@@ -5,9 +5,9 @@
     "priority": 201,
     "rect": {
       "x": 24,
-      "y": 108,
+      "y": 12,
       "width": 868,
-      "height": 626
+      "height": 582
     },
     "anchor": {
       "x": 0,
@@ -17,55 +17,13 @@
   },
   "children": [
     {
-      "type": "TextBoxWidget",
-      "name": "WindowSizeLabel",
-      "fields": {
-        "rect": {
-          "x": 4,
-          "y": 4,
-          "width": 115,
-          "height": 32
-        },
-        "text": "▶ 대형15줄",
-        "style": {
-          "fontColor": "$FontColorLightYellow",
-          "pointSize": "$SmallFontSize",
-          "alignment": {
-            "h": "left",
-            "v": "center"
-          },
-          "options": {
-            "lineWrap": false,
-            "newlineHandling": "standard",
-            "pipeCharacterBehavior": "handle"
-          },
-          "spacing": {
-            "leading": 1.12,
-            "kerning": 0.94
-          },
-          "dropShadow": {
-            "shadowColor": {
-              "r": 0,
-              "g": 0,
-              "b": 0,
-              "a": 255
-            },
-            "offset": {
-              "x": 3,
-              "y": 3
-            }
-          }
-        }
-      }
-    },
-    {
       "type": "ButtonWidget",
       "name": "SizeFoldBtn",
       "fields": {
         "rect": {
-          "x": 135,
+          "x": 0,
           "y": 0,
-          "scale": 0.39
+          "scale": 0.38
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -82,9 +40,9 @@
       "name": "SizeSmallBtn",
       "fields": {
         "rect": {
-          "x": 280,
+          "x": 138,
           "y": 0,
-          "scale": 0.39
+          "scale": 0.38
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -101,9 +59,9 @@
       "name": "SizeMedBtn",
       "fields": {
         "rect": {
-          "x": 425,
+          "x": 276,
           "y": 0,
-          "scale": 0.39
+          "scale": 0.38
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -120,9 +78,9 @@
       "name": "SizeLargeBtn",
       "fields": {
         "rect": {
-          "x": 570,
+          "x": 414,
           "y": 0,
-          "scale": 0.39
+          "scale": 0.38
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -139,9 +97,9 @@
       "name": "SizeTintToggleBtn",
       "fields": {
         "rect": {
-          "x": 715,
+          "x": 552,
           "y": 0,
-          "scale": 0.39
+          "scale": 0.38
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -154,38 +112,84 @@
       }
     },
     {
-      "type": "ImageWidget",
-      "name": "ScrollBarBackground",
+      "type": "ButtonWidget",
+      "name": "CloseTrackerSubBtn",
       "fields": {
         "rect": {
-          "x": -14,
-          "y": 40,
-          "width": 22,
-          "height": 580
+          "x": 696,
+          "y": -2,
+          "scale": 0.56
         },
-        "anchor": {
-          "x": 1
-        },
-        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ScrollbarSmall"
+        "filename": "PANEL\\closebtn_4x",
+        "hoveredFrame": 3,
+        "onClickMessage": "PanelManager:ClosePanel:D2RHudTrackerPanel",
+        "tooltipString": "@strClose",
+        "sound": "cursor_close_window_hd"
+      }
+    },
+    {
+      "type": "Widget",
+      "name": "ScrollBarWrap_ScrollController",
+      "fields": {
+        "rect": {
+          "x": 840,
+          "y": 36,
+          "width": 24,
+          "height": 540
+        }
       },
       "children": [
+        {
+          "type": "RectangleWidget",
+          "name": "ScrollTrackBg_ScrollController",
+          "fields": {
+            "rect": {
+              "x": 8,
+              "y": 22,
+              "width": 8,
+              "height": 496
+            },
+            "color": [
+              0.08,
+              0.07,
+              0.05,
+              0.72
+            ]
+          }
+        },
+        {
+          "type": "RectangleWidget",
+          "name": "ScrollTrackLine_ScrollController",
+          "fields": {
+            "rect": {
+              "x": 10,
+              "y": 22,
+              "width": 4,
+              "height": 496
+            },
+            "color": [
+              0.55,
+              0.44,
+              0.22,
+              0.85
+            ]
+          }
+        },
         {
           "type": "ScrollControllerWidget",
           "name": "ScrollController",
           "fields": {
             "rect": {
-              "x": -22,
-              "y": 20,
-              "width": 22,
+              "x": 0,
+              "y": 0,
+              "width": 24,
               "height": 540
-            },
-            "anchor": {
-              "x": 1
             },
             "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
             "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
             "barFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollIndicator",
             "viewName": "ScrollView",
+            "buttonScrollAmount": 76,
             "wheelScrollSound": "cursor_scroll_hd",
             "buttonScrollSound": "cursor_scroll_hd"
           }
@@ -198,9 +202,9 @@
       "fields": {
         "rect": {
           "x": 4,
-          "y": 40,
-          "width": 830,
-          "height": 580
+          "y": 36,
+          "width": 828,
+          "height": 540
         },
         "scrollControllerName": "ScrollController",
         "clipChildrenDraw": true
@@ -212,14 +216,14 @@
           "fields": {
             "columns": [
               {
-                "width": 815,
+                "width": 816,
                 "alignment": {
                   "h": "fit",
                   "v": "fit"
                 }
               }
             ],
-            "rowHeight": 38
+            "rowHeight": 37
           },
           "children": [
             {

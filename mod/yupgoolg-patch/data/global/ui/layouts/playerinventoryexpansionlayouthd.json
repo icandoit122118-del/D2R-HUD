@@ -377,31 +377,6 @@
         "focusOnMouseOver": false,
         "sound": "select"
       }
-    },
-    {
-      "type": "ButtonWidget",
-      "name": "D2RHudInvBtn",
-      "fields": {
-        "rect": {
-          "x": 472,
-          "y": 52,
-          "scale": 0.67
-        },
-        "filename": "PANEL/infobutton",
-        "hoveredFrame": 3,
-        "textString": "성역 HUD v1.3",
-        "pressLabelOffset": [
-          0,
-          0
-        ],
-        "onClickMessage": "PanelManager:TogglePanel:D2RHudMainPanel",
-        "tooltipString": "D2R-HUD v1.3 투명 성역 퀘스트 동선·길찾기·룬워드 98종·큐빙 60종 사전 켜기/끄기",
-        "textColor": "$FontColorGoldYellow",
-        "text/style": "$StyleFEButtonText",
-        "acceptsReturnKey": true,
-        "focusOnMouseOver": false,
-        "sound": "select"
-      }
     }
   ]
 }

@@ -5,9 +5,9 @@
     "priority": 201,
     "rect": {
       "x": 24,
-      "y": 108,
-      "width": 880,
-      "height": 50
+      "y": 12,
+      "width": 680,
+      "height": 42
     },
     "anchor": {
       "x": 0,
@@ -17,55 +17,13 @@
   },
   "children": [
     {
-      "type": "TextBoxWidget",
-      "name": "FoldStateText",
-      "fields": {
-        "rect": {
-          "x": 4,
-          "y": 6,
-          "width": 220,
-          "height": 32
-        },
-        "text": "▼ 출력창 접힘:",
-        "style": {
-          "fontColor": "$FontColorLightYellow",
-          "pointSize": "$SmallFontSize",
-          "alignment": {
-            "h": "left",
-            "v": "center"
-          },
-          "options": {
-            "lineWrap": false,
-            "newlineHandling": "standard",
-            "pipeCharacterBehavior": "handle"
-          },
-          "spacing": {
-            "leading": 1.12,
-            "kerning": 0.94
-          },
-          "dropShadow": {
-            "shadowColor": {
-              "r": 0,
-              "g": 0,
-              "b": 0,
-              "a": 255
-            },
-            "offset": {
-              "x": 3,
-              "y": 3
-            }
-          }
-        }
-      }
-    },
-    {
       "type": "ButtonWidget",
       "name": "ExpandSmallBtn",
       "fields": {
         "rect": {
-          "x": 205,
-          "y": 2,
-          "scale": 0.42
+          "x": 0,
+          "y": 0,
+          "scale": 0.39
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -81,9 +39,9 @@
       "name": "ExpandMedBtn",
       "fields": {
         "rect": {
-          "x": 355,
-          "y": 2,
-          "scale": 0.42
+          "x": 142,
+          "y": 0,
+          "scale": 0.39
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -99,9 +57,9 @@
       "name": "ExpandLargeBtn",
       "fields": {
         "rect": {
-          "x": 505,
-          "y": 2,
-          "scale": 0.42
+          "x": 284,
+          "y": 0,
+          "scale": 0.39
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -110,6 +68,22 @@
         "textColor": "$FontColorGoldYellow",
         "text/style": "$StyleFEButtonText",
         "sound": "select"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "FoldCloseBtn",
+      "fields": {
+        "rect": {
+          "x": 432,
+          "y": 0,
+          "scale": 0.56
+        },
+        "filename": "PANEL\\closebtn_4x",
+        "hoveredFrame": 3,
+        "onClickMessage": "PanelManager:ClosePanel:D2RHudTrackerPanel",
+        "tooltipString": "@strClose",
+        "sound": "cursor_close_window_hd"
       }
     }
   ]

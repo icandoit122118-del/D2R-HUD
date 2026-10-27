@@ -5,9 +5,9 @@
     "priority": 201,
     "rect": {
       "x": 24,
-      "y": 108,
+      "y": 12,
       "width": 868,
-      "height": 366
+      "height": 338
     },
     "anchor": {
       "x": 0,
@@ -22,9 +22,9 @@
       "fields": {
         "rect": {
           "x": 0,
-          "y": 40,
-          "width": 860,
-          "height": 320
+          "y": 36,
+          "width": 868,
+          "height": 296
         },
         "color": [
           0,
@@ -35,55 +35,13 @@
       }
     },
     {
-      "type": "TextBoxWidget",
-      "name": "WindowSizeLabel",
-      "fields": {
-        "rect": {
-          "x": 4,
-          "y": 4,
-          "width": 115,
-          "height": 32
-        },
-        "text": "▶ 반투명8줄",
-        "style": {
-          "fontColor": "$FontColorLightYellow",
-          "pointSize": "$SmallFontSize",
-          "alignment": {
-            "h": "left",
-            "v": "center"
-          },
-          "options": {
-            "lineWrap": false,
-            "newlineHandling": "standard",
-            "pipeCharacterBehavior": "handle"
-          },
-          "spacing": {
-            "leading": 1.12,
-            "kerning": 0.94
-          },
-          "dropShadow": {
-            "shadowColor": {
-              "r": 0,
-              "g": 0,
-              "b": 0,
-              "a": 255
-            },
-            "offset": {
-              "x": 3,
-              "y": 3
-            }
-          }
-        }
-      }
-    },
-    {
       "type": "ButtonWidget",
       "name": "SizeFoldBtn",
       "fields": {
         "rect": {
-          "x": 135,
+          "x": 0,
           "y": 0,
-          "scale": 0.39
+          "scale": 0.38
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -100,9 +58,9 @@
       "name": "SizeSmallBtn",
       "fields": {
         "rect": {
-          "x": 280,
+          "x": 138,
           "y": 0,
-          "scale": 0.39
+          "scale": 0.38
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -119,9 +77,9 @@
       "name": "SizeMedBtn",
       "fields": {
         "rect": {
-          "x": 425,
+          "x": 276,
           "y": 0,
-          "scale": 0.39
+          "scale": 0.38
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -138,9 +96,9 @@
       "name": "SizeLargeBtn",
       "fields": {
         "rect": {
-          "x": 570,
+          "x": 414,
           "y": 0,
-          "scale": 0.39
+          "scale": 0.38
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -157,9 +115,9 @@
       "name": "SizeTintToggleBtn",
       "fields": {
         "rect": {
-          "x": 715,
+          "x": 552,
           "y": 0,
-          "scale": 0.39
+          "scale": 0.38
         },
         "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
         "hoveredFrame": 3,
@@ -172,38 +130,84 @@
       }
     },
     {
-      "type": "ImageWidget",
-      "name": "ScrollBarBackground",
+      "type": "ButtonWidget",
+      "name": "CloseTrackerSubBtn",
       "fields": {
         "rect": {
-          "x": -14,
-          "y": 40,
-          "width": 22,
-          "height": 320
+          "x": 696,
+          "y": -2,
+          "scale": 0.56
         },
-        "anchor": {
-          "x": 1
-        },
-        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ScrollbarSmall"
+        "filename": "PANEL\\closebtn_4x",
+        "hoveredFrame": 3,
+        "onClickMessage": "PanelManager:ClosePanel:D2RHudTrackerPanel",
+        "tooltipString": "@strClose",
+        "sound": "cursor_close_window_hd"
+      }
+    },
+    {
+      "type": "Widget",
+      "name": "ScrollBarWrap_ScrollController",
+      "fields": {
+        "rect": {
+          "x": 840,
+          "y": 36,
+          "width": 24,
+          "height": 296
+        }
       },
       "children": [
+        {
+          "type": "RectangleWidget",
+          "name": "ScrollTrackBg_ScrollController",
+          "fields": {
+            "rect": {
+              "x": 8,
+              "y": 22,
+              "width": 8,
+              "height": 252
+            },
+            "color": [
+              0.08,
+              0.07,
+              0.05,
+              0.72
+            ]
+          }
+        },
+        {
+          "type": "RectangleWidget",
+          "name": "ScrollTrackLine_ScrollController",
+          "fields": {
+            "rect": {
+              "x": 10,
+              "y": 22,
+              "width": 4,
+              "height": 252
+            },
+            "color": [
+              0.55,
+              0.44,
+              0.22,
+              0.85
+            ]
+          }
+        },
         {
           "type": "ScrollControllerWidget",
           "name": "ScrollController",
           "fields": {
             "rect": {
-              "x": -22,
-              "y": 20,
-              "width": 22,
-              "height": 280
-            },
-            "anchor": {
-              "x": 1
+              "x": 0,
+              "y": 0,
+              "width": 24,
+              "height": 296
             },
             "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
             "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
             "barFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollIndicator",
             "viewName": "ScrollView",
+            "buttonScrollAmount": 76,
             "wheelScrollSound": "cursor_scroll_hd",
             "buttonScrollSound": "cursor_scroll_hd"
           }
@@ -216,9 +220,9 @@
       "fields": {
         "rect": {
           "x": 4,
-          "y": 40,
-          "width": 830,
-          "height": 320
+          "y": 36,
+          "width": 828,
+          "height": 296
         },
         "scrollControllerName": "ScrollController",
         "clipChildrenDraw": true
@@ -230,14 +234,14 @@
           "fields": {
             "columns": [
               {
-                "width": 815,
+                "width": 816,
                 "alignment": {
                   "h": "fit",
                   "v": "fit"
                 }
               }
             ],
-            "rowHeight": 38
+            "rowHeight": 37
           },
           "children": [
             {
@@ -249,7 +253,7 @@
                   "name": "TrackText_0",
                   "fields": {
                     "fitToText": true,
-                    "text": "■ [Act 2-1] 2막 - 하수구(라다먼트) & 호라드림의 함/지팡이",
+                    "text": "★ [2막 핵심 던전 길찾기 방향 공식]",
                     "style": {
                       "fontColor": "$FontColorGoldYellow",
                       "pointSize": "$MediumFontSize",
@@ -292,9 +296,9 @@
                   "name": "TrackText_1",
                   "fields": {
                     "fitToText": true,
-                    "text": "▶ 동선: 하수구 3층(스킬+1) → 메마른 언덕 → 죽음의 전당 3층(큐브) →",
+                    "text": "· 머나먼 오아시스 - 구더기 굴 1~2층: 입구 타일 기준 오른쪽(반시계방향",
                     "style": {
-                      "fontColor": "$FontColorLightTeal",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -335,9 +339,9 @@
                   "name": "TrackText_2",
                   "fields": {
                     "fitToText": true,
-                    "text": "    머나먼 오아시스 → 구더기 굴 3층(지팡이) → 잊힌 도시 → 발톱 독사",
+                    "text": "    90도) 벽면을 따라 이동",
                     "style": {
-                      "fontColor": "$FontColorLightTeal",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -378,9 +382,9 @@
                   "name": "TrackText_3",
                   "fields": {
                     "fitToText": true,
-                    "text": "    사원 2층(목걸이)",
+                    "text": "· 죽음의 전당 1~2층 / 발톱 독사 사원 1층: 입구 타일 기준 왼쪽(시계방향",
                     "style": {
-                      "fontColor": "$FontColorLightTeal",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -421,7 +425,7 @@
                   "name": "TrackText_4",
                   "fields": {
                     "fitToText": true,
-                    "text": "[1] [필수/보상] 루트 골레인 하수구 3층 라다먼트 처치 → 기술의 책(스킬",
+                    "text": "    90도) 벽면을 따라 이동",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -464,7 +468,7 @@
                   "name": "TrackText_5",
                   "fields": {
                     "fitToText": true,
-                    "text": "    +1) 획득",
+                    "text": "· 비전 성역 (소환술사 4방향): 웨이포인트 기준 4갈래 중 막다른 끝 -",
                     "style": {
                       "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
@@ -507,9 +511,9 @@
                   "name": "TrackText_6",
                   "fields": {
                     "fitToText": true,
-                    "text": "  [2] 그리즈에게 전투/기도/축복받은 조준 2막 사막 용병 고용",
+                    "text": "    포탈/계단 유무로 지형 판별",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -550,9 +554,9 @@
                   "name": "TrackText_7",
                   "fields": {
                     "fitToText": true,
-                    "text": "[3] 죽음의 전당 3층에서 호라드림의 함(큐브) 획득 (악몽/지옥 난이도 생략",
+                    "text": "· 신비술사의 협곡 - 탈 라샤의 무덤 (두리엘): 무덤 입구 기준 왼쪽(시계방향",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -593,9 +597,9 @@
                   "name": "TrackText_8",
                   "fields": {
                     "fitToText": true,
-                    "text": "    가능)",
+                    "text": "    90도) 벽면을 따라가면 지팡이 홈 방 등장",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -636,10 +640,10 @@
                   "name": "TrackText_9",
                   "fields": {
                     "fitToText": true,
-                    "text": "[4] 머나먼 오아시스 구더기 굴 3층에서 왕들의 지팡이 획득 (입구 기준",
+                    "text": "■ [Act 2-1] 2막 - 하수구(라다먼트) & 호라드림의 함/지팡이",
                     "style": {
-                      "fontColor": "$FontColorWhite",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -679,9 +683,9 @@
                   "name": "TrackText_10",
                   "fields": {
                     "fitToText": true,
-                    "text": "    시계방향 벽타기)",
+                    "text": "▶ 동선: 하수구 3층(스킬+1) → 메마른 언덕 → 죽음의 전당 3층(큐브) →",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightTeal",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -722,9 +726,9 @@
                   "name": "TrackText_11",
                   "fields": {
                     "fitToText": true,
-                    "text": "[5] 잊힌 도시 웨이포인트 활성화 후 발톱 독사 사원 2층 제단에서 독사의",
+                    "text": "    머나먼 오아시스 → 구더기 굴 3층(지팡이) → 잊힌 도시 → 발톱 독사",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightTeal",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -765,9 +769,9 @@
                   "name": "TrackText_12",
                   "fields": {
                     "fitToText": true,
-                    "text": "    목걸이 획득",
+                    "text": "    사원 2층(목걸이)",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightTeal",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -808,9 +812,9 @@
                   "name": "TrackText_13",
                   "fields": {
                     "fitToText": true,
-                    "text": "[6] 호라드림의 함에 왕들의 지팡이 + 독사의 목걸이를 넣어 호라드림 지팡이",
+                    "text": "[1] [필수/보상] 루트 골레인 하수구 3층 라다먼트 처치 → 기술의 책(스킬",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -851,9 +855,9 @@
                   "name": "TrackText_14",
                   "fields": {
                     "fitToText": true,
-                    "text": "    조합",
+                    "text": "    +1) 획득",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightYellow",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -894,9 +898,9 @@
                   "name": "TrackText_15",
                   "fields": {
                     "fitToText": true,
-                    "text": "★ 길찾기: 파라 상점에서 2홈 본 실드(제왕운시 재료), 3홈 방패(고대인의",
+                    "text": "  [2] 그리즈에게 전투/기도/축복받은 조준 2막 사막 용병 고용",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
+                      "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -937,9 +941,9 @@
                   "name": "TrackText_16",
                   "fields": {
                     "fitToText": true,
-                    "text": "    서약 재료), 3홈 프레일(강철/원환)을 구매할 수 있습니다.",
+                    "text": "[3] 죽음의 전당 3층에서 호라드림의 함(큐브) 획득 (악몽/지옥 난이도 생략",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
+                      "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -980,9 +984,9 @@
                   "name": "TrackText_17",
                   "fields": {
                     "fitToText": true,
-                    "text": "★ 공략팁: 구더기 굴 1~2층은 입구 방향 기준 오른쪽(시계방향) 벽을 따라",
+                    "text": "    가능)",
                     "style": {
-                      "fontColor": "$FontColorGreen",
+                      "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -1023,9 +1027,9 @@
                   "name": "TrackText_18",
                   "fields": {
                     "fitToText": true,
-                    "text": "    이동하면 가장 빠르게 다음 층 계단을 찾습니다.",
+                    "text": "[4] 머나먼 오아시스 구더기 굴 3층에서 왕들의 지팡이 획득 (입구 기준",
                     "style": {
-                      "fontColor": "$FontColorGreen",
+                      "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -1066,10 +1070,10 @@
                   "name": "TrackText_19",
                   "fields": {
                     "fitToText": true,
-                    "text": "■ [Act 2-2] 2막 - 비전 성역 ~ 탈 라샤의 무덤(두리엘)",
+                    "text": "    시계방향 벽타기)",
                     "style": {
-                      "fontColor": "$FontColorGoldYellow",
-                      "pointSize": "$MediumFontSize",
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1109,9 +1113,9 @@
                   "name": "TrackText_20",
                   "fields": {
                     "fitToText": true,
-                    "text": "▶ 동선: 하렘 → 궁전 지하 3층(포탈) → 비전 성역(소환술사) → 신비술사의",
+                    "text": "[5] 잊힌 도시 웨이포인트 활성화 후 발톱 독사 사원 2층 제단에서 독사의",
                     "style": {
-                      "fontColor": "$FontColorLightTeal",
+                      "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -1152,9 +1156,9 @@
                   "name": "TrackText_21",
                   "fields": {
                     "fitToText": true,
-                    "text": "    협곡(WP) → 진짜 탈 라샤의 무덤 → 두리엘 처치",
+                    "text": "    목걸이 획득",
                     "style": {
-                      "fontColor": "$FontColorLightTeal",
+                      "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -1195,7 +1199,7 @@
                   "name": "TrackText_22",
                   "fields": {
                     "fitToText": true,
-                    "text": "[1] 드로그난과 대화 후 궁전 진입 (대화하지 않으면 제르힌 경비병이 길을",
+                    "text": "[6] 호라드림의 함에 왕들의 지팡이 + 독사의 목걸이를 넣어 호라드림 지팡이",
                     "style": {
                       "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
@@ -1238,7 +1242,7 @@
                   "name": "TrackText_23",
                   "fields": {
                     "fitToText": true,
-                    "text": "    막음)",
+                    "text": "    조합",
                     "style": {
                       "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
@@ -1281,9 +1285,9 @@
                   "name": "TrackText_24",
                   "fields": {
                     "fitToText": true,
-                    "text": "[2] 비전 성역 4방향 중 소환술사 처치 후 호라드림 일지 클릭 → 진짜 무덤",
+                    "text": "★ 길찾기: 파라 상점에서 2홈 본 실드(제왕운시 재료), 3홈 방패(고대인의",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -1324,9 +1328,9 @@
                   "name": "TrackText_25",
                   "fields": {
                     "fitToText": true,
-                    "text": "    문양 확인",
+                    "text": "    서약 재료), 3홈 프레일(강철/원환)을 구매할 수 있습니다.",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightBlue",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -1367,9 +1371,9 @@
                   "name": "TrackText_26",
                   "fields": {
                     "fitToText": true,
-                    "text": "[3] 신비술사의 협곡 웨이포인트에서 퀘스트 창(Q)의 문양과 일치하는 탈 라샤",
+                    "text": "★ 공략팁: 구더기 굴 1~2층은 입구 방향 기준 오른쪽(시계방향) 벽을 따라",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorGreen",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -1410,9 +1414,9 @@
                   "name": "TrackText_27",
                   "fields": {
                     "fitToText": true,
-                    "text": "    무덤 진입",
+                    "text": "    이동하면 가장 빠르게 다음 층 계단을 찾습니다.",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorGreen",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -1453,10 +1457,10 @@
                   "name": "TrackText_28",
                   "fields": {
                     "fitToText": true,
-                    "text": "[4] 용병과 캐릭터에게 해동 물약 4개씩 복용(냉기 저항 +50%) 후 두리엘",
+                    "text": "■ [Act 2-2] 2막 - 비전 성역 ~ 탈 라샤의 무덤(두리엘)",
                     "style": {
-                      "fontColor": "$FontColorWhite",
-                      "pointSize": "$SmallFontSize",
+                      "fontColor": "$FontColorGoldYellow",
+                      "pointSize": "$MediumFontSize",
                       "alignment": {
                         "h": "left",
                         "v": "center"
@@ -1496,9 +1500,9 @@
                   "name": "TrackText_29",
                   "fields": {
                     "fitToText": true,
-                    "text": "    처치",
+                    "text": "▶ 동선: 하렘 → 궁전 지하 3층(포탈) → 비전 성역(소환술사) → 신비술사의",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightTeal",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -1539,9 +1543,9 @@
                   "name": "TrackText_30",
                   "fields": {
                     "fitToText": true,
-                    "text": "[5] 무덤 안쪽 티리엘과 대화 → 마을 복귀 후 제르힌 및 메쉬프와 대화해 3막",
+                    "text": "    협곡(WP) → 진짜 탈 라샤의 무덤 → 두리엘 처치",
                     "style": {
-                      "fontColor": "$FontColorWhite",
+                      "fontColor": "$FontColorLightTeal",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -1582,7 +1586,7 @@
                   "name": "TrackText_31",
                   "fields": {
                     "fitToText": true,
-                    "text": "    이동",
+                    "text": "[1] 드로그난과 대화 후 궁전 진입 (대화하지 않으면 제르힌 경비병이 길을",
                     "style": {
                       "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
@@ -1625,9 +1629,9 @@
                   "name": "TrackText_32",
                   "fields": {
                     "fitToText": true,
-                    "text": "★ 길찾기: 탈 라샤의 무덤 진행 방향은 입구 타일 기준 왼쪽(반시계방향 90도)",
+                    "text": "    막음)",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
+                      "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -1668,9 +1672,9 @@
                   "name": "TrackText_33",
                   "fields": {
                     "fitToText": true,
-                    "text": "    벽면을 따라가면 지팡이 꽂는 방이 나옵니다.",
+                    "text": "[2] 비전 성역 4방향 중 소환술사 처치 후 호라드림 일지 클릭 → 진짜 무덤",
                     "style": {
-                      "fontColor": "$FontColorLightBlue",
+                      "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -1711,9 +1715,9 @@
                   "name": "TrackText_34",
                   "fields": {
                     "fitToText": true,
-                    "text": "★ 공략팁: 원소술사는 전자기장(Static Field)으로 두리엘 체력을 즉시",
+                    "text": "    문양 확인",
                     "style": {
-                      "fontColor": "$FontColorGreen",
+                      "fontColor": "$FontColorWhite",
                       "pointSize": "$SmallFontSize",
                       "alignment": {
                         "h": "left",
@@ -1752,6 +1756,393 @@
                 {
                   "type": "TextBoxWidget",
                   "name": "TrackText_35",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[3] 신비술사의 협곡 웨이포인트에서 퀘스트 창(Q)의 문양과 일치하는 탈 라샤",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_36",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_36",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    무덤 진입",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_37",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_37",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[4] 용병과 캐릭터에게 해동 물약 4개씩 복용(냉기 저항 +50%) 후 두리엘",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_38",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_38",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    처치",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_39",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_39",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "[5] 무덤 안쪽 티리엘과 대화 → 마을 복귀 후 제르힌 및 메쉬프와 대화해 3막",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_40",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_40",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    이동",
+                    "style": {
+                      "fontColor": "$FontColorWhite",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_41",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_41",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 길찾기: 탈 라샤의 무덤 진행 방향은 입구 타일 기준 왼쪽(반시계방향 90도)",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_42",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_42",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "    벽면을 따라가면 지팡이 꽂는 방이 나옵니다.",
+                    "style": {
+                      "fontColor": "$FontColorLightBlue",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_43",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_43",
+                  "fields": {
+                    "fitToText": true,
+                    "text": "★ 공략팁: 원소술사는 전자기장(Static Field)으로 두리엘 체력을 즉시",
+                    "style": {
+                      "fontColor": "$FontColorGreen",
+                      "pointSize": "$SmallFontSize",
+                      "alignment": {
+                        "h": "left",
+                        "v": "center"
+                      },
+                      "options": {
+                        "lineWrap": false,
+                        "newlineHandling": "standard",
+                        "pipeCharacterBehavior": "handle"
+                      },
+                      "spacing": {
+                        "leading": 1.12,
+                        "kerning": 0.94
+                      },
+                      "dropShadow": {
+                        "shadowColor": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 255
+                        },
+                        "offset": {
+                          "x": 3,
+                          "y": 3
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "TableRowWidget",
+              "name": "TrackRow_44",
+              "children": [
+                {
+                  "type": "TextBoxWidget",
+                  "name": "TrackText_44",
                   "fields": {
                     "fitToText": true,
                     "text": "    깎고, 근접 캐릭터는 강타(Crushing Blow) 무기를 활용하세요.",

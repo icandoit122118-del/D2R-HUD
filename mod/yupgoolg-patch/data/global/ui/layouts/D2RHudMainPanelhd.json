@@ -5,9 +5,9 @@
     "priority": 9002,
     "rect": {
       "x": -860,
-      "y": 24,
+      "y": 18,
       "width": 1720,
-      "height": 150
+      "height": 110
     },
     "anchor": {
       "x": 0.5,
@@ -16,73 +16,12 @@
   },
   "children": [
     {
-      "type": "TextBoxWidget",
-      "name": "Title",
-      "fields": {
-        "rect": {
-          "x": 16,
-          "y": 6,
-          "width": 680,
-          "height": 42
-        },
-        "text": "★ D2R-HUD v1.3 호라드림 투명 대사전 (룬워드 98종 · 큐빙 60종)",
-        "style": {
-          "fontColor": "$FontColorGoldYellow",
-          "pointSize": "$MediumFontSize",
-          "alignment": {
-            "h": "left",
-            "v": "center"
-          },
-          "options": {
-            "lineWrap": false,
-            "newlineHandling": "standard",
-            "pipeCharacterBehavior": "handle"
-          },
-          "spacing": {
-            "leading": 1.12,
-            "kerning": 0.94
-          },
-          "dropShadow": {
-            "shadowColor": {
-              "r": 0,
-              "g": 0,
-              "b": 0,
-              "a": 255
-            },
-            "offset": {
-              "x": 3,
-              "y": 3
-            }
-          }
-        }
-      }
-    },
-    {
-      "type": "ButtonWidget",
-      "name": "OpenMiniTrackerBtn",
-      "fields": {
-        "rect": {
-          "x": 1470,
-          "y": 4,
-          "scale": 0.48
-        },
-        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonMed",
-        "hoveredFrame": 3,
-        "textString": "좌측 미니HUD",
-        "onClickMessage": "PanelManager:TogglePanel:D2RHudTrackerPanel",
-        "tooltipString": "좌측 상단 투명 성역 미니 내비게이터를 켜거나 끕니다.",
-        "textColor": "$FontColorLightGold",
-        "text/style": "$StyleFEButtonText",
-        "sound": "select"
-      }
-    },
-    {
       "type": "ButtonWidget",
       "name": "CloseButton",
       "fields": {
         "rect": {
-          "x": 1656,
-          "y": 4,
+          "x": 1662,
+          "y": 8,
           "scale": 0.72
         },
         "filename": "PANEL\\closebtn_4x",
@@ -100,10 +39,10 @@
       "fields": {
         "rect": {
           "x": 12,
-          "y": 52,
-          "scale": 0.88,
-          "width": 1720,
-          "height": 105
+          "y": 6,
+          "scale": 0.86,
+          "width": 1640,
+          "height": 100
         },
         "anchor": {
           "x": 0,
@@ -111,8 +50,8 @@
         },
         "tabCount": 7,
         "tabSize": {
-          "x": 242,
-          "y": 100
+          "x": 232,
+          "y": 96
         },
         "tabPadding": {
           "x": 2,
